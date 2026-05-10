@@ -1,0 +1,14 @@
+special_forces_tech_decisions = {
+	icon = generic_political_actions
+	priority = 9999
+	visible = {
+			AND = {
+				NOT = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				NOT = {
+					has_dlc = "Arms Against Tyranny"
+				}
+			}
+	}
+}

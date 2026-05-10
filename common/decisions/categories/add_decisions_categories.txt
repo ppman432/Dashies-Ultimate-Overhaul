@@ -1,0 +1,7 @@
+special_forces_tech_decisions = {
+	icon = generic_political_actions
+	priority = 9999
+	visible = {
+		always = yes
+	}
+}

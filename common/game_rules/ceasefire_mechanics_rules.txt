@@ -1,0 +1,142 @@
+ceasefire_break_cooldown_rule = {
+    name = "RULE_CEASEFIRE_BREAK_COOLDOWN_RULE"
+    group = "RULE_GROUP_CEASEFIRE_MECHANICS"
+
+    default = {
+        name = DAYS_90
+        text = "RULE_OPTION_CEASEFIRE_DAYS_90"
+        desc = "RULE_CEASEFIRE_BREAK_COOLDOWN_90_DESC"
+    }
+
+    option = {
+        name = DAYS_30
+        text = "RULE_OPTION_CEASEFIRE_DAYS_30"
+        desc = "RULE_CEASEFIRE_BREAK_COOLDOWN_30_DESC"
+    }
+
+    option = {
+        name = DAYS_60
+        text = "RULE_OPTION_CEASEFIRE_DAYS_60"
+        desc = "RULE_CEASEFIRE_BREAK_COOLDOWN_60_DESC"
+    }
+
+    option = {
+        name = DAYS_180
+        text = "RULE_OPTION_CEASEFIRE_DAYS_180"
+        desc = "RULE_CEASEFIRE_BREAK_COOLDOWN_180_DESC"
+    }
+}
+
+ceasefire_ai_send_rule = {
+    name = "RULE_CEASEFIRE_AI_SEND_RULE"
+    group = "RULE_GROUP_CEASEFIRE_MECHANICS"
+
+    default = {
+        name = ALLOWED
+        text = "RULE_OPTION_CEASEFIRE_ALLOWED"
+        desc = "RULE_CEASEFIRE_AI_SEND_ALLOWED_DESC"
+    }
+
+    option = {
+        name = BLOCKED
+        text = "RULE_OPTION_CEASEFIRE_BLOCKED"
+        desc = "RULE_CEASEFIRE_AI_SEND_BLOCKED_DESC"
+    }
+}
+
+ceasefire_ai_break_rule = {
+    name = "RULE_CEASEFIRE_AI_BREAK_RULE"
+    group = "RULE_GROUP_CEASEFIRE_MECHANICS"
+
+    default = {
+        name = ALLOWED
+        text = "RULE_OPTION_CEASEFIRE_ALLOWED"
+        desc = "RULE_CEASEFIRE_AI_BREAK_ALLOWED_DESC"
+    }
+
+    option = {
+        name = BLOCKED
+        text = "RULE_OPTION_CEASEFIRE_BLOCKED"
+        desc = "RULE_CEASEFIRE_AI_BREAK_BLOCKED_DESC"
+    }
+}
+
+ceasefire_participant_break_rule = {
+    name = "RULE_CEASEFIRE_PARTICIPANT_BREAK_RULE"
+    group = "RULE_GROUP_CEASEFIRE_MECHANICS"
+
+    default = {
+        name = LEADERS_ONLY
+        text = "RULE_OPTION_CEASEFIRE_LEADERS_ONLY"
+        desc = "RULE_CEASEFIRE_PARTICIPANT_BREAK_LEADERS_ONLY_DESC"
+    }
+
+    option = {
+        name = AFTER_TRUCE
+        text = "RULE_OPTION_CEASEFIRE_AFTER_TRUCE"
+        desc = "RULE_CEASEFIRE_PARTICIPANT_BREAK_AFTER_TRUCE_DESC"
+    }
+}
+
+ceasefire_truce_multiplier_rule = {
+    name = "RULE_CEASEFIRE_TRUCE_MULTIPLIER_RULE"
+    group = "RULE_GROUP_CEASEFIRE_MECHANICS"
+
+    default = {
+        name = X3
+        text = "RULE_OPTION_CEASEFIRE_TRUCE_X3"
+        desc = "RULE_CEASEFIRE_TRUCE_MULTIPLIER_X3_DESC"
+    }
+
+    option = {
+        name = X1
+        text = "RULE_OPTION_CEASEFIRE_TRUCE_X1"
+        desc = "RULE_CEASEFIRE_TRUCE_MULTIPLIER_X1_DESC"
+    }
+
+    option = {
+        name = X2
+        text = "RULE_OPTION_CEASEFIRE_TRUCE_X2"
+        desc = "RULE_CEASEFIRE_TRUCE_MULTIPLIER_X2_DESC"
+    }
+
+    option = {
+        name = X4
+        text = "RULE_OPTION_CEASEFIRE_TRUCE_X4"
+        desc = "RULE_CEASEFIRE_TRUCE_MULTIPLIER_X4_DESC"
+    }
+}
+
+ceasefire_events_rule = {
+    name = "RULE_CEASEFIRE_EVENTS_RULE"
+    group = "RULE_GROUP_CEASEFIRE_MECHANICS"
+
+    default = {
+        name = ENABLED
+        text = "RULE_OPTION_CEASEFIRE_EVENTS_ENABLED"
+        desc = "RULE_CEASEFIRE_EVENTS_ENABLED_DESC"
+    }
+
+    option = {
+        name = DISABLED
+        text = "RULE_OPTION_CEASEFIRE_EVENTS_DISABLED"
+        desc = "RULE_CEASEFIRE_EVENTS_DISABLED_DESC"
+    }
+}
+
+ceasefire_territory_rule = {
+    name = "RULE_CEASEFIRE_TERRITORY_RULE"
+    group = "RULE_GROUP_CEASEFIRE_MECHANICS"
+
+    default = {
+        name = TRANSFER_OWNERSHIP
+        text = "RULE_OPTION_CEASEFIRE_TERRITORY_TRANSFER_OWNERSHIP"
+        desc = "RULE_CEASEFIRE_TERRITORY_TRANSFER_OWNERSHIP_DESC"
+    }
+
+    option = {
+        name = ESCROW_OWNERSHIP
+        text = "RULE_OPTION_CEASEFIRE_TERRITORY_ESCROW_OWNERSHIP"
+        desc = "RULE_CEASEFIRE_TERRITORY_ESCROW_OWNERSHIP_DESC"
+    }
+}

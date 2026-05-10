@@ -1,0 +1,250 @@
+ideas = {
+
+	hidden_ideas = {
+
+		ecf_nuclear_research = {
+
+			picture = generic_research_bonus
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+
+			research_bonus = {
+				nuclear = 1.00
+			}
+
+		}
+
+		ecf_rocketry_research = {
+
+			picture = generic_research_bonus
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+
+			research_bonus = {
+				rocketry = 0.75
+			}
+
+		}
+
+		ecf_artillery_research = {
+
+			picture = generic_research_bonus
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+
+			research_bonus = {
+				artillery = 0.50
+			}
+
+		}
+
+		ecf_armor_research = {
+
+			picture = generic_research_bonus
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+
+			research_bonus = {
+				armor = 0.50
+				armor_tech_category = 0.50 #OWB
+			}
+
+		}
+
+		ecf_industry_research = {
+
+			picture = generic_research_bonus
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+
+			research_bonus = {
+				industry = 0.50
+			}
+
+		}
+
+		ecf_naval_equipment_research = {
+
+			picture = generic_research_bonus
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+
+			research_bonus = {
+				naval_equipment = 0.50
+				naval_tech_category = 0.50 #OWB
+			}
+
+		}
+
+
+		ecf_synth_resources_research = {
+
+			picture = generic_research_bonus
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+
+			research_bonus = {
+				synth_resources = 0.50
+			}
+
+		}
+
+		ecf_air_equipment_research = {
+
+			picture = generic_research_bonus
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+
+			research_bonus = {
+				air_equipment = 0.50
+				air_tech_category = 0.50 #OWB
+			}
+
+		}
+
+		ecf_infantry_equipment_research = {
+
+			picture = generic_research_bonus
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.50
+				support_tech = 0.50
+				night_vision = 0.50
+				marine_tech = 0.50
+				para_tech = 0.50
+				mountaineers_tech = 0.50
+				infantry_tech_category = 0.50 #OWB
+				support_tech_category = 0.50 #OWB
+			}
+
+		}
+
+		#OWB Research#
+
+		ecf_owb_robotics_research = {
+
+			picture = generic_research_bonus
+	
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+			}
+
+			research_bonus = {
+				robotics_tech_category = 0.50 #OWB
+			}
+
+		}
+
+	}
+}
+			

@@ -1,0 +1,570 @@
+ST_HOST_CAT = {
+	host_hire_dishg = {
+	
+		visible = {
+		    has_country_flag = ST_HOST
+			always = yes
+		}
+
+		available = {
+		    #has_country_flag = ST_HOST
+		}
+		cost = 0
+
+		fire_only_once = yes
+
+		complete_effect = {
+			SOL = {
+				set_nationality = {
+					target_country = ROOT
+					character = HEPO_dishg
+				}
+			}
+			if = {
+				limit = {
+					is_changeling_race = yes
+				}
+				HEPO_dishg = {
+					set_character_name = "“Rainbow Dash”"
+					set_portraits = {
+						army = {
+							large = "gfx/leaders/HEPO/changelingdish.tga"
+						}
+					}
+				}
+				add_field_marshal_role = {
+					character = HEPO_dishg
+
+					traits =  { HEPO_Dish_trait war_hero changeling_race_trait panzer_leader panzer_expert fortress_buster invader_ii naval_invader }
+
+					skill = 8
+					attack_skill = 10
+					defense_skill = 10
+					planning_skill = 10
+					logistics_skill = 10
+					desc = CHN_dishg_desc
+				}
+			}
+			else_if = {
+				limit = {
+					tag = EQS
+				}
+				HEPO_dishg = {
+					set_character_name = "Rainbow Dash"
+					set_portraits = {
+						army = {
+							large = "gfx/leaders/HEPO/disheqs.tga"
+						}
+					}
+				}
+				add_field_marshal_role = {
+					character = HEPO_dishg
+
+					traits =  { HEPO_Dish_trait war_hero changeling_race_trait panzer_leader panzer_expert fortress_buster invader_ii naval_invader }
+
+					skill = 8
+					attack_skill = 10
+					defense_skill = 10
+					planning_skill = 10
+					logistics_skill = 10
+					desc = def_dishg_desc
+				}
+			}
+			else_if = {
+				limit = {
+					tag = CES
+				}
+				HEPO_dishg = {
+					set_character_name = "“Rainbow Dash”"
+					set_portraits = {
+						army = {
+							large = "gfx/leaders/HEPO/CESdish.tga"
+						}
+					}
+				add_field_marshal_role = {
+					character = HEPO_dishg
+
+					traits =  { HEPO_Dish_trait war_hero changeling_race_trait panzer_leader panzer_expert fortress_buster invader_ii naval_invader }
+
+					skill = 8
+					attack_skill = 10
+					defense_skill = 10
+					planning_skill = 10
+					logistics_skill = 10
+					desc = CES_dishg_desc
+				}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = DED
+				}
+				HEPO_dishg = {
+					set_character_name = "Rainbone Death"
+					set_portraits = {
+						army = {
+							large = "gfx/leaders/HEPO/dishded.tga"
+						}
+					}
+					add_field_marshal_role = {
+					character = HEPO_dishg
+
+						traits =  { HEPO_Dish_trait war_hero changeling_race_trait panzer_leader panzer_expert fortress_buster invader_ii naval_invader }
+
+						skill = 8
+						attack_skill = 10
+						defense_skill = 10
+						planning_skill = 10
+						logistics_skill = 10
+						desc = DED_dishg_desc
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						original_tag = BAT
+						tag = NLR
+					}
+				}
+				HEPO_dishg = {
+					set_character_name = "“Rainbat Dash”"
+					set_portraits = {
+						army = {
+							large = "gfx/leaders/HEPO/thestraldish.tga"
+						}
+					}
+				add_field_marshal_role = {
+					character = HEPO_dishg
+
+					traits =  { HEPO_Dish_trait war_hero changeling_race_trait panzer_leader panzer_expert fortress_buster invader_ii naval_invader }
+
+					skill = 8
+					attack_skill = 10
+					defense_skill = 10
+					planning_skill = 10
+					logistics_skill = 10
+					desc = BAT_dishg_desc
+				}
+				}
+			}
+			else_if = {
+				limit = {
+					is_dragon_race = yes
+				}
+				HEPO_dishg = {
+					set_character_name = "Rainburn Draco"
+					set_portraits = {
+						army = {
+							large = "gfx/leaders/HEPO/dishdrg.tga"
+						}
+					}
+				add_field_marshal_role = {
+					character = HEPO_dishg
+
+					traits =  { HEPO_Dish_trait war_hero changeling_race_trait panzer_leader panzer_expert fortress_buster invader_ii naval_invader }
+
+					skill = 8
+					attack_skill = 10
+					defense_skill = 10
+					planning_skill = 10
+					logistics_skill = 10
+					desc = DRG_dishg_desc
+				}
+				}
+			}
+			else_if = {
+				limit = {
+					tag = HLQ
+				}
+				HEPO_dishg = {
+					set_character_name = "“Rainbow Dash”"
+					set_portraits = {
+						army = {
+							large = "gfx/leaders/HEPO/hellquildish.tga"
+						}
+					}
+				add_field_marshal_role = {
+					character = HEPO_dishg
+
+					traits =  { HEPO_Dish_trait war_hero changeling_race_trait panzer_leader panzer_expert fortress_buster invader_ii naval_invader }
+
+					skill = 8
+					attack_skill = 10
+					defense_skill = 10
+					planning_skill = 10
+					logistics_skill = 10
+					desc = HLQ_dishg_desc
+				}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_government = communism
+						original_tag = STG
+					}
+				}
+				HEPO_dishg = {
+					set_character_name = "Comrade Dash"
+					set_portraits = {
+						army = {
+							large = "gfx/leaders/HEPO/dishstg.tga"
+						}
+					}
+					add_field_marshal_role = {
+						character = HEPO_dishg
+
+						traits =  { HEPO_Dish_trait war_hero changeling_race_trait panzer_leader panzer_expert fortress_buster invader_ii naval_invader }
+
+						skill = 8
+						attack_skill = 10
+						defense_skill = 10
+						planning_skill = 10
+						logistics_skill = 10
+						desc = STG_dishg_desc
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						is_zebra_race = yes
+						is_llama_race = yes
+						is_kirin_race = yes
+						ROOT = {
+							is_on_continent = africa
+						}
+					}
+				}
+				HEPO_dishg = {
+					set_character_name = "“Rainbow Dash”"
+					set_portraits = {
+						army = {
+							large = "gfx/leaders/HEPO/dishcivilwar.tga"
+						}
+					}
+					add_field_marshal_role = {
+						character = HEPO_dishg
+
+						traits =  { HEPO_Dish_trait war_hero changeling_race_trait panzer_leader panzer_expert fortress_buster invader_ii naval_invader }
+
+						skill = 8
+						attack_skill = 10
+						defense_skill = 10
+						planning_skill = 10
+						logistics_skill = 10
+						desc = def_dishg_desc
+					}
+				}
+			}
+		}
+	}
+	ST_HOST = {
+		visible = {
+			is_ai = no
+			#Visible if either there is no global flag or if any country either has the flag and is an ai or if no country has the flag
+			OR = {
+				NOT = {has_global_flag = ST_HOST_SELECTED}
+				#any_country = {
+				#		has_country_flag = ST_HOST
+				#		is_ai = yes
+				#}
+				NOT = {
+					any_country = {
+							has_country_flag = ST_HOST
+					}
+				}
+			}
+		}
+		available = {
+			is_ai = no
+		}
+
+		fire_only_once = no
+
+		cost = 0
+		
+		complete_effect = {
+			every_country = {
+				limit = {has_country_flag = ST_HOST}
+				clr_country_flag = ST_HOST
+			}
+			add_ideas = duo_host_idea
+			set_global_flag = ST_HOST_SELECTED
+			set_country_flag = ST_HOST
+		}
+	}
+	ST_divine_request = {
+		visible = {
+			is_ai = no
+			has_global_flag = ST_HOST_SELECTED
+			any_country = {
+				has_country_flag = ST_HOST
+			}
+			NOT = {
+				has_country_flag = requesting_intervention
+				has_country_flag = ST_DIVINE
+				has_country_flag = ST_HOST
+			}
+		}
+		available = {
+			
+			custom_override_tooltip = {
+				tooltip = {
+				  localization_key = DUO_divine_cooldown
+				}
+				not_tooltip = MY_TOOLTIP_NOT
+				not = {
+					has_country_flag = divine_cd
+				}
+			}
+			
+			is_ai = no
+		}
+
+		fire_only_once = no
+
+		cost = 0
+		
+		complete_effect = {
+			set_country_flag = requesting_intervention
+		}
+	}
+	ST_grant_divine = {
+		icon = GFX_decision_switch_form
+
+		visible = {
+		    has_country_flag = ST_HOST
+		}
+
+		available = {
+		    has_country_flag = ST_HOST
+		}
+
+		fire_only_once = no
+
+		target_root_trigger = {
+			ROOT = {
+				has_country_flag = ST_HOST
+			}
+		}
+		targets_dynamic = yes
+		target_trigger = { #will check only neighbors
+			FROM = {
+				has_country_flag = requesting_intervention
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = Researchslots.4
+				set_country_flag = ST_DIVINE
+				clr_country_flag = requesting_intervention
+			}
+		}
+	}
+	ST_deny_divine = {
+		icon = GFX_decision_switch_form
+
+		visible = {
+		    has_country_flag = ST_HOST
+		}
+
+		available = {
+		    has_country_flag = ST_HOST
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		fire_only_once = no
+
+		target_root_trigger = {
+			ROOT = {
+				has_country_flag = ST_HOST
+			}
+		}
+		targets_dynamic = yes
+		target_trigger = { #will check only neighbors
+			FROM = {
+				has_country_flag = requesting_intervention
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = Researchslots.3
+				clr_country_flag = requesting_intervention
+			}
+		}
+	}
+	ST_revoke_divine = {
+		icon = GFX_decision_switch_form
+
+		visible = {
+		    has_country_flag = ST_HOST
+		}
+
+		available = {
+		    has_country_flag = ST_HOST
+		}
+
+		available = {
+			is_ai = no
+		}
+
+		fire_only_once = no
+
+		target_root_trigger = {
+			ROOT = {
+				has_country_flag = ST_HOST
+			}
+		}
+		targets_dynamic = yes
+		target_trigger = { #will check only neighbors
+			FROM = {
+				has_country_flag = ST_DIVINE
+			}
+		}
+
+		complete_effect = {
+			FROM = {
+				country_event = Researchslots.2
+				clr_country_flag = ST_DIVINE
+			}
+		}
+	}
+	Sekrit_hush = {
+		visible = {
+			is_ai = no
+			or = {
+				has_country_flag = ST_DIVINE
+				has_country_flag = ST_HOST
+			}
+			}
+		available = {
+			is_ai = no
+			or = {
+				has_country_flag = ST_DIVINE
+				has_country_flag = ST_HOST
+			}
+		}
+		cancel_trigger = {
+			NOT = {
+				OR = {
+					has_country_flag = ST_DIVINE
+					has_country_flag = ST_HOST
+				}
+			}
+		}
+		fire_only_once = no
+		days_remove = 200
+		cost = 0
+		
+		modifier = {
+				research_speed_factor = 2.5
+				weekly_manpower = 10000
+				political_power_gain = 5
+				political_power_factor = 5
+				training_time_army_factor = -0.25
+				production_speed_buildings_factor = 50
+				production_lack_of_resource_penalty_factor = -0.90
+				production_factory_efficiency_gain_factor = 5 
+				production_factory_max_efficiency_factor = 5 
+				line_change_production_efficiency_factor = 5 
+				special_project_speed_factor = 5
+			}
+		
+		complete_effect = {
+		}
+	}
+	Sekrit_hush_research = {
+		visible = {
+			is_ai = no
+			has_country_flag = ST_HOST
+		}
+		available = {
+			is_ai = no
+			has_country_flag = ST_HOST
+		}
+
+		fire_only_once = no
+		days_remove = 100
+		cost = 0
+		
+		modifier = { }
+		
+		complete_effect = {
+			add_research_slot = 6
+		}
+	}
+	Sekrit_hush_military = {
+		visible = {
+			is_ai = no
+			has_country_flag = ST_HOST
+			}
+		available = {
+			is_ai = no
+			has_country_flag = ST_HOST
+		}
+
+		fire_only_once = no
+		days_remove = 100
+		cost = 0
+		
+		modifier = { }
+		
+		complete_effect = {
+			add_manpower = 250000
+			army_experience = 100
+			navy_experience = 100
+			air_experience = 100
+			add_command_power = 100
+		}
+	}
+	Sekrit_hush_political = {
+		visible = {
+			is_ai = no
+			has_country_flag = ST_HOST
+			}
+		available = {
+			is_ai = no
+			has_country_flag = ST_HOST
+		}
+
+		fire_only_once = no
+		days_remove = 100
+		cost = 0
+		
+		modifier = { }
+		
+		complete_effect = {
+			add_stability = 0.25
+			add_war_support = 0.25
+			add_political_power = 500
+			add_to_variable = { var = dx value = 2000 }
+		}
+	}
+	Sekrit_hush_digedanium = {
+		visible = {
+			is_ai = no
+			has_country_flag = ST_HOST
+			}
+		available = {
+			is_ai = no
+			has_country_flag = ST_HOST
+		}
+
+		fire_only_once = yes
+		days_remove = 100
+		cost = 0
+		
+		modifier = { }
+		
+		complete_effect = {
+			set_technology = { digedanium_tech = 1 }
+		}
+	}
+}

@@ -1,0 +1,2020 @@
+ideas = {
+	political_advisor = {
+		generic_stickler = {
+			allowed = {
+			}
+			
+			picture = CES_quibble_pants
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_stickler
+						  }
+		}
+		generic_refitter = {
+			allowed = {
+			}
+			
+			picture = LeerVicious
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_refitter
+						  }
+		}
+		generic_unionist = {
+			allowed = {
+			}
+			available = {
+
+			}
+			
+			picture = TEM_Midnight_Dasher
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.6
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_unionist
+						  }
+		}
+		generic_wealthy_investor = {
+			allowed = {
+			}
+			
+			picture = EQS_filthy_rich
+			
+			ai_will_do = {
+				factor = 0.85
+			}
+			
+			traits = { ham_wealthy_investor
+						  }
+		}
+		generic_geared_for_war = {
+			allowed = {
+			}
+			
+			picture = UESR_Sablin_Bat
+			
+			ai_will_do = {
+				factor = 0.85
+			}
+			
+			traits = { ham_geared_for_war
+						ham_conservative }
+		}
+		generic_oil_synthesist = {
+			allowed = {
+			}
+			
+			picture = Steelwing
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			modifier = {
+				production_oil_factor = 0.2
+			}
+			
+			traits = { ham_oil_synthesist
+						  }
+		}
+		generic_excavator = {
+			allowed = {
+			}
+			
+			picture = EQS_limestone
+			
+			modifier = {
+				local_resources_factor = 0.05
+			}
+			
+			ai_will_do = {
+				factor = 1.25
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_excavator
+						  }
+		}
+		generic_entrepreneur = {
+			allowed = {
+			}
+			available = {
+
+			}
+			
+			picture = EQS_coco_pommel
+			
+			ai_will_do = {
+				factor = 1.1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_entrepreneur
+						  }
+		}
+		
+		generic_youth_recruiter = {
+			allowed = {
+			}
+			available = {
+ 
+ 
+			}
+			
+			picture = CHN_hermis_thysbe
+			
+			modifier = {
+				conscription_factor = 0.05
+			}
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_youth_recruiter
+						  }
+		}
+		generic_social_cohesive = {
+			allowed = {
+			}
+			
+			picture = EQS_fancy_pants
+			
+			ai_will_do = {
+				factor = 0.85
+			}
+			
+			traits = { ham_social_cohesive
+						ham_conservative }
+		}
+		generic_national_pride = {
+			allowed = {
+			}
+			available = {
+ 
+ 
+			}
+			
+			picture = UESR_cheese_sandwich
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_national_pride
+						  }
+		}
+		generic_enlightened = {
+			allowed = {
+			}
+			
+			picture = EQS_zecora
+			
+			ai_will_do = {
+				factor = 0.85
+			}
+			
+			traits = { ham_enlightened
+						  }
+		}
+		generic_scientific_mind = {
+			allowed = {
+			}
+			
+			picture = EQS_flakesnow
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_scientific_mind
+						  }
+		}
+		generic_political_youth = {
+			allowed = {
+			}
+			available = {
+ 
+ 
+			}
+			
+			picture = JUN_caballeron
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_political_youth
+						  }
+		}
+		generic_local_historian = {
+			allowed = {
+				has_dlc = "Together for Victory"
+			}
+			
+			picture = EQS_granny_smith
+			
+			ai_will_do = {
+				factor = 0.5
+				modifier = {
+					factor = 0
+					is_subject = no
+				}
+				modifier = {
+					factor = 1.25
+					is_subject = yes
+				}
+			}
+			
+			traits = { ham_local_historian
+						ham_conservative }
+		}
+	
+		generic_eagle_eyed = {
+			allowed = {
+			}
+			
+			picture = EQS_coppertop
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_eagle_eyed
+						  }
+		}
+		generic_likes_sailors = {
+			allowed = {
+			}
+			
+			picture = EQS_sun_marble
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_likes_sailors
+						  }
+		}
+		generic_nation_builder = {
+			allowed = {
+			}
+			
+			picture = EQS_flash_magnus
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_nation_builder
+						  }
+		}
+		generic_oil_baron = {
+			allowed = {
+			}
+			available = {
+ 
+ 
+			}
+			
+			picture = EQS_flim_flam
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_oil_baron
+						  }
+		}
+		generic_future_developer = {
+			allowed = {
+			}
+			
+			picture = EQS_fizzlepop
+			
+			ai_will_do = {
+				factor = 0.85
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_future_developer
+						  }
+		}
+		generic_strategic_defender = {
+			allowed = {
+			}
+			
+			picture = EQS_orion_star
+			
+			ai_will_do = {
+				factor = 0.85
+			}
+			
+			traits = { ham_strategic_defender
+						ham_conservative }
+		}
+		generic_industrialist = {
+			allowed = {
+			}
+			available = {
+ 
+ 
+			}
+			
+			picture = EQS_Fireflight
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_industrialist
+						  }
+		}
+	
+	
+
+		generic_sweet_talker = {
+			allowed = {
+			}
+			
+			picture = EQS_SOL_thunderlane
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_sweet_talker
+						  }
+		}
+		generic_skilled_negotiator = {
+			allowed = {
+			}
+			
+			picture = WNG_generic_land_3
+			
+			ai_will_do = {
+				factor = 1.1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_skilled_negotiator
+						  }
+		}
+		generic_ideological_crusader = {
+			allowed = {
+			}
+			available = {
+ 
+ 
+			}
+			
+			ai_will_do = {
+				factor = 0.85
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			picture = WNG_generic_navy_1
+			
+			traits = { ham_ideological_crusader_2
+						  }
+		}
+		generic_polyglot = {
+			allowed = {
+			}
+			
+			picture = portrait_griffon_generic_1
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.6
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_polyglot
+						  }
+		}
+		generic_buffoon = {
+			allowed = {
+			}
+			available = {
+ 
+ 
+			}
+			
+			picture = portrait_griffon_generic_land_9
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_buffoon
+						  }
+		}
+		generic_cooperative = {
+			allowed = {
+			}
+			
+			picture = portrait_griffon_generic_navy_2
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_cooperative
+						  }
+		}
+		generic_paranoid = {
+			allowed = {
+			}
+			available = {
+				always = yes
+			}
+			
+			picture = WNG_generic_navy_2
+			
+			ai_will_do = {
+				factor = 0.5
+			}
+			
+			traits = { ham_paranoid
+						ham_conservative }
+		}
+		generic_alpha_male = {
+			allowed = {
+				has_dlc = "Together for Victory" 
+			}
+			
+			picture = EQS_SOL_august_fon_eisenstadt
+			
+			ai_will_do = {
+				factor = 0.5
+				modifier = {
+					factor = 0
+					is_subject = no
+				}
+				modifier = {
+					factor = 1
+					is_subject = yes
+				}
+			}
+			
+			traits = { ham_alpha_male
+						ham_conservative }
+		}
+	}
+	
+	
+	
+	
+	war_advisor = {
+		generic_psycho_general = {
+			allowed = {
+			}
+			available = {
+			
+			}
+			
+			picture = EQS_anonfilly
+			
+			ai_will_do = {
+				factor = 1.25
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_psychopathic_general
+						  }
+		}
+		generic_armchair_general = {
+			allowed = {
+			}
+			
+			picture = WNG_generic_land_1
+			
+			research_bonus = {
+				land_doctrine = 0.05
+			}
+			
+			ai_will_do = {
+				factor = 0.85
+			}
+			
+			traits = { ham_armchair_general
+						ham_conservative }
+		}
+		generic_ex_special_forces = {
+			allowed = {
+			}
+			
+			picture = generic_griffon_politician
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_ex_special_forces
+						  }
+		}
+		generic_tactical_genius = {
+			allowed = {
+			}
+			
+			picture = CHN_lascor_erebidae
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_tactical_genius
+						  }
+		}
+		generic_strategic_genius = {
+			allowed = {
+			}
+			
+			ai_will_do = {
+				factor = 0.85
+			}
+			
+			picture = CHN_hermis_thysbe
+			
+			traits = { ham_strategic_genius
+						  
+			}
+		}
+		generic_recruiter = {
+			allowed = {
+			}
+			
+			picture = EQS_fast_clip
+			
+			modifier = {
+				conscription_factor = 0.05
+			}
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = communism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_recruiter
+						  }
+		}
+		generic_popular_general = {
+			allowed = {
+			}
+			available = {
+
+			}
+			
+			picture = EQS_soarin
+			
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.6
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = democratic
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_popular_general
+						  }
+		}
+		generic_naive_militarist = {
+			allowed = {
+			}
+			
+			picture = EQS_sergeant_reckless
+			
+			ai_will_do = {
+				factor = 1.1
+				modifier = {
+					factor = 0.25
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						OR = {
+							is_historical_focus_on = yes
+							is_major = yes
+						}
+					}
+				}
+				modifier = {
+					factor = 0.5
+					AND = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						is_historical_focus_on = no
+					}
+				}
+			}
+			
+			traits = { ham_naive_militarist
+						  }
+		}
+	}
+	
+	
+	
+	
+	
+    gt_head_of_state = {
+        law = yes
+        use_list_view = yes
+
+        monarch = {
+
+            available = {
+                 
+                OR = {
+                    has_government = neutrality
+                    has_government = democratic
+                    has_government = fascism
+                }
+            }
+
+            cost = 200
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                stability_factor = 0.05
+                war_support_factor = 0.05
+            }
+
+            ai_will_do = {
+
+                base = 20
+
+
+                modifier = {
+                    has_government = neutrality 
+                    add = 40
+                }
+
+
+                modifier = {
+                    factor = 4
+                }
+            }
+
+            cancel_if_invalid = yes 
+        }
+
+        prime_minister = {
+
+            available = {
+               NOT = {
+                has_government = fascism
+               }
+            }
+
+            cost = 200
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.15
+            }
+
+            ai_will_do = {
+
+                base = 40
+
+                modifier = {
+                    has_government = neutrality
+                    add = -40
+                }
+
+                modifier = {
+                    has_government = democratic
+
+        
+                    #is_on_continent #= #europe
+                    add = 40
+                }
+
+                modifier = {
+                    has_idea = syndicalist_markets
+                    add = 20
+                }
+
+                modifier = {
+                    has_government = democratic
+                    add = 20
+                }
+
+                modifier = {
+                    factor = 4
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        president = {
+
+            available = {
+                  NOT = {
+                    has_government = fascism
+                    has_government = communism
+                  }
+            }
+
+            cost = 200
+            removal_cost = -1
+
+            modifier = {
+                stability_factor = 0.10
+                war_support_factor = 0.10
+            }
+
+            ai_will_do = {
+                
+                base = 40
+
+
+                modifier = {
+                    has_government = neutrality
+                    add = 80
+                }
+
+                modifier = {
+                    has_government = democratic
+                }
+
+
+                modifier = {
+                    factor = 4
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        military_head = {
+
+            available = {
+                NOT = {
+                    has_government = democratic
+                }
+            }
+
+            cost = 150
+            removal_cost = -1
+
+            modifier = {
+                offensive_war_stability_factor = 0.10
+                defensive_war_stability_factor = 0.15
+                war_support_factor = 0.20
+                max_command_power_mult = 0.20
+                #max_command_power = 10
+                command_power_gain_mult = 0.20
+                #command_power_gain = 0.10
+                stability_factor = -0.10
+                political_power_factor = -0.05
+
+            }
+
+            ai_will_do = {
+                
+                base = 0
+
+                modifier = {
+                    has_government = fascism
+                    add = 80
+                }
+
+                modifier = {
+                    factor = 4
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        chairman = {
+
+            available = {
+                has_government = communism
+            }
+
+            cost = 200
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.10
+                stability_factor = 0.05
+                drift_defence_factor = 0.20
+            }
+
+            ai_will_do = {
+
+                base = 40
+
+                modifier = {
+                    has_government = communism
+                    add = 80
+                }
+
+
+                modifier = {
+                    factor = 4
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        federal_council = {
+
+            available = {
+                has_idea = sassy_federated_state
+                NOT = {
+                     has_government = fascism
+                     #has_government #= #neutrality
+                }
+            }
+
+            cost = 200
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = -0.15
+                stability_factor = 0.05
+                war_support_factor = 0.10
+                defensive_war_stability_factor = 0.70
+                justify_war_goal_time = 0.30
+                stability_weekly = 0.0020
+            }
+
+            ai_will_do = {
+
+                 base = 0
+                 
+                 modifier = {
+                    NOT = {
+                        has_government = fascism
+                        has_government = neutrality
+                    }
+                    factor = 4000
+                 }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        communal_council = {
+
+            available = {
+                has_idea = communal_state
+            }
+
+            cost = 150
+            removal_cost = -1
+
+            modifier = {
+                army_core_defence_factor = 0.10
+                political_power_factor = 0.10
+                stability_factor = 0.05
+                non_core_manpower = 0.50
+                war_support_factor = -0.30
+                compliance_growth = 0.20
+                #resistance_target = -0.05
+            }
+
+            ai_will_do = {
+
+                base = 10
+                
+                modifier = {
+                    has_country_leader_ideology = anarchism
+                    add = 200
+                }
+
+
+            }
+            
+            cancel_if_invalid = yes
+        }
+
+        workers_council = {
+            
+            available = {
+                OR = {
+                    has_government = communism
+                    has_country_leader_ideology = socialism
+                } 
+            }
+
+            cost = 250
+            removal_cost = -1
+
+            modifier = {
+                political_power_factor = 0.05
+                war_support_factor = -0.20
+                stability_factor = 0.05
+                industrial_capacity_factory = 0.05
+                industrial_capacity_dockyard = 0.05
+                production_factory_start_efficiency_factor = 0.05
+                line_change_production_efficiency_factor = 0.05
+                production_factory_max_efficiency_factor = 0.05
+            }
+
+            ai_will_do = {
+
+                base = 0
+                
+                modifier = {
+                    has_government = communism
+                    add = 30
+                }
+
+                modifier = {
+                    has_government = communism
+                    has_idea = syndicalist_markets
+                    add = 60
+                }
+
+                modifier = {
+                    has_country_leader_ideology = anarchist_communism
+                    add = 60
+                }
+
+                modifier = {
+                    has_country_leader_ideology = marxism
+                    add = 40
+                }
+
+                modifier = {
+                    has_country_leader_ideology = socialism
+                    add = 20
+                }
+
+                modifier = {
+                    factor = 4
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+    }
+	
+	
+	
+	
+	mod_director = {
+		
+		law = yes
+		
+		Seasoned_General ={
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			traits = { WoundedWarHero }
+
+			cost = 150
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 3
+
+					OR = {
+						has_war = yes
+						is_major = yes
+					}
+				}
+				modifier = {
+					factor = 10
+
+					OR = {
+						date > 1943.1.1
+					}
+				}
+			}	
+		}
+		Accomplished_Admiral = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			traits = { OldSaltySkipper }
+
+			cost = 150		
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 3
+
+					OR = {
+						has_war = yes
+						is_major = yes
+					}
+				}
+				modifier = {
+					factor = 10
+
+					OR = {
+						date > 1943.1.1
+					}
+				}
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							is_coastal = no
+							dockyard < 1
+						}
+					}
+				}
+			}
+		}
+		Sky_Warden = {
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			traits = { UndefeatedDuelist }
+
+			cost = 150		
+			ai_will_do = {
+				factor = 0.5
+				modifier = {
+					factor = 2
+
+					AND = {
+						has_war = yes
+						is_major = yes
+					}
+				}
+				modifier = {
+					factor = 10
+
+					OR = {
+						date > 1943.1.1
+					}
+				}
+			}
+		}
+
+		Grizzled_Instructor = {
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			traits = { TrainingOurFinest }
+
+			cost = 200		
+			ai_will_do = {
+				factor = 0.5
+				modifier = {
+					factor = 2
+
+					AND = {
+						has_war = yes
+						is_major = yes
+					}
+				}
+				modifier = {
+					factor = 10
+
+					OR = {
+						date > 1943.1.1
+					}
+				}
+			}
+		}
+		
+		Challenging_inventor  = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			modifier = {
+				stability_weekly = -0.0020
+				consumer_goods_factor = 0.02
+				political_power_gain = -0.25
+				research_speed_factor = 0.08
+			}
+			cost = 150
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		Revered_Auditor = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			traits = { QualityControlMastermind }
+
+			cost = 150
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		Master_of_Disguise = {
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			modifier = {
+				political_power_gain = -0.15
+				own_operative_detection_chance_factor = -0.20
+				intel_network_gain_factor = 0.10
+				decryption_power = 20
+			}
+
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 2
+					AND = {
+						has_war = no
+					}
+				}
+			}
+
+			cost = 100
+		}
+
+		Driven_Detective = {
+			removal_cost = -1
+			cancel_if_invalid = no
+
+			modifier = {
+				political_power_gain = -0.15
+				enemy_operative_capture_chance_factor = 0.20
+				root_out_resistance_effectiveness_factor = 0.10
+				encryption = 10
+				intelligence_agency_defense = 1.0
+			}
+
+			ai_will_do = {
+				factor = 1.5
+				modifier = {
+					factor = 3.6 #Not great not terrible
+					AND = {
+						has_war = yes
+						is_major = yes
+					}
+				}
+			}
+
+			cost = 100
+		}
+
+		Oil_capitalists = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+					factor = 0
+			}
+			modifier = {
+				fuel_gain_factor = 0.25
+				fuel_gain_factor_from_states = 0.25
+				political_power_gain = -0.15
+			}
+			research_bonus = {
+				synth_resources = 0.25
+			}	
+			cost = 100		
+		}
+		
+		Master_of_propaganda = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			modifier = {
+				war_support_weekly = 0.0010
+				stability_weekly = 0.0010
+				political_power_gain = -0.15
+				monthly_population = 0.075
+				justify_war_goal_time = -0.10
+			}
+			cost = 50
+			ai_will_do = {
+				base = -1
+				modifier = {
+					add = 4
+
+					AND = {
+						has_war = no
+						is_major = no
+					}
+				}
+			}
+		}
+		
+		Revolutionary_leader = {
+			removal_cost = -1
+			cancel_if_invalid = yes
+			
+			available = {
+				is_subject = no
+			}
+			
+			modifier = {
+				political_power_factor = 0.10
+				communism_drift = 0.30
+			}
+			
+			cost = 150
+			ai_will_do = {
+				factor = 0.5
+				modifier = {
+					factor = 2
+
+					AND = {
+						has_war = no
+						has_government = communism
+					}
+				}
+				modifier = {
+					factor = 2
+
+					AND = {
+						is_major = no
+						date < 1943.1.1
+					}
+				}
+				modifier = {
+					factor = 100000
+
+					OR = {
+						has_completed_focus = internationalism_focus
+					}
+				}
+				modifier = {
+					factor = 0
+
+					OR = {
+						date > 1945.1.1
+					}
+				}
+			}
+		}
+		
+		Fascist_crusader = {
+			removal_cost = -1
+			cancel_if_invalid = yes
+			
+			available = {
+				is_subject = no
+			}
+
+			modifier = {
+				political_power_factor = 0.10
+				fascism_drift = 0.30
+			}
+			
+			cost = 150
+			ai_will_do = {
+				factor = 0.5
+				modifier = {
+					factor = 2
+
+					AND = {
+						has_war = no
+						has_government = fascism
+					}
+				}
+				modifier = {
+					factor = 2
+
+					AND = {
+						is_major = no
+						date < 1943.1.1
+					}
+				}
+				modifier = {
+					factor = 100000
+
+					OR = {
+						has_completed_focus = nationalism_focus
+					}
+				}
+				modifier = {
+					factor = 0
+
+					OR = {
+						date > 1945.1.1
+					}
+				}
+			}
+		}
+		
+		Democratic_idealist = {
+			removal_cost = -1
+			cancel_if_invalid = yes
+			
+			available = {
+				is_subject = no
+			}
+
+			modifier = {
+				political_power_factor = 0.10
+				democratic_drift = 0.30
+			}
+			
+			cost = 150
+			ai_will_do = {
+				factor = 0.3
+				modifier = {
+					factor = 2
+
+					AND = {
+						has_war = no
+						has_government = democratic
+					}
+				}
+				modifier = {
+					factor = 2
+
+					AND = {
+						is_major = no
+						date < 1943.1.1
+					}
+				}
+				modifier = {
+					factor = 100000
+
+					OR = {
+						has_completed_focus = interventionism_focus
+					}
+				}
+				modifier = {
+					factor = 0
+
+					OR = {
+						date > 1945.1.1
+					}
+				}
+			}
+		}
+		
+		
+		Neutral_parliament = {
+			removal_cost = -1
+			cancel_if_invalid = yes
+			
+			available = {
+				is_subject = no
+			}
+
+			modifier = {
+				political_power_factor = 0.10
+				neutrality_drift = 0.30
+			}
+			
+			cost = 150
+			ai_will_do = {
+				factor = 0.3
+				modifier = {
+					factor = 2
+
+					AND = {
+						has_war = no
+						has_government = neutrality
+					}
+				}
+				modifier = {
+					factor = 2
+
+					AND = {
+						is_major = no
+						date < 1943.1.1
+					}
+				}
+				modifier = {
+					factor = 100000
+
+					OR = {
+						has_completed_focus = neutrality_focus
+					}
+				}
+				modifier = {
+					factor = 0
+
+					OR = {
+						date > 1945.1.1
+					}
+				}
+			}
+		}
+	}
+}

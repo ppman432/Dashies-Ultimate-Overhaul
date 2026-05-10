@@ -1,0 +1,567 @@
+ideas = {
+	## Education
+	education = { 
+		law = yes
+		edu_minimal = {
+			
+			available = {
+				
+			}
+			removal_cost = -1
+		
+			modifier = {
+				research_speed_factor = -0.05
+				political_power_factor = 0.05
+				planning_speed = -0.1
+				max_planning = -0.1
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05			
+			}
+			
+			on_add = {
+				set_country_flag = edu_minimal
+				clr_country_flag = edu_low
+				clr_country_flag = edu_high
+				clr_country_flag = edu_excellent
+			}
+			
+			allowed_to_remove = {
+
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+		edu_low = {
+			
+			available = {
+				OR = {
+					has_idea = tax_low
+					has_idea = tax_average
+					has_idea = tax_high
+					has_idea = tax_extreme
+					}
+			}
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = -0.025
+				political_power_factor = 0.025
+				planning_speed = -0.05
+				max_planning = -0.05
+				
+				
+				
+			}
+			
+			on_add = {
+				set_country_flag = edu_low
+				clr_country_flag = edu_minimal
+				clr_country_flag = edu_high
+				clr_country_flag = edu_excellent
+			}
+			
+			allowed_to_remove = {
+
+			}
+			
+			default = yes
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 0
+   			}
+		}
+		edu_high = {
+			
+			available = {
+			OR = {
+				has_idea = tax_average
+				has_idea = tax_average
+				has_idea = tax_high			
+				has_idea = tax_extreme
+				}
+			}
+			
+			cost = 300
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.025								
+				industrial_capacity_factory = 0.025
+				industrial_capacity_dockyard = 0.025
+				political_power_factor = -0.05
+			}
+			
+			on_add = {
+				set_country_flag = edu_high
+				clr_country_flag = edu_low
+				clr_country_flag = edu_minimal
+				clr_country_flag = edu_excellent
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 100
+				modifier = {
+					factor = 0
+					has_manpower < 900000
+					is_major = yes
+					has_war = yes
+				}
+				modifier = {
+					factor = 0
+					has_manpower < 450000
+					is_major = no
+					has_war = yes
+				}
+   			}
+		}
+		edu_excellent = {
+			
+			available = {
+				OR ={ 
+				has_idea = tax_high
+				has_idea = tax_extreme
+				}
+			}
+
+			cost = 450
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.05
+				political_power_factor = -0.1
+				planning_speed = 0.05
+				max_planning = 0.05
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				stability_weekly  = 0.002
+			}
+			
+			on_add = {
+				set_country_flag = edu_excellent
+				clr_country_flag = edu_low
+				clr_country_flag = edu_high
+				clr_country_flag = edu_minimal
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1000
+				modifier = {
+					factor = 0
+					has_manpower < 1000000
+					is_major = yes
+					has_war = yes
+				}
+				modifier = {
+					factor = 0
+					has_manpower < 500000
+					is_major = no
+					has_war = yes
+				}
+			}
+		}
+	}
+	
+	
+	
+	
+    wp_education_focus = {
+        law = yes
+        use_list_view = yes
+
+        business_schools = {
+
+            available = {
+
+                NOT = {
+                    has_idea = planned_economy
+                }
+           }  
+
+            cost = 70
+            removal_cost = 10
+
+            modifier = {
+                local_resources_factor = 0.10
+                conversion_cost_civ_to_mil_factor = -0.25
+                conversion_cost_mil_to_civ_factor = -0.25
+                production_speed_buildings_factor = 0.05
+                trade_opinion_factor = 0.30
+            }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+                    has_government = communism
+                    add = -20
+                }
+
+                modifier = {
+                    has_idea = laisezz_faire
+                    add = 60
+                }
+
+                modifier = {
+                    has_idea = syndicalist_markets
+                    add = 20
+                }
+
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        military_academies = {
+
+            available = {
+                
+                NOT = {
+                    has_idea = disarmed_nation
+                }
+            }
+
+            cost = 70
+            removal_cost = 10
+
+            modifier = {
+                experience_gain_army = 0.05
+                experience_gain_navy = 0.05
+                experience_gain_air = 0.05
+                command_power_gain = 0.05
+                max_command_power_mult = 0.20
+                max_planning_factor = 0.10
+            }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+                    has_government = fascism
+                    has_idea = military_head
+                    add = 40
+                }
+
+                modifier = {
+                    has_idea = military_head
+                    add = 20
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        medical_universities = {
+            
+            available = {
+
+            }
+            
+            cost = 70
+            removal_cost = 10
+
+            modifier = {
+                research_speed_factor = 0.05
+                attrition = -0.10
+                army_morale_factor = 0.10
+                experience_loss_factor = -0.20
+
+            }
+
+            research_bonus = { hospital_tech = 1 }
+
+            ai_will_do = {
+                base = 40
+            }
+            
+            cancel_if_invalid = yes
+        }
+
+        elite_institutions = {
+
+            available = {
+
+            }
+            
+            cost = 70
+            removal_cost = 10
+            
+            modifier = {
+                research_speed_factor = 0.10
+                encryption_factor = 0.10
+                decryption_factor = 0.10
+            }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+                    has_government = democratic
+                    add = 20
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        propaganda_programs = {
+
+            available = {
+
+                NOT = {
+                    has_government = democratic
+                    has_idea = prime_minister
+                    has_idea = president
+                    has_idea = communal_council
+                    has_idea = workers_council
+                }
+            }
+
+            cost = 70
+            removal_cost = 10
+
+            modifier = {
+                political_power_factor = -0.15
+                recruitable_population_factor = 0.10
+                drift_defence_factor = 0.30
+                war_support_factor = 0.05
+                stability_factor = 0.05
+            }
+
+            ai_will_do = {
+                base = 20
+
+                modifier = {  
+                   has_idea = chairman
+                   add = 40
+                }
+                
+                modifier = {
+                    has_government = fascism
+                    add = 40
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+    }
+	
+	
+    wp_education_policy = {
+        law = yes
+        use_list_view = yes
+
+        subsidized_higher_education = {
+
+            available = {
+                
+            }
+
+            level = 5
+
+            modifier = {
+                consumer_goods_factor = 0.10
+                production_factory_max_efficiency_factor = 0.10
+                production_factory_efficiency_gain_factor = 0.10
+                research_speed_factor = 0.15
+                drift_defence_factor = -0.30
+                female_random_operative_chance = 0.5
+                army_leader_start_level = 1
+            }
+
+            ai_will_do = {
+                base = 20
+
+                modifier = {
+                    has_government = communism
+                    add = 100
+                }
+
+                modifier = {
+                    has_idea = welfare_capitalism
+                    add = 40
+                }
+
+                modifier = {
+                    has_government =  democratic
+                    add = 10
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        subsidized_basic_education = {
+
+            available = {
+
+            }
+
+            level = 4
+
+            modifier = {
+                consumer_goods_factor = 0.05
+                production_factory_max_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                research_speed_factor = 0.075
+                drift_defence_factor = -0.10
+                female_random_operative_chance = 0.30
+            }
+
+            ai_will_do = {
+                base = 30
+
+                modifier = {
+
+                    has_idea = welfare_capitalism
+                    add = 40
+                }
+
+                modifier = {
+                    has_government = democratic
+                    add = 20
+                }
+
+                modifier = {
+                    has_government = communism
+                    add = 50
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        basic_education_system = {
+
+            available = {
+
+            }
+            
+            cost = 50
+            level = 3
+
+            modifier = {
+                monthly_population = 0.05
+                research_speed_factor = 0.05
+                female_random_operative_chance = 0.10
+            }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+                    has_government = democratic
+                    add = -20
+                }
+
+                modifier = {
+                    
+                    OR = {
+                        has_idea = laisezz_faire
+                        has_idea = rentier_state
+                    }
+
+                    add = 30
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        no_official_education_system = {
+
+            available = {
+                
+                NOT = {
+                    has_government = communism
+                    has_government = democratic
+                    has_idea = welfare_capitalism
+                    has_idea = planned_economy
+                    has_idea = state_capitalism
+                }
+            }
+            
+            level = 2
+
+            modifier = {
+                consumer_goods_factor = -0.05
+                production_factory_max_efficiency_factor = -0.05
+                production_factory_efficiency_gain_factor = -0.05
+                monthly_population = 0.25
+                research_speed_factor = -0.10
+                drift_defence_factor = 0.30
+            }
+
+            ai_will_do = {
+                base = 1
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        left_to_the_market = {
+
+            available = {
+
+                OR = {
+                    has_idea = rentier_state
+                    has_idea = laisezz_faire
+                    has_idea = welfare_capitalism
+                    has_idea = mixed_market
+                    has_idea = syndicalist_markets
+                }
+            }
+
+            level = 1
+
+            modifier = {
+                consumer_goods_factor = -0.10
+                research_speed_factor = 0.10
+                stability_factor = -0.05
+                industrial_capacity_factory = -0.05
+                female_random_operative_chance = 0.20
+                drift_defence_factor = -0.50
+            }
+
+            ai_will_do = {
+                base = 0
+
+                modifier = {
+                    has_idea = welfare_capitalism
+                    add = 5
+                }
+
+                modifier = {   
+                        has_idea = laisezz_faire
+                        add = 100
+                }
+
+                modifier = {
+                    has_idea = rentier_state
+                    add = 20
+                }
+
+                modifier = {
+                    has_idea = mixed_market
+                    add = 10
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+    }
+	
+	
+	
+	
+	
+}
+### EOF ###

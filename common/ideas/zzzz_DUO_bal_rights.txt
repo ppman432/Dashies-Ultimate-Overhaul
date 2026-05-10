@@ -1,0 +1,1164 @@
+ideas = {
+
+
+	mr_role_of_women = { 
+		law = yes
+
+		stay_at_home = {
+			removal_cost = -1
+			level = 4
+			
+			available = {
+			}
+
+			modifier = {
+				political_power_factor = 0.1
+			}
+			
+			ai_will_do = {
+				factor = 1
+			}
+			
+			cancel_if_invalid = no
+			
+			default = yes
+		}
+		women_workers = {
+			removal_cost = -1
+			level = 3
+			
+			available = {
+				OR = {
+					has_war = yes
+					has_government = communism
+					tag = JAP
+				}
+			}
+			
+			ai_will_do = {
+				factor = 25
+			}
+
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.1
+				production_factory_efficiency_gain_factor = 0.15
+			}
+			
+			cancel_if_invalid = yes
+		}
+		egalitarian = {
+			removal_cost = -1
+			level = 1
+			
+			available = {
+				OR = {
+					AND = {
+						has_war = yes
+						has_government = communism
+					}
+					
+					AND = {
+						has_war = yes
+						NOT = { has_government = fascism }
+						enemies_strength_ratio > 1.5
+					}
+				}
+			}
+			
+			ai_will_do = {
+				factor = 10
+			}
+
+			modifier = {
+				conscription = 0.06
+				political_power_factor = -0.20
+				training_time_factor = 0.15
+			}
+			
+			cancel_if_invalid = yes
+		}
+	}
+	
+	
+	
+	
+
+    mj_female_service = {
+        law = yes
+        use_list_view = yes
+        
+
+        equal_service = {
+
+            available = {
+                
+                OR = {
+                    has_idea = affirmative_actionF
+                    has_idea = full_equality
+                }
+            }
+
+            level = 4
+
+            modifier = {
+                political_power_factor = -0.05
+                war_support_factor = 0.05
+                stability_factor = 0.05
+                conscription_factor = 0.25
+            }
+
+            ai_will_do = {
+                base = 20
+
+                modifier = {
+                    has_government = communism
+                    add = 80
+                }
+
+                modifier = {
+                    has_government = communism
+                    tag = SOV 
+                    add = 400
+                }
+
+                modifier = {
+                    has_idea = affirmative_actionF
+                    add = 60    
+                }
+
+                modifier = {
+                    has_idea = full_equality
+                    add = 40
+                }
+                
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        support_roles = {
+
+            available = {
+                
+                NOT = {
+                    has_idea = no_legal_protections
+                    has_idea = patriarchal_society
+                }
+            }
+
+            level = 3
+
+            modifier = {
+                political_power_factor = -0.1
+				supply_consumption_factor = -0.15
+                stability_factor = 0.05
+                conscription_factor = 0.10
+                training_time_army_factor =  -0.05
+                army_morale_factor = 0.05
+                experience_loss_factor = -0.05
+            }
+
+            ai_will_do = {
+                base = 30 
+
+                modifier = {
+                    has_idea = limited_womens_rights
+                    add = 20
+                }
+
+                modifier = {
+                    has_government = democratic
+                    add = 10
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        non_combat_roles = {
+
+            available = {
+                NOT = {
+                    has_idea = affirmative_actionF
+                    has_idea = full_equality
+                }
+            }
+
+            level = 1
+
+            modifier = {
+                stability_factor = -0.025
+                conscription_factor = 0.05
+                attrition = -0.10
+            }
+
+            research_bonus = {hospital_tech = 0.25}
+
+            ai_will_do = {
+                base = 20
+
+                modifier = {
+                    has_idea = no_legal_protections
+                    add = 20
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        service_prohibited = {
+            
+            available = {
+                NOT = {
+                    has_idea = affirmative_actionF
+                    has_idea = full_equality
+                }
+            }
+
+            level =  2
+
+            modifier = {
+                political_power_factor = 0.05
+                stability_factor = -0.05
+                drift_defence_factor = 0.05
+            }
+
+            ai_will_do = {
+                base = 10
+
+                modifier = {
+                    has_government = fascism
+                    add = 100
+                }
+
+                modifier = {
+                    has_idea = patriarchal_society
+                    add = 100
+                }
+
+                modifier = {
+                    has_idea = no_legal_protections
+                    add = 70
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+    }
+	
+	
+	
+	
+    gp_minority_rights = {
+        law = yes
+        use_list_view = yes
+
+        affirmative_action = {
+            
+            available = {
+                OR = {
+                    NOT = {
+                        has_government = fascism
+                        has_government = neutrality
+                    }
+                    has_country_leader_ideology = anarchism
+                }
+            }
+
+            level = 5
+
+            modifier = {
+                political_power_factor = -0.20
+                non_core_manpower = 0.25
+                stability_factor = 0.10
+                resistance_damage_to_garrison = -0.30
+            }
+
+            ai_will_do = { 
+                base = 10
+                
+                modifier = {
+                    has_government = democratic
+                    add = 30
+                }
+
+                modifier = {
+                    has_government = communism
+                    add = 70
+                }
+
+                modifier = {
+                    factor = 3
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        significant_rights = {
+
+            available = {
+                NOT = {
+                    has_government = fascism
+                }
+            }
+
+            level = 4
+
+            modifier = {
+                political_power_factor = -0.10
+                non_core_manpower = 0.15
+                stability_factor = 0.05
+                resistance_damage_to_garrison = -0.15
+            }
+
+            ai_will_do = {
+                base = 20
+
+                modifier = {
+                    OR = {
+                        has_government = democratic
+                        has_government = communism
+                    }
+                    add = 40
+                } 
+                
+                modifier = {
+                    factor = 3
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        neutral_stance = {
+            available = {
+            }
+
+            level = 3
+
+            modifier = {
+                #political_power_factor = 0.05
+                non_core_manpower = 0.05
+                stability_factor = 0.025
+                #resistance_damage_to_garrison #= #-0.15
+            }
+
+            ai_will_do = {
+                base = 30
+
+                modifier = {
+                    has_government = neutrality
+                    add = 70
+                }
+
+                modifier = {
+                    has_government = democratic
+                    add = 20
+                }
+
+                modifier = {
+                    factor = 3
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        racial_segregation = {
+            available = {
+                NOT = {
+                    has_government = communism
+                }
+                
+            }
+
+            level = 2
+
+            modifier = {
+                political_power_factor = 0.10
+                non_core_manpower = -0.25
+                resistance_damage_to_garrison = 0.15
+            }
+
+            ai_will_do = {
+                base = 10
+
+                modifier = {
+                    has_government = neutrality
+                    add = 30
+                }
+
+                modifier = {
+                    has_government = fascism
+                    add = 60
+                }
+
+                modifier = {
+                    has_government = democratic
+                    original_tag = ENG
+                    add = 30
+                }
+
+                modifier = {
+                    factor = 3
+                }
+
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        racial_hierarchy = {
+            available = {
+                has_government = fascism
+            }
+
+            level = 1
+            
+            modifier = {
+                political_power_factor = 0.20
+                non_core_manpower = -0.50
+                conscription_factor = 0.10
+                stability_factor = -0.05
+                resistance_damage_to_garrison = 0.40
+            }
+
+            ai_will_do = {
+                base = 1
+
+                modifier = {
+                    has_government = fascism
+                    add = 80
+                }
+
+                modifier = {
+                  has_government = fascism
+                  original_tag = GER
+                  add = 100
+                }
+
+                modifier = {
+                    has_government = fascism
+                    original_tag = JAP
+                    add = 100
+                }
+
+                modifier = {
+                    factor = 3
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+    }
+	
+	
+	
+	
+	
+    gp_gender_equality = {
+        law = yes
+        use_list_view = yes
+
+        affirmative_actionF = {
+            
+            available = {
+            }
+
+            level = 5
+
+            modifier = {
+                political_power_factor = -0.25
+                monthly_population = -0.3
+                industrial_capacity_factory = 0.30
+                production_factory_max_efficiency_factor = 0.10
+                production_factory_efficiency_gain_factor = 0.05
+				
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.15
+
+            }
+
+            ai_will_do = {
+
+                base = 10
+
+                modifier = {
+                    has_government = democratic
+                    add = 20
+                }
+
+                modifier = {
+                    has_government = communism
+                    add = 60
+                }
+
+                modifier = {
+                    factor = 3
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        full_equality = {
+             
+             available = {
+             }
+
+             level = 4
+
+             modifier = {
+                political_power_factor = -0.05
+                monthly_population = -0.15
+                industrial_capacity_factory = 0.05
+                production_factory_max_efficiency_factor = 0.05
+             }
+
+             ai_will_do = {
+
+                base = 20
+
+                modifier = {
+                    has_government = democratic
+                    add = 40
+                }
+
+                modifier = {
+                    has_government = communism
+                    add = 30
+                }
+
+                modifier = {
+                    factor = 3
+                }
+
+             }
+
+             cancel_if_invalid = yes
+        }
+
+        limited_womens_rights = {
+            
+            available = {
+            }
+
+            level = 3
+
+            modifier = {
+                monthly_population = 0.05
+                stability_factor = 0.02
+                industrial_capacity_factory = 0.125
+				political_power_factor = -0.1
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.05
+            }
+
+            ai_will_do = {
+
+                base = 30
+
+                modifier = {
+                    has_government = democratic
+                    add = 15
+                }
+
+                modifier = {
+                    has_government = neutrality
+                    factor = 40
+                }
+
+                modifier = {
+                    has_government = fascism
+                    add = 10
+                }
+
+                modifier = {
+                    factor = 3
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        no_legal_protections = {
+
+            available = {
+            }
+
+            level = 2
+
+            modifier = {
+                political_power_factor = 0.20
+                monthly_population = 0.2
+                industrial_capacity_factory = -0.05
+                production_factory_max_efficiency_factor = -0.10
+                production_factory_efficiency_gain_factor = -0.05
+				conscription_factor = -0.2
+				production_speed_buildings_factor = -0.2
+				research_speed_factor = -0.15
+				
+            }
+            
+            ai_will_do = {
+
+                base = 20
+
+                modifier = {
+                    has_government = neutrality
+                    add = 30
+                }
+
+                modifier = {
+                    has_government = fascism
+                    add = 50
+                }
+
+                modifier = {
+                    factor = 3
+                }
+            }
+            
+            cancel_if_invalid = yes
+        }
+
+        patriarchal_society = {
+
+            available = {
+            }
+
+            level = 1
+
+            modifier = {
+                political_power_factor = 0.4
+                monthly_population = 0.4
+                industrial_capacity_factory = -0.2
+                production_factory_max_efficiency_factor = -0.15
+                production_factory_efficiency_gain_factor = -0.10
+				
+				production_speed_buildings_factor = -0.1
+				research_speed_factor = -0.05
+				
+				
+
+            }
+
+            ai_will_do = {
+
+                base = 10
+
+                modifier = {
+                    has_government = fascism
+                    add = 90
+                }
+
+                modifier = {
+                    has_government = neutrality 
+                    add = 10
+                }
+
+                modifier = {
+                    factor = 3
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+    }
+	
+	
+	
+
+	
+
+    gp_immigration_policy = {
+        law = yes
+        use_list_view = yes
+
+       open_borders = {
+
+         available = {
+            NOT = {
+                has_government = fascism
+            }
+         }
+
+         level = 6
+
+         modifier = {
+            political_power_factor = -0.05
+            stability_factor = -0.10
+            monthly_population = 0.30
+            research_speed_factor = 0.05
+            production_factory_efficiency_gain_factor = 0.10
+            production_factory_max_efficiency_factor = 0.10
+         }
+
+         ai_will_do = {
+
+            base = 10
+           
+            modifier = {
+                has_government = democratic 
+                add = 40
+            }
+            
+            modifier = {
+                has_government = communism
+                add = 50
+            }
+
+            modifier = {
+                factor = 3
+            }
+
+         }
+
+         cancel_if_invalid = yes
+       }
+
+       citizenship = {
+        available = {
+            NOT = {
+                has_government = fascism
+            }
+        }
+
+        level = 5
+
+        modifier = {
+            political_power_factor = -0.025
+            stability_factor = -0.05
+            monthly_population = 0.15
+            research_speed_factor = 0.025
+            production_factory_efficiency_gain_factor = 0.05
+            production_factory_max_efficiency_factor = 0.05
+        }
+
+        ai_will_do = {
+
+            base = 20
+
+            modifier = {
+                has_government = democratic
+                add = 40
+            }
+
+            modifier = {
+                factor = 3
+            }
+        }
+
+        cancel_if_invalid = yes
+        
+       }
+
+       limited_citizenship = {
+        available = {
+
+        }
+        
+        level = 4
+
+        modifier = {
+            monthly_population = 0.10
+            research_speed_factor = 0.01
+            production_factory_efficiency_gain_factor = 0.01
+            production_factory_max_efficiency_factor = 0.01
+        }
+
+        ai_will_do = {
+            base = 30
+
+            modifier = {
+                has_government = neutrality
+                add = 30
+            }
+
+            modifier = {
+                factor = 3
+            }
+        }
+
+        cancel_if_invalid = yes
+
+       }
+
+       strict_immigration_controls = {
+        available = {
+            NOT = {
+             has_government = democratic
+            }
+        }
+
+        level = 3
+
+        modifier = {
+            political_power_factor = 0.05
+            stability_factor = 0.05
+            monthly_population = 0.05
+            drift_defence_factor = 0.10
+
+            
+        }
+
+        ai_will_do = { 
+            base = 10
+
+            modifier = {
+                has_government = neutrality
+                add = 30
+            }
+
+            modifier = {
+                has_government = fascism
+                add = 60
+            }
+
+            modifier = {
+                factor = 3
+            }
+        }
+
+        cancel_if_invalid = yes
+
+       }
+
+       closed_borders = {
+        available = {
+            NOT = { 
+                OR = {
+                    has_government = democratic
+                    has_government = communism
+                }
+            }
+        }
+
+        level = 2
+
+        modifier = {
+            political_power_factor = 0.05
+            stability_factor = 0.10
+            drift_defence_factor = 0.20
+        }
+
+        ai_will_do = {
+            base = 5
+            
+            modifier = {
+                has_government = fascism
+                add = 80
+            }
+
+            modifier = {
+                factor = 3
+            }
+        }
+
+        cancel_if_invalid = yes
+       }
+
+       political_refugees = {
+
+        level = 1
+
+        modifier = {
+            consumer_goods_factor = 0.05
+            political_power_gain = 0.1
+            #monthly_population = 0.1
+            drift_defence_factor = 0.3
+            weekly_manpower = 100
+            research_speed_factor = 0.05
+
+        }
+
+        ai_will_do = {
+            base = 30
+            modifier = {
+              has_government = communism
+              add = 80
+            }
+
+            modifier = {
+                factor = 3
+            }
+        }
+
+        cancel_if_invalid = yes
+       }
+    }
+	
+	
+	
+	
+	
+	press_laws = {
+		law = yes
+
+		free_press = {
+						
+			cost = 50
+			removal_cost = -1
+			
+			available = {
+				has_government = democratic
+			}
+			
+			modifier = {
+				research_speed_factor = 0.05
+				drift_defence_factor = -0.15
+			}
+			
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 2
+					has_government = democratic
+				}
+   			}
+			
+			cancel_if_invalid = no
+			default = yes
+		}
+		
+		censored_press = {
+						
+			cost = 50
+			removal_cost = -1
+			
+		available = {
+			OR = { 
+					has_government = fascism
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				#production_speed_industrial_complex_factor = 0.05
+				#production_speed_arms_factory_factor = 0.05
+				production_speed_buildings_factor = 0.05
+
+			}
+			
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 2
+					has_government = democratic
+					has_war = yes
+				}
+				
+				modifier = {
+					factor = 10
+					has_government = communism
+				}
+				
+				modifier = {
+					factor = 10
+					has_government = fascism
+				}
+   			}
+			
+			cancel_if_invalid = no
+		}
+		
+		resistance_press = {
+						
+			cost = 50
+			removal_cost = -1
+			
+		available = {
+			OR = { 
+					has_government = fascism
+					has_government = communism
+					has_government = democratic
+				}
+			}
+		
+			modifier = {
+				experience_gain_army = 0.1
+			}
+			
+			ai_will_do = {
+   				factor = 1
+				
+				modifier = {
+					factor = 2
+					surrender_progress > 0.50
+					has_war = yes
+				}
+
+   				modifier = {
+					factor = 10
+					has_capitulated = yes
+					has_war = yes
+				}
+				
+				modifier = {
+					factor = 10
+					tag = FRA
+					has_global_flag = fall_of_france
+					has_capitulated = yes
+				}
+   			}
+			
+			cancel_if_invalid = no
+		}
+		
+		productive_press = {
+						
+			cost = 50
+			removal_cost = -1
+			
+		available = {
+			OR = { 
+					has_government = fascism
+					has_government = communism
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+			
+			modifier = {
+				production_factory_efficiency_gain_factor = 0.10
+			}
+			
+			ai_will_do = {
+   				factor = 1
+				
+				modifier = {
+					factor = 2
+					num_of_factories >75
+				}
+   			}
+			
+			cancel_if_invalid = no
+		}
+		
+		call_for_volunteers_press = {
+						
+			cost = 50
+			removal_cost = -1
+			
+			available = {
+			OR = { 
+					has_government = fascism
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+
+			modifier = {
+				conscription = 0.01
+			}
+			
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 2
+					surrender_progress > 0.60
+				}
+   			}
+			
+			
+			cancel_if_invalid = no
+		}
+		
+		agressive_press = {
+						
+			cost = 50
+			removal_cost = -1
+			
+			available = {
+			OR = { 
+					has_government = fascism
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				justify_war_goal_time = -0.25
+				experience_gain_army = 0.05
+			}
+			
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 3
+					has_added_tension_amount > 0.20
+				}
+				
+				modifier = {
+					factor = 5
+					tag = GER
+				}
+   			}
+			
+			cancel_if_invalid = no
+		}
+		
+		nationalism_press = {
+						
+			cost = 50
+			removal_cost = -1
+			
+			available = {
+			OR = { 
+					has_government = democratic
+					has_government = communism
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+
+			modifier = {
+				weekly_manpower = 750
+			}
+			
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+					factor = 3
+					has_added_tension_amount > 0.20
+				}
+   			}
+			
+			cancel_if_invalid = no
+		}
+		
+		security_press = {
+						
+			cost = 50
+			removal_cost = -1
+			
+				available = {
+			OR = { 
+					has_government = fascism
+					has_government = communism
+				}
+			}
+
+			modifier = {
+				encryption_factor = 0.05
+				army_intel_to_others = -10
+				civilian_intel_to_others = -10
+			}
+			
+			ai_will_do = {
+   				factor = 1
+   			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	
+	
+}
