@@ -1,0 +1,76 @@
+add_namespace = ceasefire_api
+
+# Ceasefire Mechanics - Submod API (events)
+#
+# These are hidden, stable entry points intended for other mods to trigger.
+# Scope conventions:
+# - Start events: ROOT = receiver, FROM = initiator
+# - Break/End events: ROOT = breaker/ender, FROM = other signatory
+
+# ------------------------------------------------------------
+# START CEASEFIRE (faction rules enforced)
+# ------------------------------------------------------------
+country_event = {
+    id = ceasefire_api.100
+    hidden = yes
+    is_triggered_only = yes
+    immediate = { ceasefire_api_start_faction = yes }
+}
+
+# START CEASEFIRE (faction rules enforced, participants-only)
+country_event = {
+    id = ceasefire_api.101
+    hidden = yes
+    is_triggered_only = yes
+    immediate = { ceasefire_api_start_faction_participants_only = yes }
+}
+
+# START CEASEFIRE (two countries only)
+country_event = {
+    id = ceasefire_api.102
+    hidden = yes
+    is_triggered_only = yes
+    immediate = { ceasefire_api_start_two_country = yes }
+}
+
+# FORCE START CEASEFIRE (two countries only; ignores faction-leader enforcement)
+country_event = {
+    id = ceasefire_api.103
+    hidden = yes
+    is_triggered_only = yes
+    immediate = { ceasefire_api_force_start_two_country = yes }
+}
+
+# ------------------------------------------------------------
+# BREAK CEASEFIRE (resume war)
+# ------------------------------------------------------------
+country_event = {
+    id = ceasefire_api.200
+    hidden = yes
+    is_triggered_only = yes
+    immediate = { ceasefire_api_break_and_resume_war = yes }
+}
+
+country_event = {
+    id = ceasefire_api.201
+    hidden = yes
+    is_triggered_only = yes
+    immediate = { ceasefire_api_force_break_and_resume_war = yes }
+}
+
+# ------------------------------------------------------------
+# END CEASEFIRE (no war resume; cleanup only)
+# ------------------------------------------------------------
+country_event = {
+    id = ceasefire_api.210
+    hidden = yes
+    is_triggered_only = yes
+    immediate = { ceasefire_api_end_ceasefire = yes }
+}
+
+country_event = {
+    id = ceasefire_api.211
+    hidden = yes
+    is_triggered_only = yes
+    immediate = { ceasefire_api_force_end_ceasefire = yes }
+}

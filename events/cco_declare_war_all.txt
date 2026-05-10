@@ -1,0 +1,27 @@
+﻿add_namespace = cco_declare_war_all
+country_event = {
+	id = cco_declare_war_all.1
+	title = cco_declare_war_all.1.t
+	desc = cco_declare_war_all.1.d
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		name = cco_declare_war_all.1.a
+		FROM = {
+			if = {
+				limit = {
+					NOT = {
+						is_in_faction_with = PREV
+					}
+					ROOT = {
+						is_on_continent = africa
+					}
+				}
+				declare_war_on = {
+					target = PREV
+					type = annex_everything
+				}
+			}
+		}
+	}
+}

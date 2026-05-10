@@ -1,0 +1,204 @@
+add_namespace = ceasefire_events
+
+# =====================================================================
+# Ceasefire Mechanics - Flavor Events
+# All events are triggered via scripted effects / on_actions and are
+# gated by the game rule `ceasefire_events_rule`.
+# =====================================================================
+
+# Shared strings:
+# - title keys are reused across variants
+# - option key is reused across most events
+
+# ---------------------------------------------------------------------
+# Ceasefire signed (leaders)
+# FROM = the other signatory
+# ---------------------------------------------------------------------
+country_event = {
+    id = ceasefire_events.10
+    title = ceasefire_events.ceasefire_signed.t
+    desc = ceasefire_events.10.d
+    picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok custom_effect_tooltip = ceasefire_terms_tt }
+}
+country_event = {
+    id = ceasefire_events.11
+    title = ceasefire_events.ceasefire_signed.t
+    desc = ceasefire_events.11.d
+    picture = GFX_report_event_generic_sign_treaty1
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok custom_effect_tooltip = ceasefire_terms_tt }
+}
+country_event = {
+    id = ceasefire_events.12
+    title = ceasefire_events.ceasefire_signed.t
+    desc = ceasefire_events.12.d
+    picture = GFX_report_event_generic_sign_treaty2
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok custom_effect_tooltip = ceasefire_terms_tt }
+}
+country_event = {
+    id = ceasefire_events.13
+    title = ceasefire_events.ceasefire_signed.t
+    desc = ceasefire_events.13.d
+    picture = GFX_report_event_generic_sign_treaty3
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok custom_effect_tooltip = ceasefire_terms_tt }
+}
+country_event = {
+    id = ceasefire_events.14
+    title = ceasefire_events.ceasefire_signed.t
+    desc = ceasefire_events.14.d
+    picture = GFX_report_event_generic_conference
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok custom_effect_tooltip = ceasefire_terms_tt }
+}
+
+# ---------------------------------------------------------------------
+# Ceasefire signed (participants)
+# FROM = your side's signatory (leader)
+# ---------------------------------------------------------------------
+country_event = {
+    id = ceasefire_events.15
+    title = ceasefire_events.ceasefire_signed_participant.t
+    desc = ceasefire_events.15.d
+    picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.16
+    title = ceasefire_events.ceasefire_signed_participant.t
+    desc = ceasefire_events.16.d
+    picture = GFX_report_event_generic_defensive_preparations
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.17
+    title = ceasefire_events.ceasefire_signed_participant.t
+    desc = ceasefire_events.17.d
+    picture = GFX_report_event_generic_read_write
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+
+# ---------------------------------------------------------------------
+# Ceasefire broken (breaker)
+# FROM = the country you resumed hostilities against
+# ---------------------------------------------------------------------
+country_event = {
+    id = ceasefire_events.30
+    title = ceasefire_events.ceasefire_broken.t
+    desc = ceasefire_events.30.d
+    picture = GFX_report_event_generic_rifles
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.31
+    title = ceasefire_events.ceasefire_broken.t
+    desc = ceasefire_events.31.d
+    picture = GFX_report_event_generic_military_parade
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.32
+    title = ceasefire_events.ceasefire_broken.t
+    desc = ceasefire_events.32.d
+    picture = GFX_report_event_generic_panzer_attack
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.33
+    title = ceasefire_events.ceasefire_broken.t
+    desc = ceasefire_events.33.d
+    picture = GFX_report_event_generic_conference
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.34
+    title = ceasefire_events.ceasefire_broken.t
+    desc = ceasefire_events.34.d
+    picture = GFX_report_event_generic_battle
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+
+# ---------------------------------------------------------------------
+# Ceasefire broken (victim)
+# FROM = the country that resumed hostilities
+# ---------------------------------------------------------------------
+country_event = {
+    id = ceasefire_events.35
+    title = ceasefire_events.ceasefire_shattered.t
+    desc = ceasefire_events.35.d
+    picture = GFX_report_event_generic_defensive_preparations
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.36
+    title = ceasefire_events.ceasefire_shattered.t
+    desc = ceasefire_events.36.d
+    picture = GFX_report_event_generic_bombers
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.37
+    title = ceasefire_events.ceasefire_shattered.t
+    desc = ceasefire_events.37.d
+    picture = GFX_report_event_generic_riot
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.38
+    title = ceasefire_events.ceasefire_shattered.t
+    desc = ceasefire_events.38.d
+    picture = GFX_report_event_generic_ruins
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.39
+    title = ceasefire_events.ceasefire_shattered.t
+    desc = ceasefire_events.39.d
+    picture = GFX_report_event_generic_army
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+
+# ---------------------------------------------------------------------
+# Ceasefire holds (cooldown elapsed)
+# FROM = the other signatory
+# ---------------------------------------------------------------------
+country_event = {
+    id = ceasefire_events.50
+    title = ceasefire_events.ceasefire_holds.t
+    desc = ceasefire_events.50.d
+    picture = GFX_report_event_generic_handshake
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.51
+    title = ceasefire_events.ceasefire_holds.t
+    desc = ceasefire_events.51.d
+    picture = GFX_report_event_generic_conference
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
+country_event = {
+    id = ceasefire_events.52
+    title = ceasefire_events.ceasefire_holds.t
+    desc = ceasefire_events.52.d
+    picture = GFX_report_event_generic_peaceful_annexation
+    is_triggered_only = yes
+    option = { name = ceasefire_events.ok }
+}
