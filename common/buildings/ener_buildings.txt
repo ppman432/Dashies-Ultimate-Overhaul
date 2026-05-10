@@ -1,0 +1,18 @@
+buildings = {
+
+	coal_mine = {
+		show_on_map = 0
+		base_cost = 3500
+		per_level_extra_cost = 6000
+		local_resources_coal = 2
+		icon_frame = 44
+		value = 1
+		damage_factor = 0.2 #this is a coal mine , yes it is under ground stuff or on ground but it would not be a good idea to make it very bombable
+		allied_build = yes
+		infrastructure_construction_effect = yes
+		level_cap = {
+			shares_slots = yes
+			state_max = 3
+		}
+	}
+}
