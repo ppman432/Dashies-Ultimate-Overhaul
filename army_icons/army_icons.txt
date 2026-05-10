@@ -1,0 +1,6932 @@
+﻿army = {
+	gfx = GFX_eawarmyicons_theatre_army_shield
+	
+	icon = {
+		#Example of icon script, corresponding to the frame index in the .dds files
+		#color_override = no
+		#name = "EQUAL_ICON"
+		#available = 
+		#{
+		#	tag = CHI
+		#}
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+		color_override = no
+		name = "4. Armee"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "16. Armee"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1. Panzerarmee"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "V. Armeekorps"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "6. Armee"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "7. Armee"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2. Armee"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2. Panzerarmee"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "10. Armee"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "11. Armee"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "14. Armee"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "17. Armee"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "18. Armee"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzergruppe H"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzergruppe E"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzergruppe Z"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzergruppe A"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Panzergruppe D"
+		available = 
+		{
+			OR = {
+				original_tag = CHN
+				original_tag = CCN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "First Army"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Second Army"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Eighth Army"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Tenth Army"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Fourteenth Army"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Northern Command"
+		available = 
+		{
+			original_tag = EQS
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Eastern Command"
+		available = 
+		{
+			OR = {
+				original_tag = DMT
+				original_tag = BRZ
+				original_tag = HYE
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Western Command"
+		available = 
+		{
+			original_tag = EQS
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Southern Command"
+		available = 
+		{
+			original_tag = EQS
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Aldershot Command"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Scottish Command"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "8th Army"
+		available = 
+		{
+			OR = {
+				original_tag = HIP
+				original_tag = WIN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1st Army"
+		available = 
+		{
+			OR = {
+				original_tag = HIP
+				original_tag = WIN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2nd Army"
+		available = 
+		{
+			OR = {
+				original_tag = HIP
+				original_tag = WIN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "3rd Army"
+		available = 
+		{
+			OR = {
+				original_tag = HIP
+				original_tag = WIN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "5th Army"
+		available = 
+		{
+			OR = {
+				original_tag = HIP
+				original_tag = WIN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "6th Army"
+		available = 
+		{
+			OR = {
+				original_tag = HIP
+				original_tag = WIN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "7th Army"
+		available = 
+		{
+			OR = {
+				original_tag = HIP
+				original_tag = WIN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "9th Army"
+		available = 
+		{
+			OR = {
+				original_tag = HIP
+				original_tag = WIN
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1re Armée"
+		available = 
+		{
+			OR = {
+				original_tag = JER
+				original_tag = JEB
+				original_tag = JRR
+				original_tag = JFT
+				original_tag = VIN
+				original_tag = JES
+			}
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Forces françaises libres"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "2e Armée"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1. Allied Army"
+		available = 
+		{
+			has_government = democratic
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1. Homeland Defense Army"
+		available = 
+		{
+			has_government = fascism
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Sunflower Defense Corps"
+		available = 
+		{
+			has_government = neutrality
+		}
+	}
+	icon = {
+		color_override = no
+		name = "I. Army"
+	}
+	icon = {
+		color_override = no
+		name = "II. Army"
+	}
+	icon = {
+		color_override = no
+		name = "III. Army"
+	}
+	icon = 
+	{
+		color_override = no
+		name = "1. Celestial Penetration Army"
+		available = 
+		{
+			has_government = fascism
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1. Liberation Army"
+		available = 
+		{
+			has_government = communism
+		}
+	}
+	icon = {
+		color_override = no
+		name = "IV. Army"
+	}
+	icon = {
+		color_override = no
+		name = "V. Army"
+	}
+	icon = {
+		color_override = no
+		name = "7. Guards"
+		available = 
+		{
+			original_tag = STG
+		}
+	}
+	icon = {
+		color_override = no
+		name = "41. Guards"
+		available = 
+		{
+			original_tag = STG
+		}
+	}
+	icon = {
+		color_override = no
+		name = "90. Tanks"
+		available = 
+		{
+			original_tag = STG
+		}
+	}
+	icon = {
+		color_override = no
+		name = "8. Artillery"
+		available = 
+		{
+			original_tag = STG
+		}
+	}
+	icon = {
+		color_override = no
+		name = "1443. Artillery"
+		available = 
+		{
+			original_tag = STG
+		}
+	}
+	icon = {
+		color_override = no
+		name = "76. Tanks"
+		available = 
+		{
+			original_tag = STG
+		}
+	}
+	icon = {
+		color_override = no
+		name = "3. Guards Mechanized"
+		available = 
+		{
+			original_tag = STG
+		}
+	}
+	icon = {
+		color_override = no
+		name = "3. Tanks"
+		available = 
+		{
+			original_tag = STG
+		}
+	}
+	icon = {
+		color_override = no
+		name = "213. Tanks"
+		available = {
+			original_tag = STG
+		}
+	}
+	icon = {
+		color_override = no
+		name = "8. Mechanized"
+		available = 
+		{
+			original_tag = STG
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Senturya 1"
+		available = 
+		{
+			original_tag = CNT
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Senturya 2"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Greek 1"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Greek 2"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Greek 3"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Bulgarian 1"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		color_override = no
+		name = "Bulgarian 2"
+		available = 
+		{
+			always = no
+		}
+	}
+	icon = {
+		name = "Baltimare - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAL
+					original_tag = CES
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Baltimare - Non-Aligned"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAL
+					original_tag = CES
+				}
+			}
+	}
+	icon = {
+		name = "Buffalo - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BUF
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Buffalo - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BUF
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Celestial Resistance - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CES
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Celestial Resistance - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CES
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Celestial Resistance - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CES
+					has_cosmetic_tag = EQC_SOL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Changeling Lands - Communist 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+					original_tag = CCN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Changeling Lands - Communist 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+					original_tag = CCN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Changeling Lands - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+					original_tag = CCN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Changeling Lands - Non-Aligned 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+					original_tag = CCN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Changeling Lands - Non-Aligned 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+					original_tag = CCN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Changeling Occupation Authority"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = PLB_CHN_occupation_authority
+					original_tag = CHN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Changeling Lands - Supremacist 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+					original_tag = CCN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Changeling Lands - Supremacist 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+					original_tag = CCN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Crystal Empire - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CRY
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Crystal Empire - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CRY
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Crystal Empire - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CRY
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Deer - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAR
+					original_tag = BRS
+					original_tag = CTL
+					original_tag = HIN
+					original_tag = HRV
+					original_tag = SAM
+					original_tag = SPL
+					original_tag = OLE
+					original_tag = OLV
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Deer - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAR
+					original_tag = BRS
+					original_tag = CTL
+					original_tag = HIN
+					original_tag = HRV
+					original_tag = SAM
+					original_tag = SPL
+					original_tag = OLE
+					original_tag = OLV
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Deer - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAR
+					original_tag = BRS
+					original_tag = CTL
+					original_tag = HIN
+					original_tag = HRV
+					original_tag = SAM
+					original_tag = SPL
+					original_tag = OLE
+					original_tag = OLV
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Dragons - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = DRG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Dragons - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = DRG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Dragons - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = DRG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Equestrian Liberation Front 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ELF
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Equestrian Liberation Front 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ELF
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Equestria - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = EQS
+					has_cosmetic_tag = EQC_EQS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					AND = {
+						original_tag = EQS
+						has_government = neutrality
+					}
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Equestria - Supremacist 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = EQS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Canterlonian Regency"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = EQS_TWI_TABBY
+					has_cosmetic_tag = EQS_TWI_TABBY_REUNIFIED
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Equinist Republic of Equestria"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = EQS_ERE
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Griffonian Frontier - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GFF
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Nova Griffonia - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GRF
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Nova Griffonia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GRF
+					original_tag = GFF
+					original_tag = FAW
+					has_cosmetic_tag = GRIF_REPUBLIC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Jaki Clan - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Jaki Clan - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Jaki Clan - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Jaki Clan - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Jaki Clan - Supremacist 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Las Pegasus - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LSP
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Las Pegasus - Technocratic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = LSP_technocracy
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Manehattan - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MAN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Les Meridiennes"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MER
+				}
+			}
+		}
+	}
+	icon = {
+		name = "New Californian Expedition"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NCR
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lunar Empire - Non-Aligned/Supremacist 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NLR
+					has_cosmetic_tag = EQC_NLR
+					has_cosmetic_tag = EQC_NLR_thestralia
+					has_cosmetic_tag = EQC_NLR_ARA
+					has_cosmetic_tag = EQC_NLR_CYA
+					has_cosmetic_tag = EQC_NLR_FAL
+					has_cosmetic_tag = EQC_NLR_FRN
+					has_cosmetic_tag = EQC_NLR_MIT
+					has_cosmetic_tag = EQC_NLR_SIC
+					has_cosmetic_tag = EQC_NLR_TAL
+					has_cosmetic_tag = EQC_NLR_WNG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lunar Empire - Non-Aligned/Supremacist 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NLR
+					has_cosmetic_tag = EQC_NLR
+					has_cosmetic_tag = EQC_NLR_thestralia
+					has_cosmetic_tag = EQC_NLR_ARA
+					has_cosmetic_tag = EQC_NLR_CYA
+					has_cosmetic_tag = EQC_NLR_FAL
+					has_cosmetic_tag = EQC_NLR_FRN
+					has_cosmetic_tag = EQC_NLR_MIT
+					has_cosmetic_tag = EQC_NLR_SIC
+					has_cosmetic_tag = EQC_NLR_TAL
+					has_cosmetic_tag = EQC_NLR_WNG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Crystal Empire - Lunarist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = CRY_NLR
+					original_tag = NLR
+					original_tag = EQS
+					original_tag = BAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lunar Empire - Communist 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NLR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lunar Empire - Communist 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NLR
+					has_cosmetic_tag = CRY_NLR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Disciples of the Night - Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NMS
+					original_tag = NLR
+					original_tag = BAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Disciples of the Night - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NMS
+					original_tag = NLR
+					original_tag = BAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Disciples of the Night - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NMS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Olenia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = OLE
+					original_tag = CTL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Olenia - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = OLE
+					original_tag = CTL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Olenia - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = OLE
+					original_tag = CTL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Puerto Caballo - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = PCB
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Puerto Caballo - Lunarist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = PCB_NLR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Puerto Caballo - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = PCB
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Polar Bear Communities - Non-Aligned/Harmonic/Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = PLB
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = fascism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Polar Bear Communities - Self-Reliance"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = PLB_ice_bear
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Primordial Changeling-Bear Queendom"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = PLB_exuvia_changelingia
+					has_cosmetic_tag = PLB_exu_equus
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Great Polar Bear Realm"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = PLB_high_kingdom
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Realm of Owlbears"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = PLB_GRF_owlbears
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Princessdom of Polaria"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = PLB_polaria
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Pingland - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = PNG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Princessdom of Equestria"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = EQS_POE
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Rock Union - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					# original_tag = ROC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Southern Confederacy - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SRS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Southern Confederacy - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SRS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Solar Empire"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = EQS_SOL
+					has_cosmetic_tag = EQC_SOL
+					original_tag = CES
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							has_cosmetic_tag = EQC_SOL
+						}
+						has_government = neutrality
+					}
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							has_cosmetic_tag = EQC_SOL
+							has_cosmetic_tag = EQS_SOL
+						}
+						has_government = democratic
+					}
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Celestial State - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CES
+					original_tag = LSP
+					has_cosmetic_tag = EQS_DEM2
+					has_cosmetic_tag = SCS_royalist
+					original_tag = EQS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							original_tag = CES
+							original_tag = LSP
+							original_tag = EQS
+						}
+						has_government = neutrality
+					}
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Stalliongrad - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = STG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Our Town - Communist 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = STL
+					original_tag = STG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Our Town - Communist 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = STL_OUR
+					original_tag = STG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Severyanian Black Site"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = STL_CHN
+					original_tag = MAN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Children of Ahuizotl"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = TEM
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Vanhoover - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = VAN
+					has_cosmetic_tag = EQS_POE
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yakyakistan - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yakyakistan - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yakyakistan - Communist 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yakyakistan - Communist 3"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yakyakistan Federation"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yakyakistan - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yakyakistan - Non-Aligned/Harmonic 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Everfree Forest"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZRS
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Arusharii Clan"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+					original_tag = JAK
+				}
+		}
+	}
+	icon = {
+		name = "Juyilkhai Clan"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+					original_tag = JAK
+				}
+		}
+	}
+	icon = {
+		name = "Khata ut Clan"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+					original_tag = JAK
+				}
+		}
+	}
+	icon = {
+		name = "Khoriikhat Clan"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+					original_tag = JAK
+				}
+		}
+	}
+	icon = {
+		name = "Mangchijid Clan"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+					original_tag = JAK
+				}
+		}
+	}
+	icon = {
+		name = "Mankhutayid Clan"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+					original_tag = JAK
+				}
+		}
+	}
+	icon = {
+		name = "Noyamanan Clan"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+					original_tag = JAK
+				}
+		}
+	}
+	icon = {
+		name = "Suldintjid Clan"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+					original_tag = JAK
+				}
+		}
+	}
+	icon = {
+		name = "Yurkid Clan"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAK
+					original_tag = JAK
+				}
+		}
+	}
+	icon = {
+		name = "Greifwald"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = AET
+					original_tag = HEL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = AET
+					AND = {
+						original_tag = HEL
+						has_government = fascism
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Greifwald - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = AET
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Greifwald - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = AET
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Angriver - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ANG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Herzland - Anarchist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = ANG_heartland
+					has_cosmetic_tag = ANG_heartland_kingdom
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Angriver - Neofedualist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = ANG_republic
+					has_cosmetic_tag = ANG_heartland
+					has_cosmetic_tag = ANG_heartland_kingdom
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Holy Griffonian Empire"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = ANG_black_empire
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Arantiga - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ARA
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Arantiga - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ARA
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "House Avian - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = AVI
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Bakara - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Blackhollow - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Barrad - Non-Aligned/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Griffonstone"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BOI
+					original_tag = GRI
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Bronzehill - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BRZ
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Cyanolisia - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CYA
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Cyanolisia - Equalist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = CYA_equality
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Dread League - Non-Aligned/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = DED
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Dread League - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = DED
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Diamond Mountain - Supremacist"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = DMT
+					has_cosmetic_tag = DMT_BAK_puppet
+					original_tag = BRZ
+				}
+		}
+	}
+	icon = {
+		name = "Diamond Mountain - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = DMT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "New Mareland - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = EQC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Marelandia"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = EQC_maresoc
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "New Mareland - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = EQC
+					has_cosmetic_tag = EQC_ARA
+					has_cosmetic_tag = EQC_CYA
+					has_cosmetic_tag = EQC_FAL
+					has_cosmetic_tag = EQC_FRN
+					has_cosmetic_tag = EQC_MIT
+					has_cosmetic_tag = EQC_SIC
+					has_cosmetic_tag = EQC_TAL
+					has_cosmetic_tag = EQC_WNG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "House Erie - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ERI
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "House Erie - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ERI
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Evi - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = EVI_commonwealth
+					has_cosmetic_tag = EVI_commonwealth_red
+					has_cosmetic_tag = EVI_commonwealth_RIV
+					has_cosmetic_tag = LUS_supremacy
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							has_cosmetic_tag = EVI_commonwealth
+							has_cosmetic_tag = EVI_commonwealth_red
+							has_cosmetic_tag = EVI_commonwealth_RIV
+						}
+						has_government = fascism
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Evi - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = EVI_commonwealth
+					has_cosmetic_tag = EVI_commonwealth_red
+					has_cosmetic_tag = EVI_commonwealth_RIV
+					has_cosmetic_tag = LUS_supremacy
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "House Eyrie - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = EYR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "House Eyrie - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = EYR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "House Eyrie - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = EYR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Falcor - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FAL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Falcor - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FAL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Griffonian Republic - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FAT
+					original_tag = FAW
+					has_cosmetic_tag = GRIF_REPUBLIC
+					has_cosmetic_tag = FEA_nazbol_empire
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Cloudbury - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FAW
+					original_tag = JNG
+					has_cosmetic_tag = FAT_GRI_puppet
+					has_cosmetic_tag = FAT_Monarchy
+					has_cosmetic_tag = FAT_Cloudbury
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_government = neutrality
+					has_cosmetic_tag = FAT_Monarchy
+					AND = {
+						has_cosmetic_tag = FAT_Cloudbury
+						NOT = { has_government = communism }
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Farbrook - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FBK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Farbrook - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FBK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Feathisia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FEA
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Feathisia - Ethno-Socialism"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = FEA_nazbol_takeover_tag
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Fezera - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FEZ
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Fezera - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FEZ
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Fezera - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FEZ
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Fezera - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FEZ
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Firtree - Non-Aligned/Harmonic/Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = fascism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Firtree - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Francistria - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FRN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Francistria - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = FRN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Griffonian Empire - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GRI
+					has_cosmetic_tag = GRIF_EMPIRE
+					has_cosmetic_tag = BRZ_EMPIRE
+					has_cosmetic_tag = BRZ_EMPIRE_IDC
+					has_cosmetic_tag = KAT_herzlandtreue
+					has_cosmetic_tag = PYT_EMPIRE_COMMIE
+					has_cosmetic_tag = ROU_empire
+					has_cosmetic_tag = YAL_grover_empire
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+					AND = {
+						has_cosmetic_tag = ROU_empire
+						has_government = neutrality
+					}
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							original_tag = GRI
+							has_cosmetic_tag = GRIF_EMPIRE
+							has_cosmetic_tag = BRZ_EMPIRE
+							has_cosmetic_tag = BRZ_EMPIRE_IDC
+							has_cosmetic_tag = KAT_herzlandtreue
+							has_cosmetic_tag = YAL_grover_empire
+						}
+						NOT = { has_government = communism }
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Imperium of Griffonkind 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = GRI_APRILFOOLS
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Griffonian Empire - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GRI
+					has_cosmetic_tag = GRIF_EMPIRE
+					has_cosmetic_tag = KAT_herzlandtreue
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Gryphus - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GRU
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Prywhen - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BRF
+					original_tag = GRW
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Prywhen - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BRF
+					original_tag = GRU
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							original_tag = GRU
+						}
+						NOT = { has_government = communism }
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Gryphia - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GRY
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Gryphia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GRY
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Gryphia - Monarchist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = GRY_kingdom
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Gryphia - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GRY
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Haukland - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HAU
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Haukland - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HAU
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Adelart - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HEL
+					has_cosmetic_tag = HEL_SWI
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							has_cosmetic_tag = HEL_SWI
+						}
+						NOT = { has_government = fascism }
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Adelart - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HEL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Second Griffonian Republic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = GRI_HEL_REPUBLIC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Arcturia - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HLR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Arcturia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HLR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Aquileia - Non-Aligned 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JER
+					original_tag = JEB
+					original_tag = JFT
+					original_tag = JRR
+					original_tag = VIN
+					original_tag = JES
+					original_tag = JAS
+					original_tag = JEV
+					original_tag = JGF
+					original_tag = JHP
+					original_tag = JHZ
+					original_tag = JKR
+					original_tag = JNG
+					original_tag = JOS
+					original_tag = JRV
+					has_cosmetic_tag = JER_REPUBLIC_2
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							original_tag = JER
+							original_tag = JEB
+							original_tag = JFT
+							original_tag = JRR
+							original_tag = VIN
+							original_tag = JES
+							original_tag = JAS
+							original_tag = JEV
+							original_tag = JGF
+							original_tag = JHP
+							original_tag = JHZ
+							original_tag = JKR
+							original_tag = JNG
+							original_tag = JOS
+							original_tag = JRV
+						}
+						has_government = neutrality
+					}
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							original_tag = JEB
+							original_tag = JFT
+							original_tag = JRR
+							original_tag = VIN
+							has_cosmetic_tag = JER_REPUBLIC_2
+						}
+						has_government = fascism
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Aquileia - Non-Aligned 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JER
+					original_tag = JEB
+					original_tag = JFT
+					original_tag = JRR
+					original_tag = VIN
+					original_tag = JES
+					original_tag = JAS
+					original_tag = JEV
+					original_tag = JGF
+					original_tag = JHP
+					original_tag = JHZ
+					original_tag = JKR
+					original_tag = JNG
+					original_tag = JOS
+					original_tag = JRV
+					has_cosmetic_tag = JER_REPUBLIC_2
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							original_tag = JER
+							original_tag = JEB
+							original_tag = JFT
+							original_tag = JRR
+							original_tag = VIN
+							original_tag = JES
+							original_tag = JAS
+							original_tag = JEV
+							original_tag = JGF
+							original_tag = JHP
+							original_tag = JHZ
+							original_tag = JKR
+							original_tag = JNG
+							original_tag = JOS
+							original_tag = JRV
+						}
+						has_government = neutrality
+					}
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							original_tag = JEB
+							original_tag = JFT
+							original_tag = JRR
+							original_tag = VIN
+							has_cosmetic_tag = JER_REPUBLIC_2
+						}
+						has_government = fascism
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Aquileia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = JER_REPUBLIC_3
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Aquileia - Republican"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JER
+					has_cosmetic_tag = JER_REPUBLIC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = JER_REPUBLIC
+					AND = {
+						original_tag = JER
+						has_government = democratic
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Aquileia - Supremacist 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JER
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Aquileia - Supremacist 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = JER_REPUBLIC_2
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Tarrin - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JES
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Tarrin - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JES
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Herzland - Aquileian Puppet"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = JHZ
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Herzland - Monarchist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = ANG_heartland_kingdom
+					has_cosmetic_tag = KAT_heartland
+					has_cosmetic_tag = YAL_herzland_kingdom_name
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							has_cosmetic_tag = ANG_heartland_kingdom
+							has_cosmetic_tag = YAL_herzland_kingdom_name
+						}
+						has_government = neutrality
+					}
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							has_cosmetic_tag = ANG_heartland_kingdom
+							has_cosmetic_tag = KAT_heartland
+							has_cosmetic_tag = YAL_herzland_kingdom_name
+						}
+						has_government = democratic
+					}
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							has_cosmetic_tag = KAT_heartland
+						}
+						has_government = fascism
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Herzland - Republican"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = PYT_heartland
+					has_cosmetic_tag = ROU_heartland
+					has_cosmetic_tag = YAL_herzland
+					has_cosmetic_tag = YAL_herzland_kingdom_name
+					has_cosmetic_tag = YAL_KINGDOM_OF_BOREAS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							has_cosmetic_tag = ROU_heartland
+							has_cosmetic_tag = PYT_heartland
+						}
+						has_government = neutrality
+					}
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							has_cosmetic_tag = PYT_heartland
+							has_cosmetic_tag = YAL_herzland
+							has_cosmetic_tag = YAL_KINGDOM_OF_BOREAS
+						}
+						has_government = democratic
+					}
+					AND = {
+						OR = {
+							has_global_flag = eawarmyicons_tag_check_disabled
+							has_cosmetic_tag = YAL_herzland
+							has_cosmetic_tag = YAL_herzland_kingdom_name
+						}
+						has_government = fascism
+					}
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Katerin - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Rumare - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Rumare - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LAK
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lake City - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LCT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lake City - Monarchist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = LCT_prince_ally
+					has_cosmetic_tag = LCT_prince
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Longsword - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LNS
+					original_tag = LSC
+					original_tag = LSM
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Griffking Empire"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					has_cosmetic_tag = LSC_griffking_empire_cosmetic
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Longsword - Pony Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LSC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lushi - Non-Aligned/Harmonic 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LUS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lushi - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LUS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lushi - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LUS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lushi - Supremacist 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LUS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Asterion - Non-Aligned/Harmonic"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MIT
+				}
+		}
+	}
+	icon = {
+		name = "Asterion - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MIT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Asterion - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MIT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Sunstriker Clan - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MNC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Greneclyf - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NCH
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Greneclyf - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NCH
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Greneclyf - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NCH
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+					}
+			}
+		}
+	}
+	icon = {
+		name = "Nimbusia"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NIM
+				}
+		}
+	}
+	icon = {
+		name = "Northern Tribes"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NTR
+				}
+		}
+	}
+	icon = {
+		name = "Northern Tribes - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NTR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Austurland"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = OLV
+				}
+		}
+	}
+	icon = {
+		name = "Pomovarra"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = POM
+				}
+		}
+	}
+	icon = {
+		name = "Greifenmarschen - Non-aligned/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = PYT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Greifenmarschen - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = PYT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Greifenmarschen - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = PYT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Romau - Non-aligned/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ROU
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Romau - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ROU
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Romau - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ROU
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Sicameon - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SIC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Sicameon - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SIC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Sicameon - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SIC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Skynavia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SRS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Skynavia - Pan-Griffonia"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SRS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Strawberry"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = STW
+				}
+		}
+	}
+	icon = {
+		name = "Talouse - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = TAL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Talouse - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = TAL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Talouse - New Mareland Puppet"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = TAL
+				}
+		}
+	}
+	icon = {
+		name = "Talouse - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = TAL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Skyfall - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = TRD
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Skyfall - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = TRD
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Vedina - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = VED
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Vedina - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = VED
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Vedina - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = VED
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Watertowns - Communist/Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Watertowns - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Watertowns - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Wittenland"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WIT
+				}
+		}
+	}
+	icon = {
+		name = "Wittenland - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WIT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Wingbardy - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WNG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Wingbardy - Non-aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WNG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+					}
+			}
+		}
+	}
+	icon = {
+		name = "Karthinia"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WNG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Karthinia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WNG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "World Socialist Republic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SRS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yale - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Kasa Free State"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WNG
+				}
+		}
+	}
+	icon = {
+		name = "Abyssinia - Non-aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ABY
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Abyssinia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ABY
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Abyssinia - Supremacy"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ABY
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Aestlonia - Non-aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = AES
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Aestlonia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = AES
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Aestlonia - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = AES
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Anseruk"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ANS
+				}
+
+		}
+	}
+	icon = {
+		name = "Chiropterra - Supremacist 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Chiropterra - Supremacist 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Chiropterra - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Chiropterra - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BAT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Boltria 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BLT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = neutrality }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Boltria - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BLT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Boltria 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BLT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = neutrality }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Barasingha"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = BRS
+				}
+		}
+	}
+	icon = {
+		name = "Coltdar"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CDR
+				}
+		}
+	}
+	icon = {
+		name = "Peril Range Industrial Combine"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Naval Protectorate South-East and Zebrides"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Vespidae-Korps 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Vespidae-Korps 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CHN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Quaggatai"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CGI
+				}
+		}
+	}
+	icon = {
+		name = "Free Camel Tribes"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CME
+				}
+		}
+	}
+	icon = {
+		name = "Senturya Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CNT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = fascism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Senturya - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CNT
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Colthage"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTH
+				}
+		}
+	}
+	icon = {
+		name = "Colthage - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTH
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Colthage - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTH
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Colthage - Technocratic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTH
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Zonica - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTH
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Zonica - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTH
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Zonica - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTH
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Chital"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTL
+				}
+
+		}
+	}
+	icon = {
+		name = "Chital - Motherly State"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Chital Lotus"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTL
+				}
+		}
+	}
+	icon = {
+		name = "Coltvan Republic - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CVA
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Coltvan Republic - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CVA
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Coltvan Republic - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CVA
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Central Zebrican Empire - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CZR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Central Zebrican Empire - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CZR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Central Zebrican Empire - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CZR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Talarayi"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = DEL
+				}
+		}
+	}
+	icon = {
+		name = "League of Four Emirs"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = EMR
+				}
+		}
+	}
+	icon = {
+		name = "Gargiloya"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GAR
+				}
+		}
+	}
+	icon = {
+		name = "Taungpau"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GAZ
+				}
+		}
+	}
+	icon = {
+		name = "Taungpau - Kirian Puppet"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GAZ
+				}
+		}
+	}
+	icon = {
+		name = "Twizanyika"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GIF
+				}
+		}
+	}
+	icon = {
+		name = "Great Lakes Generic Placeholder"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZUG
+				}
+		}
+	}
+	icon = {
+		name = "Gyzwindid Realm - Non-Aligned/Supremacist/Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GYZ
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = democratic }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Gyzwindid Realm - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = GYZ
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Hayzeb Federation"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HAY
+				}
+		}
+	}
+	icon = {
+		name = "Hippone 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					tag = HIE
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Hippone - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIE
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Hippone 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIE
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Doelhi Confederation"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIN
+				}
+		}
+	}
+	icon = {
+		name = "Hippogrifia 1"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+		}
+	}
+	icon = {
+		name = "Hippogrifia 2"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+		}
+	}
+	icon = {
+		name = "Hippogrifia 3"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+		}
+	}
+	icon = {
+		name = "Hippogrifia 4"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+		}
+	}
+	icon = {
+		name = "Hippogriffia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Hippogriffia - Monbol"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Hippogriffia - Posadist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Hippogriffia - Posadist Social Harmonism"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Hippogriffia - Posadist Hard Line"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Hippogriffia - Posadist Anarchist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Hippogriffia - National Communism"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Hippogriffia - SIR"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HIP
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Haymirite Malikate - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HMR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Uusi Hirvimaa / Tanikama"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HRV
+				}
+		}
+	}
+	icon = {
+		name = "Uusi Hirvimaa / Tanikama - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HRV
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Qaylidi Dervishes"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = HYE
+				}
+		}
+	}
+	icon = {
+		name = "Ice Dragon Tribe"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = IDT
+				}
+		}
+	}
+	icon = {
+		name = "Maglibing"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = IST
+				}
+		}
+	}
+	icon = {
+		name = "Khamrin"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KHM
+				}
+		}
+	}
+	icon = {
+		name = "Kirin"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+		}
+	}
+	icon = {
+		name = "All-Kiria Artificer's Guild"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Exclusive Naval Economic Zone of South Kiria"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Blossom Supervisorate"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+			}
+		}
+	}
+	icon = {
+		name = "Children of Concord"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Children of Concord - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Rising Sun"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Federal Kirin's Republic of Zaikiria"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "All Kiria Confederation of Trade Unions"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "All Kiria Confederation of Trade Unions 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Nirik Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Proletarian Red Banner"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Proletarian"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Radiance Commune"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Central Kiria Revolutionary Headquarters"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Scarlet River Storm"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Union of Kirin Peasantry 1"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Union of Kirin Peasantry 2"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "North Nirik Contumancy"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "South Nirik Contumancy"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "West Nirik Contumancy"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Kirian People's Commune"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Kirin 2"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KIR
+				}
+		}
+	}
+	icon = {
+		name = "Klugetown"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KLG
+				}
+		}
+	}
+	icon = {
+		name = "Klugetown - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KLG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Lan Kir Militarchy"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = KXN
+				}
+		}
+	}
+	icon = {
+		name = "Llambet"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = LMB
+				}
+		}
+	}
+	icon = {
+		name = "Imperial Mazwi"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MAZ
+				}
+		}
+	}
+	icon = {
+		name = "Macawia"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MCW
+				}
+		}
+	}
+	icon = {
+		name = "Maregypt"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MGY
+				}
+		}
+	}
+	icon = {
+		name = "Ovingoland"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MGY
+				}
+		}
+	}
+	icon = {
+		name = "Macigena"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MSH
+				}
+		}
+	}
+	icon = {
+		name = "Macigena - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MSH
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Mozzi - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MSS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Mozzi - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MSS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Mozzi - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MSS
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Maretonia - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MTO
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Maretonia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = MTO
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Sen Kinh 1"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NVA
+				}
+		}
+	}
+	icon = {
+		name = "Sen Kinh 2"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = NVA
+				}
+		}
+	}
+	icon = {
+		name = "Osqat - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = OSQ
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Reem"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = REE
+				}
+		}
+	}
+	icon = {
+		name = "Roam"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ROA
+				}
+		}
+	}
+	icon = {
+		name = "Riseia - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SDL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Riseia - Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SDL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Riseia - Non-Aligned"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SDL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Riseia - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SDL
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Sambar"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SAM
+				}
+		}
+	}
+	icon = {
+		name = "Socialist Republic of Arabia"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SDC
+				}
+		}
+	}
+	icon = {
+		name = "Saddle Arabia"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SDL
+				}
+		}
+	}
+	icon = {
+		name = "Icepaw - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SLC
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Zar-Hay"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = SON
+				}
+		}
+	}
+	icon = {
+		name = "Stormland"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = STM
+				}
+		}
+	}
+	icon = {
+		name = "Tanaigha"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = TAI
+				}
+		}
+	}
+	icon = {
+		name = "Tobuck - United Lands of Northern Zebrica"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = TBK
+				}
+		}
+	}
+	icon = {
+		name = "Thundaria"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = THU
+				}
+		}
+	}
+	icon = {
+		name = "Trotkat"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTH
+				}
+		}
+	}
+	icon = {
+		name = "Warzena Republic"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = CTH
+				}
+		}
+	}
+	icon = {
+		name = "Winggarden"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = WIN
+				}
+		}
+	}
+	icon = {
+		name = "Feathisian South Zebrides - Non-Aligned/Communist"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Feathisian South Zebrides - Harmonic"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Feathisian South Zebrides - Supremacist"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YAN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yemane - Non-Aligned"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YMN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yemane - Communist"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YMN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yemane - Harmonic"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YMN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Yemane - Supremacist"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = YMN
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Azir - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZAI
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Azir - Communist"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZAI
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Tambelon 1"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZAI
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Tambelon 2"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZAI
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Zarantia - Non-Aligned"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZAR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = neutrality
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Zarantia - Communist"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZAR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Zarantia - Harmonic"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZAR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = democratic
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Zarantia - Worm"
+		available = 
+		{
+				AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZAR
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Zongo"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZOO
+				}
+		}
+	}
+	icon = {
+		name = "Ugabi - Non-Aligned/Harmonic"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZUG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Ugabi - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZUG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Ugabi - Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZUG
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = fascism
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Zumidia"
+		available = 
+		{
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZUM
+				}
+		}
+	}
+	icon = {
+		name = "Aoranda - Non-Aligned/Harmonic/Supremacist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZWA
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					NOT = { has_government = communism }
+				}
+			}
+		}
+	}
+	icon = {
+		name = "Aoranda - Communist"
+		available = 
+		{
+			AND = {
+				OR = {
+					has_global_flag = eawarmyicons_tag_check_disabled
+					original_tag = ZWA
+				}
+				OR = {
+					has_global_flag = eawarmyicons_ideology_check_disabled
+					has_government = communism
+				}
+			}
+		}
+	}
+}
+army_group = {
+	gfx = GFX_theatre_army_group_shield
+	
+	icon = {
+	}
+	icon = {
+		color_override = no
+	}
+	icon = {
+		color_override = no
+		name = "15. Army Group"
+	}
+	icon = {
+		color_override = no
+		name = "12. Army Group"
+	}
+	icon = {
+		color_override = no
+		name = "6. Army Group"
+	}
+	icon = {
+		color_override = no
+	}
+}
+
+fleet = {
+	gfx = GFX_theatre_task_force_shield
+	
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+}
+
+task_force = {
+	gfx = GFX_theatre_task_force_shield
+	
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+}
+
+naval_equipment_role = {
+	gfx = GFX_naval_equipment_role_icons
+	
+	icon = {
+		color_override = no
+		name = "Battery"
+	}
+	icon = {
+		color_override = no
+		name = "Shield"
+	}
+	icon = {
+		color_override = no
+		name = "Spotter"
+	}
+	icon = {
+		color_override = no
+		name = "Minelayer"
+	}
+	icon = {
+		color_override = no
+		name = "Minesweeper"
+	}
+	icon = {
+		color_override = no
+		name = "Skull"
+	}
+	icon = {
+		color_override = no
+		name = "Airplane"
+	}
+	icon = {
+		color_override = no
+		name = "Crab"
+	}
+}
+
+equipment_niche_insignias = {
+	gfx = GFX_niche_icon_strip
+	
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+}
+
+air_group = {
+	gfx = GFX_theatre_air_force_shield
+
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+}
+
+air_niche = {
+	gfx = GFX_plane_niche_icon_strip
+
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}
+	icon = {
+	}	
+}
