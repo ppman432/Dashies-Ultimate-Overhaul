@@ -1,0 +1,7 @@
+JAP_has_idea_JAP_intervene_in_china = {
+	always = no
+}
+
+is_literally_china = {
+	always = no
+}

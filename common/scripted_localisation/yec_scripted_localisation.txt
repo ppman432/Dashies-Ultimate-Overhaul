@@ -1,0 +1,176 @@
+defined_text = {
+	name = yec_event_card_image
+	text = {
+		trigger = {
+			check_variable = { var = global.year value = 1939 compare = equals }
+			has_game_rule = {
+        rule = yec_christmas_hitler_enabled
+        option = YES
+      }
+		}
+		localization_key = "GFX_yec_1939_alt_event_picture"
+	}
+	text = {
+		trigger = {
+			check_variable = { var = global.year value = 1936 compare = greater_than }
+			check_variable = { var = global.year value = 1945 compare = less_than_or_equals }
+		}
+		localization_key = "GFX_yec_[GetYear]_event_picture"
+	}
+	text = {
+		localization_key = "GFX_yec_generic_event_picture"
+	}
+}
+
+defined_text = {
+	name = yec_accurate_year_tt
+	text = {
+		localization_key = "yec_accurate_year_text_tt"
+	}
+}
+
+defined_text = {
+	name = yec_data_mode_btn
+	text = {
+		trigger = { has_country_flag = yec_data_mode_delta }
+		localization_key = "yec_data_mode_delta_btn"
+	}
+	text = {
+		localization_key = "yec_data_mode_absolute_btn"
+	}
+}
+
+defined_text = {
+	name = yec_data_mode_btn_tt
+	text = {
+		trigger = { has_country_flag = yec_data_mode_delta }
+		localization_key = "yec_data_mode_delta_btn_tt"
+	}
+	text = {
+		localization_key = "yec_data_mode_absolute_btn_tt"
+	}
+}
+
+# Countries at War
+defined_text = {
+	name = yec_review_countries_at_war_var
+	text = {
+		trigger = { has_country_flag = yec_data_mode_delta }
+		localization_key = "yec_review_countries_at_war_var_delta"
+	}
+	text = {
+		localization_key = "yec_review_countries_at_war_var_absolute"
+	}
+}
+
+# Governments in Exile
+defined_text = {
+	name = yec_review_exiled_govs_var
+	text = {
+		trigger = { has_country_flag = yec_data_mode_delta }
+		localization_key = "yec_review_exiled_govs_var_delta"
+	}
+	text = {
+		localization_key = "yec_review_exiled_govs_var_absolute"
+	}
+}
+
+# Faction Members
+defined_text = {
+	name = yec_review_faction_members_var
+	text = {
+		trigger = { has_country_flag = yec_data_mode_delta }
+		localization_key = "yec_review_faction_members_var_delta"
+	}
+	text = {
+		localization_key = "yec_review_faction_members_var_absolute"
+	}
+}
+
+# Civilian Factories
+defined_text = {
+	name = yec_review_civ_factories_var
+	text = {
+		trigger = { has_country_flag = yec_data_mode_delta }
+		localization_key = "yec_review_civ_factories_var_delta"
+	}
+	text = {
+		localization_key = "yec_review_civ_factories_var_absolute"
+	}
+}
+
+# Military Factories
+defined_text = {
+	name = yec_review_mil_factories_var
+	text = {
+		trigger = { has_country_flag = yec_data_mode_delta }
+		localization_key = "yec_review_mil_factories_var_delta"
+	}
+	text = {
+		localization_key = "yec_review_mil_factories_var_absolute"
+	}
+}
+
+# Naval Dockyards
+defined_text = {
+	name = yec_review_nav_factories_var
+	text = {
+		trigger = { has_country_flag = yec_data_mode_delta }
+		localization_key = "yec_review_nav_factories_var_delta"
+	}
+	text = {
+		localization_key = "yec_review_nav_factories_var_absolute"
+	}
+}
+
+# Divisions in Field
+defined_text = {
+	name = yec_review_divisions_var
+	text = {
+		trigger = { has_country_flag = yec_data_mode_delta }
+		localization_key = "yec_review_divisions_var_delta"
+	}
+	text = {
+		localization_key = "yec_review_divisions_var_absolute"
+	}
+}
+
+# Deployed Planes
+defined_text = {
+	name = yec_review_planes_var
+	text = {
+		trigger = {
+			has_country_flag = yec_data_mode_delta
+			check_variable = { var = THIS.delta_num_deployed_planes value = 1000 compare = greater_than_or_equals }
+		}
+		localization_key = "yec_review_planes_var_delta"
+	}
+	text = {
+		trigger = {
+			check_variable = { var = THIS.delta_num_deployed_planes value = 1000 compare = less_than }
+			has_country_flag = yec_data_mode_delta
+		}
+		localization_key = "yec_review_planes_var_delta_small"
+	}
+	text = {
+		trigger = {
+			check_variable = { var = THIS.num_deployed_planes value = 1000 compare = greater_than_or_equals }
+		}
+		localization_key = "yec_review_planes_var_absolute"
+	}
+	text = {
+		localization_key = "yec_review_planes_var_absolute_small"
+	}
+}
+
+# Naval Ships
+defined_text = {
+	name = yec_review_ships_var
+	text = {
+		trigger = { has_country_flag = yec_data_mode_delta }
+		localization_key = "yec_review_ships_var_delta"
+	}
+	text = {
+		localization_key = "yec_review_ships_var_absolute"
+	}
+}

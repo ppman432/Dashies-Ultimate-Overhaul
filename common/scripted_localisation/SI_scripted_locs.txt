@@ -1,0 +1,66 @@
+defined_text = {
+	name = SiStateTransferGameRule
+
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = si_state_transfer_rules
+				option = SI_STATE_TRANSFER_MP
+			}
+		}
+		localization_key = SI_state_transfer_gamerule_mp
+	}
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = si_state_transfer_rules
+				option = SI_STATE_TRANSFER_DISABLED
+			}
+		}
+		localization_key = SI_state_transfer_gamerule_none
+	}
+	text = {
+		localization_key = SI_state_transfer_gamerule_sp
+	}
+}
+defined_text = {
+	name = SiAiBehaviourRule
+
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = si_ai_behaviour_rules
+				option = SI_AI_ALLOWED_RULE
+			}
+		}
+		localization_key = SI_ai_behaviour_gamerule_yes
+	}
+	text = {
+		localization_key = SI_ai_behaviour_gamerule_no
+	}
+}
+defined_text = {
+	name = SiAiRejectionRule
+
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = si_increase_ai_rejectance_rules
+				option = SI_AI_REJECT_INCREASED_FOR_PLAYERS
+			}
+		}
+		localization_key = SI_ai_rejection_gamerule_increase
+	}
+	text = {
+		trigger = {
+			has_game_rule = {
+				rule = si_increase_ai_rejectance_rules
+				option = SI_AI_REJECT_DECREASED_FOR_PLAYERS
+			}
+		}
+		localization_key = SI_ai_rejection_gamerule_decrease
+	}
+	text = {
+		localization_key = SI_ai_rejection_gamerule_default
+	}
+}
