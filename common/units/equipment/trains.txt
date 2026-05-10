@@ -1,0 +1,192 @@
+## trains.txt
+## OVERWRITE: Adds 2 new trains
+
+equipments = {
+	# archetype
+	train_equipment = {
+		year = 981
+
+		is_archetype = yes
+		is_buildable = no
+		active = no
+		type = train
+		picture = archetype_train
+		group_by = archetype
+		sprite = train
+
+		interface_category = interface_category_land
+
+		armor_value = 0 # HP = BASE_TRAIN_HP + armor_value
+
+		lend_lease_cost = 20
+
+		build_cost_ic = 70
+		resources = {
+			steel = 1
+		}
+	}
+
+	# civ train 1
+	train_equipment_1 = {
+		year = 981
+
+		archetype = train_equipment
+
+		armor_value = 0 # HP = BASE_TRAIN_HP + armor_value
+
+		priority = 10
+
+		build_cost_ic = 80
+		resources = {
+			steel = 1
+		}
+	}
+
+	# civ train 2
+	civ_train_equipment_2 = {
+		year = 1016
+
+		archetype = train_equipment
+		parent = train_equipment_1
+
+		armor_value = 70 # HP = BASE_TRAIN_HP + armor_value
+
+		priority = 10
+
+		build_cost_ic = 70
+		resources = {
+			steel = 2
+		}
+	}
+
+	# civ train 3
+	civ_train_equipment_3 = {
+		year = 1018
+
+		archetype = train_equipment
+		parent = civ_train_equipment_2
+
+		armor_value = 60 # HP = BASE_TRAIN_HP + armor_value
+
+		priority = 10
+
+		build_cost_ic = 60
+		resources = {
+			steel = 3
+		}
+	}
+	
+	# civ train 4
+	civ_train_equipment_4 = {
+		year = 1028
+
+		archetype = train_equipment
+		parent = civ_train_equipment_3
+
+		armor_value = 100 # HP = BASE_TRAIN_HP + armor_value
+
+		priority = 10
+
+		build_cost_ic = 60
+		resources = {
+			steel = 2
+			crystals = 1
+		}
+	}
+	#Heavy Train 1
+	
+	hvy_train_equipment_1 = {
+		year = 1016
+
+		archetype = train_equipment
+		parent = train_equipment_1
+
+		armor_value = 100 # HP = BASE_TRAIN_HP + armor_value
+
+		priority = 10
+
+		build_cost_ic = 90
+		resources = {
+			steel = 2
+		}
+	}
+	#Heavy Train 2
+	
+	hvy_train_equipment_2 = {
+		year = 1018
+
+		archetype = train_equipment
+		parent = hvy_train_equipment_1
+
+		armor_value = 300 # HP = BASE_TRAIN_HP + armor_value
+
+		priority = 10
+
+		build_cost_ic = 150
+		resources = {
+			steel = 4
+		}
+	}
+	#Heavy Train 3
+
+	hvy_train_equipment_3 = {
+		year = 1028
+
+		archetype = train_equipment
+		parent = hvy_train_equipment_2
+
+		armor_value = 400 # HP = BASE_TRAIN_HP + armor_value
+
+		priority = 10
+
+		build_cost_ic = 200
+		resources = {
+			steel = 6
+		}
+	}
+	# war austerity train
+	train_equipment_2 = {
+		year = 1010
+
+		archetype = train_equipment
+		parent = train_equipment_1
+
+		priority = 20
+
+		build_cost_ic = 50
+		resources = {
+			steel = 1
+		}
+	}
+
+	# armored train 1
+	train_equipment_3 = {
+		year = 1007
+		archetype = train_equipment
+		parent = train_equipment_1
+		armor_value = 250 # HP = BASE_TRAIN_HP + armor_value
+		air_attack = 18
+		priority = 30
+		build_cost_ic = 105
+		resources = {
+			steel = 2
+		}
+	}
+
+	# armored train 2
+	train_equipment_4 = {
+		year = 1019
+		archetype = train_equipment
+		parent = train_equipment_3
+		type = {
+			train
+		}
+		armor_value = 300 # HP = BASE_TRAIN_HP + armor_value
+		air_attack = 45
+		priority = 30
+		build_cost_ic = 140
+		resources = {
+			steel = 2
+		}
+	}
+}

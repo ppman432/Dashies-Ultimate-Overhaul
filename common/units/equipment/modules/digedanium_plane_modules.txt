@@ -1,0 +1,86 @@
+equipment_modules = {
+	
+	digedanium_small = {
+		abbreviation = "digedanium_small"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			weight = -10000
+		}
+		xp_cost = 1
+	}
+}
+
+equipment_modules = {
+	
+	digedanium_medium = {
+		abbreviation = "digedanium_medium"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			weight = -10000
+		}
+		xp_cost = 1
+	}
+}
+
+equipment_modules = {
+	
+	digedanium_large = {
+		abbreviation = "digedanium_large"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			weight = -10000
+		}
+		xp_cost = 1
+	}
+}
+
+equipment_modules = {
+	
+	digedanium2_small = {
+		abbreviation = "digedanium2_small"
+		category = plane_special_module_small
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 4
+			air_agility = 15
+		}
+		xp_cost = 1
+	}
+}
+
+equipment_modules = {
+	
+	digedanium2_medium = {
+		abbreviation = "digedanium2_medium"
+		category = plane_special_module_medium
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 4
+			air_agility = 15
+		}
+		xp_cost = 1
+	}
+}
+
+equipment_modules = {
+	
+	digedanium2_large = {
+		abbreviation = "digedanium2_large"
+		category = plane_special_module_large
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 4
+			air_agility = 15
+		}
+		xp_cost = 1
+	}
+}
