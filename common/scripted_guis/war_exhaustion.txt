@@ -1,0 +1,29 @@
+scripted_gui = {
+	
+	war_exhaustion_main = {
+	
+		context_type = player_context
+		
+        	parent_window_token = politics_tab
+		
+		window_name = "war_exhaustion_container"
+		
+		visible = {
+			NOT = {
+				has_game_rule = {
+					rule = war_exhaustion_enable_rule
+					option = Disable_war_exhaustion_rule
+				}
+			}
+		}
+		
+		effects = {
+		}
+		
+		properties = {
+		}
+		
+		triggers = {
+		}
+	}
+}

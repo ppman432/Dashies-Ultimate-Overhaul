@@ -1,0 +1,43 @@
+scripted_gui = {
+	yec_event_card_ui = {
+		context_type = player_context
+		window_name = "yec_event_card_ui_window"
+
+		visible = {
+			has_country_flag = yec_event_card_visible
+		}
+
+		properties = {
+			yec_event_card_image = {
+				image = "[yec_event_card_image]"
+			}
+		}
+
+		triggers = {
+			yec_event_card_star_visible = {
+				OR = {
+					check_variable = { var = global.year value = 1937 compare = equals }
+					check_variable = { var = global.year value = 1940 compare = equals }
+					check_variable = { var = global.year value = 1941 compare = equals }
+					check_variable = { var = global.year value = 1942 compare = equals }
+					check_variable = { var = global.year value = 1943 compare = equals }
+				}
+			}
+    }
+
+		effects = {
+			yec_close_btn_click = {
+				clr_country_flag = yec_event_card_visible
+			}
+			yec_data_mode_btn_click = {
+				if = {
+					limit = { has_country_flag = yec_data_mode_delta }
+					clr_country_flag = yec_data_mode_delta
+					else = {
+						set_country_flag = yec_data_mode_delta
+					}
+				}
+			}
+		}
+	}
+}

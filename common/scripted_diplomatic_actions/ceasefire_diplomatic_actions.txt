@@ -1,0 +1,1081 @@
+scripted_diplomatic_actions = {
+
+    propose_ceasefire = {
+        # ROOT = sender, current scope = receiver (target)
+
+        icon = 1
+        requires_acceptance = yes
+        cost = 0
+
+        # BASIC AVAILABILITY
+
+        allowed = { # if action is valid at all - checked without target context
+            always = yes
+        }
+
+        visible = { # if action shows up in the GUI
+            has_war_with = ROOT
+            # Avoid confusion/GUI clutter: if either side is in a faction, only the faction leader can sign.
+            # ROOT = {
+            #     OR = {
+            #         is_faction_leader = yes
+            #         NOT = { is_in_faction = yes }
+            #     }
+            # }
+            # OR = {
+            #     is_faction_leader = yes
+            #     NOT = { is_in_faction = yes }
+            # }
+        }
+
+        selectable = {
+            # Game rule: optionally block AI from sending ceasefires.
+            OR = {
+                ROOT = { is_ai = no }
+                has_game_rule = { rule = ceasefire_ai_send_rule option = ALLOWED }
+            }
+
+            # Subjects (puppets) cannot negotiate independent ceasefires.
+            custom_trigger_tooltip = {
+                tooltip = ceasefire_sender_cannot_be_subject
+                ROOT = { NOT = { is_subject = yes } }
+            }
+            custom_trigger_tooltip = {
+                tooltip = ceasefire_target_cannot_be_subject
+                NOT = { is_subject = yes }
+            }
+
+            ROOT = {
+                OR = {
+                    NOT = { has_country_flag = ceasefire_propose_cooldown }
+                    has_country_flag = { flag = ceasefire_propose_cooldown days > 29 }
+                }
+            }
+
+            ROOT = {
+                OR = {
+                    is_faction_leader = yes
+                    NOT = { is_in_faction = yes }
+                }
+            }
+
+            OR = {
+                is_faction_leader = yes
+                NOT = { is_in_faction = yes }
+            }
+
+            has_war_with = ROOT
+            NOT = { has_non_aggression_pact_with = ROOT }
+        }
+
+
+        # SEND POPUP
+
+        can_be_sent = {
+            # Sender must be faction leader if in a faction
+            custom_trigger_tooltip = {
+                tooltip = ceasefire_must_be_faction_leader
+                ROOT = {
+                    OR = {
+                        is_faction_leader = yes
+                        NOT = { is_in_faction = yes }
+                    }
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = ceasefire_sender_cannot_be_subject
+                ROOT = { NOT = { is_subject = yes } }
+            }
+            # Receiver must be faction leader if in a faction
+            custom_trigger_tooltip = {
+                tooltip = ceasefire_target_must_be_faction_leader
+                OR = {
+                    is_faction_leader = yes
+                    NOT = { is_in_faction = yes }
+                }
+            }
+            custom_trigger_tooltip = {
+                tooltip = ceasefire_target_cannot_be_subject
+                NOT = { is_subject = yes }
+            }
+        }
+
+        send_description = ceasefire_send_desc
+
+        reset_send_effect = {
+            # clear action state if you add variables later
+        }
+
+        # RECEIVE POPUP
+
+        can_be_accepted = {
+            # Current scope = receiver (AI evaluating acceptance), ROOT = sender
+            custom_trigger_tooltip = {
+                tooltip = ceasefire_sender_cannot_be_subject
+                ROOT = { NOT = { is_subject = yes } }
+            }
+            custom_trigger_tooltip = {
+                tooltip = ceasefire_target_cannot_be_subject
+                NOT = { is_subject = yes }
+            }
+
+            # Both sides must be exhausted/near capitulation
+            # custom_trigger_tooltip = {
+            #     tooltip = ceasefire_sender_exhausted
+            #     ROOT = {
+            #         OR = {
+            #             surrender_progress > 0.5
+            #             has_war_support < 0.3
+            #             casualties_k > 500
+            #         }
+            #     }
+            # }
+            # custom_trigger_tooltip = {
+            #     tooltip = ceasefire_receiver_exhausted
+            #     ROOT = {
+            #         OR = {
+            #             surrender_progress > 0.5
+            #             has_war_support < 0.3
+            #             casualties_k > 500
+            #         }
+            #     }
+            # }
+
+            always = yes
+        }
+
+        receive_description = ceasefire_receive_desc
+
+        reset_receive_effect = {
+            log = "[CeasefireMechanics] Ceasefire offer received - Sender: [ROOT.GetName], Receiver: [This.GetName]"
+        }
+
+        # EFFECTS
+
+        on_sent_effect = {
+            # runs when request is sent
+            log = "[CeasefireMechanics] Ceasefire proposed - Sender: [ROOT.GetName], Receiver: [This.GetName]"
+            ROOT = {
+                if = {
+                    limit = { is_ai = yes }
+                    clr_country_flag = ceasefire_ai_propose_cooldown
+                    set_country_flag = ceasefire_ai_propose_cooldown
+                }
+            }
+        }
+
+        complete_effect = {
+            # Context: ROOT = sender (proposer), current scope = receiver (accepter)
+            log = "[CeasefireMechanics] Initiating ceasefire - Sender: [ROOT.GetName], Receiver: [This.GetName]"
+            # ============================================================
+            # STEP 1: Capture ceasefire camps (both sides)
+            # ============================================================
+            # Intended behavior:
+            # - If a signatory is in a faction, only faction members who are actually at war with the opposing signatory join their side.
+            # - If a signatory is not in a faction, only the signatory joins.
+            # This avoids dragging unrelated third-party wars into the ceasefire.
+            if = {
+                limit = { ROOT = { is_in_faction = yes } }
+                 every_country = {
+                     limit = {
+                         OR = {
+                             tag = ROOT
+                             AND = {
+                                 is_in_faction_with = ROOT
+                                 has_war_with = PREV
+                             }
+                         }
+                      }
+                      set_country_flag = ceasefire_tmp_sender_side
+                      set_country_flag = ceasefire_participant_against_@PREV
+                      set_country_flag = ceasefire_participant_with_@ROOT
+                  }
+              }
+              else = {
+                  ROOT = {
+                      set_country_flag = ceasefire_tmp_sender_side
+                      set_country_flag = ceasefire_participant_against_@PREV
+                      set_country_flag = ceasefire_participant_with_@THIS
+                  }
+              }
+              if = {
+                  limit = { is_in_faction = yes }
+                  every_country = {
+                    limit = {
+                        OR = {
+                            tag = PREV
+                            AND = {
+                                is_in_faction_with = PREV
+                                has_war_with = ROOT
+                            }
+                        }
+                      }
+                      set_country_flag = ceasefire_tmp_receiver_side
+                      set_country_flag = ceasefire_participant_against_@ROOT
+                      set_country_flag = ceasefire_participant_with_@PREV
+                  }
+              }
+               else = {
+                   set_country_flag = ceasefire_tmp_receiver_side
+                   set_country_flag = ceasefire_participant_against_@ROOT
+                   set_country_flag = ceasefire_participant_with_@THIS
+               }
+
+            # Include subjects (puppets) so they enter ceasefires only through their overlord.
+            # This closes the edge case where the overlord signs, but subjects remain at war and can act independently.
+            every_country = {
+                limit = {
+                    is_subject = yes
+                    is_subject_of = ROOT
+                    has_war_with = PREV
+                }
+                set_country_flag = ceasefire_tmp_sender_side
+                set_country_flag = ceasefire_participant_against_@PREV
+                set_country_flag = ceasefire_participant_with_@ROOT
+            }
+            every_country = {
+                limit = {
+                    is_subject = yes
+                    is_subject_of = PREV
+                    has_war_with = ROOT
+                }
+                set_country_flag = ceasefire_tmp_receiver_side
+                set_country_flag = ceasefire_participant_against_@ROOT
+                set_country_flag = ceasefire_participant_with_@PREV
+            }
+
+            # ============================================================
+            # STEP 2: Record occupied states for post-peace transfer
+            # ============================================================
+            # white_peace will reset occupation control; store the current occupied states so we can transfer them after.
+            every_country = {
+                limit = { has_country_flag = ceasefire_tmp_sender_side }
+                every_controlled_state = {
+                    limit = { owner = { has_country_flag = ceasefire_tmp_receiver_side } }
+                    set_state_flag = ceasefire_tmp_transfer_state
+                    set_variable = { ceasefire_transfer_to = PREV }
+                    if = {
+                        limit = { has_game_rule = { rule = ceasefire_territory_rule option = ESCROW_OWNERSHIP } }
+                        set_variable = { var = ceasefire_escrow_original_owner value = owner }
+                    }
+                }
+            }
+            every_country = {
+                limit = { has_country_flag = ceasefire_tmp_receiver_side }
+                every_controlled_state = {
+                    limit = { owner = { has_country_flag = ceasefire_tmp_sender_side } }
+                    set_state_flag = ceasefire_tmp_transfer_state
+                    set_variable = { ceasefire_transfer_to = PREV }
+                    if = {
+                        limit = { has_game_rule = { rule = ceasefire_territory_rule option = ESCROW_OWNERSHIP } }
+                        set_variable = { var = ceasefire_escrow_original_owner value = owner }
+                    }
+                }
+            }
+
+            # ============================================================
+            # STEP 3: End the war with white peace
+            # ============================================================
+            log = "[CeasefireMechanics] Executing camp-wide white_peace for ceasefire between [ROOT.GetName] and [This.GetName]"
+            # Apply white peace across the whole "camp vs camp" mesh.
+            # This prevents the broken state where a third party gets a truce/NAP without actually being peaced out.
+            every_country = {
+                limit = { has_country_flag = ceasefire_tmp_sender_side }
+                every_country = {
+                    limit = {
+                        has_country_flag = ceasefire_tmp_receiver_side
+                        has_war_with = PREV
+                    }
+                    white_peace = PREV
+                }
+            }
+            log = "[CeasefireMechanics] Camp-wide white peace executed for ceasefire between [ROOT.GetName] and [This.GetName]"
+
+            # ============================================================
+            # STEP 4: Apply recorded occupied territory results
+            # ============================================================
+            # Legacy (stable): transfer OWNERSHIP of currently-occupied states.
+            # Note: state "controller" occupation is not stable after peace; the engine will reassert owner.
+            every_state = {
+                limit = { has_state_flag = ceasefire_tmp_transfer_state }
+                var:ceasefire_transfer_to = { transfer_state = PREV }
+                clr_state_flag = ceasefire_tmp_transfer_state
+                if = {
+                    limit = { has_game_rule = { rule = ceasefire_territory_rule option = ESCROW_OWNERSHIP } }
+                    set_state_flag = ceasefire_escrow_state
+                }
+                else = {
+                    clear_variable = ceasefire_transfer_to
+                    clear_variable = ceasefire_escrow_original_owner
+                }
+            }
+
+            # -------------------------------------------------------------------------
+            # EXPERIMENTAL BACKUP (PROVINCE CONTROLLER RESTORE) - disabled
+            # -------------------------------------------------------------------------
+            # This is intentionally left here, but disabled, because it is heavy and unreliable:
+            # HOI4 scripting has no practical way to iterate "all controlled provinces", so it must brute-force scan IDs.
+            #
+            # STEP 2 (experimental): Record occupied provinces for post-peace restore
+            # every_country = {
+            #     limit = {
+            #         OR = {
+            #             has_country_flag = ceasefire_tmp_sender_side
+            #             has_country_flag = ceasefire_tmp_receiver_side
+            #         }
+            #     }
+            #     clear_temp_array = ceasefire_tmp_controlled_provinces
+            #     for_loop_effect = {
+            #         start = 1
+            #         end = 16000 # PROVINCE_ID_SCAN_MAX
+            #         compare = less_than_or_equals
+            #         add = 1
+            #         value = ceasefire_tmp_province_id
+            #         meta_effect = {
+            #             text = {
+            #                 if = {
+            #                     limit = { controls_province = [PROV] }
+            #                     add_to_temp_array = { array = ceasefire_tmp_controlled_provinces value = [PROV] }
+            #                 }
+            #             }
+            #             PROV = var:ceasefire_tmp_province_id
+            #             debug = no
+            #         }
+            #     }
+            # }
+            #
+            # STEP 4 (experimental): Restore recorded occupied provinces to the controller
+            # every_country = {
+            #     limit = {
+            #         OR = {
+            #             has_country_flag = ceasefire_tmp_sender_side
+            #             has_country_flag = ceasefire_tmp_receiver_side
+            #         }
+            #     }
+            #     for_each_loop = {
+            #         array = ceasefire_tmp_controlled_provinces
+            #         value = ceasefire_tmp_province_id
+            #         set_province_controller = var:ceasefire_tmp_province_id
+            #     }
+            #     clear_temp_array = ceasefire_tmp_controlled_provinces
+            # }
+            # ============================================================
+            # STEP 5: Create wargoals for both sides (after peace)
+            # ============================================================
+            # Create wargoals for all captured participants (full mesh across the two camps),
+            # so non-leaders can still resume the war if factions change during the ceasefire.
+            every_country = {
+                limit = { has_country_flag = ceasefire_tmp_sender_side }
+                every_country = {
+                    limit = { has_country_flag = ceasefire_tmp_receiver_side }
+
+                    if = {
+                        limit = { NOT = { has_wargoal_against = PREV } }
+                        create_wargoal = {
+                            type = ceasefire_resume_war
+                            target = PREV
+                        }
+                    }
+                    PREV = {
+                        if = {
+                            limit = { NOT = { has_wargoal_against = PREV } }
+                            create_wargoal = {
+                                type = ceasefire_resume_war
+                                target = PREV
+                            }
+                        }
+                    }
+                }
+            }
+            log = "[CeasefireMechanics] Participant wargoals created for ceasefire between [ROOT.GetName] and [This.GetName]"
+            # ============================================================
+            # STEP 6: Apply ceasefire truce + NAP (leaders + participants)
+            # ============================================================
+            if = {
+                limit = { has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_30 } }
+                # Apply truce+NAP across the whole "camp vs camp" mesh to prevent non-leaders from re-starting the war.
+                every_country = {
+                    limit = { has_country_flag = ceasefire_tmp_sender_side }
+                    every_country = {
+                        limit = { has_country_flag = ceasefire_tmp_receiver_side }
+                        # Safety: never apply truce/NAP to a pair that is still at war (prevents broken "truce while fighting").
+                        if = {
+                            limit = { NOT = { has_war_with = PREV } }
+                            if = {
+                                limit = { has_game_rule = { rule = ceasefire_participant_break_rule option = AFTER_TRUCE } }
+                                # Truce duration is intentionally longer than the break cooldown (cooldown is only the minimum time before breaking).
+                                if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X1 } }
+                                    set_truce = { target = PREV days = 30 }
+                                    PREV = { set_truce = { target = PREV days = 30 } }
+                                }
+                                else_if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X2 } }
+                                    set_truce = { target = PREV days = 60 }
+                                    PREV = { set_truce = { target = PREV days = 60 } }
+                                }
+                                else_if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X4 } }
+                                    set_truce = { target = PREV days = 120 }
+                                    PREV = { set_truce = { target = PREV days = 120 } }
+                                }
+                                else = {
+                                    # Default: X3
+                                    set_truce = { target = PREV days = 90 }
+                                    PREV = { set_truce = { target = PREV days = 90 } }
+                                }
+                            }
+                            else = {
+                                diplomatic_relation = { country = PREV relation = non_aggression_pact active = yes }
+                                set_truce = { target = PREV days = 9999 }
+                                PREV = {
+                                    diplomatic_relation = { country = PREV relation = non_aggression_pact active = yes }
+                                    set_truce = { target = PREV days = 9999 }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_60 } }
+                every_country = {
+                    limit = { has_country_flag = ceasefire_tmp_sender_side }
+                    every_country = {
+                        limit = { has_country_flag = ceasefire_tmp_receiver_side }
+                        if = {
+                            limit = { NOT = { has_war_with = PREV } }
+                            if = {
+                                limit = { has_game_rule = { rule = ceasefire_participant_break_rule option = AFTER_TRUCE } }
+                                if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X1 } }
+                                    set_truce = { target = PREV days = 60 }
+                                    PREV = { set_truce = { target = PREV days = 60 } }
+                                }
+                                else_if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X2 } }
+                                    set_truce = { target = PREV days = 120 }
+                                    PREV = { set_truce = { target = PREV days = 120 } }
+                                }
+                                else_if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X4 } }
+                                    set_truce = { target = PREV days = 240 }
+                                    PREV = { set_truce = { target = PREV days = 240 } }
+                                }
+                                else = {
+                                    # Default: X3
+                                    set_truce = { target = PREV days = 180 }
+                                    PREV = { set_truce = { target = PREV days = 180 } }
+                                }
+                            }
+                            else = {
+                                diplomatic_relation = { country = PREV relation = non_aggression_pact active = yes }
+                                set_truce = { target = PREV days = 9999 }
+                                PREV = {
+                                    diplomatic_relation = { country = PREV relation = non_aggression_pact active = yes }
+                                    set_truce = { target = PREV days = 9999 }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_180 } }
+                every_country = {
+                    limit = { has_country_flag = ceasefire_tmp_sender_side }
+                    every_country = {
+                        limit = { has_country_flag = ceasefire_tmp_receiver_side }
+                        if = {
+                            limit = { NOT = { has_war_with = PREV } }
+                            if = {
+                                limit = { has_game_rule = { rule = ceasefire_participant_break_rule option = AFTER_TRUCE } }
+                                if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X1 } }
+                                    set_truce = { target = PREV days = 180 }
+                                    PREV = { set_truce = { target = PREV days = 180 } }
+                                }
+                                else_if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X2 } }
+                                    set_truce = { target = PREV days = 360 }
+                                    PREV = { set_truce = { target = PREV days = 360 } }
+                                }
+                                else_if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X4 } }
+                                    set_truce = { target = PREV days = 720 }
+                                    PREV = { set_truce = { target = PREV days = 720 } }
+                                }
+                                else = {
+                                    # Default: X3
+                                    set_truce = { target = PREV days = 540 }
+                                    PREV = { set_truce = { target = PREV days = 540 } }
+                                }
+                            }
+                            else = {
+                                diplomatic_relation = { country = PREV relation = non_aggression_pact active = yes }
+                                set_truce = { target = PREV days = 9999 }
+                                PREV = {
+                                    diplomatic_relation = { country = PREV relation = non_aggression_pact active = yes }
+                                    set_truce = { target = PREV days = 9999 }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            else = {
+                # Default: 90 days cooldown
+                every_country = {
+                    limit = { has_country_flag = ceasefire_tmp_sender_side }
+                    every_country = {
+                        limit = { has_country_flag = ceasefire_tmp_receiver_side }
+                        if = {
+                            limit = { NOT = { has_war_with = PREV } }
+                            if = {
+                                limit = { has_game_rule = { rule = ceasefire_participant_break_rule option = AFTER_TRUCE } }
+                                if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X1 } }
+                                    set_truce = { target = PREV days = 90 }
+                                    PREV = { set_truce = { target = PREV days = 90 } }
+                                }
+                                else_if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X2 } }
+                                    set_truce = { target = PREV days = 180 }
+                                    PREV = { set_truce = { target = PREV days = 180 } }
+                                }
+                                else_if = {
+                                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X4 } }
+                                    set_truce = { target = PREV days = 360 }
+                                    PREV = { set_truce = { target = PREV days = 360 } }
+                                }
+                                else = {
+                                    # Default: X3
+                                    set_truce = { target = PREV days = 270 }
+                                    PREV = { set_truce = { target = PREV days = 270 } }
+                                }
+                            }
+                            else = {
+                                diplomatic_relation = { country = PREV relation = non_aggression_pact active = yes }
+                                set_truce = { target = PREV days = 9999 }
+                                PREV = {
+                                    diplomatic_relation = { country = PREV relation = non_aggression_pact active = yes }
+                                    set_truce = { target = PREV days = 9999 }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            # ============================================================
+            # STEP 7: Set ceasefire tracking flags on both parties
+            # ============================================================
+            # Set flags explicitly on sender + receiver
+            set_country_flag = ceasefire_active
+            set_country_flag = ceasefire_active_with_@ROOT
+            clr_country_flag = ceasefire_honored_notified_with_@ROOT
+            clr_country_flag = ceasefire_honored_monthly_done
+            # Track the real initiator so only they can break the ceasefire.
+            set_country_flag = ceasefire_initiated_by_@ROOT
+            log = "[CeasefireMechanics] [This.GetName] set ceasefire_active_with_@[ROOT.GetTag]"
+             
+            ROOT = {
+                set_country_flag = ceasefire_active
+                set_country_flag = ceasefire_active_with_@PREV
+                clr_country_flag = ceasefire_honored_notified_with_@PREV
+                clr_country_flag = ceasefire_honored_monthly_done
+                set_country_flag = ceasefire_initiator_with_@PREV
+                log = "[CeasefireMechanics] [This.GetName] set ceasefire_active_with_@[PREV.GetTag]"
+            }
+            # ============================================================
+            # STEP 8: Set cooldown flags on both parties
+            # ============================================================
+            # Prevent immediately breaking the ceasefire.
+            if = {
+                limit = { has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_30 } }
+                clr_country_flag = ceasefire_break_cooldown
+                set_country_flag = ceasefire_break_cooldown
+                ROOT = {
+                    clr_country_flag = ceasefire_break_cooldown
+                    set_country_flag = ceasefire_break_cooldown
+                }
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_60 } }
+                clr_country_flag = ceasefire_break_cooldown
+                set_country_flag = ceasefire_break_cooldown
+                ROOT = {
+                    clr_country_flag = ceasefire_break_cooldown
+                    set_country_flag = ceasefire_break_cooldown
+                }
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_180 } }
+                clr_country_flag = ceasefire_break_cooldown
+                set_country_flag = ceasefire_break_cooldown
+                ROOT = {
+                    clr_country_flag = ceasefire_break_cooldown
+                    set_country_flag = ceasefire_break_cooldown
+                }
+            }
+            else = {
+                # Default: 90 days
+                clr_country_flag = ceasefire_break_cooldown
+                set_country_flag = ceasefire_break_cooldown
+                ROOT = {
+                    clr_country_flag = ceasefire_break_cooldown
+                    set_country_flag = ceasefire_break_cooldown
+                }
+            }
+
+            # (Optional anti-spam) Prevent immediately proposing new ceasefires to anyone.
+            clr_country_flag = ceasefire_propose_cooldown
+            set_country_flag = ceasefire_propose_cooldown
+            ROOT = {
+                clr_country_flag = ceasefire_propose_cooldown
+                set_country_flag = ceasefire_propose_cooldown
+            }
+
+            # Opinion impact: ceasefire accepted (apply across both camps).
+            every_country = {
+                limit = { has_country_flag = ceasefire_tmp_sender_side }
+                every_country = {
+                    limit = { has_country_flag = ceasefire_tmp_receiver_side }
+                    add_opinion_modifier = { target = PREV modifier = accepted_ceasefire }
+                }
+            }
+            every_country = {
+                limit = { has_country_flag = ceasefire_tmp_receiver_side }
+                every_country = {
+                    limit = { has_country_flag = ceasefire_tmp_sender_side }
+                    add_opinion_modifier = { target = PREV modifier = accepted_ceasefire }
+                }
+            }
+
+            # Events (leaders + player-controlled participants), gated by game rule.
+            if = {
+                limit = { has_game_rule = { rule = ceasefire_events_rule option = ENABLED } }
+
+                # Leader perspectives (make sure FROM is the other signatory)
+                if = {
+                    limit = { is_ai = no } # current scope = receiver (accepter)
+                    ROOT = {
+                        PREV = {
+                            random_list = {
+                                20 = { country_event = { id = ceasefire_events.10 } }
+                                20 = { country_event = { id = ceasefire_events.11 } }
+                                20 = { country_event = { id = ceasefire_events.12 } }
+                                20 = { country_event = { id = ceasefire_events.13 } }
+                                20 = { country_event = { id = ceasefire_events.14 } }
+                            }
+                        }
+                    }
+                }
+                ROOT = {
+                    if = {
+                        limit = { is_ai = no } # ROOT = sender (proposer)
+                        random_list = {
+                            20 = { country_event = { id = ceasefire_events.10 } }
+                            20 = { country_event = { id = ceasefire_events.11 } }
+                            20 = { country_event = { id = ceasefire_events.12 } }
+                            20 = { country_event = { id = ceasefire_events.13 } }
+                            20 = { country_event = { id = ceasefire_events.14 } }
+                        }
+                    }
+                }
+
+                # Participant perspectives (only fire for human-controlled countries)
+                # Sender side participants: show them the opponent signatory (receiver) via FROM.
+                every_country = {
+                    limit = {
+                        is_ai = no
+                        has_country_flag = ceasefire_tmp_sender_side
+                        NOT = { tag = ROOT }
+                        NOT = { tag = PREV }
+                    }
+                    random_list = {
+                        34 = { country_event = { id = ceasefire_events.15 } }
+                        33 = { country_event = { id = ceasefire_events.16 } }
+                        33 = { country_event = { id = ceasefire_events.17 } }
+                    }
+                }
+                # Receiver side participants: trigger from sender so FROM is sender.
+                ROOT = {
+                    every_country = {
+                        limit = {
+                            is_ai = no
+                            has_country_flag = ceasefire_tmp_receiver_side
+                            NOT = { tag = ROOT }
+                            NOT = { tag = PREV }
+                        }
+                        random_list = {
+                            34 = { country_event = { id = ceasefire_events.15 } }
+                            33 = { country_event = { id = ceasefire_events.16 } }
+                            33 = { country_event = { id = ceasefire_events.17 } }
+                        }
+                    }
+                }
+            }
+
+            # Cleanup temporary side flags (only used during this complete_effect execution)
+            every_country = {
+                limit = { has_country_flag = ceasefire_tmp_sender_side }
+                clr_country_flag = ceasefire_tmp_sender_side
+            }
+            every_country = {
+                limit = { has_country_flag = ceasefire_tmp_receiver_side }
+                clr_country_flag = ceasefire_tmp_receiver_side
+            }
+            log = "[CeasefireMechanics] Ceasefire established between [ROOT.GetName] and [This.GetName]"
+        }
+
+        reject_effect = {
+            log = "[CeasefireMechanics] Ceasefire rejected - Sender: [ROOT.GetName], Receiver: [This.GetName]"
+            ROOT = {
+                add_opinion_modifier = {
+                    target = PREV
+                    modifier = refused_ceasefire
+                }
+                # Anti-spam: prevent immediately proposing another ceasefire after rejection.
+                clr_country_flag = ceasefire_propose_cooldown
+                set_country_flag = ceasefire_propose_cooldown
+            }
+        }
+
+        # PLAYER FEEDBACK
+
+        accept_title = ceasefire_accept_title
+        accept_description = ceasefire_accept_desc
+        reject_title = ceasefire_reject_title
+        reject_description = ceasefire_reject_desc
+
+        # AI
+
+        # AI acceptance factors:
+        # 1. Own surrender progress (capitulation risk)
+        # 2. Enemy surrender progress (if enemy is collapsing, refuse)
+        # 3. War support (domestic support for continuing)
+        # 4. Stability (internal resilience)
+        # 5. Relative strength ratio vs proposer
+        # 6. Major status (majors are more stubborn)
+
+        ai_acceptance = {
+            # current scope = receiver (evaluating acceptance), ROOT = sender
+            # Total score is the sum of all conditions. Positive = accept, negative = reject.
+
+            ceasefire_ai_base_reluctance = {
+                # Default posture: keep fighting unless there is a concrete strategic reason to stop.
+                base = -70
+            }
+
+            # Being close to capitulation is the biggest driver.
+            ceasefire_ai_close_to_surrender = {
+                base = 0
+                modifier = {
+                    set_temp_variable = { sp = var:THIS.surrender_progress }
+                    multiply_temp_variable = { sp = 280 } # 0..280
+                    round_temp_variable = sp
+                    subtract_from_temp_variable = { sp = 130 } # -130..150
+                    clamp_temp_variable = { var = sp min = -130 max = 150 }
+                    add = var:sp
+                }
+            }
+
+            # Relative desperation matters more than absolute desperation.
+            # If our surrender progress is higher than the sender's, acceptance increases (and vice versa).
+            ceasefire_ai_surrender_gap = {
+                base = 0
+                modifier = {
+                    set_temp_variable = { gap = var:THIS.surrender_progress }
+                    subtract_from_temp_variable = { gap = var:ROOT.surrender_progress }
+                    multiply_temp_variable = { gap = 240 } # -240..240
+                    round_temp_variable = gap
+                    clamp_temp_variable = { var = gap min = -150 max = 150 }
+                    add = var:gap
+                }
+            }
+
+            # If the sender is close to capitulation, we are likely winning -> reluctant to accept.
+            ceasefire_ai_enemy_near_capitulation = {
+                base = 0
+                modifier = {
+                    set_temp_variable = { esp = var:ROOT.surrender_progress }
+                    multiply_temp_variable = { esp = -200 } # 0..-200
+                    round_temp_variable = esp
+                    clamp_temp_variable = { var = esp min = -200 max = 0 }
+                    add = var:esp
+                }
+            }
+
+            # Domestic situation: low war support / low stability increases acceptance.
+            ceasefire_ai_war_support = {
+                base = 0
+                modifier = {
+                    set_temp_variable = { ws = var:THIS.has_war_support }
+                    multiply_temp_variable = { ws = -160 } # 0..-160
+                    round_temp_variable = ws
+                    add_to_temp_variable = { ws = 80 } # 80..-80
+                    clamp_temp_variable = { var = ws min = -80 max = 80 }
+                    add = var:ws
+                }
+            }
+            ceasefire_ai_stability = {
+                base = 0
+                modifier = {
+                    set_temp_variable = { st = var:THIS.has_stability }
+                    multiply_temp_variable = { st = -120 } # 0..-120
+                    round_temp_variable = st
+                    add_to_temp_variable = { st = 60 } # 60..-60
+                    clamp_temp_variable = { var = st min = -60 max = 60 }
+                    add = var:st
+                }
+            }
+
+            # Low manpower makes continuing the war harder to sustain (and makes a ceasefire attractive).
+            ceasefire_ai_manpower_pressure = {
+                base = 0
+                modifier = { add = 15 has_manpower < 300000 }
+                modifier = { add = 25 has_manpower < 150000 }
+                modifier = { add = 40 has_manpower < 60000 }
+                modifier = { add = 60 has_manpower < 20000 }
+            }
+
+            # If the sender is the one running out of manpower, finishing them becomes more attractive.
+            ceasefire_ai_enemy_manpower_pressure = {
+                base = 0
+                modifier = { add = -10 ROOT = { has_manpower < 150000 } }
+                modifier = { add = -20 ROOT = { has_manpower < 60000 } }
+                modifier = { add = -35 ROOT = { has_manpower < 20000 } }
+            }
+
+            # If the sender side is materially stronger, acceptance increases.
+            ceasefire_ai_strength_ratio = {
+                base = 0
+                modifier = {
+                    set_temp_variable = { str = THIS.enemies_strength_ratio@ROOT }
+                    multiply_temp_variable = { str = 140 } # ratio->points
+                    round_temp_variable = str
+                    subtract_from_temp_variable = { str = 140 } # ratio=1.0 -> 0
+                    clamp_temp_variable = { var = str min = -80 max = 220 }
+                    add = var:str
+                }
+            }
+
+            ceasefire_ai_major_stubbornness = {
+                base = 0
+                modifier = {
+                    add = -25
+                    is_major = yes
+                    surrender_progress < 0.55
+                }
+                modifier = {
+                    add = 25
+                    is_major = yes
+                    surrender_progress > 0.70
+                }
+            }
+
+            # Political culture: democracies tend to be more willing to pause wars, while dictatorships are more stubborn.
+            # This is intentionally mild so material/strategic factors dominate.
+            ceasefire_ai_political_culture = {
+                base = 0
+                modifier = { add = 10 has_government = democratic }
+                modifier = { add = -5 has_government = communism }
+                modifier = { add = -10 has_government = fascism }
+            }
+
+            # If both sides are politically exhausted, negotiated pauses become more plausible even without imminent capitulation.
+            ceasefire_ai_mutual_exhaustion = {
+                base = 0
+                modifier = {
+                    add = 20
+                    has_war_support < 0.35
+                    ROOT = { has_war_support < 0.35 }
+                }
+                modifier = {
+                    add = 15
+                    has_stability < 0.40
+                    ROOT = { has_stability < 0.40 }
+                }
+            }
+
+            ceasefire_ai_edge_cases = {
+                base = 0
+                # If we are clearly winning, refuse; if clearly losing, accept.
+                modifier = {
+                    add = -50
+                    surrender_progress < 0.05
+                }
+                modifier = {
+                    add = 50
+                    surrender_progress > 0.85
+                }
+
+                # If sender is collapsing, we're very unlikely to accept.
+                modifier = {
+                    add = -80
+                    ROOT = { surrender_progress > 0.85 }
+                }
+
+                # If we're doing fine but the sender is in real trouble, prefer to press for capitulation.
+                modifier = {
+                    add = -120
+                    surrender_progress < 0.35
+                    ROOT = { surrender_progress > 0.75 }
+                }
+            }
+
+            ceasefire_ai_facing_strong_major_enemy = {
+                base = 0
+                modifier = {
+                    add = 25
+                    surrender_progress > 0.35
+                    any_enemy_country = {
+                        is_major = yes
+                        surrender_progress < 0.20
+                    }
+                }
+            }
+        }
+
+        ai_desire = {
+            # current scope = target (receiver), ROOT = sender (AI evaluating whether to send)
+            # Score is roughly [-300, +300]. Higher = more likely to send.
+            base = -150
+
+            # Game rule: optionally block AI from sending ceasefires entirely.
+            modifier = {
+                add = -10000
+                has_game_rule = { rule = ceasefire_ai_send_rule option = BLOCKED }
+            }
+
+            # Anti-spam: AI can only send a ceasefire occasionally (regardless of target).
+            modifier = {
+                add = -10000
+                ROOT = {
+                    has_country_flag = ceasefire_ai_propose_cooldown
+                    NOT = { has_country_flag = { flag = ceasefire_ai_propose_cooldown days > 89 } }
+                }
+            }
+
+            # If we're clearly winning, don't offer a ceasefire (press the advantage).
+            modifier = {
+                add = -280
+                ROOT = { surrender_progress < 0.12 }
+                surrender_progress > 0.40
+            }
+            modifier = {
+                add = -220
+                ROOT = { surrender_progress < 0.20 }
+                surrender_progress > 0.65
+            }
+
+            # Relative desperation matters: if we're collapsing faster than the target, we look for a pause.
+            modifier = {
+                set_temp_variable = { gap = var:ROOT.surrender_progress }
+                subtract_from_temp_variable = { gap = var:THIS.surrender_progress }
+                multiply_temp_variable = { gap = 220 } # -220..220
+                round_temp_variable = gap
+                clamp_temp_variable = { var = gap min = -180 max = 180 }
+                add = var:gap
+            }
+
+            # Core driver: if we're close to capitulation, we want a ceasefire.
+            modifier = {
+                set_temp_variable = { sp = var:ROOT.surrender_progress }
+                multiply_temp_variable = { sp = 260 } # 0..260
+                round_temp_variable = sp
+                subtract_from_temp_variable = { sp = 80 } # -80..180
+                clamp_temp_variable = { var = sp min = -80 max = 200 }
+                add = var:sp
+            }
+
+            # If the target is collapsing, we're likely winning -> reduce desire.
+            modifier = {
+                set_temp_variable = { tsp = var:THIS.surrender_progress }
+                multiply_temp_variable = { tsp = -220 } # 0..-220
+                round_temp_variable = tsp
+                clamp_temp_variable = { var = tsp min = -220 max = 0 }
+                add = var:tsp
+            }
+
+            # Avoid sending offers that are very likely to be rejected (target is confident and stable).
+            modifier = {
+                add = -120
+                ROOT = { surrender_progress < 0.55 }
+                surrender_progress < 0.25
+                has_war_support > 0.60
+                has_stability > 0.55
+            }
+
+            # Domestic pressure (low war support / low stability) increases desire to pause the war.
+            modifier = {
+                set_temp_variable = { ws = var:ROOT.has_war_support }
+                multiply_temp_variable = { ws = -160 } # 0..-160
+                round_temp_variable = ws
+                add_to_temp_variable = { ws = 50 } # 50..-110
+                clamp_temp_variable = { var = ws min = -90 max = 60 }
+                add = var:ws
+            }
+            modifier = {
+                set_temp_variable = { st = var:ROOT.has_stability }
+                multiply_temp_variable = { st = -120 } # 0..-120
+                round_temp_variable = st
+                add_to_temp_variable = { st = 40 } # 40..-80
+                clamp_temp_variable = { var = st min = -60 max = 60 }
+                add = var:st
+            }
+
+            # Manpower emergencies strongly encourage seeking a pause.
+            modifier = { add = 25 ROOT = { has_manpower < 300000 } }
+            modifier = { add = 45 ROOT = { has_manpower < 100000 } }
+            modifier = { add = 75 ROOT = { has_manpower < 30000 } }
+            modifier = { add = 110 ROOT = { has_manpower < 10000 } }
+
+            # If we're outmatched overall, we're more likely to propose a ceasefire.
+            modifier = { add = 30 ROOT = { enemies_strength_ratio > 1.20 } }
+            modifier = { add = 70 ROOT = { enemies_strength_ratio > 1.60 } }
+            modifier = { add = 120 ROOT = { enemies_strength_ratio > 2.20 } }
+            modifier = { add = -70 ROOT = { enemies_strength_ratio < 0.85 } }
+            modifier = { add = -120 ROOT = { enemies_strength_ratio < 0.70 } }
+            modifier = { add = -200 ROOT = { enemies_strength_ratio < 0.55 } }
+
+            # If we have strong strategic intent against the target, we don't pause unless we're truly desperate.
+            modifier = {
+                add = -80
+                ROOT = {
+                    has_wargoal_against = PREV
+                    surrender_progress < 0.45
+                }
+            }
+            modifier = {
+                add = 35
+                ROOT = {
+                    has_wargoal_against = PREV
+                    surrender_progress > 0.70
+                }
+            }
+
+            # Facing a stable major enemy often means a long war -> increases desire (especially if we're not winning).
+            modifier = {
+                add = 25
+                ROOT = {
+                    any_enemy_country = {
+                        is_major = yes
+                        surrender_progress < 0.20
+                    }
+                }
+            }
+
+            # Majors are generally more stubborn, unless they are in real danger.
+            modifier = { add = -20 ROOT = { is_major = yes } }
+            modifier = { add = 60 ROOT = { is_major = yes surrender_progress > 0.55 } }
+
+            # Mutual exhaustion can produce negotiated pauses even without imminent capitulation.
+            modifier = {
+                add = 40
+                ROOT = { surrender_progress > 0.45 }
+                surrender_progress > 0.45
+            }
+        }
+    }
+}

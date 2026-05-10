@@ -1,0 +1,25 @@
+opinion_modifiers = {
+    accepted_ceasefire = {
+        value = 10
+        decay = 1
+        months = 12
+    }
+
+    broke_ceasefire = {
+        value = -50
+        decay = 0.5
+        months = 60
+    }
+
+    honored_ceasefire = {
+        value = 15
+        decay = 0.5
+        months = 24
+    }
+
+    refused_ceasefire = {
+        value = -20
+        decay = 2
+        months = 12
+    }
+}

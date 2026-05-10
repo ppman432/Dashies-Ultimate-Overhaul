@@ -1,0 +1,69 @@
+scripted_gui = {
+	enemy_state_resistance = {
+	
+		context_type = selected_state_context
+		parent_window_token = selected_state_view
+		window_name = "enemy_state_resistance_container"
+		
+		visible = {
+			CONTROLLER = {
+				NOT = { tag = ROOT }
+			}
+		}
+		
+		effects = {
+			enemy_resistance_click = {
+				ROOT = {
+					set_variable = { show_enemy_state_resistance_menu@PREV = 1}
+				}
+               	ROOT = {
+					set_variable = { ROOT.resistance_percentage@PREV = PREV.resistance}
+					multiply_variable = {ROOT.resistance_percentage@PREV = 100}
+				}
+				
+			
+			
+		}}
+		
+		triggers = {
+	     
+		 
+		enemy_resistance_click_enabled = {check_variable = {FROM.FROM.resistance > 0}}
+		 
+		}
+		
+	
+			
+			
+	    ai_enabled = {
+            always = yes
+        }
+		
+		ai_check = {
+            
+			has_equipment = { support_equipment > 10000 }
+        }
+		
+		ai_enabled = {
+            always = yes
+        }
+
+		ai_test_interval = 2000
+		ai_test_scopes = test_neighbouring_enemy_states
+		ai_max_weight_taken_per_test = 1
+		
+		ai_check_scope = {
+        check_variable = { resistance > 0.2 }
+        }
+		
+		ai_weights = {
+		
+		enemy_resistance_click = {
+		weight = 1
+		        ai_will_do = { 
+		               factor = 1}}
+					   }
+			
+}}
+
+

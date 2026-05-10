@@ -1,0 +1,53 @@
+scripted_gui = {
+  open_uncommon_crate = {
+    window_name = "open_uncommon_crate_gui_window"
+    context_type = player_context
+
+    visible = {
+		has_country_flag = uncommon_crate_gui_opened
+    }
+
+    effects = {
+		open_crate_button2_click = {
+			random_list = {
+				50 = { 
+					add_equipment_to_stockpile = {
+						type = artillery_equipment
+						amount = 250
+					}
+				}	
+				50 = { 
+					add_equipment_to_stockpile = {
+						type = anti_tank_equipment
+						amount = 250
+					}					
+				}
+			}
+			random_list = {
+				50 = { 
+					add_equipment_to_stockpile = {
+						type = mechanized_equipment
+						amount = 180
+					}
+				}	
+				50 = { 
+					add_equipment_to_stockpile = {
+						type = motorized_equipment
+						amount = 300
+					}					
+				}
+			}		
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1750
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 300
+			}
+			clr_country_flag = uncommon_crate_gui_opened
+		}
+    }
+
+  }
+}

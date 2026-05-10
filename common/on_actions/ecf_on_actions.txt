@@ -1,0 +1,8 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			set_global_flag = other_mod_active
+			clr_global_flag = rt56_mod_active
+		}
+	}
+}

@@ -1,0 +1,743 @@
+# Ceasefire Mechanics - Submod API (scripted effects)
+#
+# API scope convention:
+# - ROOT = receiver (target country)
+# - FROM = initiator (caller country)
+
+ceasefire_api__clear_tmp_camps = {
+    every_country = { clr_country_flag = ceasefire_tmp_sender_side }
+    every_country = { clr_country_flag = ceasefire_tmp_receiver_side }
+}
+
+ceasefire_api__build_camps_two_country = {
+    ceasefire_api__clear_tmp_camps = yes
+
+    FROM = {
+        set_country_flag = ceasefire_tmp_sender_side
+        set_country_flag = ceasefire_participant_against_@ROOT
+        set_country_flag = ceasefire_participant_with_@THIS
+    }
+    set_country_flag = ceasefire_tmp_receiver_side
+    set_country_flag = ceasefire_participant_against_@FROM
+    set_country_flag = ceasefire_participant_with_@THIS
+}
+
+ceasefire_api__build_camps_faction = {
+    ceasefire_api__clear_tmp_camps = yes
+
+    if = {
+        limit = { FROM = { is_in_faction = yes } }
+        every_country = {
+            limit = { OR = { tag = FROM is_in_faction_with = FROM } }
+            set_country_flag = ceasefire_tmp_sender_side
+            set_country_flag = ceasefire_participant_against_@ROOT
+            set_country_flag = ceasefire_participant_with_@FROM
+        }
+    }
+    else = {
+        FROM = {
+            set_country_flag = ceasefire_tmp_sender_side
+            set_country_flag = ceasefire_participant_against_@ROOT
+            set_country_flag = ceasefire_participant_with_@THIS
+        }
+    }
+
+    if = {
+        limit = { is_in_faction = yes }
+        every_country = {
+            limit = { OR = { tag = ROOT is_in_faction_with = ROOT } }
+            set_country_flag = ceasefire_tmp_receiver_side
+            set_country_flag = ceasefire_participant_against_@FROM
+            set_country_flag = ceasefire_participant_with_@ROOT
+        }
+    }
+    else = {
+        set_country_flag = ceasefire_tmp_receiver_side
+        set_country_flag = ceasefire_participant_against_@FROM
+        set_country_flag = ceasefire_participant_with_@THIS
+    }
+}
+
+ceasefire_api__build_camps_faction_participants_only = {
+    ceasefire_api__clear_tmp_camps = yes
+
+    if = {
+        limit = { FROM = { is_in_faction = yes } }
+        every_country = {
+            limit = {
+                OR = { tag = FROM is_in_faction_with = FROM }
+                OR = {
+                    has_war_with = ROOT
+                    any_country = {
+                        OR = { tag = ROOT is_in_faction_with = ROOT }
+                        has_war_with = PREV
+                    }
+                }
+            }
+            set_country_flag = ceasefire_tmp_sender_side
+            set_country_flag = ceasefire_participant_against_@ROOT
+            set_country_flag = ceasefire_participant_with_@FROM
+        }
+    }
+    else = {
+        FROM = {
+            set_country_flag = ceasefire_tmp_sender_side
+            set_country_flag = ceasefire_participant_against_@ROOT
+            set_country_flag = ceasefire_participant_with_@THIS
+        }
+    }
+
+    if = {
+        limit = { is_in_faction = yes }
+        every_country = {
+            limit = {
+                OR = { tag = ROOT is_in_faction_with = ROOT }
+                OR = {
+                    has_war_with = FROM
+                    any_country = {
+                        OR = { tag = FROM is_in_faction_with = FROM }
+                        has_war_with = PREV
+                    }
+                }
+            }
+            set_country_flag = ceasefire_tmp_receiver_side
+            set_country_flag = ceasefire_participant_against_@FROM
+            set_country_flag = ceasefire_participant_with_@ROOT
+        }
+    }
+    else = {
+        set_country_flag = ceasefire_tmp_receiver_side
+        set_country_flag = ceasefire_participant_against_@FROM
+        set_country_flag = ceasefire_participant_with_@THIS
+    }
+}
+
+ceasefire_api__apply_truce_or_nap_pair = {
+    # Current scope = side B country, PREV = side A country
+    if = {
+        limit = { NOT = { has_war_with = PREV } }
+        if = {
+            limit = { has_game_rule = { rule = ceasefire_participant_break_rule option = AFTER_TRUCE } }
+            # Truce duration = break cooldown days * truce multiplier
+            if = {
+                limit = { has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_30 } }
+                if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X1 } }
+                    set_truce = { target = PREV days = 30 }
+                    PREV = { set_truce = { target = PREV days = 30 } }
+                }
+                else_if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X2 } }
+                    set_truce = { target = PREV days = 60 }
+                    PREV = { set_truce = { target = PREV days = 60 } }
+                }
+                else_if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X4 } }
+                    set_truce = { target = PREV days = 120 }
+                    PREV = { set_truce = { target = PREV days = 120 } }
+                }
+                else = {
+                    set_truce = { target = PREV days = 90 }
+                    PREV = { set_truce = { target = PREV days = 90 } }
+                }
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_60 } }
+                if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X1 } }
+                    set_truce = { target = PREV days = 60 }
+                    PREV = { set_truce = { target = PREV days = 60 } }
+                }
+                else_if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X2 } }
+                    set_truce = { target = PREV days = 120 }
+                    PREV = { set_truce = { target = PREV days = 120 } }
+                }
+                else_if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X4 } }
+                    set_truce = { target = PREV days = 240 }
+                    PREV = { set_truce = { target = PREV days = 240 } }
+                }
+                else = {
+                    set_truce = { target = PREV days = 180 }
+                    PREV = { set_truce = { target = PREV days = 180 } }
+                }
+            }
+            else_if = {
+                limit = { has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_180 } }
+                if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X1 } }
+                    set_truce = { target = PREV days = 180 }
+                    PREV = { set_truce = { target = PREV days = 180 } }
+                }
+                else_if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X2 } }
+                    set_truce = { target = PREV days = 360 }
+                    PREV = { set_truce = { target = PREV days = 360 } }
+                }
+                else_if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X4 } }
+                    set_truce = { target = PREV days = 720 }
+                    PREV = { set_truce = { target = PREV days = 720 } }
+                }
+                else = {
+                    set_truce = { target = PREV days = 540 }
+                    PREV = { set_truce = { target = PREV days = 540 } }
+                }
+            }
+            else = {
+                if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X1 } }
+                    set_truce = { target = PREV days = 90 }
+                    PREV = { set_truce = { target = PREV days = 90 } }
+                }
+                else_if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X2 } }
+                    set_truce = { target = PREV days = 180 }
+                    PREV = { set_truce = { target = PREV days = 180 } }
+                }
+                else_if = {
+                    limit = { has_game_rule = { rule = ceasefire_truce_multiplier_rule option = X4 } }
+                    set_truce = { target = PREV days = 360 }
+                    PREV = { set_truce = { target = PREV days = 360 } }
+                }
+                else = {
+                    set_truce = { target = PREV days = 270 }
+                    PREV = { set_truce = { target = PREV days = 270 } }
+                }
+            }
+        }
+        else = {
+            diplomatic_relation = { country = PREV relation = non_aggression_pact active = yes }
+            set_truce = { target = PREV days = 9999 }
+            PREV = {
+                diplomatic_relation = { country = PREV relation = non_aggression_pact active = yes }
+                set_truce = { target = PREV days = 9999 }
+            }
+        }
+    }
+}
+
+ceasefire_api__execute_ceasefire_common = {
+    log = "[CeasefireMechanics] [API] Executing ceasefire - Initiator: [FROM.GetName], Receiver: [ROOT.GetName]"
+
+    # Record occupied states for post-peace transfer
+    every_country = {
+        limit = { has_country_flag = ceasefire_tmp_sender_side }
+        every_controlled_state = {
+            limit = { owner = { has_country_flag = ceasefire_tmp_receiver_side } }
+            set_state_flag = ceasefire_tmp_transfer_state
+            set_variable = { ceasefire_transfer_to = PREV }
+            if = {
+                limit = { has_game_rule = { rule = ceasefire_territory_rule option = ESCROW_OWNERSHIP } }
+                set_variable = { var = ceasefire_escrow_original_owner value = owner }
+            }
+        }
+    }
+    every_country = {
+        limit = { has_country_flag = ceasefire_tmp_receiver_side }
+        every_controlled_state = {
+            limit = { owner = { has_country_flag = ceasefire_tmp_sender_side } }
+            set_state_flag = ceasefire_tmp_transfer_state
+            set_variable = { ceasefire_transfer_to = PREV }
+            if = {
+                limit = { has_game_rule = { rule = ceasefire_territory_rule option = ESCROW_OWNERSHIP } }
+                set_variable = { var = ceasefire_escrow_original_owner value = owner }
+            }
+        }
+    }
+
+    # End the war with camp-wide white peace
+    every_country = {
+        limit = { has_country_flag = ceasefire_tmp_sender_side }
+        every_country = {
+            limit = { has_country_flag = ceasefire_tmp_receiver_side has_war_with = PREV }
+            white_peace = PREV
+        }
+    }
+
+    # Apply recorded occupied territory results (stable): transfer OWNERSHIP.
+    # Optional (experimental): escrow original owners so the ownership can be restored when war resumes / peace conference starts.
+    every_state = {
+        limit = { has_state_flag = ceasefire_tmp_transfer_state }
+        var:ceasefire_transfer_to = { transfer_state = PREV }
+        clr_state_flag = ceasefire_tmp_transfer_state
+        if = {
+            limit = { has_game_rule = { rule = ceasefire_territory_rule option = ESCROW_OWNERSHIP } }
+            set_state_flag = ceasefire_escrow_state
+        }
+        else = {
+            clear_variable = ceasefire_transfer_to
+            clear_variable = ceasefire_escrow_original_owner
+        }
+    }
+
+    # -------------------------------------------------------------------------
+    # EXPERIMENTAL BACKUP (PROVINCE CONTROLLER RESTORE) - disabled
+    # -------------------------------------------------------------------------
+    # Record occupied provinces for post-peace restore
+    # every_country = {
+    #     limit = {
+    #         OR = {
+    #             has_country_flag = ceasefire_tmp_sender_side
+    #             has_country_flag = ceasefire_tmp_receiver_side
+    #         }
+    #     }
+    #     clear_temp_array = ceasefire_tmp_controlled_provinces
+    #     for_loop_effect = {
+    #         start = 1
+    #         end = 16000 # PROVINCE_ID_SCAN_MAX
+    #         compare = less_than_or_equals
+    #         add = 1
+    #         value = ceasefire_tmp_province_id
+    #         meta_effect = {
+    #             text = {
+    #                 if = {
+    #                     limit = { controls_province = [PROV] }
+    #                     add_to_temp_array = { array = ceasefire_tmp_controlled_provinces value = [PROV] }
+    #                 }
+    #             }
+    #             PROV = var:ceasefire_tmp_province_id
+    #             debug = no
+    #         }
+    #     }
+    # }
+    #
+    # Restore recorded occupied provinces to the controller
+    # every_country = {
+    #     limit = {
+    #         OR = {
+    #             has_country_flag = ceasefire_tmp_sender_side
+    #             has_country_flag = ceasefire_tmp_receiver_side
+    #         }
+    #     }
+    #     for_each_loop = {
+    #         array = ceasefire_tmp_controlled_provinces
+    #         value = ceasefire_tmp_province_id
+    #         set_province_controller = var:ceasefire_tmp_province_id
+    #     }
+    #     clear_temp_array = ceasefire_tmp_controlled_provinces
+    # }
+
+    # Create wargoals for both camps
+    every_country = {
+        limit = { has_country_flag = ceasefire_tmp_sender_side }
+        every_country = {
+            limit = { has_country_flag = ceasefire_tmp_receiver_side }
+            if = {
+                limit = { NOT = { has_wargoal_against = PREV } }
+                create_wargoal = { type = ceasefire_resume_war target = PREV }
+            }
+            PREV = {
+                if = {
+                    limit = { NOT = { has_wargoal_against = PREV } }
+                    create_wargoal = { type = ceasefire_resume_war target = PREV }
+                }
+            }
+        }
+    }
+
+    # Apply truce/NAP across the camp mesh
+    every_country = {
+        limit = { has_country_flag = ceasefire_tmp_sender_side }
+        every_country = {
+            limit = { has_country_flag = ceasefire_tmp_receiver_side }
+            ceasefire_api__apply_truce_or_nap_pair = yes
+        }
+    }
+
+    # Tracking flags on signatories
+    set_country_flag = ceasefire_active
+    set_country_flag = ceasefire_active_with_@FROM
+    clr_country_flag = ceasefire_honored_notified_with_@FROM
+    clr_country_flag = ceasefire_honored_monthly_done
+    set_country_flag = ceasefire_initiated_by_@FROM
+
+    FROM = {
+        set_country_flag = ceasefire_active
+        set_country_flag = ceasefire_active_with_@ROOT
+        clr_country_flag = ceasefire_honored_notified_with_@ROOT
+        clr_country_flag = ceasefire_honored_monthly_done
+        set_country_flag = ceasefire_initiator_with_@ROOT
+    }
+
+    # Cooldown flags on signatories
+    clr_country_flag = ceasefire_break_cooldown
+    set_country_flag = ceasefire_break_cooldown
+    FROM = { clr_country_flag = ceasefire_break_cooldown set_country_flag = ceasefire_break_cooldown }
+
+    clr_country_flag = ceasefire_propose_cooldown
+    set_country_flag = ceasefire_propose_cooldown
+    FROM = { clr_country_flag = ceasefire_propose_cooldown set_country_flag = ceasefire_propose_cooldown }
+
+    # Opinion impact across camps
+    every_country = {
+        limit = { has_country_flag = ceasefire_tmp_sender_side }
+        every_country = {
+            limit = { has_country_flag = ceasefire_tmp_receiver_side }
+            add_opinion_modifier = { target = PREV modifier = accepted_ceasefire }
+        }
+    }
+    every_country = {
+        limit = { has_country_flag = ceasefire_tmp_receiver_side }
+        every_country = {
+            limit = { has_country_flag = ceasefire_tmp_sender_side }
+            add_opinion_modifier = { target = PREV modifier = accepted_ceasefire }
+        }
+    }
+
+    # Cleanup temporary camp flags
+    every_country = { limit = { has_country_flag = ceasefire_tmp_sender_side } clr_country_flag = ceasefire_tmp_sender_side }
+    every_country = { limit = { has_country_flag = ceasefire_tmp_receiver_side } clr_country_flag = ceasefire_tmp_receiver_side }
+
+    log = "[CeasefireMechanics] [API] Ceasefire established between [FROM.GetName] and [ROOT.GetName]"
+}
+
+ceasefire_api_start_faction = {
+    if = {
+        limit = {
+            has_war_with = FROM
+            OR = { NOT = { is_in_faction = yes } is_faction_leader = yes }
+            FROM = { OR = { NOT = { is_in_faction = yes } is_faction_leader = yes } }
+        }
+        ceasefire_api__build_camps_faction = yes
+        ceasefire_api__execute_ceasefire_common = yes
+    }
+    else = { log = "[CeasefireMechanics] [API] Ceasefire start blocked - Initiator: [FROM.GetName], Receiver: [ROOT.GetName]" }
+}
+
+ceasefire_api_start_faction_participants_only = {
+    if = {
+        limit = {
+            has_war_with = FROM
+            OR = { NOT = { is_in_faction = yes } is_faction_leader = yes }
+            FROM = { OR = { NOT = { is_in_faction = yes } is_faction_leader = yes } }
+        }
+        ceasefire_api__build_camps_faction_participants_only = yes
+        ceasefire_api__execute_ceasefire_common = yes
+    }
+    else = { log = "[CeasefireMechanics] [API] Ceasefire start blocked - Initiator: [FROM.GetName], Receiver: [ROOT.GetName]" }
+}
+
+ceasefire_api_start_two_country = {
+    if = { limit = { has_war_with = FROM } ceasefire_api__build_camps_two_country = yes ceasefire_api__execute_ceasefire_common = yes }
+    else = { log = "[CeasefireMechanics] [API] Ceasefire start blocked (not at war) - Initiator: [FROM.GetName], Receiver: [ROOT.GetName]" }
+}
+
+ceasefire_api_force_start_two_country = {
+    if = { limit = { has_war_with = FROM } ceasefire_api__build_camps_two_country = yes ceasefire_api__execute_ceasefire_common = yes }
+    else = { log = "[CeasefireMechanics] [API] Force ceasefire start blocked (not at war) - Initiator: [FROM.GetName], Receiver: [ROOT.GetName]" }
+}
+
+ceasefire_api__remove_truce_nap_and_wargoals = {
+    # ROOT = one signatory, FROM = other signatory
+    if = {
+        limit = {
+            OR = {
+                any_country = { has_country_flag = ceasefire_participant_with_@FROM has_country_flag = ceasefire_participant_against_@ROOT }
+                any_country = { has_country_flag = ceasefire_participant_with_@ROOT has_country_flag = ceasefire_participant_against_@FROM }
+            }
+        }
+        every_country = {
+            limit = {
+                has_country_flag = ceasefire_participant_with_@FROM
+                has_country_flag = ceasefire_participant_against_@ROOT
+            }
+            every_country = {
+                limit = {
+                    has_country_flag = ceasefire_participant_with_@ROOT
+                    has_country_flag = ceasefire_participant_against_@FROM
+                }
+                diplomatic_relation = { country = PREV relation = non_aggression_pact active = no }
+                set_truce = { target = PREV days = 0 }
+                PREV = {
+                    diplomatic_relation = { country = PREV relation = non_aggression_pact active = no }
+                    set_truce = { target = PREV days = 0 }
+                }
+                remove_wargoal = { type = ceasefire_resume_war target = PREV }
+                PREV = { remove_wargoal = { type = ceasefire_resume_war target = PREV } }
+            }
+        }
+    }
+    else = {
+        # Save-compat fallback: no WITH flags available, use legacy camp storage only (may be ambiguous if multiple ceasefires exist).
+        every_country = {
+            limit = { has_country_flag = ceasefire_participant_against_@FROM }
+            every_country = {
+                limit = { has_country_flag = ceasefire_participant_against_@ROOT }
+                diplomatic_relation = { country = PREV relation = non_aggression_pact active = no }
+                set_truce = { target = PREV days = 0 }
+                PREV = {
+                    diplomatic_relation = { country = PREV relation = non_aggression_pact active = no }
+                    set_truce = { target = PREV days = 0 }
+                }
+                remove_wargoal = { type = ceasefire_resume_war target = PREV }
+                PREV = { remove_wargoal = { type = ceasefire_resume_war target = PREV } }
+            }
+        }
+    }
+}
+
+ceasefire_api_break_and_resume_war = {
+    # ROOT = breaker, FROM = other signatory
+    if = {
+        limit = { has_country_flag = ceasefire_initiator_with_@FROM }
+        log = "[CeasefireMechanics] [API] Breaking ceasefire (resume war) - Breaker: [ROOT.GetName], Target: [FROM.GetName]"
+
+        ceasefire_api__remove_truce_nap_and_wargoals = yes
+
+        clr_country_flag = ceasefire_active_with_@FROM
+        clr_country_flag = ceasefire_initiated_by_@FROM
+        clr_country_flag = ceasefire_initiator_with_@FROM
+        clr_country_flag = ceasefire_honored_notified_with_@FROM
+        FROM = {
+            clr_country_flag = ceasefire_active_with_@ROOT
+            clr_country_flag = ceasefire_initiated_by_@ROOT
+            clr_country_flag = ceasefire_initiator_with_@ROOT
+            clr_country_flag = ceasefire_honored_notified_with_@ROOT
+        }
+
+        set_country_flag = ceasefire_break_in_progress
+        FROM = { set_country_flag = ceasefire_break_in_progress }
+        declare_war_on = { target = FROM type = ceasefire_resume_war }
+
+        every_country = {
+            limit = {
+                has_country_flag = ceasefire_participant_with_@ROOT
+                has_country_flag = ceasefire_participant_against_@FROM
+            }
+            set_country_flag = ceasefire_break_in_progress
+        }
+        every_country = {
+            limit = {
+                has_country_flag = ceasefire_participant_with_@FROM
+                has_country_flag = ceasefire_participant_against_@ROOT
+            }
+            set_country_flag = ceasefire_break_in_progress
+        }
+
+        every_country = {
+            limit = {
+                has_country_flag = ceasefire_participant_with_@ROOT
+                has_country_flag = ceasefire_participant_against_@FROM
+                NOT = { tag = ROOT }
+                NOT = { has_war_with = FROM }
+                NOT = { is_in_faction_with = FROM }
+            }
+            add_to_war = { targeted_alliance = ROOT enemy = FROM }
+        }
+        every_country = {
+            limit = {
+                has_country_flag = ceasefire_participant_with_@FROM
+                has_country_flag = ceasefire_participant_against_@ROOT
+                NOT = { tag = FROM }
+                NOT = { has_war_with = ROOT }
+                NOT = { is_in_faction_with = ROOT }
+            }
+            add_to_war = { targeted_alliance = FROM enemy = ROOT }
+        }
+
+        every_country = {
+            limit = {
+                has_country_flag = ceasefire_participant_with_@ROOT
+                has_country_flag = ceasefire_participant_against_@FROM
+            }
+            clr_country_flag = ceasefire_break_in_progress
+            clr_country_flag = ceasefire_participant_against_@FROM
+        }
+        every_country = {
+            limit = {
+                has_country_flag = ceasefire_participant_with_@FROM
+                has_country_flag = ceasefire_participant_against_@ROOT
+            }
+            clr_country_flag = ceasefire_break_in_progress
+            clr_country_flag = ceasefire_participant_against_@ROOT
+        }
+
+        clr_country_flag = ceasefire_break_in_progress
+        FROM = { clr_country_flag = ceasefire_break_in_progress }
+
+        if = { limit = { NOT = { any_country = { ROOT = { has_country_flag = ceasefire_active_with_@PREV } } } } clr_country_flag = ceasefire_active }
+        FROM = { if = { limit = { NOT = { any_country = { FROM = { has_country_flag = ceasefire_active_with_@PREV } } } } clr_country_flag = ceasefire_active } }
+    }
+    else = { log = "[CeasefireMechanics] [API] Ceasefire break blocked (breaker is not initiator) - Breaker: [ROOT.GetName], Target: [FROM.GetName]" }
+}
+
+ceasefire_api_force_break_and_resume_war = {
+    # ROOT = breaker, FROM = other signatory
+    log = "[CeasefireMechanics] [API] Force breaking ceasefire (resume war) - Breaker: [ROOT.GetName], Target: [FROM.GetName]"
+
+    ceasefire_api__remove_truce_nap_and_wargoals = yes
+
+    clr_country_flag = ceasefire_active_with_@FROM
+    clr_country_flag = ceasefire_initiated_by_@FROM
+    clr_country_flag = ceasefire_initiator_with_@FROM
+    clr_country_flag = ceasefire_honored_notified_with_@FROM
+    FROM = {
+        clr_country_flag = ceasefire_active_with_@ROOT
+        clr_country_flag = ceasefire_initiated_by_@ROOT
+        clr_country_flag = ceasefire_initiator_with_@ROOT
+        clr_country_flag = ceasefire_honored_notified_with_@ROOT
+    }
+
+    set_country_flag = ceasefire_break_in_progress
+    FROM = { set_country_flag = ceasefire_break_in_progress }
+    declare_war_on = { target = FROM type = ceasefire_resume_war }
+
+    if = {
+        limit = {
+            OR = {
+                any_country = { has_country_flag = ceasefire_participant_with_@ROOT has_country_flag = ceasefire_participant_against_@FROM }
+                any_country = { has_country_flag = ceasefire_participant_with_@FROM has_country_flag = ceasefire_participant_against_@ROOT }
+            }
+        }
+        every_country = {
+            limit = { has_country_flag = ceasefire_participant_with_@ROOT has_country_flag = ceasefire_participant_against_@FROM }
+            set_country_flag = ceasefire_break_in_progress
+        }
+        every_country = {
+            limit = { has_country_flag = ceasefire_participant_with_@FROM has_country_flag = ceasefire_participant_against_@ROOT }
+            set_country_flag = ceasefire_break_in_progress
+        }
+
+        every_country = {
+            limit = {
+                has_country_flag = ceasefire_participant_with_@ROOT
+                has_country_flag = ceasefire_participant_against_@FROM
+                NOT = { tag = ROOT }
+                NOT = { has_war_with = FROM }
+                NOT = { is_in_faction_with = FROM }
+            }
+            add_to_war = { targeted_alliance = ROOT enemy = FROM }
+        }
+        every_country = {
+            limit = {
+                has_country_flag = ceasefire_participant_with_@FROM
+                has_country_flag = ceasefire_participant_against_@ROOT
+                NOT = { tag = FROM }
+                NOT = { has_war_with = ROOT }
+                NOT = { is_in_faction_with = ROOT }
+            }
+            add_to_war = { targeted_alliance = FROM enemy = ROOT }
+        }
+
+        every_country = {
+            limit = { has_country_flag = ceasefire_participant_with_@ROOT has_country_flag = ceasefire_participant_against_@FROM }
+            clr_country_flag = ceasefire_break_in_progress
+            clr_country_flag = ceasefire_participant_against_@FROM
+        }
+        every_country = {
+            limit = { has_country_flag = ceasefire_participant_with_@FROM has_country_flag = ceasefire_participant_against_@ROOT }
+            clr_country_flag = ceasefire_break_in_progress
+            clr_country_flag = ceasefire_participant_against_@ROOT
+        }
+    }
+    else = {
+        # Save-compat fallback: no WITH flags available, use legacy camp storage only (may be ambiguous if multiple ceasefires exist).
+        every_country = { limit = { has_country_flag = ceasefire_participant_against_@FROM } set_country_flag = ceasefire_break_in_progress }
+        every_country = { limit = { has_country_flag = ceasefire_participant_against_@ROOT } set_country_flag = ceasefire_break_in_progress }
+
+        every_country = {
+            limit = { has_country_flag = ceasefire_participant_against_@FROM NOT = { tag = ROOT } NOT = { has_war_with = FROM } NOT = { is_in_faction_with = FROM } }
+            add_to_war = { targeted_alliance = ROOT enemy = FROM }
+        }
+        every_country = {
+            limit = { has_country_flag = ceasefire_participant_against_@ROOT NOT = { tag = FROM } NOT = { has_war_with = ROOT } NOT = { is_in_faction_with = ROOT } }
+            add_to_war = { targeted_alliance = FROM enemy = ROOT }
+        }
+
+        every_country = { limit = { has_country_flag = ceasefire_participant_against_@FROM } clr_country_flag = ceasefire_break_in_progress }
+        every_country = { limit = { has_country_flag = ceasefire_participant_against_@ROOT } clr_country_flag = ceasefire_break_in_progress }
+
+        every_country = { limit = { has_country_flag = ceasefire_participant_against_@FROM } clr_country_flag = ceasefire_participant_against_@FROM }
+        every_country = { limit = { has_country_flag = ceasefire_participant_against_@ROOT } clr_country_flag = ceasefire_participant_against_@ROOT }
+    }
+
+    clr_country_flag = ceasefire_break_in_progress
+    FROM = { clr_country_flag = ceasefire_break_in_progress }
+
+    if = { limit = { NOT = { any_country = { ROOT = { has_country_flag = ceasefire_active_with_@PREV } } } } clr_country_flag = ceasefire_active }
+    FROM = { if = { limit = { NOT = { any_country = { FROM = { has_country_flag = ceasefire_active_with_@PREV } } } } clr_country_flag = ceasefire_active } }
+}
+
+ceasefire_api_end_ceasefire = {
+    # ROOT = ender, FROM = other signatory
+    if = {
+        limit = { has_country_flag = ceasefire_initiator_with_@FROM }
+        log = "[CeasefireMechanics] [API] Ending ceasefire (no war) - Ender: [ROOT.GetName], Target: [FROM.GetName]"
+
+        ceasefire_api__remove_truce_nap_and_wargoals = yes
+
+        clr_country_flag = ceasefire_active_with_@FROM
+        clr_country_flag = ceasefire_initiated_by_@FROM
+        clr_country_flag = ceasefire_initiator_with_@FROM
+        clr_country_flag = ceasefire_honored_notified_with_@FROM
+        FROM = {
+            clr_country_flag = ceasefire_active_with_@ROOT
+            clr_country_flag = ceasefire_initiated_by_@ROOT
+            clr_country_flag = ceasefire_initiator_with_@ROOT
+            clr_country_flag = ceasefire_honored_notified_with_@ROOT
+        }
+
+        if = {
+            limit = {
+                OR = {
+                    any_country = { has_country_flag = ceasefire_participant_with_@ROOT has_country_flag = ceasefire_participant_against_@FROM }
+                    any_country = { has_country_flag = ceasefire_participant_with_@FROM has_country_flag = ceasefire_participant_against_@ROOT }
+                }
+            }
+            every_country = {
+                limit = { has_country_flag = ceasefire_participant_with_@ROOT has_country_flag = ceasefire_participant_against_@FROM }
+                clr_country_flag = ceasefire_participant_against_@FROM
+            }
+            every_country = {
+                limit = { has_country_flag = ceasefire_participant_with_@FROM has_country_flag = ceasefire_participant_against_@ROOT }
+                clr_country_flag = ceasefire_participant_against_@ROOT
+            }
+        }
+        else = {
+            every_country = { clr_country_flag = ceasefire_participant_against_@FROM }
+            every_country = { clr_country_flag = ceasefire_participant_against_@ROOT }
+        }
+
+        if = { limit = { NOT = { any_country = { ROOT = { has_country_flag = ceasefire_active_with_@PREV } } } } clr_country_flag = ceasefire_active }
+        FROM = { if = { limit = { NOT = { any_country = { FROM = { has_country_flag = ceasefire_active_with_@PREV } } } } clr_country_flag = ceasefire_active } }
+    }
+    else = { log = "[CeasefireMechanics] [API] Ceasefire end blocked (ender is not initiator) - Ender: [ROOT.GetName], Target: [FROM.GetName]" }
+}
+
+ceasefire_api_force_end_ceasefire = {
+    # ROOT = ender, FROM = other signatory
+    log = "[CeasefireMechanics] [API] Force ending ceasefire (no war) - Ender: [ROOT.GetName], Target: [FROM.GetName]"
+
+    ceasefire_api__remove_truce_nap_and_wargoals = yes
+
+    clr_country_flag = ceasefire_active_with_@FROM
+    clr_country_flag = ceasefire_initiated_by_@FROM
+    clr_country_flag = ceasefire_initiator_with_@FROM
+    clr_country_flag = ceasefire_honored_notified_with_@FROM
+    FROM = {
+        clr_country_flag = ceasefire_active_with_@ROOT
+        clr_country_flag = ceasefire_initiated_by_@ROOT
+        clr_country_flag = ceasefire_initiator_with_@ROOT
+        clr_country_flag = ceasefire_honored_notified_with_@ROOT
+    }
+
+    if = {
+        limit = {
+            OR = {
+                any_country = { has_country_flag = ceasefire_participant_with_@ROOT has_country_flag = ceasefire_participant_against_@FROM }
+                any_country = { has_country_flag = ceasefire_participant_with_@FROM has_country_flag = ceasefire_participant_against_@ROOT }
+            }
+        }
+        every_country = { limit = { has_country_flag = ceasefire_participant_with_@ROOT has_country_flag = ceasefire_participant_against_@FROM } clr_country_flag = ceasefire_participant_against_@FROM }
+        every_country = { limit = { has_country_flag = ceasefire_participant_with_@FROM has_country_flag = ceasefire_participant_against_@ROOT } clr_country_flag = ceasefire_participant_against_@ROOT }
+    }
+    else = {
+        every_country = { limit = { has_country_flag = ceasefire_participant_against_@FROM } clr_country_flag = ceasefire_participant_against_@FROM }
+        every_country = { limit = { has_country_flag = ceasefire_participant_against_@ROOT } clr_country_flag = ceasefire_participant_against_@ROOT }
+    }
+
+    if = { limit = { NOT = { any_country = { ROOT = { has_country_flag = ceasefire_active_with_@PREV } } } } clr_country_flag = ceasefire_active }
+    FROM = { if = { limit = { NOT = { any_country = { FROM = { has_country_flag = ceasefire_active_with_@PREV } } } } clr_country_flag = ceasefire_active } }
+}

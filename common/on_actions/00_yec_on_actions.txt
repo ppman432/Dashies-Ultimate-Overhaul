@@ -1,0 +1,27 @@
+on_actions = {
+	on_startup = {
+		effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_game_rule = {
+						  rule = yec_event_music_enabled
+						  option = DISABLED
+						}
+					}
+				}
+				every_country = {
+					limit = { is_ai = no }
+					yec_calc_global_values = yes
+					yec_calc_days_until_new_year = yes
+					THIS_yec_save_current_values = yes
+
+					country_event = {
+						id = yec.1
+						days = global.days_until_new_year
+					}
+				}
+			}
+		}
+	}
+}

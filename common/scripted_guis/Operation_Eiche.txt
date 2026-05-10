@@ -1,0 +1,393 @@
+scripted_gui = {
+
+	Operation_Eiche = {
+		context_type = player_context
+
+
+		
+		window_name = "Operation_Eiche_container"
+		
+		visible={
+		check_variable = { ROOT.show_Operation_Eiche > 0 }
+
+		}
+		
+
+		effects = {
+		
+		
+		Increase_Transport_click = { 
+		
+		var:show_Operation_Eiche = {
+		
+		ROOT = {
+		
+	
+		add_equipment_to_stockpile = { 
+        type = transport_plane_equipment
+        amount = -5
+        }
+		
+		add_to_variable = {ROOT.eiche_transport@PREV = 5}
+		
+		if = {limit = {check_variable = {ROOT.eiche_transport@PREV < ROOT.transport_needed@PREV}
+		               check_variable = {ROOT.transport_penalty@PREV = 0}}
+		set_variable = {ROOT.transport_penalty@PREV = -40}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = ROOT.transport_penalty@PREV}}
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_transport@PREV = ROOT.transport_needed@PREV}
+		                    check_variable = {ROOT.transport_penalty@PREV = -40}}
+		set_variable = {ROOT.transport_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}		
+
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_transport@PREV > ROOT.transport_needed@PREV}
+		                    check_variable = {ROOT.transport_penalty@PREV = -40}}
+		set_variable = {ROOT.transport_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}
+
+		
+		}}}
+		
+		
+		Decrease_Transport_click = {
+		var:show_Operation_Eiche = {
+		ROOT = { 
+		add_equipment_to_stockpile = {
+        type = transport_plane_equipment
+        amount = 5
+        }
+		subtract_from_variable = {ROOT.eiche_transport@PREV = 5}
+		
+		
+        if = {limit = {check_variable = {ROOT.eiche_transport@PREV < ROOT.transport_needed@PREV}
+		               check_variable = {ROOT.transport_penalty@PREV = 0}}
+		set_variable = {ROOT.transport_penalty@PREV = -40}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = ROOT.transport_penalty@PREV}}
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_transport@PREV = ROOT.transport_needed@PREV}
+		                    check_variable = {ROOT.transport_penalty@PREV = -40}}
+		set_variable = {ROOT.transport_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}		
+
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_transport@PREV > ROOT.transport_needed@PREV}
+		                    check_variable = {ROOT.transport_penalty@PREV = -40}}
+		set_variable = {ROOT.transport_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}
+
+		}
+		}}
+			
+			
+		Increase_Convoy_click = {
+		var:show_Operation_Eiche = {
+		ROOT = {
+		add_equipment_to_stockpile = {
+		type = convoy
+		amount = -5}
+		add_to_variable = {ROOT.eiche_convoy@PREV = 5}
+		
+	
+	
+		if = {limit = {check_variable = {ROOT.eiche_convoy@PREV < ROOT.convoy_needed@PREV}
+		               check_variable = {ROOT.convoy_penalty@PREV = 0}}
+		set_variable = {ROOT.convoy_penalty@PREV = -40}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = ROOT.convoy_penalty@PREV}}
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_convoy@PREV = ROOT.convoy_needed@PREV}
+		                    check_variable = {ROOT.convoy_penalty@PREV = -40}}
+		set_variable = {ROOT.convoy_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}		
+
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_convoy@PREV > ROOT.convoy_needed@PREV}
+		                    check_variable = {ROOT.convoy_penalty@PREV = -40}}
+		set_variable = {ROOT.convoy_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}
+		
+		
+
+		
+		
+		
+		
+		
+		
+		}
+		}}
+		
+		Decrease_Convoy_click = {
+		var:show_Operation_Eiche = {
+		ROOT = {
+		add_equipment_to_stockpile = {
+		type = convoy
+		amount = 5}
+		add_to_variable = {ROOT.eiche_convoy@PREV = -5}
+		
+		
+		if = {limit = {check_variable = {ROOT.eiche_convoy@PREV < ROOT.convoy_needed@PREV}
+		               check_variable = {ROOT.convoy_penalty@PREV = 0}}
+		set_variable = {ROOT.convoy_penalty@PREV = -40}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = ROOT.convoy_penalty@PREV}}
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_convoy@PREV = ROOT.convoy_needed@PREV}
+		                    check_variable = {ROOT.convoy_penalty@PREV = -40}}
+		set_variable = {ROOT.convoy_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}		
+
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_convoy@PREV > ROOT.convoy_needed@PREV}
+		                    check_variable = {ROOT.convoy_penalty@PREV = -40}}
+		set_variable = {ROOT.convoy_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}
+
+		}}  }
+		
+		
+        Increase_Marines_click = {
+		var:show_Operation_Eiche = {
+		ROOT = {
+	    add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+		amount = -3000}
+		
+	    add_equipment_to_stockpile = { 
+		type = support_equipment 
+		amount = -1000}
+		
+		add_manpower = -10000
+		 
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 20}
+		add_to_variable = {ROOT.marines_bonus@PREV = 20}
+		add_to_variable = {ROOT.marines_eiche@PREV = 1}
+		add_to_variable = {ROOT.equipment_eiche@PREV = 3000}
+		add_to_variable = {ROOT.support_equipment_eiche@PREV = 500} 
+		add_to_variable = {ROOT.manpower_eiche@PREV = 5000}
+		add_to_variable = {ROOT.convoy_needed@PREV = 10}
+		
+		
+		if = {limit = {check_variable = {ROOT.eiche_convoy@PREV < ROOT.convoy_needed@PREV}
+		               check_variable = {ROOT.convoy_penalty@PREV = 0}}
+		set_variable = {ROOT.convoy_penalty@PREV = -40}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = ROOT.convoy_penalty@PREV}}
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_convoy@PREV = ROOT.convoy_needed@PREV}
+		                    check_variable = {ROOT.convoy_penalty@PREV = -40}}
+		set_variable = {ROOT.convoy_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}		
+
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_convoy@PREV > ROOT.convoy_needed@PREV}
+		                    check_variable = {ROOT.convoy_penalty@PREV = -40}}
+		set_variable = {ROOT.convoy_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}
+		
+		
+		}}}
+		
+		Decrease_Marines_click = {
+		var:show_Operation_Eiche = {
+		ROOT = {
+	    add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+		amount = 3000}
+		
+	    add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 1000}
+		
+		add_manpower = 10000
+		
+		add_to_variable = {ROOT.eiche_success_chance@PREV = -20}
+		add_to_variable = {ROOT.marines_bonus@PREV = -20}
+		subtract_from_variable = {ROOT.marines_eiche@PREV = 1}
+		subtract_from_variable = {ROOT.equipment_eiche@PREV = 3000}
+		subtract_from_variable = {ROOT.support_equipment_eiche@PREV = 500}
+		subtract_from_variable = {ROOT.manpower_eiche@PREV = 5000}
+		add_to_variable = {ROOT.convoy_needed@PREV = -10}
+		
+		if = {limit = {check_variable = {ROOT.eiche_convoy@PREV < ROOT.convoy_needed@PREV}
+		               check_variable = {ROOT.convoy_penalty@PREV = 0}}
+		set_variable = {ROOT.convoy_penalty@PREV = -40}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = ROOT.convoy_penalty@PREV}}
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_convoy@PREV = ROOT.convoy_needed@PREV}
+		                    check_variable = {ROOT.convoy_penalty@PREV = -40}}
+		set_variable = {ROOT.convoy_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}		
+
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_convoy@PREV > ROOT.convoy_needed@PREV}
+		                    check_variable = {ROOT.convoy_penalty@PREV = -40}}
+		set_variable = {ROOT.convoy_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}
+
+		
+		
+		}}}
+		
+		Increase_Paratroopers_click = {
+		var:show_Operation_Eiche = {
+		ROOT = {
+	    add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+		amount = -3000}
+		
+	    add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = -1000}
+		
+		add_manpower = -10000 
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 20}
+		add_to_variable = {ROOT.paratroopers_bonus@PREV = 20}
+		add_to_variable = {ROOT.transport_needed@PREV = 5}
+		add_to_variable = {ROOT.paratroopers_eiche@PREV = 1}
+		add_to_variable = {ROOT.equipment_eiche@PREV = 3000}
+		add_to_variable = {ROOT.support_equipment_eiche@PREV = 500}
+		add_to_variable = {ROOT.manpower_eiche@PREV = 5000}
+		
+        if = {limit = {check_variable = {ROOT.eiche_transport@PREV < ROOT.transport_needed@PREV}
+		               check_variable = {ROOT.transport_penalty@PREV = 0}}
+		set_variable = {ROOT.transport_penalty@PREV = -40}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = ROOT.transport_penalty@PREV}}
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_transport@PREV = ROOT.transport_needed@PREV}
+		                    check_variable = {ROOT.transport_penalty@PREV = -40}}
+		set_variable = {ROOT.transport_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}		
+
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_transport@PREV > ROOT.transport_needed@PREV}
+		                    check_variable = {ROOT.transport_penalty@PREV = -40}}
+		set_variable = {ROOT.transport_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}
+		
+		
+		
+		}}}
+		
+		Decrease_Paratroopers_click = {
+		var:show_Operation_Eiche = {
+		ROOT = {
+	    add_equipment_to_stockpile = {
+		type = infantry_equipment_1
+		amount = 3000}
+		
+	    add_equipment_to_stockpile = {
+		type = support_equipment
+		amount = 1000}
+		
+		add_manpower = 10000
+		add_to_variable = {ROOT.eiche_success_chance@PREV = -20}
+		add_to_variable = {ROOT.paratroopers_bonus@PREV = -20}
+		subtract_from_variable = {ROOT.paratroopers_eiche@PREV = 1}
+		subtract_from_variable = {ROOT.equipment_eiche@PREV = 3000}
+		subtract_from_variable = {ROOT.support_equipment_eiche@PREV = 500}
+		subtract_from_variable = {ROOT.manpower_eiche@PREV = 5000}
+		add_to_variable = {ROOT.transport_needed@PREV = -5}
+		
+		
+		
+		if = {limit = {check_variable = {ROOT.eiche_transport@PREV < ROOT.transport_needed@PREV}
+		               check_variable = {ROOT.transport_penalty@PREV = 0}}
+		set_variable = {ROOT.transport_penalty@PREV = -40}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = ROOT.transport_penalty@PREV}}
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_transport@PREV = ROOT.transport_needed@PREV}
+		                    check_variable = {ROOT.transport_penalty@PREV = -40}}
+		set_variable = {ROOT.transport_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}		 
+
+		
+		else_if = {limit = {check_variable = {ROOT.eiche_transport@PREV > ROOT.transport_needed@PREV}
+		                    check_variable = {ROOT.transport_penalty@PREV = -40}}
+		set_variable = {ROOT.transport_penalty@PREV = 0}
+		add_to_variable = {ROOT.eiche_success_chance@PREV = 40}}
+
+		}}}
+		  
+		Eiche_Cancel_click = {
+		var:show_Operation_Eiche = {
+		ROOT = {
+		
+		add_equipment_to_stockpile = { type = infantry_equipment_1
+		                               amount = equipment_eiche@PREV}
+	    add_equipment_to_stockpile = { type = support_equipment
+		                               amount = support_equipment_eiche@PREV}
+	    add_equipment_to_stockpile = { type = transport_plane_equipment
+		                               amount = transport_eiche@PREV}	
+	    add_equipment_to_stockpile = { type = convoy
+		                               amount = convoy_eiche@PREV}
+        add_manpower = manpower_eiche@PREV									   
+		
+		
+		
+		    clear_variable = ROOT.transport_needed@PREV
+			clear_variable = ROOT.marines_bonus@PREV
+			clear_variable = ROOT.paratroopers_bonus@PREV 
+			clear_variable = ROOT.eiche_transport@PREV
+			clear_variable = ROOT.eiche_convoy@PREV         
+			clear_variable = ROOT.paratroopers_eiche@PREV 		
+			clear_variable = ROOT.marines_eiche@PREV 
+			clear_variable = ROOT.convoy_penalty@PREV
+			clear_variable = ROOT.convoy_needed@PREV
+			clear_variable = ROOT.support_equipment_eiche@PREV
+			clear_variable = ROOT.equipment_eiche@PREV
+			clear_variable = ROOT.manpower_eiche@PREV
+			clear_variable = ROOT.eiche_success_chance@PREV
+         set_variable = { ROOT.show_Operation_Eiche = 0} 
+		   }}}
+		   
+		   
+		Eiche_Initiate_click ={
+		var:show_Operation_Eiche = {
+		
+		country_event = { id = espionage.news.381 days = 2 } }
+		
+		clear_variable = show_Operation_Eiche
+		} 
+		
+	}
+	
+	triggers = {
+	arrowcenter_visible = {check_variable = {ROOT.marines_eiche@ROOT.show_Operation_Eiche> 0}}
+	Eiche_Marines2_visible = {check_variable = {ROOT.marines_eiche@ROOT.show_Operation_Eiche> 0}}
+	arrowdown_visible = {check_variable = {ROOT.marines_eiche@ROOT.show_Operation_Eiche> 1}}
+	Eiche_Marines1_visible = {check_variable = {ROOT.marines_eiche@ROOT.show_Operation_Eiche> 1}}
+	arrowrightleft_visible = {check_variable = {ROOT.marines_eiche@ROOT.show_Operation_Eiche> 2}}
+	Eiche_Marines3_visible = {check_variable = {ROOT.marines_eiche@ROOT.show_Operation_Eiche> 2}}
+	Increase_Marines_click_enabled = {check_variable = {ROOT.marines_eiche@ROOT.show_Operation_Eiche< 3}
+	                                  ROOT = {has_equipment = { infantry_equipment_1 > 2999 }}
+									  ROOT = {has_equipment = { support_equipment > 999 }}
+									  ROOT = {has_tech = marines}}
+	Decrease_Marines_click_enabled = {check_variable = {ROOT.marines_eiche@ROOT.show_Operation_Eiche> 0}}
+	
+	arrowpara1_visible = {check_variable = {ROOT.paratroopers_eiche@ROOT.show_Operation_Eiche> 0}}
+	Eiche_Paratroopers1_visible = {check_variable = {ROOT.paratroopers_eiche@ROOT.show_Operation_Eiche> 0}}
+    arrowpara2_visible = {check_variable = {ROOT.paratroopers_eiche@ROOT.show_Operation_Eiche> 1}}
+	Eiche_Paratroopers2_visible = {check_variable = {ROOT.paratroopers_eiche@ROOT.show_Operation_Eiche> 1}}
+	arrowpara3_visible = {check_variable = {ROOT.paratroopers_eiche@ROOT.show_Operation_Eiche> 2}}
+	Eiche_Paratroopers3_visible = {check_variable = {ROOT.paratroopers_eiche@ROOT.show_Operation_Eiche> 2}}
+	Increase_Paratroopers_click_enabled = {check_variable = {ROOT.paratroopers_eiche@ROOT.show_Operation_Eiche< 3}
+	                                       ROOT = {has_equipment = { infantry_equipment_1 > 2999 }}	
+										   ROOT = {has_equipment = { support_equipment > 999 }}
+										   ROOT = {has_tech = paratroopers}}
+	Decrease_Paratroopers_click_enabled = {check_variable = {ROOT.paratroopers_eiche@PREV > 0}}
+	
+	Increase_Transport_click_enabled = { ROOT = {has_equipment = { transport_plane_equipment > 4}
+	                                              }}
+	Decrease_Transport_click_enabled = {check_variable = {ROOT.eiche_transport@ROOT.show_Operation_Eiche> 4}}
+	
+	Increase_Convoy_click_enabled = { ROOT = {has_equipment = { convoy > 4}}}
+	Decrease_Convoy_click_enabled = {check_variable = {ROOT.eiche_convoy@ROOT.show_Operation_Eiche> 4}}
+	
+	
+	Eiche_Cancel_click_enabled = { }
+	Eiche_Initiate_click_enabled = {check_variable = {ROOT.eiche_success_chance@ROOT.show_Operation_Eiche> 0}}
+	
+	
+	
+	
+}
+} }

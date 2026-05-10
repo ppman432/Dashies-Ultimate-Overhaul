@@ -1,0 +1,23 @@
+scripted_gui = {
+
+	spy_efficiency = {
+		context_type = player_context
+		window_name = "spy_efficiency_container"
+		parent_window_token = deployment_tab
+		
+		visible = {
+            NOT = {
+				has_game_rule = {
+					rule = espionage_rule
+					option = esn
+				}
+			}
+		}
+
+		effects = {
+            
+		}
+	}
+    
+}
+

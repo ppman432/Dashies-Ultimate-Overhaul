@@ -1,0 +1,584 @@
+on_actions = {
+    # Clear ceasefire flags when war is declared by any means
+    on_war_relation_added = {
+        effect = {
+            # ROOT = country being declared on, FROM = country declaring war
+            # Check if there was a ceasefire between these countries
+            log = "[CeasefireMechanics] War declared between [ROOT.GetName] and [FROM.GetName]. Checking for ceasefire..."
+            if = {
+                limit = {
+                    NOT = { ROOT = { has_country_flag = ceasefire_break_in_progress } }
+                    NOT = { FROM = { has_country_flag = ceasefire_break_in_progress } }
+                    ROOT = { has_country_flag = ceasefire_active_with_@FROM }
+                }
+                 log = "[CeasefireMechanics] Ceasefire found (leaders) and cleared."
+ 
+                 # If war is declared by script/focus/console while a ceasefire is active, treat it as a ceasefire break:
+                 # remove truce/NAP across the stored ceasefire camps and restore the full participant set into this war.
+                 # In this on_action, FROM = attacker ("breaker"), ROOT = defender ("target").
+                 every_country = { clr_country_flag = ceasefire_tmp_breaker_camp }
+                 every_country = { clr_country_flag = ceasefire_tmp_target_camp }
+ 
+                  # Build temporary camps for this ceasefire pair.
+                  # Start with legacy storage (AGAINST flags), then (if available) refine using WITH flags to avoid mixing multiple ceasefires.
+                  # - Breaker camp (FROM's side) was stored as "against ROOT"
+                  # - Target camp (ROOT's side) was stored as "against FROM"
+                  every_country = {
+                      limit = { has_country_flag = ceasefire_participant_against_@ROOT }
+                      set_country_flag = ceasefire_tmp_breaker_camp
+                  }
+                  every_country = {
+                      limit = { has_country_flag = ceasefire_participant_against_@FROM }
+                      set_country_flag = ceasefire_tmp_target_camp
+                  }
+                  # Refine camps using WITH flags (new saves) if at least one matching participant exists for this pair.
+                  if = {
+                      limit = {
+                          any_country = {
+                              has_country_flag = ceasefire_participant_with_@FROM
+                              has_country_flag = ceasefire_participant_against_@ROOT
+                          }
+                      }
+                      every_country = {
+                          limit = {
+                              has_country_flag = ceasefire_tmp_breaker_camp
+                              NOT = { has_country_flag = ceasefire_participant_with_@FROM }
+                          }
+                          clr_country_flag = ceasefire_tmp_breaker_camp
+                      }
+                  }
+                  if = {
+                      limit = {
+                          any_country = {
+                              has_country_flag = ceasefire_participant_with_@ROOT
+                              has_country_flag = ceasefire_participant_against_@FROM
+                          }
+                      }
+                      every_country = {
+                          limit = {
+                              has_country_flag = ceasefire_tmp_target_camp
+                              NOT = { has_country_flag = ceasefire_participant_with_@ROOT }
+                          }
+                          clr_country_flag = ceasefire_tmp_target_camp
+                      }
+                  }
+ 
+                  # Ensure signatories are part of the temporary camps (for truce/NAP cleanup).
+                  FROM = { set_country_flag = ceasefire_tmp_breaker_camp }
+                  set_country_flag = ceasefire_tmp_target_camp
+
+                  # EXPERIMENTAL (Escrow Ownership): restore original owners while keeping occupation controllers.
+                  if = {
+                      limit = { has_game_rule = { rule = ceasefire_territory_rule option = ESCROW_OWNERSHIP } }
+                      every_state = {
+                          limit = {
+                              has_state_flag = ceasefire_escrow_state
+                              has_variable = ceasefire_escrow_original_owner
+                              has_variable = ceasefire_transfer_to
+                              OR = {
+                                  AND = {
+                                      var:ceasefire_transfer_to = { has_country_flag = ceasefire_tmp_breaker_camp }
+                                      var:ceasefire_escrow_original_owner = { has_country_flag = ceasefire_tmp_target_camp }
+                                  }
+                                  AND = {
+                                      var:ceasefire_transfer_to = { has_country_flag = ceasefire_tmp_target_camp }
+                                      var:ceasefire_escrow_original_owner = { has_country_flag = ceasefire_tmp_breaker_camp }
+                                  }
+                              }
+                          }
+                          var:ceasefire_escrow_original_owner = { set_state_owner = PREV }
+                          var:ceasefire_transfer_to = { set_state_controller = PREV }
+                          clr_state_flag = ceasefire_escrow_state
+                          clear_variable = ceasefire_escrow_original_owner
+                          clear_variable = ceasefire_transfer_to
+                      }
+                  }
+
+                  # Events: participant perspectives for a direct/scripted war declaration (match Break Ceasefire action behavior).
+                  if = {
+                      limit = { has_game_rule = { rule = ceasefire_events_rule option = ENABLED } }
+
+                      # Breaker camp participants: FROM should be the target (ROOT) for "breaker" events (30-34).
+                      every_country = {
+                          limit = {
+                              is_ai = no
+                              has_country_flag = ceasefire_tmp_breaker_camp
+                              NOT = { tag = FROM }
+                              NOT = { tag = ROOT }
+                          }
+                          random_list = {
+                              34 = { country_event = { id = ceasefire_events.30 } }
+                              33 = { country_event = { id = ceasefire_events.33 } }
+                              33 = { country_event = { id = ceasefire_events.34 } }
+                          }
+                      }
+
+                      # Target camp participants: fire from the breaker (FROM) so event FROM is the breaker for "victim" events (35-39).
+                      FROM = {
+                          every_country = {
+                              limit = {
+                                  is_ai = no
+                                  has_country_flag = ceasefire_tmp_target_camp
+                                  NOT = { tag = FROM }
+                                  NOT = { tag = ROOT }
+                              }
+                              random_list = {
+                                  34 = { country_event = { id = ceasefire_events.35 } }
+                                  33 = { country_event = { id = ceasefire_events.38 } }
+                                  33 = { country_event = { id = ceasefire_events.39 } }
+                              }
+                          }
+                      }
+                  }
+
+                  # Remove ceasefire truce/NAP and resume-war wargoals across the whole camp mesh.
+                  every_country = {
+                      limit = { has_country_flag = ceasefire_tmp_breaker_camp }
+                      every_country = {
+                          limit = { has_country_flag = ceasefire_tmp_target_camp }
+                         diplomatic_relation = { country = PREV relation = non_aggression_pact active = no }
+                         set_truce = { target = PREV days = 0 }
+                         PREV = {
+                             diplomatic_relation = { country = PREV relation = non_aggression_pact active = no }
+                             set_truce = { target = PREV days = 0 }
+                         }
+                         remove_wargoal = { type = ceasefire_resume_war target = PREV }
+                         PREV = { remove_wargoal = { type = ceasefire_resume_war target = PREV } }
+                     }
+                 }
+ 
+                 # Mark in-progress so on_actions doesn't recursively fire while restoring the war.
+                 set_country_flag = ceasefire_break_in_progress
+                 FROM = { set_country_flag = ceasefire_break_in_progress }
+                 every_country = { limit = { has_country_flag = ceasefire_tmp_breaker_camp } set_country_flag = ceasefire_break_in_progress }
+                 every_country = { limit = { has_country_flag = ceasefire_tmp_target_camp } set_country_flag = ceasefire_break_in_progress }
+ 
+                 # Restore all stored participants into the newly-started war (skip impossible cases like same-faction).
+                 every_country = {
+                     limit = {
+                         has_country_flag = ceasefire_tmp_breaker_camp
+                         NOT = { tag = FROM }
+                         NOT = { has_war_with = ROOT }
+                         NOT = { is_in_faction_with = ROOT }
+                     }
+                     add_to_war = { targeted_alliance = FROM enemy = ROOT }
+                 }
+                 every_country = {
+                     limit = {
+                         has_country_flag = ceasefire_tmp_target_camp
+                         NOT = { tag = ROOT }
+                         NOT = { has_war_with = FROM }
+                         NOT = { is_in_faction_with = FROM }
+                     }
+                     add_to_war = { targeted_alliance = ROOT enemy = FROM }
+                 }
+ 
+                 # Clear in-progress markers and temporary camps.
+                 every_country = { limit = { has_country_flag = ceasefire_tmp_breaker_camp } clr_country_flag = ceasefire_break_in_progress }
+                 every_country = { limit = { has_country_flag = ceasefire_tmp_target_camp } clr_country_flag = ceasefire_break_in_progress }
+                 clr_country_flag = ceasefire_break_in_progress
+                 FROM = { clr_country_flag = ceasefire_break_in_progress }
+ 
+                 every_country = { clr_country_flag = ceasefire_tmp_breaker_camp }
+                 every_country = { clr_country_flag = ceasefire_tmp_target_camp }
+ 
+                  # Ceasefire-created wargoals were already removed in the camp-mesh cleanup above.
+
+                # Events: ceasefire broken via a direct war declaration (not using the Break Ceasefire action).
+                if = {
+                    limit = { has_game_rule = { rule = ceasefire_events_rule option = ENABLED } }
+                    # Victim (ROOT) sees attacker (FROM)
+                    FROM = {
+                        ROOT = {
+                            if = {
+                                limit = { is_ai = no }
+                                random_list = {
+                                    20 = { country_event = { id = ceasefire_events.35 } }
+                                    20 = { country_event = { id = ceasefire_events.36 } }
+                                    20 = { country_event = { id = ceasefire_events.37 } }
+                                    20 = { country_event = { id = ceasefire_events.38 } }
+                                    20 = { country_event = { id = ceasefire_events.39 } }
+                                }
+                            }
+                        }
+                    }
+                    # Attacker (FROM) sees victim (ROOT)
+                    ROOT = {
+                        FROM = {
+                            if = {
+                                limit = { is_ai = no }
+                                random_list = {
+                                    20 = { country_event = { id = ceasefire_events.30 } }
+                                    20 = { country_event = { id = ceasefire_events.31 } }
+                                    20 = { country_event = { id = ceasefire_events.32 } }
+                                    20 = { country_event = { id = ceasefire_events.33 } }
+                                    20 = { country_event = { id = ceasefire_events.34 } }
+                                }
+                            }
+                        }
+                    }
+                }
+
+                  # Clear participant tracking flags for this ceasefire pair only (avoid affecting other active ceasefires).
+                  if = {
+                      limit = {
+                          OR = {
+                              any_country = {
+                                  has_country_flag = ceasefire_participant_with_@FROM
+                                  has_country_flag = ceasefire_participant_against_@ROOT
+                              }
+                              any_country = {
+                                  has_country_flag = ceasefire_participant_with_@ROOT
+                                  has_country_flag = ceasefire_participant_against_@FROM
+                              }
+                          }
+                      }
+                      every_country = {
+                          limit = {
+                              has_country_flag = ceasefire_participant_with_@FROM
+                              has_country_flag = ceasefire_participant_against_@ROOT
+                          }
+                          clr_country_flag = ceasefire_participant_against_@ROOT
+                      }
+                      every_country = {
+                          limit = {
+                              has_country_flag = ceasefire_participant_with_@ROOT
+                              has_country_flag = ceasefire_participant_against_@FROM
+                          }
+                          clr_country_flag = ceasefire_participant_against_@FROM
+                      }
+                  }
+                  else = {
+                      # Save-compat fallback: older saves might not have ceasefire_participant_with_@TAG.
+                      every_country = { clr_country_flag = ceasefire_participant_against_@ROOT }
+                      every_country = { clr_country_flag = ceasefire_participant_against_@FROM }
+                  }
+
+                # Clear ceasefire flags for ROOT
+                ROOT = {
+                    clr_country_flag = ceasefire_active_with_@FROM
+                    clr_country_flag = ceasefire_initiated_by_@FROM
+                    clr_country_flag = ceasefire_initiator_with_@FROM
+                    clr_country_flag = ceasefire_honored_notified_with_@FROM
+                }
+                FROM = {
+                    clr_country_flag = ceasefire_active_with_@ROOT
+                    clr_country_flag = ceasefire_initiated_by_@ROOT
+                    clr_country_flag = ceasefire_initiator_with_@ROOT
+                    clr_country_flag = ceasefire_honored_notified_with_@ROOT
+                }
+
+                # Check if ROOT has any remaining ceasefires
+                ROOT = {
+                    if = {
+                        limit = {
+                            NOT = {
+                                any_country = {
+                                    ROOT = { has_country_flag = ceasefire_active_with_@PREV }
+                                }
+                            }
+                        }
+                        clr_country_flag = ceasefire_active
+                    }
+                }
+
+                # Check if FROM has any remaining ceasefires
+                FROM = {
+                    if = {
+                        limit = {
+                            NOT = {
+                                any_country = {
+                                    FROM = { has_country_flag = ceasefire_active_with_@PREV }
+                                }
+                            }
+                        }
+                        clr_country_flag = ceasefire_active
+                    }
+                }
+            }
+
+            # If configured, allow non-leader participants to "break" the ceasefire by declaring war after the truce ends.
+            # This re-escalates the full ceasefire camps into the newly-started war and clears the ceasefire tracking flags.
+            if = {
+                limit = {
+                    has_game_rule = { rule = ceasefire_participant_break_rule option = AFTER_TRUCE }
+                    NOT = { ROOT = { has_country_flag = ceasefire_break_in_progress } }
+                    NOT = { FROM = { has_country_flag = ceasefire_break_in_progress } }
+                }
+                every_country = {
+                    limit = {
+                        ROOT = { has_country_flag = ceasefire_participant_against_@THIS }
+                        NOT = { ROOT = { has_country_flag = ceasefire_tmp_participant_break_processed } }
+                    }
+                    every_country = {
+                        limit = {
+                            FROM = { has_country_flag = ceasefire_participant_against_@THIS }
+                            PREV = { has_country_flag = ceasefire_active_with_@THIS }
+                            NOT = { ROOT = { has_country_flag = ceasefire_tmp_participant_break_processed } }
+                        }
+
+                        # Current scope = leader A (the leader FROM was against); PREV = leader B (the leader ROOT was against)
+                        ROOT = { set_country_flag = ceasefire_tmp_participant_break_processed }
+
+                        log = "[CeasefireMechanics] Ceasefire broken by participants - Aggressor: [FROM.GetName], Defender: [ROOT.GetName], Leaders: [This.GetName] vs [PREV.GetName]"
+
+                        # Opinion impact: defender camp considers the ceasefire broken (apply to aggressor country).
+                        every_country = {
+                            limit = { has_country_flag = ceasefire_participant_against_@THIS }
+                            add_opinion_modifier = { target = FROM modifier = broke_ceasefire }
+                        }
+
+                        # Events: participant-triggered break
+                        if = {
+                            limit = { has_game_rule = { rule = ceasefire_events_rule option = ENABLED } }
+                            # Breaker (FROM) sees the defender (ROOT)
+                            ROOT = {
+                                FROM = {
+                                    if = {
+                                        limit = { is_ai = no }
+                                        random_list = {
+                                            20 = { country_event = { id = ceasefire_events.30 } }
+                                            20 = { country_event = { id = ceasefire_events.31 } }
+                                            20 = { country_event = { id = ceasefire_events.32 } }
+                                            20 = { country_event = { id = ceasefire_events.33 } }
+                                            20 = { country_event = { id = ceasefire_events.34 } }
+                                        }
+                                    }
+                                }
+                            }
+                            # Defender (ROOT) sees the breaker (FROM)
+                            FROM = {
+                                ROOT = {
+                                    if = {
+                                        limit = { is_ai = no }
+                                        random_list = {
+                                            20 = { country_event = { id = ceasefire_events.35 } }
+                                            20 = { country_event = { id = ceasefire_events.36 } }
+                                            20 = { country_event = { id = ceasefire_events.37 } }
+                                            20 = { country_event = { id = ceasefire_events.38 } }
+                                            20 = { country_event = { id = ceasefire_events.39 } }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+
+                        # Remove all ceasefire-created wargoals now that hostilities have resumed.
+                        every_country = {
+                            limit = { has_country_flag = ceasefire_participant_against_@THIS }
+                            every_country = {
+                                limit = { has_country_flag = ceasefire_participant_against_@PREV }
+                                remove_wargoal = { type = ceasefire_resume_war target = PREV }
+                                PREV = { remove_wargoal = { type = ceasefire_resume_war target = PREV } }
+                            }
+                        }
+
+                        # Mark in-progress so on_actions doesn't recursively fire while restoring the war.
+                        set_country_flag = ceasefire_break_in_progress
+                        PREV = { set_country_flag = ceasefire_break_in_progress }
+                        ROOT = { set_country_flag = ceasefire_break_in_progress }
+                        FROM = { set_country_flag = ceasefire_break_in_progress }
+                        every_country = {
+                            limit = { has_country_flag = ceasefire_participant_against_@PREV }
+                            set_country_flag = ceasefire_break_in_progress
+                        }
+                        PREV = {
+                            every_country = {
+                                limit = { has_country_flag = ceasefire_participant_against_@PREV }
+                                set_country_flag = ceasefire_break_in_progress
+                            }
+                        }
+
+                         # Add the leaders into the participant-started war (so we can attach the camps onto the same war).
+                         if = { limit = { NOT = { is_in_faction_with = FROM } } add_to_war = { targeted_alliance = ROOT enemy = FROM } }
+                         PREV = { if = { limit = { NOT = { is_in_faction_with = ROOT } } add_to_war = { targeted_alliance = FROM enemy = ROOT } } }
+
+                        # Add the rest of each camp into the same war
+                        # Camp A = countries that were against leader A (join FROM's side)
+                         every_country = {
+                             limit = {
+                                 has_country_flag = ceasefire_participant_against_@PREV
+                                 NOT = { tag = ROOT }
+                                 NOT = { tag = FROM }
+                                 NOT = { has_war_with = ROOT }
+                                 NOT = { is_in_faction_with = ROOT }
+                             }
+                             add_to_war = { targeted_alliance = FROM enemy = ROOT }
+                         }
+                        # Camp B = countries that were against leader B (join ROOT's side)
+                        PREV = {
+                             every_country = {
+                                 limit = {
+                                     has_country_flag = ceasefire_participant_against_@PREV
+                                     NOT = { tag = ROOT }
+                                     NOT = { tag = FROM }
+                                     NOT = { has_war_with = FROM }
+                                     NOT = { is_in_faction_with = FROM }
+                                 }
+                                 add_to_war = { targeted_alliance = ROOT enemy = FROM }
+                             }
+                         }
+
+                        # Clear in-progress markers (participants + leaders) before wiping the participant flags.
+                        every_country = {
+                            limit = { has_country_flag = ceasefire_participant_against_@PREV }
+                            clr_country_flag = ceasefire_break_in_progress
+                        }
+                        PREV = {
+                            every_country = {
+                                limit = { has_country_flag = ceasefire_participant_against_@PREV }
+                                clr_country_flag = ceasefire_break_in_progress
+                            }
+                        }
+                        clr_country_flag = ceasefire_break_in_progress
+                        PREV = { clr_country_flag = ceasefire_break_in_progress }
+                        ROOT = { clr_country_flag = ceasefire_break_in_progress }
+                        FROM = { clr_country_flag = ceasefire_break_in_progress }
+
+                        # Clear ceasefire flags for the leader pair
+                        clr_country_flag = ceasefire_active_with_@PREV
+                        clr_country_flag = ceasefire_initiated_by_@PREV
+                        clr_country_flag = ceasefire_initiator_with_@PREV
+                        clr_country_flag = ceasefire_honored_notified_with_@PREV
+                        PREV = {
+                            clr_country_flag = ceasefire_active_with_@PREV
+                            clr_country_flag = ceasefire_initiated_by_@PREV
+                            clr_country_flag = ceasefire_initiator_with_@PREV
+                            clr_country_flag = ceasefire_honored_notified_with_@PREV
+                        }
+
+                        # Clear participant tracking flags for this ceasefire pair (leader-tag keyed)
+                        every_country = {
+                            limit = { has_country_flag = ceasefire_participant_against_@PREV }
+                            clr_country_flag = ceasefire_participant_against_@PREV
+                        }
+                        PREV = {
+                            every_country = {
+                                limit = { has_country_flag = ceasefire_participant_against_@PREV }
+                                clr_country_flag = ceasefire_participant_against_@PREV
+                            }
+                        }
+
+                        # Cleanup ceasefire_active if no other ceasefires remain (both leaders)
+                        if = {
+                            limit = {
+                                NOT = {
+                                    any_country = {
+                                        PREV = { has_country_flag = ceasefire_active_with_@PREV }
+                                    }
+                                }
+                            }
+                            clr_country_flag = ceasefire_active
+                        }
+                        PREV = {
+                            if = {
+                                limit = {
+                                    NOT = {
+                                        any_country = {
+                                            PREV = { has_country_flag = ceasefire_active_with_@PREV }
+                                        }
+                                    }
+                                }
+                                clr_country_flag = ceasefire_active
+                            }
+                        }
+                    }
+                }
+
+                ROOT = { clr_country_flag = ceasefire_tmp_participant_break_processed }
+            }
+        }
+    }
+
+    # Monthly check: if a ceasefire has lasted past the break cooldown, fire a one-time "ceasefire holds" event for players.
+    on_monthly = {
+        effect = {
+            if = {
+                limit = {
+                    has_game_rule = { rule = ceasefire_events_rule option = ENABLED }
+                    is_ai = no
+                    has_country_flag = ceasefire_active
+                    has_country_flag = ceasefire_break_cooldown
+                    NOT = { has_country_flag = ceasefire_honored_monthly_done }
+                }
+                # Cooldown elapsed? If not, do nothing (avoid scanning partners every month).
+                if = {
+                    limit = {
+                        OR = {
+                            AND = {
+                                has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_30 }
+                                has_country_flag = { flag = ceasefire_break_cooldown days > 29 }
+                            }
+                            AND = {
+                                has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_60 }
+                                has_country_flag = { flag = ceasefire_break_cooldown days > 59 }
+                            }
+                            AND = {
+                                has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_180 }
+                                has_country_flag = { flag = ceasefire_break_cooldown days > 179 }
+                            }
+                            AND = {
+                                has_game_rule = { rule = ceasefire_break_cooldown_rule option = DAYS_90 }
+                                has_country_flag = { flag = ceasefire_break_cooldown days > 89 }
+                            }
+                        }
+                    }
+
+                    every_country = {
+                        # Iterate over our ceasefire partners. (Both signatories store ceasefire_active_with_<other>.)
+                        limit = { ROOT = { has_country_flag = ceasefire_active_with_@PREV } }
+
+                        # Only notify once per partner
+                        if = {
+                            limit = { PREV = { NOT = { has_country_flag = ceasefire_honored_notified_with_@PREV } } }
+
+                            # Trigger the event on ROOT, with FROM = the partner country.
+                            PREV = {
+                                random_list = {
+                                    34 = { country_event = { id = ceasefire_events.50 } }
+                                    33 = { country_event = { id = ceasefire_events.51 } }
+                                    33 = { country_event = { id = ceasefire_events.52 } }
+                                }
+                                set_country_flag = ceasefire_honored_notified_with_@PREV
+                            }
+                        }
+                    }
+
+                    # Mark processed so we don't scan partners every month forever.
+                    set_country_flag = ceasefire_honored_monthly_done
+                }
+            }
+        }
+    }
+
+    # EXPERIMENTAL (Escrow Ownership):
+    # Right before a peace conference, restore "ceasefire-transferred" states to their original owners,
+    # while keeping them controlled by the winner so they can be demanded normally.
+    on_before_peace_conference_start = {
+        effect = {
+            if = {
+                limit = { has_game_rule = { rule = ceasefire_territory_rule option = ESCROW_OWNERSHIP } }
+
+                # Store winner/loser IDs for variable comparisons inside state scope.
+                set_temp_variable = { cf_pc_winner = ROOT }
+                set_temp_variable = { cf_pc_loser = FROM }
+
+                every_state = {
+                    limit = {
+                        has_state_flag = ceasefire_escrow_state
+                        has_variable = ceasefire_escrow_original_owner
+                        has_variable = ceasefire_transfer_to
+                        check_variable = { var = ceasefire_escrow_original_owner value = cf_pc_loser compare = equals }
+                        check_variable = { var = ceasefire_transfer_to value = cf_pc_winner compare = equals }
+                    }
+                    FROM = { set_state_owner = PREV }
+                    ROOT = { set_state_controller = PREV }
+                    clr_state_flag = ceasefire_escrow_state
+                    clear_variable = ceasefire_escrow_original_owner
+                    clear_variable = ceasefire_transfer_to
+                }
+            }
+        }
+    }
+
+}

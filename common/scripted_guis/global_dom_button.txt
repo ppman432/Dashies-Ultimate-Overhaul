@@ -1,0 +1,53 @@
+scripted_gui = {
+
+	worldcon_decision_toggle = {
+		context_type = player_context
+		parent_window_token = decision_tab
+		window_name = "worldcon_decision_toggle"
+
+		effects = {
+			 worldcon_disabled_click = {
+				set_country_flag = show_global_dom_decisions
+			}
+			worldcon_enabled_click = {
+				clr_country_flag = show_global_dom_decisions
+			}
+		}
+		triggers = {
+			worldcon_unavailable_visible = {
+				NOT = { has_country_flag = show_global_dom_decisions }
+				OR = {
+				is_major = no
+				date < 1017.01.01
+				}
+				has_game_rule = {
+					rule = world_dom_rule
+					option = Enable_world_dom
+				}
+			}
+			worldcon_disabled_visible = {
+				NOT = { has_country_flag = show_global_dom_decisions }
+				AND = {
+					is_major = yes
+					date > 1017.01.01
+				}
+				has_game_rule = {
+					rule = world_dom_rule
+					option = Enable_world_dom
+				}
+			}
+			worldcon_enabled_visible = {
+				has_country_flag = show_global_dom_decisions
+				AND = {
+					is_major = yes
+					date > 1017.01.01
+				}
+				has_game_rule = {
+					rule = world_dom_rule
+					option = Enable_world_dom
+				}
+			}
+		}
+	}
+
+}

@@ -1,0 +1,118 @@
+yec_calc_global_values = {
+  set_variable = { global.num_countries_at_war = 0 }
+  for_each_scope_loop = {
+    array = global.countries
+    if = {
+      limit = {
+        THIS = {
+          OR = {
+            has_war = yes
+            has_civil_war = yes
+          }
+        }
+      }
+      add_to_variable = { global.num_countries_at_war = 1 }
+    }
+  }
+  set_variable = { global.num_exiled_govs = 0 }
+  for_each_scope_loop = {
+    array = global.countries
+    if = {
+      limit = { THIS = { is_government_in_exile = yes } }
+      add_to_variable = { global.num_exiled_govs = 1 }
+    }
+  }
+}
+
+yec_calc_days_until_new_year = {
+  # Ensure that the event will fire on the 1st of January
+  # Formula: days_until_new_year = 365 - (num_days - (year * 365))
+
+  set_variable = { global.days_until_new_year = 365 }
+  set_temp_variable = { tmp_num_days = global.num_days }
+  set_temp_variable = { tmp_year = global.year }
+
+  # log = "Calculating: [?global.days_until_new_year] - ([?tmp_num_days] - ([?tmp_year] * 365))"
+
+  multiply_temp_variable = { tmp_year = 365 }
+  subtract_from_temp_variable = { tmp_num_days = tmp_year }
+  subtract_from_variable = { global.days_until_new_year = tmp_num_days }
+
+  # log = "Result: [?global.days_until_new_year]"
+}
+
+yec_play_event_card_music = {
+  if = {
+    limit = {
+      OR = {
+        has_game_rule = {
+          rule = yec_event_music_enabled
+          option = SHORT
+        }
+        AND = {
+          has_game_rule = {
+            rule = yec_event_music_enabled
+            option = DYNAMIC
+          }
+          has_country_flag = yec_event_music_played
+        }
+      }
+    }
+    play_song = "yec_event_music_short"
+  }
+  if = {
+    limit = {
+      OR = {
+        has_game_rule = {
+          rule = yec_event_music_enabled
+          option = LONG
+        }
+        AND = {
+          has_game_rule = {
+            rule = yec_event_music_enabled
+            option = DYNAMIC
+          }
+          NOT = { has_country_flag = yec_event_music_played }
+        }
+      }
+    }
+    play_song = "yec_event_music_long"
+  }
+  set_country_flag = yec_event_music_played
+}
+
+THIS_yec_save_current_values = {
+  set_variable = { global.curr_num_countries_at_war = global.num_countries_at_war }
+  set_variable = { global.curr_num_exiled_govs = global.num_exiled_govs }
+  set_variable = { THIS.curr_num_faction_members = THIS.num_faction_members }
+  set_variable = { THIS.curr_num_of_civilian_factories = THIS.num_of_civilian_factories }
+  set_variable = { THIS.curr_num_of_military_factories = THIS.num_of_military_factories }
+  set_variable = { THIS.curr_num_of_naval_factories = THIS.num_of_naval_factories }
+  set_variable = { THIS.curr_num_divisions = THIS.num_divisions }
+  set_variable = { THIS.curr_num_deployed_planes = THIS.num_deployed_planes }
+  set_variable = { THIS.curr_num_ships = THIS.num_ships }
+}
+
+THIS_yec_calc_delta_values = {
+  # Init variables with current values
+  set_variable = { global.delta_num_countries_at_war = global.num_countries_at_war }
+  set_variable = { global.delta_num_exiled_govs = global.num_exiled_govs }
+  set_variable = { THIS.delta_num_faction_members = THIS.num_faction_members }
+  set_variable = { THIS.delta_num_of_civilian_factories = THIS.num_of_civilian_factories }
+  set_variable = { THIS.delta_num_of_military_factories = THIS.num_of_military_factories }
+  set_variable = { THIS.delta_num_of_naval_factories = THIS.num_of_naval_factories }
+  set_variable = { THIS.delta_num_divisions = THIS.num_divisions }
+  set_variable = { THIS.delta_num_deployed_planes = THIS.num_deployed_planes }
+  set_variable = { THIS.delta_num_ships = THIS.num_ships }
+
+  # Calc delta with stored values
+  subtract_from_variable = { global.delta_num_countries_at_war = global.curr_num_countries_at_war }
+  subtract_from_variable = { global.delta_num_exiled_govs = global.curr_num_exiled_govs }
+  subtract_from_variable = { THIS.delta_num_faction_members = THIS.curr_num_faction_members }
+  subtract_from_variable = { THIS.delta_num_of_civilian_factories = THIS.curr_num_of_civilian_factories }
+  subtract_from_variable = { THIS.delta_num_of_military_factories = THIS.curr_num_of_military_factories }
+  subtract_from_variable = { THIS.delta_num_of_naval_factories = THIS.curr_num_of_naval_factories }
+  subtract_from_variable = { THIS.delta_num_divisions = THIS.curr_num_divisions }
+  subtract_from_variable = { THIS.delta_num_deployed_planes = THIS.curr_num_deployed_planes }
+  subtract_from_variable = { THIS.delta_num_ships = THIS.curr_num_ships }
+}

@@ -1,0 +1,32 @@
+on_actions = {
+	on_capitulation = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						NOT = { has_country_flag = jianniangyibeifuhuo }
+					}
+				}
+				FROM = {
+					country_event = getzhg_event.11
+				}
+					
+			}
+		}
+	}
+	on_puppet = {
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						NOT = { has_country_flag = jianniangyibeifuhuo }
+					}
+				}
+				FROM = {
+					country_event = getzhg_event.11
+				}
+				
+			}
+		}
+	}
+}
