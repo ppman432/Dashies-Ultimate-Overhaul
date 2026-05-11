@@ -1,0 +1,16 @@
+﻿l_english:
+  
+#Modded "Improved Spy Slots"
+branch_spyrecruitment:0 "Spy Recruitment"
+upgrade_spy1:0 "Garrison Safety initiative"
+upgrade_spy1_desc:0 "§LBy making a doctrine to safeguard our garrisons, we can safely make sure new lands do not get overrun by resistance."
+upgrade_spyresistancetraining:0 "Spy Resistance Training"
+upgrade_spyresistancetraining_desc:0 "§LBy making our spies more militarized, we can make sure any operations involving supporting local resistance will go more smoothly with our spies on the frontlines to fight along the local resistance."
+upgrade_spy_begin:0 "Spy Recruitment"
+upgrade_spy_rec1:0 "Increase Operative Recruitment Funding"
+upgrade_spy_rec1_desc:0 "§LIn order to maintain a espionage program, we must have multiple operatives making sure we know everyones next move.. The only way to do so of course is by hiring more operatives but that will require money...§"
+upgrade_spy_rec2:0 "Extend Recruitment"
+upgrade_spy_rec2_desc:0 "§LWith the already approved increased funding for hiring operatives, we have found ourselves lacking operatives in the field. We must increase funding further.§"
+spy_begintt:0 "Unlocks §YOperative Funding §!options."
+upgrade_spy_rec3:0 "Foreign Spy Program"
+upgrade_spy_rec3_desc:0 "§LBy reaching out to possibly interested foreign agents, we can use a nations people against itself with the agent being able to mask himself with much more ease and blend in. This can work greatly for us if we start a program to recruit foreign operatives.§"

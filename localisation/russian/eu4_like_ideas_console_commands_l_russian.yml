@@ -1,0 +1,34 @@
+﻿l_russian:
+ ## Everything will be kept in English language.
+ ## Only used for the console commands.
+EU4_STYLE_IDEAS_CC_USED_IN_WRONG_SCOPE: "§RКоманда была использована в неправильной области.§!"
+
+d_eu4_style_ideas_console_commands_DESC: "Отображает все консольные команды, добавленные модом §LEU4 Style Ideas§!."
+D_EU4_STYLE_IDEAS_CONSOLE_COMMANDS_TT_1: "Мод §LEU4 Style Ideas§! добавляет следующие консольные команды:"
+D_EU4_STYLE_IDEAS_CONSOLE_COMMANDS_TT_2: "\nВведите §Yhelp <command>§! для получения дополнительной информации о конкретной команде."
+
+d_unlock_all_idea_slots_DESC: "Разблокирует все слоты групп идей независимо от даты и убирает ограничение на выбор \nгрупп идей одной категории."
+D_UNLOCK_ALL_IDEA_SLOTS_TT: "Все слоты идей разблокированы."
+
+d_lock_all_idea_slots_as_normal_DESC: "Возвращает блокировку всех групп идей по датам и повторно вводит \nограничение на выбор групп идей одной категории (если не активировано правило игры для снятия этого ограничения)."
+D_LOCK_ALL_IDEA_SLOTS_AS_NORMAL_TT: "Все слоты идей снова заблокированы по датам."
+
+d_select_idea_group_DESC: "Выбирает указанную группу идей, если это возможно. \nИспользование: §Yselect_idea_group <ID>§!."
+D_SELECT_IDEA_GROUP_TT: "(§Y[This.GetName]§!): Выбрана новая группа идей: §Y[This.GetIdeaGroupName]§!."
+D_SELECT_IDEA_GROUP_TT_CANT_SELECT_IDEA: "(§Y[This.GetName]§!): §RУказанная группа идей не может быть выбрана.§!"
+D_SELECT_IDEA_GROUP_TT_CANT_SELECT_IDEA_ALREADY_SELECTED: "(§Y[This.GetName]§!): §Y[This.GetIdeaGroupName]§! §Rуже выбрана.§!"
+D_SELECT_IDEA_GROUP_TT_INVALID_ARGUMENTS: "§RНеверное количество аргументов.§!"
+
+d_remove_idea_group_DESC: "Удаляет указанную группу идей из выбранных, если это возможно. \nИспользование: §Yremove_idea_group <ID>§!."
+D_REMOVE_IDEA_GROUP_TT: "(§Y[This.GetName]§!): Выбранная группа идей удалена: §Y[This.GetIdeaGroupName]§!."
+D_REMOVE_IDEA_GROUP_TT_CANT_REMOVE_IDEA: "(§Y[This.GetName]§!): §RУказанную группу идей нельзя удалить, так как она не выбрана.§!"
+D_REMOVE_IDEA_GROUP_TT_INVALID_ARGUMENTS: "§RНеверное количество аргументов.§!"
+
+d_swap_national_idea_group_DESC: "Меняет нашу национальную группу идей на указанную. \nИспользование: §Yswap_national_idea_group <ID>§! \nЕсли ID не указан, выбирается группа идей, триггеры которой выполнены."
+D_SWAP_NATIONAL_IDEA_GROUP_TT: "Национальные идеи заменены на §Y[This.GetNationalIdeasName]§!."
+
+d_open_window_for_ni_choice_DESC: "Открывает окно выбора национальной группы идей. \nИспользование: §Yopen_window_for_ni_choice§!."
+D_OPEN_WINDOW_FOR_NI_CHOICE_TT: "Открыто окно выбора национальной группы идей."
+
+d_set_position_idea_open_button_DESC: "Устанавливает позицию (x) кнопки открытия окна идей относительно стартовой позиции. \nИспользование: §Yset_position_idea_open_button <integer>§! \nЕсли значение не указано, позиция сбросится на стандартное значение."
+D_SET_POSITION_IDEA_OPEN_BUTTON_TT: "Позиция кнопки открытия окна идей установлена на §Y[?args^0|0]§!."

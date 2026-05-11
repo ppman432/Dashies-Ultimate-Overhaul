@@ -1,0 +1,186 @@
+﻿l_russian:
+cadet_training_standards:0 "Стандарты Обучения"
+train_none:0 "Без Стандартов"
+train_low:0 "Низкие Стандарты"
+train_medium:0 "Средние Стандарты"
+train_high:0 "Высокие Стандарты"
+train_elite:0 "Элитарные Стандарты"
+
+education:0 "Образование"
+edu_minimal:0 "Минимальные Вложения"
+edu_low:0 "Низкие Вложения"
+edu_high:0 "Высокие Вложения"
+edu_excellent:0 "Отличные Вложения"
+
+press:0 "Законы о Прессе"
+press_free:0 "Свободная Пресса"
+press_regulated:0 "Регулируемая Пресса"
+press_censored:0 "Цензурированная Пресса"
+press_state:0 "Государственная Пресса"
+
+conscription:0 "Уровень Призыва"
+cons_volunteer:0 "Только Добровольцы"
+cons_one:0 "Призыв на Один Год"
+cons_two:0 "Призыв на Два Года"
+cons_three:0 "Призыв на Три Года"
+cons_expanded_draft:0 "Расширенный Призыв"
+cons_extensive_draft:0 "Обширный Призыв"
+cons_barrel:0 "Последний Ресурс"
+
+labor_laws:0 "Женский Труд и Призыв"
+labor_none:0 "Домохозяйки"
+labor_allowed:0 "Женщины в Рабочей Силе"
+labor_encouraged:0 "Женские Вспомогательные Подразделения"
+labor_pressed:0 "Женский Призыв"
+
+mobilization:0 "Уровень Готовности"
+mob_reserve:0 "Армия Резерва"
+mob_standing:0 "Постоянная Армия"
+mob_limited:0 "Ограниченная Мобилизация"
+mob_general:0 "Всеобщая Мобилизация"
+
+foreign_isolationism:0 "Изоляционизм"
+foreign_neutral:0 "Нейтралитет"
+foreign_cooperative:0 "Сотрудничество"
+foreign_interventionism:0 "Интервенционизм"
+foreign_warmonger:0 "Воинственная Политика"
+
+recruitment_laws:0 "Иностранный Призыв"
+foreign_none:0 "Нет Призыва"
+foreign_volunteers:0 "Иностранные Добровольцы"
+foreign_legion:0 "Иностранный Легион"
+foreign_conscript:0 "Иностранный Призыв"
+
+GER_foreign_SS_unit_recruitment:0 "Набор Иностранных СС"
+GER_foreign_SS_unit_recruitment_desc:0 "Набор иностранных подразделений СС"
+
+taxes:0 "Налоговая Политика"
+tax_minimal:0 "Минимальные Налоги"
+tax_low:0 "Низкие Налоги"
+tax_average:0 "Средние Налоги"
+tax_high:0 "Высокие Налоги"
+tax_extreme:0 "Максимальные Налоги"
+
+tariffs:0 "Тарифы"
+tariffs_none:0 "Без Пошлин"
+tariffs_low:0 "Низкие Тарифы"
+tariffs_average:0 "Средние Тарифы"
+tariffs_high:0 "Высокие Тарифы"
+tariffs_extreme:0 "Максимальные Тарифы"
+
+fdi_regulations:0 "Регулирование Иностранных Инвестиций"
+fdi_allowed:0 "Базовое Разрешение на Иностранные Предприятия"
+fdi_regulated:0 "Минимальные Разрешения"
+fdi_banned:0 "Экономическая Автаркия"
+fdi_encouraged:0 "Стимулы для Бизнеса"
+
+nationalization:0 "Уровень Национализации"
+private_control:0 "Лассе-Фэр"
+key_industries:0 "Государственное Вмешательство"
+major_industries:0 "Государственный Капитализм"
+planned_economy:0 "Плановая Экономика"
+
+unity:0 "Военные Вложения"
+unity_united_nation:0 "Высокие Вложения"
+unity_divided_nation:0 "Средние Вложения"
+unity_broken_nation:0 "Низкие Вложения"
+unity_civil_war:0 "Без Вложений"
+
+officer_training_standards:0 "Обучение Офицеров"
+officer_train_none:0 "Без Формального Обучения"
+officer_train_low:0 "Базовое Обучение Офицеров"
+officer_train_high:0 "Расширенное Обучение"
+officer_train_elite:0 "Элитное Обучение Офицеров"
+
+security:0 "Политика Безопасности"
+security_liberty_first:0 "Прежде Всего Гражданские Свободы"
+security_minor_restrictions:0 "Небольшие Ограничения Свобод"
+security_major_restrictions:0 "Серьёзные Ограничения Свобод"
+security_police_state:0 "Полицейское Государство"
+
+bonds:0 "Военные Облигации"
+bonds_peace:0 "Нормальные Финансовые Операции"
+bonds_basic:0 "Базовые Облигации"
+bonds_war_domestic:0 "Военные Внутренние Займы"
+bonds_war_international:0 "Военные Международные Займы"
+bonds_war_public:0 "Публичные Военные Облигации"
+bonds_state_requisition:0 "Государственный Реквизит"
+bonds_print:0 "Эмиссия Денег"
+
+#National Spirits
+general_strike:0 "Всеобщая Забастовка"
+general_strike_agreement:0 "Соглашение о Всеобщей Забастовке"
+general_strike_agreement_desc:0 "Серия компромиссов с рабочими временно снизила промышленное производство минимум на 2 года."
+
+royal_restoration:0 "Восстановление Монархии"
+soviet_women:0 "Женщины Родины"
+
+labor_transition:0 "Переход Рабочей Силы"
+labor_transition_desc:0 "Включение новой рабочей силы в экономику. Постепенно улучшает показатели."
+labor_transition2:0 "Переход Рабочей Силы"
+labor_transition2_desc:0 "Включение новой рабочей силы в экономику. Постепенно улучшает показатели."
+
+#Opinion Modifiers
+same_type_group:0 "Демократический"
+
+#Scripted Effects
+increase_corruption:0 "Увеличить Коррупцию на 1"
+increase_corruption2:0 "Увеличить Коррупцию на 2"
+increase_corruption3:0 "Увеличить Коррупцию на 3"
+decrease_corruption:0 "Уменьшить Коррупцию на 1"
+decrease_corruption2:0 "Уменьшить Коррупцию на 2"
+decrease_corruption3:0 "Уменьшить Коррупцию на 3"
+show_corruption:0 "Отчёт о Коррупции"
+
+#Scripted Triggers
+free_trader:0 "Свободный Торговец"
+protectionist:0 "Протекционист"
+
+#Custom Tooltips
+labor_transition_TT:0 "Эффективность временно будет ниже из-за обучения новых работников."
+taxes_TT:0 "Некоторые законы требуют определённого уровня налогов для их применения. Будьте осторожны при снижении налогов, особенно если война близка."
+judge_TT:0 "В краткосрочной перспективе симпатичный судья может ускорить правовые процессы. В долгосрочной перспективе они повышают уровень коррупции."
+powerful_TT:0 "Из-за их влияния удаление этого человека вызовет дополнительную стоимость в 100 PP."
+readiness_TT:0 "Убедитесь, что ваша армия мобилизована, если война близка, иначе она будет сильно ослаблена."
+
+#Ministers
+#generic_neutral_advisor:0 "Арх Традиционалист"
+#generic_speechwriter:0 "Сценарист"
+#generic_sympathetic_judge:0 "Судья"
+#generic_political_advisor:0 "Советник по Политике"
+
+#Traits
+speechwriter:0 "Признанный Сценарист"
+sympathetic_judge:0 "Симпатичный Судья"
+policy_wonk:0 "Политический Эксперт"
+right_hand_man:0 "Правая Рука"
+corrupt_kleptocrat_ai:0 "Коррумпированный Клептократ"
+
+Manpower_draft:0 "Призыв в Армию"
+ENG_commando_raid:0 "Рейд Коммандос"
+
+#Partisans
+Partisan_Hell:0 "Партизанский Ад"
+SPA_partisan_attacks:0 "Партизанские Нападения"
+SPR_partisan_attacks:0 "Партизанские Нападения"
+CHI_partisan_attacks:0 "Партизанские Нападения"
+PRC_partisan_attacks:0 "Партизанские Нападения"
+
+SOV_partisan_attacks:0 "Партизанские Нападения"
+SOV_partisan_attacks_94:0 "Партизанские Нападения"
+SOV_partisan_attacks_95:0 "Партизанские Нападения"
+SOV_partisan_attacks_96:0 "Партизанские Нападения"
+SOV_partisan_attacks_12:0 "Партизанские Нападения"
+SOV_partisan_attacks_13:0 "Партизанские Нападения"
+SOV_partisan_attacks_840:0 "Партизанские Нападения"
+SOV_partisan_attacks_209:0 "Партизанские Нападения"
+SOV_partisan_attacks_195:0 "Партизанские Нападения"
+SOV_partisan_attacks_202:0 "Партизанские Нападения"
+SOV_partisan_attacks_240:0 "Партизанские Нападения"
+SOV_partisan_attacks_246:0 "Партизанские Нападения"
+SOV_partisan_attacks_260:0 "Партизанские Нападения"
+SOV_partisan_attacks_223:0 "Партизанские Нападения"
+SOV_partisan_attacks_263:0 "Партизанские Нападения"
+SOV_partisan_attacks_222:0 "Партизанские Нападения"
+SOV_partisan_attacks_226:0 "Партизанские Нападения"
+  ## EOF ##

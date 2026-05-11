@@ -1,0 +1,79 @@
+﻿l_english:
+ extra_advisors:0 "Additional Advisors"
+ extra_advisors2:0 "Additional Advisors"
+ 
+ extra_silent_workhorse:0 "Silent Workhorse"
+ extra_captain_of_industry:0 "Captain of Industry"
+ extra_war_industrialist:0 "War Industrialist"
+ extra_fortification_engineer:0 "Fortification Engineer"
+ extra_armaments_organizer:0 "Armaments Organizer"
+ extra_quartermaster_general:0 "Quartermaster General"
+ extra_popular_figurehead:0 "Popular Figurehead"
+ extra_prince_of_terror:0 "Prince of Terror"
+ extra_compassionate_gentleman:0 "Compassionate Gentleman"
+ extra_backroom_backstabber:0 "Backroom Backstabber"
+ extra_smooth_talking_charmer:0 "Smooth Talking Charmer"
+ extra_ideological_crusader:0 "Ideological Crusader"
+ 
+ vacancy_sw:0 "Vacancy"
+ specialist_sw:0 "Specialist"
+ expert_sw:0 "Expert"
+ genius_sw:0 "Genius"
+ 
+ vacancy_pf:0 "Vacancy"
+ specialist_pf:0 "Specialist"
+ expert_pf:0 "Expert"
+ genius_pf:0 "Genius"
+ 
+ vacancy_pot:0 "Vacancy"
+ specialist_pot:0 "Specialist"
+ expert_pot:0 "Expert"
+ genius_pot:0 "Genius"
+ 
+ vacancy_cg:0 "Vacancy"
+ specialist_cg:0 "Specialist"
+ expert_cg:0 "Expert"
+ genius_cg:0 "Genius"
+ 
+ vacancy_bb:0 "Vacancy"
+ specialist_bb:0 "Specialist"
+ expert_bb:0 "Expert"
+ genius_bb:0 "Genius"
+ 
+ vacancy_stc:0 "Vacancy"
+ specialist_stc:0 "Specialist"
+ expert_stc:0 "Expert"
+ genius_stc:0 "Genius"
+ 
+ vacancy_ic:0 "Vacancy"
+ specialist_ic:0 "Specialist"
+ expert_ic:0 "Expert"
+ genius_ic:0 "Genius"
+ 
+ vacancy_feng:0 "Vacancy"
+ specialist_feng:0 "Specialist"
+ expert_feng:0 "Expert"
+ genius_feng:0 "Genius"
+ 
+ vacancy_wi:0 "Vacancy"
+ specialist_wi:0 "Specialist"
+ expert_wi:0 "Expert"
+ genius_wi:0 "Genius"
+ 
+ vacancy_coi:0 "Vacancy"
+ specialist_coi:0 "Specialist"
+ expert_coi:0 "Expert"
+ genius_coi:0 "Genius"
+ 
+ vacancy_ao:0 "Vacancy"
+ specialist_ao:0 "Specialist"
+ expert_ao:0 "Expert"
+ genius_ao:0 "Genius"
+ 
+ vacancy_qg:0 "Vacancy"
+ specialist_qg:0 "Specialist"
+ expert_qg:0 "Expert"
+ genius_qg:0 "Genius"
+ 
+army_research:0 "Army Research"
+industrial_research:0 "Industrial Research" 

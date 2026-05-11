@@ -1,0 +1,10 @@
+﻿l_russian:
+TTT_TOOLTIP:0 "[This.GetTicTacToeButtonTooltip]"
+TTT_TOOLTIP_NOREFRESH:0 "Играть в Крестики-Нолики"
+TTT_TOOLTIP_REFRESH:0 "Играть в Крестики-Нолики\n§YИз-за особенностей HoI IV, вы можете сыграть только одну партию в день, чтобы обновилась случайность ИИ.§!"
+TTT_HEADER:0 "Крестики-Нолики 1.2 от Yard1"
+TTT_HEADER_TOOLTIP:0 "Кликните, чтобы увидеть больше моих работ :)"
+TTT_DRAW:0 "§YНичья!§!"
+TTT_WIN:0 "§GВы выиграли!§!"
+TTT_LOSE:0 "§RВы проиграли!§!"
+TTT_COUNTER:0 "§GВ: [?TTT_score_counter.TTT_wins]§! §YН: [?TTT_score_counter.TTT_draws]§! §П: [?TTT_score_counter.TTT_loses]§!"

@@ -1,0 +1,197 @@
+﻿l_russian:
+continuous_thinking_outside_box:0 "Инвестирование в альтернативные науки"
+continuous_thinking_outside_box_desc:0 "В мире, где технологии постоянно меняются и всё непредсказуемо, мы должны находить новые способы оставаться на шаг впереди конкурентов любыми средствами."
+
+continuous_increase_war_support:0 "Милитаристская пропаганда"
+continuous_increase_war_support_desc:0 "Слишком долго наша нация игнорировала растущую военную напряжённость вокруг нас. Нам следует мобилизовать народ к неизбежной войне."
+
+continuous_increase_stability:0 "Социальные реформы"
+continuous_increase_stability_desc:0 "Нация оказалась в социальном кризисе. Политические волнения требуют срочного вмешательства для стабилизации ситуации."
+
+continuous_science_haven:0 "Научное убежище"
+continuous_science_haven_desc:0 "Технологии отстают от соседей, поэтому нужно сосредоточить все ресурсы на их улучшении."
+
+continuous_foreign_volunteers:0 "Иностранные добровольцы"
+continuous_foreign_volunteers_desc:0 "Недостаток рабочей силы препятствует дипломатии. Обещания гражданам соседних стран сражаться на нашей стороне за землю и деньги помогут решить эту проблему."
+
+continuous_immigration:0 "Иммиграция"
+continuous_immigration_desc:0 "Постоянное решение проблемы рабочей силы — смягчение иммиграционных законов и улучшение условий жизни. Это разозлит ультранационалистов, верящих в силу армии без иностранных добровольцев."
+
+continuous_consumer_goods_investment:0 "Инвестиции в потребительские товары"
+continuous_consumer_goods_investment_desc:0 "Ограниченные ресурсы используются неэффективно. Поддержка НИОКР по рационализации ресурсов поможет сбалансировать военные и гражданские нужды."
+
+continuous_land_doctrine_research:0 "Учения по сухопутной доктрине"
+continuous_land_doctrine_research_desc:0 "Война — это борьба стратегий. Упреждение врага в стратегии даст преимущество в будущих конфликтах."
+
+continuous_air_doctrine_research:0 "Учения по воздушной доктрине"
+continuous_air_doctrine_research_desc:0 "Воздушные силы — ключ к современным войнам. Оптимальное их использование даст технологическое превосходство."
+
+continuous_naval_doctrine_research:0 "Учения по морской доктрине"
+continuous_naval_doctrine_research_desc:0 "Новые формы морской войны изменят представление о флоте. Фокус на технологии флота позволит господствовать на море."
+
+continuous_military_think_tank:0 "Военный аналитический центр"
+continuous_military_think_tank_desc:0 "Создание аналитического центра с участием опытных маршалов и новых генералов ускорит реализацию военных планов и повысит квалификацию командиров."
+
+continuous_national_defense:0 "Национальная оборона"
+continuous_national_defense_desc:0 "При угрозе вторжения важно снабжать гражданское население оружием и укреплять оборонительные сооружения."
+
+continuous_resistance_suppression:0 "Подавление сопротивления"
+continuous_resistance_suppression_desc:0 "Сопротивление гражданских непокорных регионов требует перераспределения промышленности на снабжение гарнизонов."
+
+continuous_renounce_foreign_occupation:0 "Отказ от иностранной оккупации"
+continuous_renounce_foreign_occupation_desc:0 "Правительство в изгнании должно поддерживать дух сопротивления среди населения и информировать о ходе войны и возвращении власти."
+
+continuous_work_with_local_leaders:0 "Работа с местными лидерами"
+continuous_work_with_local_leaders_desc:0 "Для улучшения отношений с местными жителями необходимо взаимодействовать с их лидерами и снизить сопротивление новым порядкам."
+
+continuous_national_teachings:0 "Национальное воспитание"
+continuous_national_teachings_desc:0 "Чтобы контролировать новые территории, необходимо обучать население идеологии и культуре страны."
+
+continuous_nationalism:0 "Национализм"
+continuous_nationalism_desc:0 "В условиях выживания необходимо массово распространять пропаганду, убеждая людей бороться любыми средствами."
+
+#Normal Ideologies
+continuous_political_correction_democratic:0 "Политическая корректировка"
+continuous_political_correction_democratic_desc:0 "Демократия доказала свою эффективность. Устранение чуждых идей в правительстве поможет соответствовать большинству."
+
+continuous_political_correction_communist:0 "Политические чистки"
+continuous_political_correction_communist_desc:0 "Коммунизм — лучшая идеология. Устранение оппозиции обеспечит политическое будущее нации."
+
+continuous_political_correction_fascist:0 "Политические чистки"
+continuous_political_correction_fascist_desc:0 "Фашизм укрепил нацию. Любая оппозиция несёт угрозу безопасности идеологии."
+
+continuous_political_correction_neutrality:0 "Политические соперники"
+continuous_political_correction_neutrality_desc:0 "Политическая безопасность лидера под угрозой. Создаётся кабинет для выявления сторонников и противников, оппозиция подавляется."
+
+#Kaiser Ideologies
+continuous_totalist_principles:0 "Принципы тотализма"
+continuous_totalist_principles_desc:0 "В текущей ситуации обеспечение будущего идеологии — лучший путь."
+
+continuous_syndicalist_principles:0 "Принципы синдикализма"
+continuous_syndicalist_principles_desc:0 "В текущей ситуации обеспечение будущего идеологии — лучший путь."
+
+continuous_radical_socialist_principles:0 "Принципы радикального социализма"
+continuous_radical_socialist_principles_desc:0 "В текущей ситуации обеспечение будущего идеологии — лучший путь."
+
+continuous_social_democrat_principles:0 "Принципы социал-демократии"
+continuous_social_democrat_principles_desc:0 "В текущей ситуации обеспечение будущего идеологии — лучший путь."
+
+continuous_social_liberal_principles:0 "Принципы социального либерализма"
+continuous_social_liberal_principles_desc:0 "В текущей ситуации обеспечение будущего идеологии — лучший путь."
+
+continuous_market_liberal_principles:0 "Принципы рыночного либерализма"
+continuous_market_liberal_principles_desc:0 "В текущей ситуации обеспечение будущего идеологии — лучший путь."
+
+continuous_social_conservative_principles:0 "Принципы социального консерватизма"
+continuous_social_conservative_principles_desc:0 "В текущей ситуации обеспечение будущего идеологии — лучший путь."
+
+continuous_authoritarian_democrat_principles:0 "Принципы авторитарной демократии"
+continuous_authoritarian_democrat_principles_desc:0 "В текущей ситуации обеспечение будущего идеологии — лучший путь."
+
+continuous_paternal_autocrat_principles:0 "Принципы патерналистского автократа"
+continuous_paternal_autocrat_principles_desc:0 "В текущей ситуации обеспечение будущего идеологии — лучший путь."
+
+continuous_national_populist_principles:0 "Принципы национального популизма"
+continuous_national_populist_principles_desc:0 "В текущей ситуации обеспечение будущего идеологии — лучший путь."
+
+#OWB Ideologies
+continuous_people_principles:0 "Принципы народа"
+continuous_people_principles_desc:0 "С учётом состояния пустошей, защита будущего идеологии — лучший путь."
+
+continuous_intellectuals_principles:0 "Принципы интеллигенции"
+continuous_intellectuals_principles_desc:0 "С учётом состояния пустошей, защита будущего идеологии — лучший путь."
+
+continuous_elites_principles:0 "Принципы элиты"
+continuous_elites_principles_desc:0 "С учётом состояния пустошей, защита будущего идеологии — лучший путь."
+
+continuous_ruler_principles:0 "Принципы правителя"
+continuous_ruler_principles_desc:0 "С учётом состояния пустошей, защита будущего идеологии — лучший путь."
+
+#Focuses Continued
+continuous_synthetic_nation:0 "Синтетическая нация"
+continuous_synthetic_nation_desc:0 "Недостаток нефти и резины ограничивает возможности армии. Финансирование синтетических заводов поможет решить проблему."
+
+continuous_infrastructure_improvements:0 "Улучшение инфраструктуры"
+continuous_infrastructure_improvements_desc:0 "Плохие дороги тормозят промышленность и передвижение войск. Увеличение бюджета на инфраструктуру улучшит ситуацию."
+
+continuous_new_naval_structures:0 "Новые морские сооружения"
+continuous_new_naval_structures_desc:0 "Фокус на постройку военно-морских баз и доков позволит восстановить морскую мощь страны."
+
+continuous_new_aerial_structures:0 "Новые воздушные сооружения"
+continuous_new_aerial_structures_desc:0 "Фокус на авиабазы и радиолокационные станции позволит восстановить воздушное превосходство."
+
+continuous_defense_in_depth:0 "Глубокая оборона"
+continuous_defense_in_depth_desc:0 "Политическая нестабильность требует масштабного строительства укреплений для защиты от возможных вторжений."
+
+continuous_exploit_natural_resources:0 "Разработка природных ресурсов"
+continuous_exploit_natural_resources_desc:0 "Увеличение расходов на добычу ресурсов поддержит внешнюю торговлю и военное строительство."
+
+continuous_lower_industrial_taxes:0 "Снижение промышленных налогов"
+continuous_lower_industrial_taxes_desc:0 "Снижение налогов на гражданскую промышленность позволит предприятиям развиваться. Для баланса бюджета придётся повысить налоги на военную промышленность."
+
+continuous_lower_military_taxes:0 "Снижение военных налогов"
+continuous_lower_military_taxes_desc:0 "Снижение налогов на военные предприятия даст им возможность развиваться. Для баланса бюджета придётся увеличить налоги на гражданскую промышленность."
+
+continuous_industry_for_autonomy:0 "Промышленность для автономии"
+continuous_industry_for_autonomy_desc:0 "Увеличение автономии в обмен на долю промышленности поможет обрести независимость и принесёт выгоду правителю."
+
+continuous_foreign_investments:0 "Иностранные инвестиции"
+continuous_foreign_investments_desc:0 "Инвестиции в зарубежные территории помогут финансово, предоставив долю доходов и возможность назначать министров."
+
+continuous_volunteers_program:0 "Программа добровольцев"
+continuous_volunteers_program_desc:0 "Программа добровольцев позволит влиять на исход войн за границей, убеждая население помогать союзникам."
+
+continuous_temporary_agents:0 "Временные агенты"
+continuous_temporary_agents_desc:0 "§R\"СЕКРЕТНО\"§!"
+
+continuous_counter_intelligence:0 "Контрразведка"
+continuous_counter_intelligence_desc:0 "Среди нас есть §Rсамозванцы§!."
+
+#Research Focus
+continuous_infantry_equipment_research:0 "Исследования пехотного снаряжения"
+continuous_infantry_equipment_research_desc:0 "Огнестрельное оружие — одно из величайших изобретений. Почему бы его не улучшить?"
+
+continuous_air_equipment_research:0 "Исследования авиационного снаряжения"
+continuous_air_equipment_research_desc:0 "Самолёты доказали эффективность. Их улучшение даст преимущество."
+
+continuous_naval_equipment_research:0 "Исследования флота"
+continuous_naval_equipment_research_desc:0 "Фокус на качестве флота даст шанс против врагов."
+
+continuous_artillery_research:0 "Исследования артиллерии"
+continuous_artillery_research_desc:0 "Артиллерия была ключом в прошлых войнах и будет таковой в будущем."
+
+continuous_armor_research:0 "Исследования бронетехники"
+continuous_armor_research_desc:0 "Использование танков в армии обеспечит быструю победу, учитывая уроки прошлой войны."
+
+continuous_industry_research:0 "Промышленные исследования"
+continuous_industry_research_desc:0 "Лучшие технологии и строительство заводов увеличат производство оружия и обеспечат победы."
+
+continuous_rocketry_research:0 "Исследования ракетной техники"
+continuous_rocketry_research_desc:0 "\"Базовые исследования — это когда я не знаю, что делаю.\" — Вернер фон Браун"
+
+continuous_nuclear_research:0 "Ядерные исследования"
+continuous_nuclear_research_desc:0 "\"Теперь я стал смертью, разрушителем миров.\" — Джулиус Роберт Оппенгеймер"
+
+#OWB Research Focus
+continuous_owb_robotics_research:0 "Исследования робототехники"
+continuous_owb_robotics_research_desc:0 "\"Mr. Handy, это просто работает!\" — Роберт Эдвин Хаус, основатель RobCo"
+
+#Custom Tool-tips
+continuous_industry_for_autonomy_tt:0 "Заводы для Верховного правителя: §R+20%§! \nЕжедневный прирост автономии: §G+1.0§!"
+continuous_national_defense_tt:0 "§YСухопутная крепость§! Скорость строительства: §G+150%§! \n§YПрибрежная крепость§! Скорость строительства: §G+150%§! \nВсе остальные здания: §R-100%§! \nЕжедневная стоимость политической власти: §R-2§!"
+continuous_new_naval_structures_tt:0 "§YМорская верфь§! Скорость строительства: §G+150%§! \n§YМорская база§! Скорость строительства: §G+150%§! \nВсе остальные здания: §R-100%§!"
+continuous_new_aerial_structures_tt:0 "§YАвиабаза§! Скорость строительства: §G+150%§! \n§YРЛС§! Скорость строительства: §G+150%§! \n§YЗенитное сооружение§! Скорость строительства: §G+75%§! \nВсе остальные здания: §R-100%§!"
+continuous_synthetic_nation_tt:0 "§YSynthetic Refinery§! Скорость строительства: §G+150%§! \nВсе остальные здания: §R-100%§!"
+continuous_infrastructure_improvements_tt:0 "§YИнфраструктура§! Скорость строительства: §G+150%§! \n§YЖелезная дорога§! Скорость строительства: §G+150%§! \n§YСнабженческий центр§! Скорость строительства: §G+150%§! \nВсе остальные здания: §R-100%§!"
+continuous_defense_in_depth_tt:0 "§YСухопутная крепость§! Скорость строительства: §G+100%§! \n§YПрибрежная крепость§! Скорость строительства: §G+100%§! \n§YЗенитное сооружение§! Скорость строительства: §G+75%§! \nВсе остальные здания: §R-100%§!"
+
+#Political Power Cost
+continuous_daily_pp_0_tt:0 "Ежедневная стоимость политической власти: §Y0§!"
+continuous_daily_pp_2_tt:0 "Ежедневная стоимость политической власти: §R-2§!"
+continuous_daily_pp_3_tt:0 "Ежедневная стоимость политической власти: §R-3§!"
+
+#Misc
+night_vision_research:0 "Скорость исследований ночного видения"
+marine_tech_research:0 "Скорость исследований морской техники"
+para_tech_research:0 "Скорость исследований парашютной техники"
+mountaineers_tech_research:0 "Скорость исследований горной техники"

@@ -1,0 +1,68 @@
+﻿l_french:
+ # GUI
+ yec_accurate_year_text_tt:0 "D'après mes sources, cette photo a en fait été prise le soir du §YNouvel An [GetYear]§!."
+ yec_review_title:0 "Une année en revue"
+ yec_data_mode_absolute_btn_tt:0 "Passe à des chiffres §Yrelatifs§!"
+ yec_data_mode_delta_btn_tt:0 "Passe à des chiffres §Yabsolus§!"
+ yec_close_btn:0 "Santé!"
+ yec_close_btn_tt:0 "Veille à faire des §Ypauses§!, à §Yt'hydrater§! et à faire attention à ta §Yposture assise§!!"
+
+ # Music
+ yec_event_music_long:0 "Leon Cortez - The Girl Who Loves A Soldier (Long)"
+ yec_event_music_short:0 "Leon Cortez - The Girl Who Loves A Soldier (Court)"
+
+ # Stats
+ yec_review_countries_at_war:0 "Pays en guerre"
+ yec_review_exiled_govs:0 "Gouvernements en exil"
+ yec_review_faction_members:0 "Membres de factions"
+ yec_review_civ_factories:0 "Usines civiles"
+ yec_review_mil_factories:0 "Usines militaires"
+ yec_review_nav_factories:0 "Chantiers navals"
+ yec_review_divisions:0 "Divisions sur le terrain"
+ yec_review_planes:0 "Avions déployés"
+ yec_review_ships:0 "Navires de guerre"
+
+ # Options
+ YEC_RULE_GROUP_GENERAL:0 "Yearly Event Cards"
+ YEC_RULE_MUSIC_ENABLED:0 "Musique d'événement"
+ YEC_RULE_OPTION_SHORT:0 "Court"
+ YEC_RULE_MUSIC_ENABLED_SHORT_DESC:0 "Joue une version raccourcie de la chanson §YThe Girl Who Loves A Soldier§! de §YLeon Cortez & His Coster Pals§!.\n\n§RNon recommandé pour les vidéos sur YouTube / Twitch.§!"
+ YEC_RULE_OPTION_LONG:0 "Long"
+ YEC_RULE_MUSIC_ENABLED_LONG_DESC:0 "Joue la version complète de la chanson §YThe Girl Who Loves A Soldier§! de §YLeon Cortez & His Coster Pals§!.\n\n§RNon recommandé pour les vidéos sur YouTube / Twitch.§!"
+ YEC_RULE_OPTION_DYNAMIC:0 "Dynamique"
+ YEC_RULE_MUSIC_ENABLED_DYNAMIC_DESC:0 "Joue la chanson §YThe Girl Who Loves A Soldier§! de §YLeon Cortez & His Coster Pals§! en version intégrale la première fois, et toutes les fois suivantes en version raccourcie.\n\n§RNon recommandé pour les vidéos sur YouTube / Twitch.§!"
+ YEC_RULE_OPTION_OFF:0 "Désactivé"
+ YEC_RULE_MUSIC_ENABLED_OFF_DESC:0 "Désactive complètement la musique des événements.\n\n§GRecommandé pour les vidéos sur YouTube / Twitch.§!"
+ YEC_RULE_CHRISTMAS_HITLER:0 "Afficher Noël Hitler"
+ YEC_RULE_CHRISTMAS_HITLER_NO_DESC:0 "Conserve l'image de l'événement de §Y1939§! comme prévu à §Yl'origine§!. Ne contient pas de croix gammée.\n\n§GRecommandé pour les vidéos sur YouTube / Twitch.§!"
+ YEC_RULE_CHRISTMAS_HITLER_YES_DESC:0 "Remplace la photo de l'événement de §Y1939§! par une photo §Yd'Hilter§! pendant §YNoël§!. Contient une croix gammée.\n\n§RNon recommandé pour les vidéos sur YouTube / Twitch.§!"
+
+ # NON-TRANSLATABLE LOCALS
+ # GUI
+ yec_year_display:0 "[GetYear]"
+ yec_accurate_year_tt:0 "[yec_accurate_year_tt]" # Workaround because [GetYear] doesn't work with normal tooltips.
+ yec_data_mode_btn_tt:0 "[yec_data_mode_btn_tt]"
+ yec_data_mode_absolute_btn:0 "£prod_eff"
+ yec_data_mode_delta_btn:0 "£prod_eff_cap"
+
+ # Stats
+ yec_review_countries_at_war_var_absolute:0 "§Y[?global.num_countries_at_war]§!"
+ yec_review_countries_at_war_var_delta:0 "[?global.delta_num_countries_at_war|=-0]"
+ yec_review_exiled_govs_var_absolute:0 "§Y[?global.num_exiled_govs]§!"
+ yec_review_exiled_govs_var_delta:0 "[?global.delta_num_exiled_govs|=-0]"
+ yec_review_faction_members_var_absolute:0 "§Y[?THIS.num_faction_members]§!"
+ yec_review_faction_members_var_delta:0 "[?THIS.delta_num_faction_members|=+0]"
+ yec_review_civ_factories_var_absolute:0 "§Y[?THIS.num_of_civilian_factories]§!"
+ yec_review_civ_factories_var_delta:0 "[?THIS.delta_num_of_civilian_factories|=+0]"
+ yec_review_mil_factories_var_absolute:0 "§Y[?THIS.num_of_military_factories]§!"
+ yec_review_mil_factories_var_delta:0 "[?THIS.delta_num_of_military_factories|=+0]"
+ yec_review_nav_factories_var_absolute:0 "§Y[?THIS.num_of_naval_factories]§!"
+ yec_review_nav_factories_var_delta:0 "[?THIS.delta_num_of_naval_factories|=+0]"
+ yec_review_divisions_var_absolute:0 "§Y[?THIS.num_divisions]§!"
+ yec_review_divisions_var_delta:0 "[?THIS.delta_num_divisions|=+0]"
+ yec_review_planes_var_absolute:0 "§Y[?THIS.num_deployed_planes|*1]§!"
+ yec_review_planes_var_absolute_small:0 "§Y[?THIS.num_deployed_planes|*0]§!"
+ yec_review_planes_var_delta:0 "[?THIS.delta_num_deployed_planes|=+*1]"
+ yec_review_planes_var_delta_small:0 "[?THIS.delta_num_deployed_planes|=+*0]"
+ yec_review_ships_var_absolute:0 "§Y[?THIS.num_ships]§!"
+ yec_review_ships_var_delta:0 "[?THIS.delta_num_ships|=+0]"

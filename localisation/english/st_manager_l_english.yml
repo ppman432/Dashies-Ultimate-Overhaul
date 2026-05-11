@@ -1,0 +1,41 @@
+﻿l_english:
+ 
+ ST_STATE_MARK_FOR_TRANSFER_TT:0 "[ST_STATE_MARK_FOR_TRANSFER_SCRIPT]"
+ ST_STATE_MARK_FOR_TRANSFER_1:0 "§HMark State for Transfer§!\n§RYou cannot mark a player owned state!§! \n"
+ ST_STATE_MARK_FOR_TRANSFER_2:0 "§HMark State for Transfer§!\nMark the selected state so it can be transferred \n"
+ ST_STATE_UNMARK_FOR_TRANSFER:0 "§HUnmark State§!\nUnmarks the selected state\n"
+ mark_state_yes:0 ""
+ mark_state_no:0 "\n  §RMarked!§!"
+ 
+ MARK_ALL_STATES_TT:0 "[MARK_ALL_STATES_SCRIPT]"
+ MARK_ALL_STATES_1:0 "§HMark All States§!\n\n§REvery state is already marked!§!"
+ MARK_ALL_STATES_2:0 "§HMark All States§!\n\n§RYou cannot mark player owned states!§!"
+ MARK_ALL_STATES_3:0 "§HMark All States§!\n\nMark all states of this country."
+ 
+ MARK_COLONIES_TT:0 "[MARK_COLONIES_SCRIPT]"
+ MARK_COLONIES_1:0 "§HMark Colonies§!\n\n§REvery colonial state is already marked!§!"
+ MARK_COLONIES_2:0 "§HMark Colonies§!\n\n§RYou cannot mark player owned states!§!"
+ MARK_COLONIES_3:0 "§HMark Colonies§!\n\nMark all colonial states of this country"
+ MARK_COLONIES_4:0 "§HMark Colonies§!\n\n§RThere are no colonies to mark!§!"
+ 
+ CLEAR_ALL_MARKINGS_TT:0 "[CLEAR_ALL_MARKINGS_SCRIPT]"
+ CLEAR_ALL_MARKINGS_1:0 "§HClear All Marks§!\n\n§RThere are no states marked!§!"
+ CLEAR_ALL_MARKINGS_2:0 "§HClear All Marks§!\n\nEvery mark on world will be removed"
+
+ AWARD_STATES_TT:0 "[AWARD_STATES_SCRIPT]"
+ AWARD_STATES_1:0 "§HTransfer States§!\n\n§RYou must first mark a state!§!"
+ AWARD_STATES_2:0 "§HTransfer States§!\n\n§RYou cannot transfer player owned states!§!"
+ AWARD_STATES_3:0 "§HTransfer States§!\n\nTransfer marked states to this country"
+ AWARD_STATES_4:0 "§HTransfer States§!\n\n§RYou cannot transfer a state to a country already owning it!§!"
+ 
+ ST_TOOLTIP_on:0 "§HActivate 'State Transfer Tool'§!"
+ ST_TOOLTIP_off:0 "§HDeactivate 'State Transfer Tool'§!"
+ transfer_states_on:0 "State Transfer Tool: £trigger_no"
+ transfer_states_off:0 "State Transfer Tool: £trigger_yes"
+ 
+ mark_status_marked:0   "     Unmark State "
+ mark_status_unmarked:0 "      Mark State  "
+ 
+ ST_HOST_CAT:0 "Multiplayer Host Options"
+ ST_HOST:0 "Become the host"
+ ST_HOST_desc:0 "This will allow you to transfer states from player countries. You will probably be kicked from the host if you aren't the host and take this decision."

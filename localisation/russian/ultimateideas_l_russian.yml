@@ -1,0 +1,12 @@
+l_russian:
+
+army_research:0 "Исследования армии"
+industrial_research:0 "Промышленные исследования"
+military_staff:0 "Начальник штаба"
+spy_expansion:0 "Шпионаж"
+
+recruitment_drive:0 "Призывная кампания"
+recruitment_drive0:0 "Без инвестиций"
+recruitment_drive1:0 "Небольшая призывная кампания"
+recruitment_drive2:0 "Средняя призывная кампания"
+recruitment_drive3:0 "Крупная призывная кампания"

@@ -1,0 +1,66 @@
+﻿l_english:
+ # GUI
+ yec_accurate_year_text_tt:0 "According to my sources, this photo was actually taken on §YNew Year's Eve [GetYear]§!."
+ yec_review_title:0 "A Year in Review"
+ yec_data_mode_absolute_btn_tt:0 "Switch to §Yrelative§! numbers"
+ yec_data_mode_delta_btn_tt:0 "Switch to §Yabsolute§! numbers"
+ yec_close_btn:0 "Cheers!"
+ yec_close_btn_tt:0 "Be sure to take §Ybreaks§!, stay §Yhydrated§! and pay attention to your sitting §Yposture§!!"
+
+ # Music
+ yec_event_music_long:0 "Applejack - Days Gone By - MLP: It's a Pony Kind of Christmas"
+ yec_event_music_short:0 "New Years Eve"
+
+ # Stats
+ yec_review_countries_at_war:0 "Countries at War"
+ yec_review_exiled_govs:0 "Governments in Exile"
+ yec_review_faction_members:0 "Faction Members"
+ yec_review_civ_factories:0 "Civilian Factories"
+ yec_review_mil_factories:0 "Military Factories"
+ yec_review_nav_factories:0 "Naval Dockyards"
+ yec_review_divisions:0 "Divisions in Field"
+ yec_review_planes:0 "Deployed Planes"
+ yec_review_ships:0 "Naval Ships"
+
+ # Options
+ YEC_RULE_MUSIC_ENABLED:0 "Yearly Event Cards"
+ YEC_RULE_OPTION_SHORT:0 "§GShort§!"
+ YEC_RULE_MUSIC_ENABLED_SHORT_DESC:0 "Plays a shortened recording of New Years\n\n§GRecommended for videos on YouTube / Twitch.§!"
+ YEC_RULE_OPTION_LONG:0 "§YLong§!"
+ YEC_RULE_MUSIC_ENABLED_LONG_DESC:0 "Plays the full version of the song §Y\"Days Gone By\"§! from §YIt's a Pony Kind of Christmas§!.\n\n§RNot recommended for videos on YouTube / Twitch.§!"
+ YEC_RULE_OPTION_DYNAMIC:0 "§GDynamic§Y"
+ YEC_RULE_MUSIC_ENABLED_DYNAMIC_DESC:0 "Plays §Y\"Days Gone By\"§! from §YIt's a Pony Kind of Christmas§! in full length the first time, and all the following times as general new years celebrations.\n\n§RNot recommended for videos on YouTube / Twitch.§!"
+ YEC_RULE_OPTION_OFF:0 "§OOff§!"
+ YEC_RULE_MUSIC_ENABLED_OFF_DESC:0 "disables the music for event popups."
+ YEC_DISABLED:0 "§RNo Yearly Event§!"
+ YEC_DISABLED_DESC:0 "§RCompletely disables the yearly event.§!"
+
+ # NON-TRANSLATABLE LOCALS
+ # GUI
+ yec_year_display:0 "[GetYear]"
+ yec_accurate_year_tt:0 "[yec_accurate_year_tt]" # Workaround because [GetYear] doesn't work with normal tooltips.
+ yec_data_mode_btn_tt:0 "[yec_data_mode_btn_tt]"
+ yec_data_mode_absolute_btn:0 "£prod_eff"
+ yec_data_mode_delta_btn:0 "£prod_eff_cap"
+
+ # Stats
+ yec_review_countries_at_war_var_absolute:0 "§Y[?global.num_countries_at_war]§!"
+ yec_review_countries_at_war_var_delta:0 "[?global.delta_num_countries_at_war|=-0]"
+ yec_review_exiled_govs_var_absolute:0 "§Y[?global.num_exiled_govs]§!"
+ yec_review_exiled_govs_var_delta:0 "[?global.delta_num_exiled_govs|=-0]"
+ yec_review_faction_members_var_absolute:0 "§Y[?THIS.num_faction_members]§!"
+ yec_review_faction_members_var_delta:0 "[?THIS.delta_num_faction_members|=+0]"
+ yec_review_civ_factories_var_absolute:0 "§Y[?THIS.num_of_civilian_factories]§!"
+ yec_review_civ_factories_var_delta:0 "[?THIS.delta_num_of_civilian_factories|=+0]"
+ yec_review_mil_factories_var_absolute:0 "§Y[?THIS.num_of_military_factories]§!"
+ yec_review_mil_factories_var_delta:0 "[?THIS.delta_num_of_military_factories|=+0]"
+ yec_review_nav_factories_var_absolute:0 "§Y[?THIS.num_of_naval_factories]§!"
+ yec_review_nav_factories_var_delta:0 "[?THIS.delta_num_of_naval_factories|=+0]"
+ yec_review_divisions_var_absolute:0 "§Y[?THIS.num_divisions]§!"
+ yec_review_divisions_var_delta:0 "[?THIS.delta_num_divisions|=+0]"
+ yec_review_planes_var_absolute:0 "§Y[?THIS.num_deployed_planes|*1]§!"
+ yec_review_planes_var_absolute_small:0 "§Y[?THIS.num_deployed_planes|*0]§!"
+ yec_review_planes_var_delta:0 "[?THIS.delta_num_deployed_planes|=+*1]"
+ yec_review_planes_var_delta_small:0 "[?THIS.delta_num_deployed_planes|=+*0]"
+ yec_review_ships_var_absolute:0 "§Y[?THIS.num_ships]§!"
+ yec_review_ships_var_delta:0 "[?THIS.delta_num_ships|=+0]"

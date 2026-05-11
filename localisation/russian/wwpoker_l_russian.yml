@@ -1,0 +1,166 @@
+﻿l_russian:
+HOST_TOURNAMENT_TOOLTIP:0 "§HПровести турнир§!\n\nВы будете хозяином следующего турнира World War Hold'em. Хозяин может приглашать других игроков и устанавливать правила турнира."
+
+CHIP_TEXT_P1:0 "[?event_target:p_1.chips_at_table]£чипов"
+CHIP_TEXT_P1_WITH_BET:0 "Ставка [?event_target:p_1.already_bet]£чипов \n[?event_target:p_1.chips_at_table]£чипов"
+CHIP_TEXT_P1_WON:0 "Выиграл [?event_target:p_1.won_amount]£чипов \n[?event_target:p_1.chips_at_table]£чипов"
+CHIP_TEXT_P1_LOST:0 "Проиграл [?event_target:p_1.lost_amount]£чипов \n[?event_target:p_1.chips_at_table]£чипов"
+
+CHIP_TEXT_P2:0 "[?event_target:p_2.chips_at_table]£чипов"
+CHIP_TEXT_P2_WITH_BET:0 "Ставка [?event_target:p_2.already_bet]£чипов \n[?event_target:p_2.chips_at_table]£чипов"
+CHIP_TEXT_P2_WON:0 "Выиграл [?event_target:p_2.won_amount]£чипов \n[?event_target:p_2.chips_at_table]£чипов"
+CHIP_TEXT_P2_LOST:0 "Проиграл [?event_target:p_2.lost_amount]£чипов \n[?event_target:p_2.chips_at_table]£чипов"
+
+CHIP_TEXT_P3:0 "[?event_target:p_3.chips_at_table]£чипов"
+CHIP_TEXT_P3_WITH_BET:0 "Ставка [?event_target:p_3.already_bet]£чипов \n[?event_target:p_3.chips_at_table]£чипов"
+CHIP_TEXT_P3_WON:0 "Выиграл [?event_target:p_3.won_amount]£чипов \n[?event_target:p_3.chips_at_table]£чипов"
+CHIP_TEXT_P3_LOST:0 "Проиграл [?event_target:p_3.lost_amount]£чипов \n[?event_target:p_3.chips_at_table]£чипов"
+
+CHIP_TEXT_P4:0 "[?event_target:p_4.chips_at_table]£чипов"
+CHIP_TEXT_P4_WITH_BET:0 "Ставка [?event_target:p_4.already_bet]£чипов \n[?event_target:p_4.chips_at_table]£чипов"
+CHIP_TEXT_P4_WON:0 "Выиграл [?event_target:p_4.won_amount]£чипов \n[?event_target:p_4.chips_at_table]£чипов"
+CHIP_TEXT_P4_LOST:0 "Проиграл [?event_target:p_4.lost_amount]£чипов \n[?event_target:p_4.chips_at_table]£чипов"
+
+CHIP_TEXT_P5:0 "[?event_target:p_5.chips_at_table]£чипов"
+CHIP_TEXT_P5_WITH_BET:0 "Ставка [?event_target:p_5.already_bet]£чипов \n[?event_target:p_5.chips_at_table]£чипов"
+CHIP_TEXT_P5_WON:0 "Выиграл [?event_target:p_5.won_amount]£чипов \n[?event_target:p_5.chips_at_table]£чипов"
+CHIP_TEXT_P5_LOST:0 "Проиграл [?event_target:p_5.lost_amount]£чипов \n[?event_target:p_5.chips_at_table]£чипов"
+
+CHIP_TEXT_P6:0 "[?event_target:p_6.chips_at_table]£чипов"
+CHIP_TEXT_P6_WITH_BET:0 "Ставка [?event_target:p_6.already_bet]£чипов \n[?event_target:p_6.chips_at_table]£чипов"
+CHIP_TEXT_P6_WON:0 "Выиграл [?event_target:p_6.won_amount]£чипов \n[?event_target:p_6.chips_at_table]£чипов"
+CHIP_TEXT_P6_LOST:0 "Проиграл [?event_target:p_6.lost_amount]£чипов \n[?event_target:p_6.chips_at_table]£чипов"
+
+CHIP_TEXT_P7:0 "[?event_target:p_7.chips_at_table]£чипов"
+CHIP_TEXT_P7_WITH_BET:0 "Ставка [?event_target:p_7.already_bet]£чипов \n[?event_target:p_7.chips_at_table]£чипов"
+CHIP_TEXT_P7_WON:0 "Выиграл [?event_target:p_7.won_amount]£чипов \n[?event_target:p_7.chips_at_table]£чипов"
+CHIP_TEXT_P7_LOST:0 "Проиграл [?event_target:p_7.lost_amount]£чипов \n[?event_target:p_7.chips_at_table]£чипов"
+
+P1_NAME_CHIP:0 "[p_1.GetName] ([?event_target:p_1.chips]£чипов )"
+P2_NAME_CHIP:0 "[p_2.GetName] ([?event_target:p_2.chips]£чипов )"
+P3_NAME_CHIP:0 "[p_3.GetName] ([?event_target:p_3.chips]£чипов )"
+P4_NAME_CHIP:0 "[p_4.GetName] ([?event_target:p_4.chips]£чипов )"
+P5_NAME_CHIP:0 "[p_5.GetName] ([?event_target:p_5.chips]£чипов )"
+P6_NAME_CHIP:0 "[p_6.GetName] ([?event_target:p_6.chips]£чипов )"
+P7_NAME_CHIP:0 "[p_7.GetName] ([?event_target:p_7.chips]£чипов )"
+
+POKER_START_INFO:0 "§HНачать турнир§!"
+POKER_START_INFO_DESC:0 "Вы можете начать турнир минимум с двумя игроками, когда все готовы и имеют достаточное количество чипов."
+
+HOST:0 "Хозяин"
+KICK:0 "Выгнать"
+WAITING:0 "Ожидание подтверждения"
+INSTANT_AI:0 "§HМгновенный ИИ§!\n\nИИ играет мгновенно, а не в игровое время"
+FRIENDLY_GAME:0 "§HДружеская игра§!\n\nВ этой игре реальные ставки чипов не делаются"
+MIN_BET_TEXT:0 "[?global.min_bet_to_check] £чипов"
+SMALL_BLIND_TEXT:0 "[?global.small_blind_to_check] £чипов"
+ENTRY_TEXT:0 "[?global.entry_amount] £чипов"
+
+BUY_CHIP_TEXT:0 "[?buy_sell_amount] £чипов"
+BUY_PP_TEXT:0 "Купить [?buy_pp_amount]"
+SELL_PP_TEXT:0 "Продать [?sell_pp_amount]"
+
+LOOT_TEXT:0 "Стоимость 100 £чипов за коробку"
+NOT_ENOUGH_CHIPS:0 "Недостаточно чипов"
+
+BUY_PP_TEXT_DESC:0 "Купить [?buy_pp_amount|H.0] §HПолитическая власть§! за [?buy_sell_amount|H.0] £чипов"
+SELL_PP_TEXT_DESC:0 "Продать [?sell_pp_amount|H.0] §HПолитическая власть§! за [?buy_sell_amount|H.0] £чипов"
+
+BUY_IE_TEXT_DESC:0 "Купить [?buy_ie_amount|H.0] §HПехотное оборудование§! за [?buy_sell_amount|H.0] £чипов"
+SELL_IE_TEXT_DESC:0 "Продать [?sell_ie_amount|H.0] §HПехотное оборудование§! за [?buy_sell_amount|H.0] £чипов"
+
+BUY_SE_TEXT_DESC:0 "Купить [?buy_se_amount|H.0] §HСопровождающее оборудование§! за [?buy_sell_amount|H.0] £чипов"
+SELL_SE_TEXT_DESC:0 "Продать [?sell_se_amount|H.0] §HСопровождающее оборудование§! за [?buy_sell_amount|H.0] £чипов"
+
+BUY_MI_TEXT_DESC:0 "Купить [?buy_mi_amount|H.0] §HМоторизованная пехота§! за [?buy_sell_amount|H.0] £чипов"
+SELL_MI_TEXT_DESC:0 "Продать [?sell_mi_amount|H.0] §HМоторизованная пехота§! за [?buy_sell_amount|H.0] £чипов"
+
+BUY_LT_TEXT_DESC:0 "Купить [?buy_lt_amount|H.0] §HЛёгкий танк§! за [?buy_sell_amount|H.0] £чипов"
+SELL_LT_TEXT_DESC:0 "Продать [?sell_lt_amount|H.0] §HЛёгкий танк§! за [?buy_sell_amount|H.0] £чипов"
+
+BUY_MT_TEXT_DESC:0 "Купить [?buy_mt_amount|H.0] §HСредний танк§! за [?buy_sell_amount|H.0] £чипов"
+SELL_MT_TEXT_DESC:0 "Продать [?sell_mt_amount|H.0] §HСредний танк§! за [?buy_sell_amount|H.0] £чипов"
+
+BUY_HT_TEXT_DESC:0 "Купить [?buy_ht_amount|H.0] §HТяжёлый танк§! за [?buy_sell_amount|H.0] £чипов"
+SELL_HT_TEXT_DESC:0 "Продать [?sell_ht_amount|H.0] §HТяжёлый танк§! за [?buy_sell_amount|H.0] £чипов"
+
+BUY_IE_TEXT:0 "Купить [?buy_ie_amount]"
+SELL_IE_TEXT:0 "Продать [?sell_ie_amount]"
+BUY_SE_TEXT:0 "Купить [?buy_se_amount]"
+SELL_SE_TEXT:0 "Продать [?sell_se_amount]"
+BUY_MI_TEXT:0 "Купить [?buy_mi_amount]"
+SELL_MI_TEXT:0 "Продать [?sell_mi_amount]"
+BUY_LT_TEXT:0 "Купить [?buy_lt_amount]"
+SELL_LT_TEXT:0 "Продать [?sell_lt_amount]"
+BUY_MT_TEXT:0 "Купить [?buy_mt_amount]"
+SELL_MT_TEXT:0 "Продать [?sell_mt_amount]"
+BUY_HT_TEXT:0 "Купить [?buy_ht_amount]"
+SELL_HT_TEXT:0 "Продать [?sell_ht_amount]"
+
+WINNER:0 "§HПобедитель§!"
+WINNER_INFO_1:0 "§HПобедитель§!\n[hand_info_1]"
+WINNER_INFO_2:0 "§HПобедитель§!\n[hand_info_2]"
+WINNER_INFO_3:0 "§HПобедитель§!\n[hand_info_3]"
+WINNER_INFO_4:0 "§HПобедитель§!\n[hand_info_4]"
+WINNER_INFO_5:0 "§HПобедитель§!\n[hand_info_5]"
+WINNER_INFO_6:0 "§HПобедитель§!\n[hand_info_6]"
+WINNER_INFO_7:0 "§HПобедитель§!\n[hand_info_7]"
+
+FOLD_INFO_1:0 "Пасс\n[hand_info_1]"
+FOLD_INFO_2:0 "Пасс\n[hand_info_2]"
+FOLD_INFO_3:0 "Пасс\n[hand_info_3]"
+FOLD_INFO_4:0 "Пасс\n[hand_info_4]"
+FOLD_INFO_5:0 "Пасс\n[hand_info_5]"
+FOLD_INFO_6:0 "Пасс\n[hand_info_6]"
+FOLD_INFO_7:0 "Пасс\n[hand_info_7]"
+
+CLOSE_POKER:0 "§HЗакрыть окно§!"
+CLOSE_POKER_DESC:0 "Кликните по вашим чипам в верхней панели, чтобы открыть снова"
+
+HOST_TOOLS_POKER:0 "§HИнструменты хозяина§!"
+HOST_TOOLS_POKER_DESC:0 "Доступно только хозяину. Вы можете завершить турнир досрочно или отменить его полностью с возвратом чипов"
+
+CHECK_POKER:0 "§HЗакончить ход§!"
+CHECK_POKER_DESC:0 "Вы можете увеличить/уменьшить ставку с помощью кнопок рядом с этой кнопкой"
+
+FOLD_POKER:0 "§HПасс§!"
+FOLD_POKER_DESC:0 "Нажмите, чтобы сбросить карты и отказаться от хода"
+
+CANCEL_TOURNAMENT:0 "§HОтменить турнир§!"
+CANCEL_TOURNAMENT_DESC:0 "Нажмите, чтобы отменить турнир и вернуть все чипы"
+
+END_TOURNAMENT:0 "§HЗавершить турнир§!"
+END_TOURNAMENT_DESC:0 "Нажмите, чтобы завершить турнир досрочно"
+
+INCREASE_BET_POKER:0 "§HУвеличить ставку§!"
+INCREASE_BET_POKER_DESC:0 "§HAlt + Клик по ставке§! увеличить ставку на 1£чип\n\n§HКлик§! увеличить ставку на 10£чип\n\n§HCtrl + Клик по ставке§! увеличить ставку на 100£чип"
+
+DECREASE_BET_POKER:0 "§HУменьшить ставку§!"
+DECREASE_BET_POKER_DESC:0 "§HAlt + Клик по ставке§! уменьшить ставку на 1£чип\n\n§HКлик§! уменьшить ставку на 10£чип\n\n§HCtrl + Клик по ставке§! уменьшить ставку на 100£чип"
+
+ENTRY_AMOUNT_DESC:0 "§HСумма входа§!\n\nКаждому игроку необходимо иметь хотя бы эту сумму для участия в турнире"
+
+BLIND_DESC:0 "§HБольшой и Малый блайнды§!\n\nВ начале каждого раунда игроки слева от текущего обязаны платить Большой и Малый блайнды"
+
+INCREASE_ENTRY_POKER:0 "§HУвеличить сумму входа§!\n\nКаждому игроку необходимо иметь хотя бы эту сумму для участия в турнире"
+INCREASE_ENTRY_POKER_DESC:0 "§HAlt + Клик§! увеличить сумму входа на 10£чип\n\n§HКлик§! увеличить сумму входа на 50£чип\n\n§HCtrl + Клик§! увеличить сумму входа на 250£чип"
+
+DECREASE_ENTRY_POKER:0 "§HУменьшить сумму входа§!\n\nКаждому игроку необходимо иметь хотя бы эту сумму для участия в турнире"
+DECREASE_ENTRY_POKER_DESC:0 "§HAlt + Клик§! уменьшить сумму входа на 10£чип\n\n§HКлик§! уменьшить сумму входа на 50£чип\n\n§HCtrl + Клик§! уменьшить сумму входа на 250£чип"
+
+INCREASE_BIG_BLIND:0 "§HУвеличить большой блайнд§!\n\nВ начале каждого раунда игроки слева от текущего обязаны платить Большой и Малый блайнды"
+INCREASE_BIG_BLIND_DESC:0 "§HAlt + Клик§! увеличить ставку на 1£чип\n\n§HКлик§! увеличить ставку на 10£чип\n\n§HCtrl + Клик§! увеличить ставку на 50£чип"
+
+DECREASE_BIG_BLIND:0 "§HУменьшить большой блайнд§!\n\nВ начале каждого раунда игроки слева от текущего обязаны платить Большой и Малый блайнды"
+DECREASE_BIG_BLIND_DESC:0 "§HAlt + Клик§! уменьшить ставку на 1£чип\n\n§HКлик§! уменьшить ставку на 10£чип\n\n§HCtrl + Клик§! уменьшить ставку на 50£чип"
+
+p_1_ai_score:0 "[?event_target:p_1.ai_score] [?event_target:p_1.safe_to_bet_amount]"
+p_2_ai_score:0 "[?event_target:p_2.ai_score] [?event_target:p_2.safe_to_bet_amount]"
+p_3_ai_score:0 "[?event_target:p_3.ai_score] [?event_target:p_3.safe_to_bet_amount]"
+p_4_ai_score:0 "[?event_target:p_4.ai_score] [?event_target:p_4.safe_to_bet_amount]"
+p_5_ai_score:0 "[?event_target:p_5.ai_score] [?event_target:p_5.safe_to_bet_amount]"
+p_6_ai_score:0 "[?event_target:p_6.ai_score] [?event_target:p_6.safe_to_bet_amount]"
+p_7_ai_score:0 "[?event_target:p_7.ai_score] [?event_target:p_7.safe_to_bet_amount]"
+
+POKER_AI:0 "§HЗаставить ИИ играть мгновенно§!"
+POKER_AI_DESC:0 "§HControl + Клик§! чтобы заставить всех ИИ играть мгновенно"

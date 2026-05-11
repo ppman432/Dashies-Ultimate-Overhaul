@@ -1,0 +1,40 @@
+﻿l_english:
+credits_gui_open_TOOLTIP:0 "Credits Shop"
+credits_gui_TITLE:0 "Credits Shop"
+credits_counter_TOOLTIP:0 "Your §YCredits§!"
+crates_header_TITLE:0 "Crates"
+conversions_header_TITLE:0 "Buy Credits"
+common_crate_text:0 "Common"
+uncommon_crate_text:0 "§GUncommon§!"
+rare_crate_text:0 "§ZRare§!"
+epic_crate_text:0 "§KEpic§!"
+legendary_crate_text:0 "§OLegendary§!"
+
+common_crate_TOOLTIP:0 "Common Crates costs §Y3 Credits§!"
+uncommon_crate_TOOLTIP:0 "Uncommon Crates costs §Y6 Credits§!"
+rare_crate_TOOLTIP:0 "Rare Crates costs §Y9 Credits§!"
+epic_crate_TOOLTIP:0 "Epic Crates costs §Y12 Credits§!"
+legendary_crate_TOOLTIP:0 "§OLegendary§! Crates costs §Y15 Credits§!"
+
+convert_pp_TOOLTIP:0 "Convert §Y50 Politcal Power§! into §Y1 Credit§!"
+convert_cp_TOOLTIP:0 "Convert §Y50 Command Points§! into §Y1 Credit§!"
+convert_arm_exp_TOOLTIP:0 "Convert §Y30 Army Experience§! into §Y1 Credit§!"
+convert_air_exp_TOOLTIP:0 "Convert §Y30 Air Experience§! into §Y1 Credit§!"
+convert_nav_exp_TOOLTIP:0 "Convert §Y30 Naval Experience§! into §Y1 Credit§!"
+
+common_crate_gui_title:0 "Common Crate"
+uncommon_crate_gui_title:0 "Uncommon Crate"
+rare_crate_gui_title:0 "Rare Crate"
+epic_crate_gui_title:0 "Epic Crate"
+legendary_crate_gui_title:0 "Legendary Crate"
+
+common_crate_open_TOOLTIP:0 "§YOpening a Common Crate will give you:§!\n 50% Chance of getting 750 Infantry Equipment\n 50% Chance of getting 1250 Infantry Equipment\n \n 50% Chance of getting 250 Support Equipment\n 50% Chance of getting 400 Support Equipment\n \n 25% Chance of getting 150 Artillery Equipment\n 25% Chance of getting 150 Anti-Tank Equipment\n 25% Chance of getting 150 Anti-Air Equipment\n 25% Chance of getting 300 Motorised Equipment\n \n 100% Chance of getting 15 Convoys"
+
+uncommon_crate_open_TOOLTIP:0 "§YOpening an Uncommon Crate will give you:§!\n 50% Chance of getting 250 Artillery Equipment\n 50% Chance of getting 250 Anti-Tank Equipment\n \n 50% Chance of getting 180 Mechanized Equipment\n 50% Chance of getting 300 Motorised Equipment\n \n 25% Chance of getting 150 Fighter Planes\n 25% Chance of getting 150 Naval Bombers\n 25% Chance of getting 150 CAS Planes\n 25% Chance of getting 125 Tac Bombers\n \n 100% Chance of getting 1750 Infantry Equipment\n 100% Chance of getting 300 Support Equipment"
+
+rare_crate_open_TOOLTIP:0 "§YOpening a Rare Crate will give you:§!\n 50% Chance of getting 5 Military Factories\n 50% Chance of getting 5 Civilian Factories\n \n 25% Chance of getting 150 Strat Bombers\n 25% Chance of getting 300 Transport Planes\n 25% Chance of getting 150 Heavy Fighters\n 25% Chance of getting 300 Fighter Planes\n \n 100% Chance of getting 350 Artillery Equipment\n 100% Chance of getting 350 Anti-Tank Equipment\n 100% Chance of getting 350 Anti-Air Equipment\n 100% Chance of getting 500 Motorised Equipment\n 100% Chance of getting 150 Fighter Planes"
+
+epic_crate_open_TOOLTIP:0 "§YOpening an Epic Crate will give you:§!\n 50% Chance of getting 10 Military Factories\n 50% Chance of getting 10 Civilian Factories\n \n 50% Chance of getting 5 Military Factories\n 50% Chance of getting 5 Civilian Factories\n \n 25% Chance of getting 500 Light Tanks\n 25% Chance of getting 850 Transport Planes\n 25% Chance of getting 500 Heavy Tanks\n 25% Chance of getting 500 Medium Tanks\n \n 100% Chance of getting 3000 Infantry Equipment\n 100% Chance of getting 500 Artillery Equipment\n 100% Chance of getting 850 Support Equipment\n 100% Chance of getting 500 Strat Bombers\n 100% Chance of getting 300 Fighter Planes"
+
+legendary_crate_open_TOOLTIP:0 "§YOpening a Legendary Crate will give you:§!\n 50% Chance of getting 15 Military Factories\n 50% Chance of getting 15 Civilian Factories\n \n 100% Chance of getting 3850 Infantry Equipment\n 100% Chance of getting 2000 Artillery Equipment\n 100% Chance of getting 2000 Anti-Tank Equipment\n 100% Chance of getting 2000 Anti-Air Equipment\n 100% Chance of getting 1850 Support Equipment\n 100% Chance of getting 800 Motorised Equipment\n 100% Chance of getting 500 Fighter Planes\n 100% Chance of getting 500 Light Tanks\n 100% Chance of getting 500 Medium Tanks\n 100% Chance of getting 500 Heavy Tanks \n 100% Chance of getting Transport Planes"
+

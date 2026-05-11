@@ -1,0 +1,197 @@
+﻿l_english:
+    
+    peoples_benefits:0 "Public Services"
+    production_organizations:0 "Production Companies"
+    research_and_education:0 "Department of Education and Science"
+    adf.1.t:0"Additional research slot"
+    adf.1.d:0"Additional research slots can be used !"
+    adf.1.y:0"Get additional research slot"
+    
+    small_airframe_bba:0"Small Airframes"
+    medium_airframe_bba:0"Medium Airframes"
+    large_airframe_bba:0"Large Airframes"
+    
+    line:0"Additional Effects"
+    Additional_effects:0"Additional Effects"
+    
+    mod_land:0"Our Army Theory"
+    mod_naval:0"Our Navy Theory"
+    mod_air:0"Our Air Force Theory"
+    
+    mod_pro:0"Manufacturing"
+    mod_doc:0"Battle Planning"
+    
+    mod_director:0 "Personal Assistant"
+    Seasoned_General:0"Seasoned General"
+    WoundedWarHero:0"Wounded War Hero"
+    Accomplished_Admiral:0"Accomplished Admiral"
+    OldSaltySkipper:0"Old Salty Skipper"
+    Sky_Warden:0"Sky Warden"
+    UndefeatedDuelist:0"Undefeated Duelist"
+    Challenging_inventor:0"Challenging Inventor"
+    Master_of_Disguise:0"Master of Disguise"
+    Driven_Detective:0"Driven Detective"
+    Oil_capitalists:0"Oil Capitalists"
+    Master_of_propaganda:0"Master Propagandist"
+    Democratic_idealist:0"Democratic Idealist"
+    Revolutionary_leader:0"Revolutionary Leader"
+    Fascist_crusader:0"Fascist Crusader"
+    Neutral_parliament:0"Vehement Monarchist"
+    Grizzled_Instructor:0 "Grizzled Instructor"
+    Revered_Auditor:0 "Revered Auditor"
+    QualityControlMastermind:0 "Quality Control Mastermind"
+    TrainingOurFinest:0 "Training Our Finest"
+    
+    level_1_d:0"Upgrade Propaganda to level I "
+    level_2_d:0"Upgrade Propaganda level II "
+    level_3_d:0"Upgrade Propaganda level III "
+    level_4_d:0"Upgrade Propaganda level IV "
+    level_5_d:0"Upgrade Propaganda level V "
+    level_6_d:0"Upgrade Propaganda level VI "
+    level_7_d:0"Upgrade Propaganda level VII "
+    level_8_d:0"Upgrade Propaganda level VIII "
+    level_9_d:0"Upgrade Propaganda level IX "
+    level_10_d:0"Upgrade Propaganda level X "
+    level_1:0"Propaganda level I "
+    level_2:0"Propaganda level II "
+    level_3:0"Propaganda level III "
+    level_4:0"Propaganda level IV "
+    level_5:0"Propaganda level V "
+    level_6:0"Propaganda level VI "
+    level_7:0"Propaganda level VII "
+    level_8:0"Propaganda level VIII "
+    level_9:0"Propaganda level IX "
+    level_10:0"Propaganda level X "
+    
+    synthetic_oil:"Synthetic Oil"
+    synthetic_rubber:"Synthetic Rubber:"
+    
+    Integration_movement:0"Integration Movement"
+    Independence_movement:0"Independence Movement"
+    National_level:"National Level"
+    
+    light_tank_pro:0 "Light Tanks"
+    medium_tank_pro:0"Medium Tanks"
+    heavy_tank_pro:0"Heavy Tanks"
+    super_heavy_tank_pro:0"Monster Tanks"
+    modern_tank_pro:0"Modern Tanks"
+    motorized_mechanized_pro:0"Motorized Vehicles"
+    rifle_pro:0"Rifle"
+    artillery_pro:0"Artillery"
+    
+    fighter_pro:0"Fighters"
+    CAS_pro:0"Close Air Support"
+    Interceptor_pro:0"Rockets"
+    nav_bomber_pro:0"Naval Bombers"
+    tac_bomber_pro:"Tactical Bombers"
+    strat_bomber_pro:0"Strategic Bombers"
+    
+    industrial_capacity:0"General Productivity"
+    production_speed:0"General Construction"
+    doctrine:0"Chiefs of Staff"
+    small_fleet:0"Small Warships"
+    big_fleet:0"Big Warships"
+    
+    manoeuvre:0"Mobile Warfare"
+    fire_support:0"Fire Support"
+    mass_combat:0"Mass Assault"
+    psychology:0"Psychology"
+    defence:0"Defence"
+    
+    army_exp:0"Army training"
+    navy_exp:0"Navy training"
+    air_exp:0"Air training"
+    
+    Attack_preparation_1:0"Political effort"
+    Attack_preparation_2:0"Political effort"
+    Attack_preparation_3:0"Political effort"
+    Attack_preparation_4:0"Political effort"
+    
+    
+    mod_land:0"Our Army Focus"
+    elastic_defence_doctrine:0"Elastic Defence"
+    elastic_defence_doctrine_desc:0"Elastic Defense revolves around deploying a thin defensive line with heavily armed infantry, and deploying replacements and assault teams in the second lines. This is essential for wearing down the enemy and for winning the war."
+    
+    static_defence_doctrine:0"Static Defence"
+    static_defence_doctrine_desc:0"Static Defense is the philosophy of deploying several defensive lines with fortified infantry and substantial artillery assets in the rear. This is essential for wearing down the enemy and for winning the war."
+    
+    armoured_spearhead_doctrine:0"Armoured Spearhead"
+    armoured_spearhead_doctrine_desc:0"In order to win the war, it is essential to make a quick attack with the tank chief and for the infantry to secure the area."
+    
+    decisive_battle_doctrine:0"Decisive Military Battle"
+    decisive_battle_doctrine_desc:0"We need to direct the utilization of the ground forces according to armoured spearhead doctrine. Spearheading speedy offensives with tank units followed up with encircling infantry are essential for wearing down the enemy and winning the war."
+    
+    guns_and_butter_doctrine:0"'Guns and Butter"
+    guns_and_butter_doctrine_desc:0"Allowing the operational commanders freedom of command while ensuring the best possible supplies and training for the Army are essential for wearing down the enemy and for winning the war."
+    
+    mod_naval:0"Our Navy Focus"
+    open_seas_doctrine:0"Open Seas"
+    open_seas_doctrine_desc:0"Control of sea lanes to far-flung resources is essential for winning the war on the sea."
+    
+    decisive_battle_doctrine2:0"Decisive Naval Battle"
+    decisive_battle_doctrine2_desc:0"In order to win the war, it is essential to amass a large battle fleet and destroy the enemy force on the high seas."
+    
+    power_projection_doctrine:0"Power Projection"
+    power_projection_doctrine_desc:0"By concentrating all power from aircraft, torpedoes and artillery fire into a suitable area, there is a good chance for winning the war."
+    
+    indirect_approach_doctrine:0"Indirect Approach"
+    indirect_approach_doctrine_desc:0"In order to win the war, it is essential to avoid decisive battle and instead destroy the enemys convoys and warships."
+    
+    base_control_doctrine:0"Base control"
+    base_control_doctrine_desc:0"In order to win the war, it is essential to strike directly at the enemy bases, and take control of them with air and land forces."
+    
+    mod_air:0"Our Air Force Focus"
+    air_superiority_doctrine:0"Air Superiority"
+    air_superiority_doctrine_desc:0"In order to win the war, it is essential to control the skies above the battlefield."
+    
+    naval_aviation_doctrine:0"Naval aviation"
+    naval_aviation_doctrine_desc:0"In order to win the war, it is essential to work closely with the navy and destroy the enemy, preferably by bombing it to pieces."
+    
+    army_aviation_doctrine:0"Army aviation"
+    army_aviation_doctrine_desc:0"In order to win the war it is essential to work closely with the army and destroy the enemy land forces, preferably by bombing them to pieces."
+    
+    carpet_bombing_doctrine:0"Carpet bombing"
+    carpet_bombing_doctrine_desc:0"In order to win the war, it is essential to grind down the enemy transportation network and industrial plants, demoralizing our enemy by terror bombing."
+    
+    vertical_envelopment_doctrine:0"Vertical envelopment"
+    vertical_envelopment_doctrine_desc:0"In order to win the war, it is essential to seize strategic terrain or bridgeheads by air, in order to quickly enable the army to achieve a breakthrough."
+    
+    add_decisions_land:0"Army equipment"
+    add_decisions_air:0"Air Force equipment"
+    add_decisions_navy:0"Navy equipment"
+    add_decisions_industry:0"Industry"
+    add_decisions_electronic_mechanical_engineering:0"Electromechanical Industry"
+    Governments_judgment:0"Governments judgment"
+    
+    
+
+    spy_expansion:0"Espionage"
+
+    recruitment_drive:0"Recruitment Drive"
+    recruitment_drive0:0"No Investment"
+    recruitment_drive1:0"Small Recruiting Drive"
+    recruitment_drive2:0"Medium Recruiting Drive"
+    recruitment_drive3:0"Large Recruiting Drive"
+    
+    counter_operations:0"Counter Operations"
+    counter_operations0:0"No Investment"
+    counter_operations1:0"Propaganda Operations"
+    counter_operations2:0"Intellegence Interception"
+    counter_operations3:0"Interegation "
+    
+    intel_gathering:0"Intellegence Focus"
+    intel0:0"No Focus"
+    intel_economy:0"Civil Intellegence"
+    intel_army:0"Army Intellegence"
+    intel_air:0"Air Intellegence"
+    intel_navy:0"Naval Intellegence"
+    
+    cryptology:0"Cryptology"
+    cryptology0:0"No Focus"
+    encryption:0"Encryption Efforts"
+    decryption:0"Decryption Efforts"
+    
+    army_research:0"Military Research"
+    
+    
+    

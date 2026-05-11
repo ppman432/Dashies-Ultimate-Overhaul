@@ -1,0 +1,113 @@
+﻿l_russian:
+ show_build_queue:0 "Открыть окно Авто-строительства"
+ show_build_queue_desc:0 "Это решение позволяет автоматически ставить в очередь строительство нескольких выбранных зданий в различных провинциях. §YНажми на кнопку снизу чтобы§! §Gувидеть§! §Yрешение.§!"
+
+ aqc_show_tooltip:0 "§GОткрыть§! окно очереди Авто-строительства"
+ aqc_hide_tooltip:0 "§RЗакрыть§! окно очереди Авто-строительства"
+
+ build_queue:0 "Авто-очереди"
+ build_queue_desc:0 "Это решение позволяет автоматически ставить в очередь строительство нескольких выбранных зданий или инфраструктур в различных провинциях."
+
+ auto_queue_5:0 "§G5x§! | §R10x§! | §R25x§! Переключить авто-очередь на §Y10x§! провинций"
+ auto_queue_10:0 "§R5x§! | §G10x§! | §R25x§! Переключить авто-очередь на §Y25x§! провинций"
+ auto_queue_25:0 "§R5x§! | §R10x§! | §G25x§! Переключить авто-очередь на §Y5x§! провинций"
+
+ aqc_building_type:0 "Выбери §YКатегорию Построек§!"
+ aqc_quantity_construction:0 "Количество авто-очереди:"
+
+ aqr_current_quantity:0 "[GetCurrentQuantity]"
+
+ aqc_factory_current_quantity_5:0 "§G5x§! | §R10x§! | §R25x§!"
+ aqc_factory_current_quantity_10:0 "§R5x§! | §G10x§! | §R25x§!"
+ aqc_factory_current_quantity_25:0 "§R5x§! | §R10x§! | §G25x§!"
+
+ aqc_refineries_current_quantity_3:0 "§G3x§! | §R6x§! | §R10x§!"
+ aqc_refineries_current_quantity_6:0 "§R3x§! | §G6x§! | §R10x§!"
+ aqc_refineries_current_quantity_10:0 "§R3x§! | §R6x§! | §G10x§!"
+
+ aqc_special_current_quantity_2:0 "§G2x§! | §R4x§! | §R6x§!"
+ aqc_special_current_quantity_4:0 "§R2x§! | §G4x§! | §R6x§!"
+ aqc_special_current_quantity_6:0 "§R2x§! | §R4x§! | §G6x§!"
+
+ aqc_infrastructure_current_quantity_3:0 "§G3x§! | §R6x§! | §R10x§!"
+ aqc_infrastructure_current_quantity_6:0 "§R3x§! | §G6x§! | §R10x§!"
+ aqc_infrastructure_current_quantity_10:0 "§R3x§! | §R6x§! | §G10x§!"
+
+ aqc_current_quantity_tooltip:0 "§GЗелёным§! показано текущее количество того, как много строений выбрано для постройки"
+
+ increase_quantity_button:0 "§GУвеличить§! текущее количество"
+ decrease_quantity_button:0 "§RУменьшить§! текущее количество"
+ 
+ hide_aqc_decision_text:0 "§RСпрятать§! Решения"
+ unhide_aqc_decision_text:0 "§GОткрыть§! Авто-очередь"
+
+ select_factory_text:0 "[GetSelectFactory]"
+ selected_factory_text:0 "§YФабрики и Верфи§!"
+ deselect_factory_text:0 "Фабрики и Верфи"
+
+ select_refineries_text:0 "[GetSelectRefineries]"
+ selected_refineries_text:0 "§YНефтезаводы и Топливные Хранилища§!"
+ deselect_refineries_text:0 "Нефтезаводы и Топливные Хранилища"
+
+ select_special_text:0 "[GetSelectSpecial]"
+ selected_special_text:0 "§YСпециальные Постройки§!"
+ deselect_special_text:0 "Специальные Постройки"
+
+ select_infrastructure_text:0 "[GetSelectInfrastructure]"
+ selected_infrastructure_text:0 "§YИнфраструктура§!"
+ deselect_infrastructure_text:0 "Инфраструктура"
+
+ aqc_select_factory_tooltip:0 "§YАвто-очередь§! для §OГражданских Фабрик§!, §GВоенных Заводов§!, и §3Верфей§!"
+ aqc_select_refineries_tooltip:0 "§YАвто-очередь§! для §8Топливных Хранилищ§!, и §gСинтетических Заводов§!"
+ aqc_select_special_tooltip:0 "§YАвто-очередь§! для §9Ядерных Реакторов§!"
+ aqc_select_infrastructure_tooltip:0 "§YАвто-очередь§! для §OИнфраструктуры§!"
+
+
+ aqc_tt_queue_industrial_complex:0 "Начать строительство §YГражданских Фабрик§!"
+ aqc_tt_queue_arms_factory:0 "Начать строительство §YВоенных Заводов§!"
+ aqc_tt_queue_dockyard:0 "Начать строительство §YВерфей§!"
+
+ build_queue_industrial_complex:0 "Авто-очередь [GetCurrentNumberFactory] §OГражданских Фабрик§!"
+ build_queue_arms_factory:0 "Авто-очередь [GetCurrentNumberFactory] §GВоенных Заводов§!"
+ build_queue_dockyard:0 "Авто-очередь [GetCurrentNumberFactory] §3Верфей§!"
+
+ aqc_tt_queue_fuel_silo:0 "Начать строительство §YТопливных Хранилищ§!"
+ aqc_tt_queue_synthetic_refinery:0 "Начать строительствоt §YСинтетических Заводов§!"
+
+ build_queue_fuel_silo:0 "Авто-очередь [GetCurrentNumberRefineries] §8Топливных Хранилищ§!"
+ build_queue_synthetic_refinery:0 "Авто-очередь [GetCurrentNumberRefineries] §gСинтетических Заводов§!"
+
+ aqc_tt_queue_nuclear_reactor:0 "Начать строительство §YЯдерных Реакторов§!"
+
+ build_queue_nuclear_reactor:0 "Авто-очередь [GetCurrentNumberSpecial] §9Ядерных Реакторов§!"
+
+ aqc_tt_queue_infrastructure:0 "Начать строительство §YИнфраструктуры§!"
+ aqc_tt_queue_infrastructure_resource:0 "Начать строительство §YИнфраструктуры§!. Но строить только в провинциях с ресурсами."
+
+ build_queue_infrastructure:0 "Авто-очередь [GetCurrentNumberInfrastructure] §OИнфраструктуры§!"
+ build_queue_infrastructure_resource:0 "Авто-очередь [GetCurrentNumberInfrastructure] §OИнфраструктуры§!"
+
+ current_number_factory:0 "[GetCurrentNumberFactory]"
+ current_number_factory_5:0 "§Y5x§!"
+ current_number_factory_10:0 "§Y10x§!"
+ current_number_factory_25:0 "§Y25x§!"
+
+ current_number_refineries:0 "[GetCurrentNumberRefineries]"
+ current_number_refineries_3:0 "§Y3x§!"
+ current_number_refineries_6:0 "§Y6x§!"
+ current_number_refineries_10:0 "§Y10x§!"
+
+ current_number_special:0 "[GetCurrentNumberSpecial]"
+ current_number_special_2:0 "§Y2x§!"
+ current_number_special_4:0 "§Y4x§!"
+ current_number_special_6:0 "§Y6x§!"
+
+ current_number_infrastructure:0 "[GetCurrentNumberInfrastructure]"
+ current_number_infrastructure_3:0 "§Y3x§!"
+ current_number_infrastructure_6:0 "§Y6x§!"
+ current_number_infrastructure_10:0 "§Y10x§!"
+
+ infrastructure_random:0 "Случайная Провинция"
+ prior_infrastructure_resource:0 "Приоритет провинций с ресурсами"
+
+

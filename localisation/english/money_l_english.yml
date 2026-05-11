@@ -1,0 +1,200 @@
+﻿l_english:
+ #Money Text and events#
+ MONEY_TOOLTIP_BASE:0 "You Have [?dx] Million Money\n\nYou Gain §G[?nmn]§! Million Money Per Week \n §GIncomes§! \nTaxes [?tax] Million Per Week\nIncome from civilian factories [?cfff] Million Per Week\nTrade(Export) [?resourceincome] Million Per Week\n Rubber Export [?rubber_export] Million Per Week\n Chromium Export [?chromium_export] Million Per Week\n Tungsten Export [?tungsten_export] Million Per Week\n Aluminium Export [?aluminium_export] Million Per Week\n Oil Export [?oil_export] Million Per Week\n Steel Export [?steel_export] Million Per Week  \n §RExpenses§! \nMilitary Spending -[?ms] Million Per Week\nMilitary Factory Upkeep -[?nf] Million Per Week\nNaval Factory Upkeep -[?navf] Million Per Week\nTax To Overlord -[?tax_to_overlord] Million Per Week\nGreat Depression -[?depression] Million Per Week\nState Upkeep -[?nc] Million Per Week\nTrade(IMPORT) -[?resourceexpenses] Million Per Week\n Rubber Import -[?rubber_import] Million Per Week\n Chromium Import -[?chromium_import] Million Per Week\n Tungsten Import -[?tungsten_import] Million Per Week\n Aluminium Import -[?aluminium_import] Million Per Week\n Oil Import -[?oil_import] Million Per Week\n Steel Import -[?steel_import] Million Per Week\nEconomic Unstability -[?nerfeco] Million Per Week\nOccupation Cost -[?no] Million Per Week\nDaily Debt Cost -[?debtexp] Million Per Week\n\nTotal Debt [?debttotal] Million"
+ MONEY_MAIN:0       "[?dx] M"
+ MONEY_DEBT:0       "§YYou Have [?debttotal] Debt§!"
+ moneymod.1.t:0     "World Stocks Are Updated"
+ moneymod.1.d:0     "World stocks for equipments are updated.\nThis will be updated every year."
+ moneymod.1.a:0     "Sounds Good"
+ moneymod.2.t:0     "We Are Low On Money"
+ moneymod.2.d:0     "We Are Low On Money.\nWe Need To Act!"
+ moneymod.2.a:0     "Take It From Economy"
+ moneymod.2.b:0     "Take Debt"
+ moneymod.2.c:0     "Do Nothing"
+ moneymod.5.t:0     "Bankruptcy!"
+ moneymod.5.d:0     "We reached Bankruptcy.\n We Can Either Lose Our Economy Or Our Political Vision"
+ moneymod.5.a:0     "Economy Crashes!!"
+ moneymod.5.b:0     "Civil War!"
+ MARK_TOOLTIP:0     "You Have [?dx] Million Reichsmark\n\nYou Gain §G[?nmn]§! Million Reichsmark Per Week \n §GIncomes§! \nTaxes [?tax] Million Per Week\nIncome from civilian factories [?cfff] Million Per Week\nTrade(Export) [?resourceincome] Million Per Week\n Rubber Export [?rubber_export] Million Per Week\n Chromium Export [?chromium_export] Million Per Week\n Tungsten Export [?tungsten_export] Million Per Week\n aluminium Export [?aluminium_export] Million Per Week\n Oil Export [?oil_export] Million Per Week\n Steel Export [?steel_export] Million Per Week  \n §RExpenses§! \nMilitary Spending -[?ms] Million Per Week\nMilitary Factory Upkeep -[?nf] Million Per Week\nNaval Factory Upkeep -[?navf] Million Per Week\nTax To Overlord -[?tax_to_overlord] Million Per Week\nGreat Depression -[?depression] Million Per Week\nState Upkeep -[?nc] Million Per Week\nTrade(IMPORT) -[?resourceexpenses] Million Per Week\n Rubber Import -[?rubber_import] Million Per Week\n Chromium Import -[?chromium_import] Million Per Week\n Tungsten Import -[?tungsten_import] Million Per Week\n Aluminium Import -[?aluminium_import] Million Per Week\n Oil Import -[?oil_import] Million Per Week\n Steel Import -[?steel_import] Million Per Week\nEconomic Unstability -[?nerfeco] Million Per Week\nOccupation Cost -[?no] Million Per Week\nDaily Debt Cost -[?debtexp] Million Per Week\n\nTotal Debt [?debttotal] Million"
+ MONEY_TOOLTIP:0    "[Root.GetMoneyTooltip]"
+ RUBLE_TOOLTIP:0    "You Have [?dx] Million Ruble\n\nYou Gain §G[?nmn]§! Million Ruble  \n §GIncomes§! \nTaxes [?tax] Million Per Week\nIncome from civilian factories [?cfff] Million Per Week\nTrade(Export) [?resourceincome] Million Per Week\n Rubber Export [?rubber_export] Million Per Week\n Chromium Export [?chromium_export] Million Per Week\n Tungsten Export [?tungsten_export] Million Per Week\n aluminium Export [?aluminium_export] Million Per Week\n Oil Export [?oil_export] Million Per Week\n Steel Export [?steel_export] Million Per Week  \n §RExpenses§! \nMilitary Spending -[?ms] Million Per Week\nMilitary Factory Upkeep -[?nf] Million Per Week\nNaval Factory Upkeep -[?navf] Million Per Week\nTax To Overlord -[?tax_to_overlord] Million Per Week\nGreat Depression -[?depression] Million Per Week\nState Upkeep -[?nc] Million Per Week\nTrade(IMPORT) -[?resourceexpenses] Million Per Week\n Rubber Import -[?rubber_import] Million Per Week\n Chromium Import -[?chromium_import] Million Per Week\n Tungsten Import -[?tungsten_import] Million Per Week\n Aluminium Import -[?aluminium_import] Million Per Week\n Oil Import -[?oil_import] Million Per Week\n Steel Import -[?steel_import] Million Per Week\nEconomic Unstability -[?nerfeco] Million Per Week\nOccupation Cost -[?no] Million Per Week\nDaily Debt Cost -[?debtexp] Million Per Week\n\nTotal Debt [?debttotal] Million"
+ DOLAR_TOOLTIP:0    "You Have [?dx] Million Dolar\n\nYou Gain §G[?nmn]§! Million Dolar Per Week \n §GIncomes§! \nTaxes [?tax] Million Per Week\nIncome from civilian factories [?cfff] Million Per Week\nTrade(Export) [?resourceincome] Million Per Week\n Rubber Export [?rubber_export] Million Per Week\n Chromium Export [?chromium_export] Million Per Week\n Tungsten Export [?tungsten_export] Million Per Week\n aluminium Export [?aluminium_export] Million Per Week\n Oil Export [?oil_export] Million Per Week\n Steel Export [?steel_export] Million Per Week  \n §RExpenses§! \nMilitary Spending -[?ms] Million Per Week\nMilitary Factory Upkeep -[?nf] Million Per Week\nNaval Factory Upkeep -[?navf] Million Per Week\nTax To Overlord -[?tax_to_overlord] Million Per Week\nGreat Depression -[?depression] Million Per Week\nState Upkeep -[?nc] Million Per Week\nTrade(IMPORT) -[?resourceexpenses] Million Per Week\n Rubber Import -[?rubber_import] Million Per Week\n Chromium Import -[?chromium_import] Million Per Week\n Tungsten Import -[?tungsten_import] Million Per Week\n aluminium Import -[?aluminium_import] Million Per Week\n Oil Import -[?oil_import] Million Per Week\n Steel Import -[?steel_import] Million Per Week\nEconomic Unstability -[?nerfeco] Million Per Week\nOccupation Cost -[?no] Million Per Week\nDaily Debt Cost -[?debtexp] Million Per Week\n\nTotal Debt [?debttotal] Million"
+ STERLING_TOOLTIP:0 "You Have [?dx] Million Sterling\n\nYou Gain §G[?nmn]§! Million Sterling Per Week \n §GIncomes§! \nTaxes [?tax] Million Per Week\nIncome from civilian factories [?cfff] Million Per Week\nTrade(Export) [?resourceincome] Million Per Week\n Rubber Export [?rubber_export] Million Per Week\n Chromium Export [?chromium_export] Million Per Week\n Tungsten Export [?tungsten_export] Million Per Week\n aluminium Export [?aluminium_export] Million Per Week\n Oil Export [?oil_export] Million Per Week\n Steel Export [?steel_export] Million Per Week  \n §RExpenses§! \nMilitary Spending -[?ms] Million Per Week\nMilitary Factory Upkeep -[?nf] Million Per Week\nNaval Factory Upkeep -[?navf] Million Per Week\nTax To Overlord -[?tax_to_overlord] Million Per Week\nGreat Depression -[?depression] Million Per Week\nState Upkeep -[?nc] Million Per Week\nTrade(IMPORT) -[?resourceexpenses] Million Per Week\n Rubber Import -[?rubber_import] Million Per Week\n Chromium Import -[?chromium_import] Million Per Week\n Tungsten Import -[?tungsten_import] Million Per Week\n aluminium Import -[?aluminium_import] Million Per Week\n Oil Import -[?oil_import] Million Per Week\n Steel Import -[?steel_import] Million Per Week\nEconomic Unstability -[?nerfeco] Million Per Week\nOccupation Cost -[?no] Million Per Week\nDaily Debt Cost -[?debtexp] Million Per Week\n\nTotal Debt [?debttotal] Million"
+ FRANC_TOOLTIP:0    "You Have [?dx] Million Franc\n\nYou Gain §G[?nmn]§! Million Franc Per Week \n §GIncomes§! \nTaxes [?tax] Million Per Week\nIncome from civilian factories [?cfff] Million Per Week\nTrade(Export) [?resourceincome] Million Per Week\n Rubber Export [?rubber_export] Million Per Week\n Chromium Export [?chromium_export] Million Per Week\n Tungsten Export [?tungsten_export] Million Per Week\n aluminium Export [?aluminium_export] Million Per Week\n Oil Export [?oil_export] Million Per Week\n Steel Export [?steel_export] Million Per Week  \n §RExpenses§! \nMilitary Spending -[?ms] Million Per Week\nMilitary Factory Upkeep -[?nf] Million Per Week\nNaval Factory Upkeep -[?navf] Million Per Week\nTax To Overlord -[?tax_to_overlord] Million Per Week\nGreat Depression -[?depression] Million Per Week\nState Upkeep -[?nc] Million Per Week\nTrade(IMPORT) -[?resourceexpenses] Million Per Week\n Rubber Import -[?rubber_import] Million Per Week\n Chromium Import -[?chromium_import] Million Per Week\n Tungsten Import -[?tungsten_import] Million Per Week\n aluminium Import -[?aluminium_import] Million Per Week\n Oil Import -[?oil_import] Million Per Week\n Steel Import -[?steel_import] Million Per Week\nEconomic Unstability -[?nerfeco] Million Per Week\nOccupation Cost -[?no] Million Per Week\nDaily Debt Cost -[?debtexp] Million Per Week\n\nTotal Debt [?debttotal] Million"
+ LIRA_TOOLTIP:0     "You Have [?dx] Million Lira\n\nYou Gain §G[?nmn]§! Million Lira Per Week \n §GIncomes§! \nTaxes [?tax] Million Per Week\nIncome from civilian factories [?cfff] Million Per Week\nTrade(Export) [?resourceincome] Million Per Week\n Rubber Export [?rubber_export] Million Per Week\n Chromium Export [?chromium_export] Million Per Week\n Tungsten Export [?tungsten_export] Million Per Week\n aluminium Export [?aluminium_export] Million Per Week\n Oil Export [?oil_export] Million Per Week\n Steel Export [?steel_export] Million Per Week  \n §RExpenses§! \nMilitary Spending -[?ms] Million Per Week\nMilitary Factory Upkeep -[?nf] Million Per Week\nNaval Factory Upkeep -[?navf] Million Per Week\nTax To Overlord -[?tax_to_overlord] Million Per Week\nGreat Depression -[?depression] Million Per Week\nState Upkeep -[?nc] Million Per Week\nTrade(IMPORT) -[?resourceexpenses] Million Per Week\n Rubber Import -[?rubber_import] Million Per Week\n Chromium Import -[?chromium_import] Million Per Week\n Tungsten Import -[?tungsten_import] Million Per Week\n aluminium Import -[?aluminium_import] Million Per Week\n Oil Import -[?oil_import] Million Per Week\n Steel Import -[?steel_import] Million Per Week\nEconomic Unstability -[?nerfeco] Million Per Week\nOccupation Cost -[?no] Million Per Week\nDaily Debt Cost -[?debtexp] Million Per Week\n\nTotal Debt [?debttotal] Million"
+ YEN_TOOLTIP:0      "You Have [?dx] Million Yen\n\nYou Gain §G[?nmn]§! Million Yen Per Week \n §GIncomes§! \nTaxes [?tax] Million Per Week\nIncome from civilian factories [?cfff] Million Per Week\nTrade(Export) [?resourceincome] Million Per Week\n Rubber Export [?rubber_export] Million Per Week\n Chromium Export [?chromium_export] Million Per Week\n Tungsten Export [?tungsten_export] Million Per Week\n aluminium Export [?aluminium_export] Million Per Week\n Oil Export [?oil_export] Million Per Week\n Steel Export [?steel_export] Million Per Week  \n §RExpenses§! \nMilitary Spending -[?ms] Million Per Week\nMilitary Factory Upkeep -[?nf] Million Per Week\nNaval Factory Upkeep -[?navf] Million Per Week\nTax To Overlord -[?tax_to_overlord] Million Per Week\nGreat Depression -[?depression] Million Per Week\nState Upkeep -[?nc] Million Per Week\nTrade(IMPORT) -[?resourceexpenses] Million Per Week\n Rubber Import -[?rubber_import] Million Per Week\n Chromium Import -[?chromium_import] Million Per Week\n Tungsten Import -[?tungsten_import] Million Per Week\n aluminium Import -[?aluminium_import] Million Per Week\n Oil Import -[?oil_import] Million Per Week\n Steel Import -[?steel_import] Million Per Week\nEconomic Unstability -[?nerfeco] Million Per Week\nOccupation Cost -[?no] Million Per Week\nDaily Debt Cost -[?debtexp] Million Per Week\n\nTotal Debt [?debttotal] Million"
+ 
+ 
+ 
+ 
+ #Political Invesment Decisions#
+ political_option:0         "Political Investment"
+ political_option_desc:0    "We can use our political influence to force some foreign investment. It can be used to develop the nation."
+ buy_research_slot:0        "Buy Reseach Slot"
+ buy_militar_slot:0         "Buy Military Factory"
+ buy_civil_slot:0           "Buy Civilian Factory"
+ buy_dockyard_slot:0        "Buy Dockyard"
+ buy_militaryexp:0          "Buy 50 Army Experience"
+ buy_airexp:0               "Buy 50 Airforce Experience"
+ buy_navyexp:0              "Buy 50 Navy Experience"
+ buy_steel2:0               "Buy 2 of Steel Production"
+ buy_oil5:0                 "Buy 5 of Oil Production"
+ 
+ #Currency Reserves Bonus#
+ normal_money:0          "Currency Reserves"
+ normal_money_desc:0     "Our budget is positive. we should keep an eye on it and seek economic oportunities"
+ low_money:0             "We have a small debt"
+ low_money_desc:0        "Our nation is getting afected for this small crisis. we should start working on it before get worse"
+ bad_money:0             "We have a medium debt"
+ bad_money_desc:0        "Our debt is growing and its effects are started to get notice. we should make new economic policies"
+ very_low_money:0        "We have a high debt"
+ very_low_money_desc:0   "Our nation is deeply affected by this debt. We must do something before a revolution takes place!"
+ 
+ 
+ #Currency Reserves Bonus(not used)#
+ boost_money:0          "No Debt"
+ boost_money_desc:0     "We have no debt"
+ very_high_money:0       "High Currency Reserves"
+ very_high_money_desc:0  "We have a great amount of currency in our reserves"
+ medium_money:0          "Medium Currency Reserves"
+ medium_money_desc:0     "Our Reserves are good and helpful"
+
+ 
+ #Ideas Bonus#
+ CB_15:0        "Medium subsidy on Construction Industry"
+ CB_15_desc:0   "We did a medium investment in our construction area to speed up our projects"
+ 
+ CB_30:0        "Heavy Subsidy on Construction Industry"
+ CB_30_desc:0   "We did a big investment in construction industry to accelarate our projects"
+ 
+ IB_10:0        "Researchers Salary Increased"
+ IB_10_desc:0   "We increased the salary of our researchers. they should be more motivated to work"
+ 
+ #IB_10:0        "Researchers Salary Increased"
+ #IB_10_desc:0   "We increased the salary of our researchers. they should be more motivated to work"
+ 
+ IB_20:0        "Heavy Investment on Research Centers"
+ IB_20_desc:0   "We have invested in a better equipment to improve the efficiency of researchers"
+ 
+ MB_3:0         "Medium Draft"
+ MB_3_desc:0    "We succesfully implemented a draft system to increase our manpower"
+ 
+ MB_7:0         "Heavy Draft"
+ MB_7_desc:0    "We expanded our automatic draft system to maximize our manpower"
+ 
+ GB_3:0         "Small Investment in Consumer Goods"
+ GB_3_desc:0    "We Subsidy a small part of civilian items.consumer goods factories are good"
+ 
+ GB_5:0         "Medium Invesment in Consumer Goods"
+ GB_5_desc:0    "We Subsidy a consider part of civilian equipment.consumer goods factories are grateful"
+ 
+ MB_10:0        "Small Investment in Mining Production"
+ MB_10_desc:0   "We Subsidy a small part of our mining industry. we need resources"
+ 
+ MB_20:0        "Medium Invesment in Mining Production"
+ MB_20_desc:0   "We Subsidy a big part of our mining industry.We need resource as soon as possible. the economy need it!"
+ 
+ JFB_25:0       "Fast Justification War"
+ JFB_25_desc:0  "We have accelarated our policy and now we can declare war faster"
+ 
+ JFB_60:0       "Faster Justification War"
+ JFB_60_desc:0  "We have removed temporary any all who can stop us to declare war and now we can do it really fast"
+ 
+ 
+ #Ideas On Menu#
+ CB15_200_200:0 "Buy 15% Construction Bonus for 200 days for §G$200M§!" 
+ 
+ CB30_400_350:0 "Buy 30% Construction Bonus for 400 days for §G$350M§!"
+ 
+ IB10_200_200:0 "Buy 10% Investigation Bonus for 200 days for §G$200M§!"
+ 
+ IB20_400_350:0 "Buy 20% Investigation Bonus for 400 days for §G$350M§!"
+ 
+ MB3_200_150:0  "Buy 3% Manpower Bonus for 200 days for §G$150M§!"
+ 
+ MB7_400_250:0  "Buy 7% Manpower Bonus for 400 days for §G$250M§!"
+ 
+ GB3_200_200:0  "Buy -3% Consumer Goods Bonus for 200 days for §G$200M§!"
+ 
+ GB5_400_300:0  "Buy -5% Consumer Goods Bonus for 400 days for §G$300M§!"
+ 
+ MB10_200_200:0 "Buy 10% Mining Bonus for 500 days for §G$200M§!"
+ 
+ MB20_400_350:0 "Buy 20% Mining Bonus for 1000 days for §G$350M§!"
+ 
+ JFB_25_1:0     "Buy -25% War Goal Justification for 200 days for §G$150M§!"
+ 
+ JFB_60_1:0     "Buy -60% War Goal Justification for 400 days for §G$300M§!"
+ 
+ 
+ #Militar Menu Composition#
+ money_headline_0:0 "Equipment And Investment Menu"
+ current_money:0    "Current Money"
+
+ infantry_h_0:0  "10000 Infantry Equipment" 
+ infantry_h_2:0  "Sell 10k Infantry Eq. for §G$70M§!"
+ 
+
+ support_h_0:0   "1000 Support Equipment"
+ support_h_2:0   "Sell 1k Support Eq. for §G$50M§!"
+ 
+ artillery_h_0:0 "1000 Artillery Equipment"
+ artillery_h_2:0 "Sell 1k Artillery Eq. for §G$50M§!"
+ 
+ motorized_h_0:0 "1000 Motorized Equipment"
+ motorized_h_2:0 "sell 1k Motorized Eq. for §G$70M§!"
+ 
+ anti_tank_h_0:0 "1000 Anti Tank Equipment"
+ anti_tank_h_2:0 "Sell 1k Anti Tank Eq. for §G$56M§!"
+ 
+ anti_air_h_0:0 "1000 Anti Air Equipment"
+ anti_air_h_2:0 "Sell 1k Anti Air Eq. for §G$56M§!"
+ 
+ convoy_headline0:0      "50 Convoys For §G$150M§!"
+
+ civil_factory1:0       "Buy Civilian Factory For §G$50M§!"
+ 
+ military_factory1:0    "Buy Military Factory For §G$100M§!"
+ 
+ steel_factory:0        "Buy 8 Of Steel For §G$50M§!"
+ 
+ tungsten_factory:0     "Buy 8 of Tungsten for §G$50M§!"
+ 
+ oil_pump:0             "Buy 8 of oil for §G$75M§!"
+ 
+ aluminium_factory:0    "Buy 8 of aluminium for §G$50M§!"
+ 
+ rubber_pump:0          "Buy 8 of rubber for §G$75M§!"
+ 
+ chromium_factory:0     "Buy 8 of Chromium for §G$75M§!"
+ 
+ crystal_import:        "Import 8 Crystals for §G$200§!"
+ 
+ Buy:0      "Buy"
+ Sell:0     "Sell"
+ 
+ ##########Diplomatic action(send money)###########
+ 
+ 
+ MONEY_DIPLOMATIC_ACTION_TITLE:0 "Sent 300M(30% rate)"
+ MONEY_DIPLOMATIC_ACTION_ACTION_DESC:0 "We can loan money to this nation so it can be used to develop them but the rate is high"
+ MONEY_DIPLO_ACTION_LOC:0 "We are going to send them some money\n so they can develop quickly.\n $210M will be deliver."
+ MONEY_DIPLO_ACTION_RECIEVER_LOC:0 "$210M will be sent to this nation so it can be used to develop that nation."
+ MONEY_DIPLO_ACTION_ACCEPTED_TITLE:0 "They accepted our loan"
+ MONEY_DIPLO_ACTION_ACCEPTED_DESC:0 "They received $210M"
+ MONEY_DIPLO_ACTION_REJECTED_TITLE:0 "They rejected our loan"
+ MONEY_DIPLO_ACTION_REJECTED_DESC:0 "Our money was sent back"
+ base_desire:0 "Base Desire"
+ 
+ 
+ 
+ ###################decisions gui##########
+ 
+ money_gui_open:0  "Open Menu"
+ money_gui_open_top:0 "Show Top Bar"
+ money_gui_close_top:0 "Hide Top Bar"
+ 
+ 
+ 
+ 
+ 

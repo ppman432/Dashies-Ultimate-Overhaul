@@ -1,0 +1,11 @@
+﻿l_english:
+army_icons_category:0 "Expanded Army Icons"
+army_icons_category_desc:0 "For filtering useable icons."
+disable_tag_check:0 "Disable Filtering Icons by Tag"
+disable_tag_check_desc:0 "Available icons will no longer be limited by your country."
+re-enable_tag_check:0 "Enable Filtering Icons by Tag"
+re-enable_tag_check_desc:0 "You will no longer see icons for every tag."
+disable_ideology_check:0 "Disable Filtering Icons by Ideology"
+disable_ideology_check_desc:0 "Available icons will no longer be limited by ideology."
+re-enable_ideology_check:0 "Enable Filtering Icons by Ideology"
+re-enable_ideology_check_desc:0 "You will only see icons relevant for your ideology."

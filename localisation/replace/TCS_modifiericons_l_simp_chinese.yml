@@ -1,0 +1,10 @@
+﻿l_simp_chinese:
+ leninism_drift:0 "£boost_popularity_texticon 每日先锋主义支持率"
+ marxism_drift:0 "£boost_popularity_texticon 每日马克思主义支持率"
+ rev_socialism_drift:0 "£boost_popularity_texticon  Daily Revolutionary Socialism support"
+ soc_democracy_drift:0 "£boost_popularity_texticon  Daily Social Democracy support"
+ soc_liberal_drift:0 "£boost_popularity_texticon  Daily Social Liberalism support"
+ lib_conservatism_drift:0 "£boost_popularity_texticon  Daily Liberal Conservatism support"
+ soc_conservatism_drift:0 "£boost_popularity_texticon  Daily Social Conservatism support"
+ auth_democrat_drift:0 "£boost_popularity_texticon  Daily Auth. Democracy support"
+ pat_autocrat_drift:0 "£boost_popularity_texticon  Daily Paternal Autocracy support"
