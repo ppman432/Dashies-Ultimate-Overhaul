@@ -1,0 +1,139 @@
+spriteTypes = {	
+	
+	spriteType = {
+		name = "GFX_EMI_tank_ammo_he"
+		textureFile = "gfx/module_icons/mech_he_shell1.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_ammo_he_atgm"
+		textureFile = "gfx/module_icons/mech_he_shell1.tga"
+		legacy_lazy_load = no
+	}		
+	spriteType = {
+		name = "GFX_EMI_mech_he_shell_1"
+		textureFile = "gfx/module_icons/mech_he_shell1.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_mech_he_shell_2"
+		textureFile = "gfx/module_icons/mech_he_shell2.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_mech_he_shell_3"
+		textureFile = "gfx/module_icons/mech_he_shell3.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_mech_he_shell_4"
+		textureFile = "gfx/module_icons/mech_he_shell4.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_mech_he_shell_1_atgm"
+		textureFile = "gfx/module_icons/mech_he_shell1.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_mech_he_shell_2_atgm"
+		textureFile = "gfx/module_icons/mech_he_shell2.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_mech_he_shell_3_atgm"
+		textureFile = "gfx/module_icons/mech_he_shell3.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_mech_he_shell_4_atgm"
+		textureFile = "gfx/module_icons/mech_he_shell4.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_ammo_ap"
+		textureFile = "gfx/module_icons/mech_ap_shell1.tga"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_EMI_mech_ap_shell_1"
+		textureFile = "gfx/module_icons/mech_ap_shell1.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_mech_ap_shell_2"
+		textureFile = "gfx/module_icons/mech_ap_shell2.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_mech_ap_shell_3"
+		textureFile = "gfx/module_icons/mech_ap_shell3.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_mech_ap_shell_4"
+		textureFile = "gfx/module_icons/mech_ap_shell4.dds"
+		legacy_lazy_load = no
+	}	
+	spriteType = {
+		name = "GFX_mech_ap_shell_4_atgm"
+		textureFile = "gfx/module_icons/mech_ap_shell4.dds"
+		legacy_lazy_load = no
+	}	
+
+	spriteType = {
+		name = "GFX_EMI_tank_ammo_heat"
+		textureFile = "gfx/module_icons/mech_heat_shell1.tga"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_EMI_mech_heat_shell_1"
+		textureFile = "gfx/module_icons/mech_heat_shell1.tga"
+		legacy_lazy_load = no
+	}	
+	
+	spriteType = {
+		name = "GFX_EMI_mech_heat_shell_2"
+		textureFile = "gfx/module_icons/mech_heat_shell2.tga"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_mech_heat_shell_3"
+		textureFile = "gfx/module_icons/mech_heat_shell3.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_mech_heat_shell_4"
+		textureFile = "gfx/module_icons/mech_heat_shell4.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_mech_hesh_shell"
+		textureFile = "gfx/module_icons/mech_hesh_shell.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_mech_hesh_shell_avre"
+		textureFile = "gfx/module_icons/mech_hesh_shell.tga"
+		legacy_lazy_load = no
+	}
+	spriteType = {
+		name = "GFX_EMI_tank_ammo_hesh_avre"
+		textureFile = "gfx/module_icons/mech_hesh_shell.tga"
+		legacy_lazy_load = no
+	}
+#	spriteType = {
+#		name = "GFX_EMI_tank_ammo_heat"
+#		textureFile = "gfx/module_icons/mech_hesh_shell.tga"
+#		legacy_lazy_load = no
+#	}
+
+}

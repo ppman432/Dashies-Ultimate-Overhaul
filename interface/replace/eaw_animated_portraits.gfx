@@ -1,0 +1,90 @@
+spriteTypes = {
+        frameAnimatedSpriteType = {
+		name = "GFX_BigSisterPortrait"
+		texturefile = "gfx/leaders/animated/big_sis_anim.tga"
+                noOfFrames = 38
+                animation_rate_fps = 12
+                looping = yes
+                play_on_show = yes
+	}
+        frameAnimatedSpriteType = {
+		name = "GFX_CelestiaPortrait"
+		texturefile = "gfx/leaders/animated/celestia_anim.tga"
+                noOfFrames = 64
+                animation_rate_fps = 10
+                looping = yes
+                play_on_show = yes
+	}	
+        frameAnimatedSpriteType = {
+		name = "GFX_ChrysalisPortrait"
+		texturefile = "gfx/leaders/animated/chrysalis_anim.tga"
+                noOfFrames = 72
+                animation_rate_fps = 20
+                looping = yes
+                play_on_show = yes
+	}
+        frameAnimatedSpriteType = {
+		name = "GFX_SombraPortrait"
+		texturefile = "gfx/leaders/animated/sombra_anim.tga"
+                noOfFrames = 72
+                animation_rate_fps = 20
+                looping = yes
+                play_on_show = yes
+	}	
+        frameAnimatedSpriteType = {
+		name = "GFX_MrHorsePortrait"
+		texturefile = "gfx/leaders/animated/mr_horse_anim.tga"
+                noOfFrames = 80
+                animation_rate_fps = 20
+                looping = yes
+                play_on_show = yes
+	}
+        frameAnimatedSpriteType = {
+		name = "GFX_TwilightPortrait"
+		texturefile = "gfx/leaders/animated/twilight_anim.tga"
+                noOfFrames = 96
+                animation_rate_fps = 25
+                looping = yes
+                play_on_show = yes
+	}	
+        frameAnimatedSpriteType = {
+		name = "GFX_ELF_twilight_sparkle"
+		texturefile = "gfx/leaders/animated/twilight_anim.tga"
+                noOfFrames = 96
+                animation_rate_fps = 25
+                looping = yes
+                play_on_show = yes
+	}		
+        frameAnimatedSpriteType = {
+		name = "GFX_TwilightPortraitCRY"
+		texturefile = "gfx/leaders/animated/twilight_anim.tga"
+                noOfFrames = 96
+                animation_rate_fps = 25
+                looping = yes
+                play_on_show = yes
+	}		
+        frameAnimatedSpriteType = {
+		name = "GFX_NightmareMoonPortrait"
+		texturefile = "gfx/leaders/animated/nightmare_anim.tga"
+                noOfFrames = 96
+                animation_rate_fps = 24
+                looping = yes
+                play_on_show = yes
+	}
+        frameAnimatedSpriteType = {
+		name = "GFX_LunaPortrait"
+		texturefile = "gfx/leaders/animated/luna_anim.tga"
+                noOfFrames = 80
+                animation_rate_fps = 20
+                looping = yes
+                play_on_show = yes
+	}		
+        frameAnimatedSpriteType = {
+		name = "GFX_DaybreakerPortrait"
+		texturefile = "gfx/leaders/animated/daybreaker_anim.tga"
+                noOfFrames = 100
+                animation_rate_fps = 16
+                looping = yes
+                play_on_show = yes
+	}		
+}

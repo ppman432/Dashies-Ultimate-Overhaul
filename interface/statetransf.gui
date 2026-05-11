@@ -1,0 +1,186 @@
+guiTypes = {
+
+	
+	containerWindowType = {
+		name = "st_hide_container"
+		position = { x = 10000 y = 2 }
+
+		buttonType = {
+			name = "hide_ST"
+			quadTextureSprite = "GFX_generic_text_bg_203"
+			position = { x = 0 y = 0 }
+			shortcut = "ctrl+shift+h"
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+
+	}
+	
+	containerWindowType = {
+		name = "st_state_manager_powers_container"
+		#position = {x=-400 y=790}
+        position = { x = 460 y = -35 }
+		#show_animation_type = accelerated 
+		#hide_animation_type = decelerated
+		size = { width=250 height=80 }
+		#animation_time = 500
+		moveable = no
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_BPT_areadef_conf_bg"
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=14 y=6}
+			font = "hoi_18mbs"
+			text = "SI_state_transfer_title"
+			maxWidth = 200
+			maxHeight = 23
+			format = left
+		}
+		
+		
+		buttonType = {
+			name = "st_state_manager_power_mark_for_transfer" 
+			position = {x=15 y=35}
+			shortcut = "ctrl+z"	
+			quadTextureSprite ="GFX_sort_button_140x29"
+			frame = 1
+			font = "hoi_18mbs"
+			buttonText = "[This.mark_status]"
+			pdx_tooltip =  "ST_STATE_MARK_FOR_TRANSFER_TT"
+		}
+		
+		buttonType = {
+			name = "st_state_manager_power_unmark_for_transfer"
+			position = {x=15 y=35}
+			shortcut = "ctrl+z"	
+			quadTextureSprite ="GFX_sort_button_140x29"
+			frame = 2
+			font = "hoi_18mbs"
+			buttonText = "[This.mark_status]"
+			pdx_tooltip = "ST_STATE_UNMARK_FOR_TRANSFER"
+		}
+		
+		instantTextboxType = {
+			name = "marking"
+			position = { x=155 y=20 }
+			textureFile = ""
+			font = "hoi_18mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[This.mark_state_tooltip]"
+			maxWidth = 300
+			maxHeight = 100
+		}
+	}
+	
+	containerWindowType = {
+		name = "st_subject_powers_container"
+		size = { width=300 height=200 }
+		#position = {x=-400 y=680}
+        position = { x = 465 y = 45 }
+		size = { width=300 height=200 }
+		#show_animation_type = accelerated 
+		#hide_animation_type = decelerated
+		#animation_time = 500
+		moveable = no
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_generic_bg_307x113"
+		}
+		
+		iconType ={
+			name ="title_background"
+			spriteType = "GFX_generic_text_bg_154"
+			position = { x=3 y=3}
+			Orientation = "UPPER_LEFT"
+			allwaystransparent = yes
+		}
+
+		instantTextboxType = {
+			name = "title"
+			position = {x=14 y=8}
+			font = "hoi_18mbs"
+			text = "[This.GetName]"
+			maxWidth = 200
+			maxHeight = 23
+			format = left
+		}
+		buttonType = {
+			name = "state_transfer_core_button"
+
+			position = { x = 157 y = 0 }
+
+			spriteType = "GFX_SI_state_transfer_core_button"
+
+			font = "hoi_18mbs"
+
+			shortcut = "ctrl+c"
+
+			pdx_tooltip = "SI_transfer_core_tt"
+		}
+		
+		buttonType = {
+			name = "mark_all_states" 
+			position = {x=15 y=50}
+			shortcut = "ctrl+a"
+			quadTextureSprite = "GFX_global_alert_icons"
+            frame = 39
+			pdx_tooltip = "MARK_ALL_STATES_TT"
+			scale = 1
+		}
+		
+		buttonType = {
+			name = "clear_all_markings" 
+			position = {x=70 y=50}	
+			shortcut = "ctrl+x"
+			quadTextureSprite = "GFX_global_alert_icons"
+            frame = 38
+			pdx_tooltip = "CLEAR_ALL_MARKINGS_TT"
+			scale = 1
+		}
+		
+		buttonType = {
+			name = "mark_colonial_states"	
+			position = {x=125 y=51}
+			shortcut = "ctrl+c"
+			quadTextureSprite = "GFX_global_diplorequest_icons"
+            frame = 11 
+			pdx_tooltip = "MARK_COLONIES_TT"
+			scale = 0.95
+		}
+		
+		iconType ={
+			name = "Transfer_background"
+			spriteType = "GFX_tiled_window_small"
+			position = { x=189 y=9}
+			Orientation = "UPPER_LEFT"
+			allwaystransparent = yes
+		}
+		
+		buttonType = {
+			name = "award_states" 
+			position = {x=193 y=41}	
+			shortcut = "ctrl+t"
+			quadTextureSprite ="GFX_standard_button_88"
+			font = "hoi_18mbs"
+			buttonText = "Transfer"
+			pdx_tooltip = "AWARD_STATES_TT"
+		}
+		
+	#	buttonType = {
+	#		name = "core_states" 
+	#		position = {x=193 y=20}	
+	#		shortcut = "ctrl+r"
+	#		quadTextureSprite ="GFX_standard_button_88"
+	#		font = "hoi_18mbs"
+	#		buttonText = "Core"
+	#		pdx_tooltip = "CORE_STATES"
+	#		pdx_tooltip_delayed = "CORE_STATES_DELAYED"
+	#	}
+	}
+	
+}

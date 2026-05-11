@@ -1,0 +1,47 @@
+guiTypes = { #NDH Starting GUI
+	containerWindowType = {
+		name = "Army_Icons_by"
+		position = { x = 320 y = 0}
+		size = { width = 500 height = 100 }
+		
+		
+		
+		buttonType = {
+			name = "by_tag_enabled"
+			position = { x = 120 y = 0 }
+			quadTextureSprite = "GFX_armbut_enable"
+			frame = 1
+			pdx_tooltip = "by_tag_TT_enabled"
+			pdx_tooltip_delayed = "by_tag_d_TT_enabled"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "by_tag_disabled"
+			position = { x = 120 y = 0 }
+			quadTextureSprite = "GFX_armbut_disable"
+			frame = 1
+			pdx_tooltip = "by_tag_TT_disabled"
+			pdx_tooltip_delayed = "by_tag_d_TT_disabled"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "by_ideology_enabled"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_armbut_enable"
+			frame = 1
+			pdx_tooltip = "by_ideology_TT_enabled"
+			pdx_tooltip_delayed = "by_ideology_d_TT_enabled"
+			clicksound = click_action
+		}
+		buttonType = {
+			name = "by_ideology_disabled"
+			position = { x = 0 y = 0 }
+			quadTextureSprite = "GFX_armbut_disable"
+			frame = 1
+			pdx_tooltip = "by_ideology_TT_disabled"
+			pdx_tooltip_delayed = "by_ideology_d_TT_disabled"
+			clicksound = click_action
+		}
+	}
+	
+}

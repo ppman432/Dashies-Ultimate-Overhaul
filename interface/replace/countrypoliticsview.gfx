@@ -1,0 +1,49 @@
+spriteTypes = {	
+	spriteType = {
+			name = "GFX_idea_slot_mod_director"
+			textureFile = "gfx/interface/select_advisor.dds"
+			}
+	#Additional Effects
+	spriteType = {
+			name = "GFX_idea_slot_mod_land"
+			textureFile = "gfx/interface/idea_slot_army_chief.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_mod_naval"
+			textureFile = "gfx/interface/idea_slot_navy_chief.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_mod_air"
+			textureFile = "gfx/interface/idea_slot_air_chief.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_mod_pro"
+			textureFile = "gfx/interface/idea_slot_industrial_concern.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_mod_gov"
+			textureFile ="gfx/interface/idea_slot_political_advisor.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_mod_doc"
+			textureFile = "gfx/interface/idea_slot_high_command.dds"
+			}
+	#######################		
+	#Espionage	
+	spriteType = {
+			name = "GFX_idea_slot_recruitment_drive"
+			textureFile = "gfx/interface/ideas/idea_slot_political_advisor.dds"
+			}	
+	spriteType = {
+			name = "GFX_idea_slot_counter_operations"
+			textureFile = "gfx/interface/ideas/idea_slot_political_advisor.dds"
+			}		
+	spriteType = {
+			name = "GFX_idea_slot_intel_gathering"
+			textureFile = "gfx/interface/ideas/idea_slot_political_advisor.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_cryptology"
+			textureFile = "gfx/interface/ideas/idea_slot_political_advisor.dds"
+			}		
+}

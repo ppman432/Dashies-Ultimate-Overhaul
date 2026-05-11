@@ -1,0 +1,59 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_SI_state_arrow_button"
+		textureFile = "gfx/interface/SI_state_arrow.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SI_state_menu_button"
+		textureFile = "gfx/interface/SI_state_menu.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SI_state_menu4"
+		textureFile = "gfx/interface/InteractionMenuBackground4.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SI_state_transfer_button"
+		textureFile = "gfx/interface/SI_state_transf_menu.dds"
+	}
+
+	spriteType = {
+		name = "GFX_state_buttons_strip"
+		textureFile = "gfx/interface/StateInteractionsStrip.dds"
+		noOfFrames = 7
+	}
+
+	spriteType = {
+		name = "GFX_debug_gfx_strip"
+		textureFile = "gfx/interface/debugGfxStrip.dds"
+		noOfFrames = 2
+	}
+
+	spriteType = {
+		name = "GFX_SI_state_transfer_select_all_button"
+		textureFile = "gfx/interface/StateTransferButtonSelectAll2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SI_state_transfer_deselect_all_button"
+		textureFile = "gfx/interface/StateTransferButtonDeselectAll2.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SI_mini_icon"
+		textureFile = "gfx/interface/miniicon.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SI_state_transfer_transfer_button"
+		textureFile = "gfx/interface/StateTransferButtonTransfer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_SI_state_transfer_core_button"
+		textureFile = "gfx/interface/StateTransferButtonCore.dds"
+	}
+}

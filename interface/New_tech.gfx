@@ -1,0 +1,190 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_specops_frame"
+		texturefile = "gfx/interface/techtree/specops_frame.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_specops_marines"
+		texturefile = "gfx/interface/techtree/specops_marines.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_specops_mountaineers"
+		texturefile = "gfx/interface/techtree/specops_mountaineers.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_specops_paratroopers"
+		texturefile = "gfx/interface/techtree/specops_para.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_specops_racial"
+		texturefile = "gfx/interface/techtree/specops_racial.tga"
+	}
+	
+	SpriteType = {
+		name = "GFX_specops_rangers"
+		texturefile = "gfx/interface/techtree/specops_rangers.tga"
+	}
+	
+
+
+	SpriteType = {
+		name = "GFX_tech_mountaineers3_techtree_medium"
+		texturefile = "gfx/interface/technologies/mountain3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_tech_mountaineers2_techtree_medium"
+		texturefile = "gfx/interface/technologies/mountain2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_tech_mountaineers_techtree_medium"
+		texturefile = "gfx/interface/technologies/mountain.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_marines3_techtree_medium"
+		texturefile = "gfx/interface/technologies/marines3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_marines2_techtree_medium"
+		texturefile = "gfx/interface/technologies/marines2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_tech_marines_techtree_medium"
+		texturefile = "gfx/interface/technologies/marines.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_paratroopers3_techtree_medium"
+		texturefile = "gfx/interface/technologies/paratroopers3.dds"
+	}
+	
+	SpriteType = {
+		name = "GFX_paratroopers2_techtree_medium"
+		texturefile = "gfx/interface/technologies/paratroopers2.dds"
+	}	
+	
+	SpriteType = {
+		name = "GFX_paratroopers_techtree_medium"
+		texturefile = "gfx/interface/technologies/paratroopers.dds"
+	}	
+
+	SpriteType = {
+		name = "GFX_marines_a_techtree_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/marines_a.dds"
+	}
+	SpriteType = {
+		name = "GFX_marines_b_techtree_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/marines_b.dds"
+	}
+	SpriteType = {
+		name = "GFX_marines_c_techtree_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/marines_c.dds"
+	}
+
+	#-<><><>
+
+	SpriteType = {
+		name = "GFX_paratroopers_a_techtree_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/paratroopers_a.dds"
+	}
+	SpriteType = {
+		name = "GFX_paratroopers_b_techtree_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/paratroopers_b.dds"
+	}
+	SpriteType = {
+		name = "GFX_paratroopers_c_techtree_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/paratroopers_c.dds"
+	}
+
+	#-<><><>
+
+	SpriteType = {
+		name = "GFX_mountaineers_a_techtree_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/mountaineers_a.dds"
+	}
+	SpriteType = {
+		name = "GFX_mountaineers_b_techtree_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/mountaineers_b.dds"
+	}
+	SpriteType = {
+		name = "GFX_mountaineers_c_techtree_medium"
+		texturefile = "gfx/interface/technologies/infantry_folder/mountaineers_c.dds"
+	}
+
+
+
+	SpriteType = {
+		name = "GFX_radial_engines_1_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_radial_engines_1.dds"
+	}
+	SpriteType = {
+		name = "GFX_radial_engines_2_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_radial_engines_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_radial_engines_3_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_radial_engines_3.dds"
+	}
+	SpriteType = {
+		name = "GFX_radial_engines_4_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_radial_engines_4.dds"
+	}
+	SpriteType = {
+		name = "GFX_rocket_rails_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_rocket_rails.dds"
+	}
+	SpriteType = {
+		name = "GFX_rocket_rails_2_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_rocket_rails_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_aircraft_construction_2_medium"
+		texturefile = "gfx/interface/technologies/aircraft_construction_2.dds"
+	}
+	SpriteType = {
+		name = "GFX_jet_engine_improvements_medium"
+		texturefile = "gfx/interface/technologies/jet_engine_improvements.dds"
+	}
+	SpriteType = {
+		name = "GFX_ASW_medium"
+		texturefile = "gfx/interface/technologies/ASW.dds"
+	}
+	SpriteType = {
+		name = "GFX_air_torpedoe_1_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_basic_torpedo.dds"
+	}
+	SpriteType = {
+		name = "GFX_air_torpedoe_2_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_improved_torpedo.dds"
+	}
+	SpriteType = {
+		name = "GFX_air_torpedoe_3_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_advanced_torpedo.dds"
+	}
+	SpriteType = {
+		name = "GFX_aa_hmg_2_medium"
+		texturefile = "gfx/interface/technologies/bba_tech_aa_mg_3.dds"
+	}		
+	
+	
+	SpriteType = {
+		name = "GFX_rangers_tech_a_medium"
+		texturefile = "gfx/interface/technologies/rangers_tech4.dds"
+	}
+	SpriteType = {
+		name = "GFX_rangers_tech_b_medium"
+		texturefile = "gfx/interface/technologies/rangers_tech5.dds"
+	}
+	SpriteType = {
+		name = "GFX_rangers_tech_c_medium"
+		texturefile = "gfx/interface/technologies/rangers_tech6.dds"
+	}
+}	

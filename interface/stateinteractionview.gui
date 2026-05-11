@@ -1,0 +1,167 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "state_interaction_menu_container"
+
+		buttonType = {
+			name = "state_interaction_menu_button"
+
+			position = { x = 400 y = 10 }
+
+			scale = 0.88
+
+			quadTextureSprite = "GFX_SI_state_menu_button"
+
+			pdx_tooltip = "SI_stateview_button"
+
+			shortcut = "ctrl+shift+s"
+		}
+	}
+	containerWindowType = {
+		name = "state_interaction_container"
+		
+		position = { x = -500 y = -36 }
+
+		size = { width = 467 height = 100 }
+
+		show_position = { x = 3 y = -36 }
+
+		show_animation_type = decelerated
+
+		hide_animation_type = accelerated
+
+		animation_time = 250
+
+		background = {
+			name = "Background"
+
+			spriteType = "GFX_SI_state_menu4"
+		}
+
+		buttonType = {
+			name = "interaction_debug_button"
+
+
+			scale = 0.9
+
+			position = { x = 95 y = 9 }
+
+			spriteType = button_right
+			
+			# shortcut = "ctrl+shift+q"
+
+			pdx_tooltip = "SI_interaction_debug_button"
+		}
+		
+		buttonType = {
+			name = "revoke_core_button"
+			position = { x = 300 y = 4 }
+			spriteType = GFX_revoke_core_button
+			pdx_tooltip = "REVOKE_CORE_DESC"
+		}
+		buttonType = {
+			name = "core_state_button"
+			position = { x = 260 y = 4 }
+			spriteType ="GFX_core_button"
+			pdx_tooltip = "CORE_STATE_DESC"
+		}
+
+		buttonType = {
+			name = "revoke_claim_button"
+			position = { x = 387 y = 4 }
+			spriteType = GFX_revoke_claim_button
+			pdx_tooltip = "REVOKE_CLAIM_DESC"
+		}
+
+		buttonType = {
+			name = "claim_state_button"
+			position = { x = 347 y = 4 }
+			spriteType = GFX_claim_button
+			pdx_tooltip = "CLAIM_STATE_DESC"
+		}
+		
+		
+		
+
+		buttonType = {
+			name = "state_menu_demand_state_button"
+
+
+			position = { x = 127 y = 8 }
+
+			quadTextureSprite = "GFX_state_buttons_strip"
+			frame = 2
+
+			# shortcut = "ctrl+shift+q"
+
+			pdx_tooltip = "SI_state_demand_button"
+		}
+		buttonType = {
+			name = "state_menu_demand_vsl_button"
+
+
+			position = { x = 172 y = 8 }
+
+			quadTextureSprite = "GFX_state_buttons_strip"
+			frame = 3
+
+			# shortcut = "ctrl+shift+w"
+
+			pdx_tooltip = "SI_state_vsl_button"
+		}
+		# buttonType = {
+		# 	name = "state_menu_demand_int_button"
+
+		# 	size = { width = 34 height = 34 }
+
+		# 	position = { x = 13 y = 8 }
+
+		# 	quadTextureSprite = "GFX_state_buttons_strip"
+		# 	frame = 1
+
+		# 	pdx_tooltip = "SI_state_int_button"
+		# }
+		buttonType = {
+			name = "state_menu_move_capital_button"
+
+
+			position = { x = 217 y = 8 }
+
+			quadTextureSprite = "GFX_state_buttons_strip"
+			frame = 6
+
+			# shortcut = "ctrl+shift+t"
+
+			pdx_tooltip = "SI_state_move_cap_button"
+		}
+
+		buttonType = {
+			name = "check_core_button"
+            position = { x = 8 y = 8 }
+			quadTextureSprite ="button_straight_96_32"
+			buttonText = "Calculate cost"
+			buttonFont = "hoi_16mbs"
+			Orientation = "UPPER_LEFT"
+			pdx_tooltip = "CHECK_CORE_STATE_DESC"
+		}
+		
+		buttonType = {
+			name = "state_menu_transfer_menu_button"
+
+
+			position = { x = 424 y = 9 }
+
+			quadTextureSprite = "GFX_SI_state_transfer_button"
+
+			shortcut = "ctrl+shift+t"
+
+			scale = 1
+
+			pdx_tooltip = "SI_state_transfer_menu_button"
+		}
+
+
+		
+	}
+
+}

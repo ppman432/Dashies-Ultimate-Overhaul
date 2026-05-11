@@ -1,0 +1,372 @@
+guiTypes = {
+	containerWindowType = {
+		name = "open_credits_gui_window"
+		position = { x = -25 y = 509 }
+		#orientation = lower_RIGHT
+		
+		buttonType ={
+			name ="open_button"
+			spriteType = "GFX_open_gui_button"
+			position = { x=61 y=-230 }
+			pdx_tooltip = "credits_gui_open_TOOLTIP"
+		}
+	}
+
+	containerWindowType = {
+		name = "main_credits_gui_window"
+		position = { x = 0 y = 0}	
+		size = { width = 800 height= 650 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_scripted_gui_window_background"
+		}
+
+		buttonType ={
+			name ="close_button"
+			spriteType = "GFX_close_button"
+			position = { x= 43 y = -322 }
+			Orientation = "center"
+			shortcut = "ESCAPE"
+		}	
+
+		instantTextboxType = {
+			name = "main_credits_gui_window_title"
+			position = { x = 30 y = 22 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "credits_gui_TITLE"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+		
+		iconType = {
+			name = "main_credits_counter"
+			position = { x = -80 y = -294 }
+			quadTextureSprite = "GFX_credit_counter"
+			orientation = center
+			pdx_tooltip = credits_counter_TOOLTIP
+		}
+
+		instantTextboxType = {
+			name = "credits_counter_text"
+			position = { x = 352 y = 35 }
+			font = "hoi_16mbs"
+			borderSize = {x = 0 y = 0}
+			text = "[?credits_amount]"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+			pdx_tooltip = credits_counter_TOOLTIP
+		}
+		
+		iconType = {
+			name = "crates_header"
+			position = { x = -295 y = -230 }
+			quadTextureSprite = "GFX_gui_header"
+			orientation = center
+		}		
+		
+		instantTextboxType = {
+			name = "crates_header_text"
+			position = { x = 210 y = 101 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "crates_header_TITLE"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}		
+
+		buttonType = {
+			name = "common_crate_entry"
+			position = { x = -240 y = -180 }
+			quadTextureSprite = "GFX_c_common"
+			orientation = center
+			buttonText = "common_crate_text"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = common_crate_TOOLTIP
+		}
+
+		buttonType = {
+			name = "uncommon_crate_entry"
+			position = { x = -240 y = -135 }
+			quadTextureSprite = "GFX_c_uncommon"
+			orientation = center
+			buttonText = "uncommon_crate_text"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = uncommon_crate_TOOLTIP
+		}
+
+		buttonType = {
+			name = "rare_crate_entry"
+			position = { x = -240 y = -90 }
+			quadTextureSprite = "GFX_c_rare"
+			orientation = center
+			buttonText = "rare_crate_text"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = rare_crate_TOOLTIP
+		}
+		
+		buttonType = {
+			name = "epic_crate_entry"
+			position = { x = -240 y = -45 }
+			quadTextureSprite = "GFX_c_epic"
+			orientation = center
+			buttonText = "epic_crate_text"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = epic_crate_TOOLTIP
+		}
+
+		buttonType = {
+			name = "legendary_crate_entry"
+			position = { x = -240 y = 0 }
+			quadTextureSprite = "GFX_c_legendary"
+			orientation = center
+			buttonText = "legendary_crate_text"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = legendary_crate_TOOLTIP
+		}		
+
+		iconType = {
+			name = "conversions_header"
+			position = { x = -295 y = 45 }
+			quadTextureSprite = "GFX_gui_header"
+			orientation = center
+		}
+
+		instantTextboxType = {
+			name = "conversions_header_text"
+			position = { x = 190 y = 377 }
+			font = "hoi_24header"
+			borderSize = {x = 0 y = 0}
+			text = "conversions_header_TITLE"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}
+		
+		buttonType = {
+			name = "convert_pp_entry"
+			position = { x = -218 y = 88 }
+			quadTextureSprite = "GFX_convert_pp"
+			orientation = center
+			buttonText = "Convert"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = convert_pp_TOOLTIP
+		}		
+		
+		buttonType = {
+			name = "convert_cp_entry"
+			position = { x = -218 y = 128 }
+			quadTextureSprite = "GFX_convert_cp"
+			orientation = center
+			buttonText = "Convert"
+			buttonFont = "hoi_16mbs"
+			pdx_tooltip = convert_cp_TOOLTIP
+		}			
+	}
+
+	containerWindowType = {
+		name = "open_common_crate_gui_window"
+		position = { x = 0 y = 0}	
+		size = { width = 480 height= 250 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "Background2"		
+			quadTextureSprite ="GFX_scripted_gui_window_background2"
+		}
+		
+		buttonType ={
+			name ="open_crate_button"
+			spriteType = "GFX_open_crate_button"
+			position = { x=132 y=125 }
+			pdx_tooltip = "common_crate_open_TOOLTIP"
+			buttonText = "OPEN"
+			buttonFont = "hoi_24header"
+			clicksound = Spy_Agency_Cryptology_Decipher_Select_Target_Province
+		}
+		
+		instantTextboxType = {
+			name = "crate_open_text"
+			position = { x = 30 y = 22 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "Open Common Crate"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}		
+	}
+	
+	containerWindowType = {
+		name = "open_uncommon_crate_gui_window"
+		position = { x = 0 y = 0}	
+		size = { width = 480 height= 250 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "Background2"		
+			quadTextureSprite ="GFX_scripted_gui_window_background2"
+		}
+		
+		buttonType ={
+			name ="open_crate_button2"
+			spriteType = "GFX_open_crate_button"
+			position = { x=132 y=125 }
+			pdx_tooltip = "uncommon_crate_open_TOOLTIP"
+			buttonText = "OPEN"
+			buttonFont = "hoi_24header"
+			clicksound = Spy_Agency_Cryptology_Decipher_Select_Target_Province
+		}
+		
+		instantTextboxType = {
+			name = "crate_open_text"
+			position = { x = 30 y = 22 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "Open Uncommon Crate"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}		
+	}
+	
+	containerWindowType = {
+		name = "open_rare_crate_gui_window"
+		position = { x = 0 y = 0}	
+		size = { width = 480 height= 250 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "Background2"		
+			quadTextureSprite ="GFX_scripted_gui_window_background2"
+		}
+		
+		buttonType ={
+			name ="open_crate_button"
+			spriteType = "GFX_open_crate_button"
+			position = { x=132 y=125 }
+			pdx_tooltip = "rare_crate_open_TOOLTIP"
+			buttonText = "OPEN"
+			buttonFont = "hoi_24header"
+			clicksound = Spy_Agency_Cryptology_Decipher_Select_Target_Province
+		}
+		
+		instantTextboxType = {
+			name = "crate_open_text"
+			position = { x = 30 y = 22 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "Open Rare Crate"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}		
+	}
+
+	containerWindowType = {
+		name = "open_epic_crate_gui_window"
+		position = { x = 0 y = 0}	
+		size = { width = 480 height= 250 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "Background2"		
+			quadTextureSprite ="GFX_scripted_gui_window_background2"
+		}
+		
+		buttonType ={
+			name ="open_crate_button"
+			spriteType = "GFX_open_crate_button"
+			position = { x=132 y=125 }
+			pdx_tooltip = "epic_crate_open_TOOLTIP"
+			buttonText = "OPEN"
+			buttonFont = "hoi_24header"
+			clicksound = Spy_Agency_Cryptology_Decipher_Select_Target_Province
+		}
+		
+		instantTextboxType = {
+			name = "crate_open_text"
+			position = { x = 30 y = 22 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "Open Epic Crate"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}		
+	}
+
+	containerWindowType = {
+		name = "open_legendary_crate_gui_window"
+		position = { x = 0 y = 0}	
+		size = { width = 480 height= 250 }
+		orientation = center
+		origo = center
+		fade_time = 100
+		moveable = yes
+		fade_type = linear
+		click_to_front = yes
+		clipping = no
+		
+		background = {
+			name = "Background2"		
+			quadTextureSprite ="GFX_scripted_gui_window_background2"
+		}
+		
+		buttonType ={
+			name ="open_crate_button"
+			spriteType = "GFX_open_crate_button"
+			position = { x=132 y=125 }
+			pdx_tooltip = "legendary_crate_open_TOOLTIP"
+			buttonText = "OPEN"
+			buttonFont = "hoi_24header"
+			clicksound = Spy_Agency_Cryptology_Decipher_Select_Target_Province
+		}
+		
+		instantTextboxType = {
+			name = "crate_open_text"
+			position = { x = 30 y = 22 }
+			font = "hoi_36header"
+			borderSize = {x = 0 y = 0}
+			text = "Open Legendary Crate"
+			maxWidth = 400
+			maxHeight = 20
+			fixedsize = yes
+		}		
+	}	
+}

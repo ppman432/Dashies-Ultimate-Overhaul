@@ -1,0 +1,58 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_goal_artillery_research"
+		texturefile = "gfx/interface/goals/ecfcustom/ArtilleryResearch.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_armor_research"
+		texturefile = "gfx/interface/goals/ecfcustom/ArmorResearch.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_industry_research"
+		texturefile = "gfx/interface/goals/ecfcustom/IndustryResearch.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_naval_equipment_research"
+		texturefile = "gfx/interface/goals/ecfcustom/NavalEquipmentResearch.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_continuous_air_equipment"
+		texturefile = "gfx/interface/goals/ecfcustom/continuous_air_equipment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_continuous_counter_intelligence"
+		texturefile = "gfx/interface/goals/ecfcustom/continuous_counter_intelligence.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_continuous_infantry_equipment"
+		texturefile = "gfx/interface/goals/ecfcustom/continuous_infantry_equipment.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_owb_elites"
+		texturefile = "gfx/interface/goals/ecfcustom/owb_elites.dds"
+	}
+
+	spriteType = {
+		name = "GFX_goal_owb_intellectuals"
+		texturefile = "gfx/interface/goals/ecfcustom/owb_intellectuals.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_owb_people"
+		texturefile = "gfx/interface/goals/ecfcustom/owb_people.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_goal_owb_ruler"
+		texturefile = "gfx/interface/goals/ecfcustom/owb_ruler.dds"
+	}
+	
+}

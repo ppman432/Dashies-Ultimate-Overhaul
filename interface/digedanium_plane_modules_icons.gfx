@@ -1,0 +1,39 @@
+spriteTypes = {
+		
+	spriteType = {
+		name = "GFX_EMI_digedanium_small"
+		textureFile = "gfx/interface/technologies/digedanium_tech_module.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_digedanium_medium"
+		textureFile = "gfx/interface/technologies/digedanium_tech_module.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_digedanium_large"
+		textureFile = "gfx/interface/technologies/digedanium_tech_module.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_digedanium2_small"
+		textureFile = "gfx/interface/technologies/digedanium_tech_module.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_digedanium2_medium"
+		textureFile = "gfx/interface/technologies/digedanium_tech_module.dds"
+		legacy_lazy_load = no
+	}
+	
+	spriteType = {
+		name = "GFX_EMI_digedanium2_large"
+		textureFile = "gfx/interface/technologies/digedanium_tech_module.dds"
+		legacy_lazy_load = no
+	}
+
+}

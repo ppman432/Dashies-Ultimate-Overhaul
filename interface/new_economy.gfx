@@ -1,0 +1,12 @@
+spriteTypes = {	
+
+		spriteType = {
+		name = "GFX_idea_peaceful_economy"
+		texturefile = "gfx/interface/ideas/idea_peaceful_economy.dds"
+		
+	}
+		spriteType = {
+		name = "GFX_idea_desperate_economy"
+		texturefile = "gfx/interface/ideas/idea_desperate_defense.dds"
+	}	
+}

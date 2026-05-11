@@ -1,0 +1,220 @@
+spriteTypes = {
+
+	#Silent Workhorse
+	spriteType = {
+		name = "GFX_idea_vacancy_sw"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_sw"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {  
+		name = "GFX_idea_expert_sw"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_sw"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#Industry Captain
+	spriteType = {
+		name = "GFX_idea_vacancy_coi"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_coi"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_coi"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_coi"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#War Industrialist
+	spriteType = {
+		name = "GFX_idea_vacancy_wi"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_wi"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_wi"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_wi"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#Fortication engineer
+	spriteType = {
+		name = "GFX_idea_vacancy_feng"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_feng"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_feng"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_feng"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#Armaments King
+	spriteType = {
+		name = "GFX_idea_vacancy_ao"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_ao"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_ao"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_ao"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#Quartermaster
+	spriteType = {
+		name = "GFX_idea_vacancy_qg"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_qg"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_qg"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_qg"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#Popular Figurehead
+	spriteType = {
+		name = "GFX_idea_vacancy_pf"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_pf"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_pf"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_pf"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#Prince of Terror
+	spriteType = {
+		name = "GFX_idea_vacancy_pot"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_pot"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_pot"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_pot"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#Gentlemen
+	spriteType = {
+		name = "GFX_idea_vacancy_cg"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_cg"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_cg"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_cg"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#Backroom backstabber
+	spriteType = {
+		name = "GFX_idea_vacancy_bb"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_bb"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_bb"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_bb"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#Smooth Criminal
+	spriteType = {
+		name = "GFX_idea_vacancy_stc"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_specialist_stc"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_stc"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_stc"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+	
+	#Crusader
+	spriteType = {
+		name = "GFX_idea_vacancy_ic"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_1.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_specialist_ic"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_2.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_expert_ic"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_genius_ic"
+		texturefile = "gfx/interface/ideas/Additional_Advisors/Additional_advisors_4.dds"
+	}
+
+
+}

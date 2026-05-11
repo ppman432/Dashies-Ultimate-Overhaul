@@ -1,0 +1,110 @@
+guiTypes = {
+			
+			
+	containerWindowType = {
+		name = "landlord_popup_confirm"
+		position = { x = -265 y = -160 }	
+		size = { width = 530 height = 200 }
+		orientation = center
+		clipping = no
+		fade_time = 300
+		fade_type = linear
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_bg"
+		}
+
+		instantTextBoxType = {
+			name = "u_sure"
+			position = { x = 165 y = 20 }
+			font = "hoi_36header"
+			format = center
+			alwaystransparent = yes
+			text = "Confirmation"
+		}
+
+		instantTextBoxType = {
+			name = "u_sure2"
+			position = { x = -10 y = 80 }
+			maxWidth = 560
+			font = "hoi_18mbs"
+			format = center
+			alwaystransparent = yes
+			text = revoke_core_confirmation
+		}
+
+		buttonType = {
+			name = "cancel"
+			position = { x = -475 y = 130 }
+			quadTextureSprite ="GFX_button_148x34"
+			Orientation = "UPPER_RIGHT"
+			
+			buttonText = "Cancel"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "confirm"
+			position = { x = -200 y = 130 }
+			quadTextureSprite ="GFX_button_148x34"
+			Orientation = "UPPER_RIGHT"
+			
+			buttonText = "Revoke core"
+			buttonFont = "hoi_16mbs"
+		}
+	}
+			
+	containerWindowType = {
+		name = "landlord_popup_confirm_claim"
+		position = { x = -265 y = -160 }	
+		size = { width = 530 height = 200 }
+		orientation = center
+		clipping = no
+		fade_time = 300
+		fade_type = linear
+		background = {
+			name = "Background"		
+			quadTextureSprite ="GFX_tiled_bg"
+		}
+
+		instantTextBoxType = {
+			name = "u_sure"
+			position = { x = 165 y = 20 }
+			font = "hoi_36header"
+			format = center
+			alwaystransparent = yes
+			text = "Confirmation"
+		}
+
+		instantTextBoxType = {
+			name = "u_sure2"
+			position = { x = -10 y = 80 }
+			maxWidth = 560
+			font = "hoi_18mbs"
+			format = center
+			alwaystransparent = yes
+			text = revoke_claim_confirmation
+		}
+
+		buttonType = {
+			name = "cancel"
+			position = { x = -475 y = 130 }
+			quadTextureSprite ="GFX_button_148x34"
+			Orientation = "UPPER_RIGHT"
+			
+			buttonText = "Cancel"
+			buttonFont = "hoi_16mbs"
+		}
+
+		buttonType = {
+			name = "confirm"
+			position = { x = -200 y = 130 }
+			quadTextureSprite ="GFX_button_148x34"
+			Orientation = "UPPER_RIGHT"
+			
+			buttonText = "Revoke claim"
+			buttonFont = "hoi_16mbs"
+		}
+	}
+	
+}

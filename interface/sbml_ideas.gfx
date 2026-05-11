@@ -1,0 +1,1288 @@
+spriteTypes = {
+
+	#government_type
+
+	spriteType = {
+		name = "GFX_idea_slot_wp_labour_laws"
+		texturefile = "gfx\\interface\\idea_slot_welfare.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_wp_healthcare_policy"
+		texturefile = "gfx\\interface\\idea_slot_welfare.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_wp_education_policy"
+		texturefile = "gfx\\interface\\Idea_slot_eidea.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_wp_benefits_policy"
+		texturefile = "gfx\\interface\\idea_slot_welfare.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_wp_healthcare_focus"
+		texturefile = "gfx\\interface\\idea_slot_welfare.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_wp_education_focus"
+		texturefile = "gfx\\interface\\Idea_slot_eidea.dds"
+	}
+    
+    
+	#wp_labour_laws #5slots
+
+    spriteType = {
+		name = "GFX_idea_eight_hour_workday"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_labour_laws\\_eight_hour_workday.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_twelve_hour_workday"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_labour_laws\\_twelve_hour_workday.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_fourteen_hour_workday"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_labour_laws\\_fourteen_hour_workday.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_eighteen_hour_workday"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_labour_laws\\_eighteen_hour_workday.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_no_work_hour_limits"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_labour_laws\\_no_work_hour_limits.dds"
+	}
+
+
+	#wp_healthcare_policy #4slots
+
+    
+	spriteType = {
+		name = "GFX_idea_comprehensive_healthcare_system"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_healthcare_policy\\_comprehensive_healthcare_system.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_standard_healthcare_system"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_healthcare_policy\\_standard_healthcare_system.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_basic_healthcare_system"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_healthcare_policy\\_basic_healthcare_system.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_no_national_healthcare_system"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_healthcare_policy\\_no_national_healthcare_system.dds"
+	}
+
+
+	#wp_education_policy #5slots
+
+    spriteType = {
+		name = "GFX_idea_subsidized_higher_education"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_education_policy\\_subsidized_higher_education.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_subsidized_basic_education"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_education_policy\\_subsidized_basic_education.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_basic_education_system"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_education_policy\\_basic_education_system.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_no_official_education_system"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_education_policy\\_no_official_education_system.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_left_to_the_market"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_education_policy\\_left_to_the_market.dds"
+	}
+
+
+	#wp_benefits_policy #4slots
+
+    
+	spriteType = {
+		name = "GFX_idea_generous_state_welfare"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_benefits_policy\\_generous_state_welfare.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_moderate_state_welfare"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_benefits_policy\\_moderate_state_welfare.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_basic_state_welfare"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_benefits_policy\\_basic_state_welfare.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_no_state_welfare"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_benefits_policy\\_no_state_welfare.dds"
+	}
+
+
+	#wp_healthcare_focus #3slots
+
+
+    spriteType = {
+		name = "GFX_idea_military_hospitals"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_healthcare_focus\\_military_hospitals.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_research_focus"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_healthcare_focus\\_research_focus.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_health_focus"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_healthcare_focus\\_health_focus.dds"
+	}
+	
+
+	#wp_education_focus #5slots
+    
+
+	spriteType = {
+		name = "GFX_idea_business_schools"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_education_focus\\_business_schools.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_military_academies"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_education_focus\\_military_academies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_medical_universities"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_education_focus\\_medical_universities.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_elite_institutions"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_education_focus\\_elite_institutions.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_propaganda_programs"
+		texturefile = "gfx\\interface\\ideas\\laws\\welfare_policies\\wp_education_focus\\_propaganda_programs.dds"
+	}
+	
+	##MJ##
+	
+	
+
+	#military jurisdiction
+
+	spriteType = {
+		name = "GFX_idea_slot_mj_code_of_ethics"
+		texturefile = "gfx\\interface\\idea_slot_high_command.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_mj_non_core_manpower"
+		texturefile = "gfx\\interface\\idea_slot_military.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_mj_female_service"
+		texturefile = "gfx\\interface\\idea_slot_internal_policies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_mj_training_quality"
+		texturefile = "gfx\\interface\\idea_slot_military.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_mj_branch_rivarly"
+		texturefile = "gfx\\interface\\idea_slot_supreme_commander.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_mj_volunteer_forces"
+		texturefile = "gfx\\interface\\idea_slot_high_command.dds"
+	}
+    
+
+
+    #mj_code_of_ethics #5slots
+
+    spriteType = {
+		name = "GFX_idea_strict_ethics"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_code_of_ethics\\_strict_ethics.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_code_of_honour"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_code_of_ethics\\_code_of_honour.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_no_supervision"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_code_of_ethics\\_no_supervision.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_merciless"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_code_of_ethics\\_merciless.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_encouraged_brutality"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_code_of_ethics\\_encouraged_brutality.dds"
+	}
+
+	#mj_non_core_manpower #3slots
+
+    spriteType = {
+		name = "GFX_idea_non_core_recruitment_prohibited"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_non_core_manpower\\_non_core_recruitment_prohibited.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_segregated_regiments"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_non_core_manpower\\_segregated_regiments.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_integrated_manpower"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_non_core_manpower\\_integrated_manpower.dds"
+	}
+
+	#mj_female_service #4slots
+
+    spriteType = {
+		name = "GFX_idea_equal_service"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_female_service\\_equal_service.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_support_roles"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_female_service\\_support_roles.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_non_combat_roles"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_female_service\\_non_combat_roles.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_service_prohibited"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_female_service\\_service_prohibited.dds"
+	}
+
+	#mj_training_quality #5slots
+
+    spriteType = {
+		name = "GFX_idea_advanced_training"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_training_quality\\_advanced_training.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_extensive_training"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_training_quality\\_extensive_training.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_basic_training"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_training_quality\\_basic_training.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_minimal_training"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_training_quality\\_minimal_training.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_no_training"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_training_quality\\_no_training.dds"
+	}
+
+    #mj_branch_rivarly #5slots
+
+    spriteType = {
+		name = "GFX_idea_army_dominant"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_branch_rivarly\\_army_dominant.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_army_strengthened"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_branch_rivarly\\_army_strengthened.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_balanced_rivarly"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_branch_rivarly\\_balanced_rivarly.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_navy_strengthened"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_branch_rivarly\\_navy_strengthened.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_navy_dominant"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_branch_rivarly\\_navy_dominant.dds"
+	}
+
+	#mj_volunteer_forces #3slots
+
+    spriteType = {
+		name = "GFX_idea_large_volunteer_force"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_volunteer_forces\\_large_volunteer_force.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_small_force"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_volunteer_forces\\_small_force.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_no_volunteers"
+		texturefile = "gfx\\interface\\ideas\\laws\\military_jurisdiction\\mj_volunteer_forces\\_no_volunteers.dds"
+	}
+	
+	##IS
+	
+	
+	#military jurisdiction
+
+	spriteType = {
+		name = "GFX_idea_slot_is_penal_system"
+		texturefile = "gfx\\interface\\Idea_slot_paper.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_is_population_growth"
+		texturefile = "gfx\\interface\\Idea_slot_paper.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_is_trade_unions"
+		texturefile = "gfx\\interface\\Idea_slot_paper.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_is_state_security"
+		texturefile = "gfx\\interface\\Idea_slot_flag.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_is_firearm_regulation"
+		texturefile = "gfx\\interface\\Idea_slot_paper.dds"
+	}
+
+
+
+
+	#is_penal_system #4slots
+
+
+
+    spriteType = {
+		name = "GFX_idea_penal_slavery"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_penal_system\\_penal_slavery.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_penal_labour"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_penal_system\\_penal_labour.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_penal_incarceration"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_penal_system\\_penal_incarceration.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_penal_rehabilitation"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_penal_system\\_penal_rehabilitation.dds"
+	}
+
+
+
+	#is_population_growth #4slots
+
+
+
+    spriteType = {
+		name = "GFX_idea_encourage_growth"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_population_growth\\_encourage_growth.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_standard_growth"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_population_growth\\_standard_growth.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_controlled_birth_rates"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_population_growth\\_controlled_birth_rates.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_national_purity"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_population_growth\\_national_purity.dds"
+	}
+
+
+
+	#is_trade_unions #4slots
+
+
+    spriteType = {
+		name = "GFX_idea_trade_unions_allowed"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_trade_unions\\_trade_unions_allowed.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_state_controlled_unions_allowed"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_trade_unions\\_state_controlled_unions_allowed.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_trade_unions_banned"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_trade_unions\\_trade_unions_banned.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_worker_organs"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_trade_unions\\_worker_organs.dds"
+	}
+
+
+	#is_state_security #5slots
+
+    spriteType = {
+		name = "GFX_idea_police_only"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_state_security\\_police_only.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_counter_terrorism_operatives"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_state_security\\_counter_terrorism_operatives.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_gendarmerie"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_state_security\\_gendarmerie.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_sassy_secret_police"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_state_security\\_secret_police.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_military_policing"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_state_security\\_military_policing.dds"
+	}
+
+
+
+	#is_firearm_regulation #4slots
+    
+
+
+    spriteType = {
+		name = "GFX_idea_firearms_ownership_banned"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_firearm_regulation\\_firearms_ownership_banned.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_firearms_harsh_licenses"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_firearm_regulation\\_firearms_harsh_licenses.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_firearms_licenses"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_firearm_regulation\\_firearms_licenses.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_right_to_bear_arms"
+		texturefile = "gfx\\interface\\ideas\\laws\\internal_policies\\is_firearm_regulation\\_right_to_bear_arms.dds"
+	}
+	
+	##IP
+	
+	
+	#industrial_policies
+
+	spriteType = {
+		name = "GFX_idea_slot_ip_economic_base"
+		texturefile = "gfx\\interface\\Idea_slot_money.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_ip_construction_focus"
+		texturefile = "gfx\\interface\\idea_slot_industrial.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_ip_resource_efforts"
+		texturefile = "gfx\\interface\\idea_slot_industrial.dds"
+	}
+
+
+
+
+	#ip_economic_base #6slots
+
+
+    spriteType = {
+		name = "GFX_idea_agrarian_base"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_economic_base\\_agrarian_base.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_banking_tax_heaven"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_economic_base\\_banking_tax_heaven.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_small_business"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_economic_base\\_small_business.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_natural_resources"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_economic_base\\_natural_resources.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_business_and_enterprise"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_economic_base\\_business_and_enterprise.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_industry_manufacturing"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_economic_base\\_industry_manufacturing.dds"
+	}
+
+
+	#ip_construction_focus #4slots
+
+
+    spriteType = {
+		name = "GFX_idea_industrial_complexes"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_construction_focus\\_industrial_complexes.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_military_buildings"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_construction_focus\\_military_buildings.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_defense_focus"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_construction_focus\\_defense_focus.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_infrastructure_focus"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_construction_focus\\_infrastructure_focus.dds"
+	}
+
+
+	#ip_resource_efforts #3slots
+
+
+    spriteType = {
+		name = "GFX_idea_synthetic_fuel"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_resource_efforts\\_synthetic_fuel.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_alternative_materials"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_resource_efforts\\_alternative_materials.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_extraction_programs"
+		texturefile = "gfx\\interface\\ideas\\laws\\industry_policies\\ip_resource_efforts\\_extraction_programs.dds"
+	}
+	
+	##IDEAS##
+    #government_policies
+    spriteType = {
+		name = "GFX_idea_slot_gp_national_ideas"
+		texturefile = "gfx\\interface\\idea_slot_political_advisor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gp_press_law"
+		texturefile = "gfx\\interface\\Idea_slot_paper.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gp_immigration_policy"
+		texturefile = "gfx\\interface\\idea_slot_internal_policies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gp_minority_rights"
+		texturefile = "gfx\\interface\\idea_slot_internal_policies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gp_gender_equality"
+		texturefile = "gfx\\interface\\idea_slot_internal_policies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gp_public_meetings"
+		texturefile = "gfx\\interface\\Idea_slot_paper.dds"
+	}
+     
+	#national_ideas
+
+	spriteType = {
+		name = "GFX_idea_planning_stage"
+		texturefile = "gfx\\interface\\ideas\\idea_planning_stage.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_efficient_beaurocracy"
+		texturefile = "gfx\\interface\\ideas\\idea_efficient_beaurocracy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_bolstering_of_partisans"
+		texturefile = "gfx\\interface\\ideas\\idea_bolstering_of_partisans.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_mobilization"
+		texturefile = "gfx\\interface\\ideas\\idea_mobilization.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_gp_nationalism"
+		texturefile = "gfx\\interface\\ideas\\idea_nationalism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_covert_ops"
+		texturefile = "gfx\\interface\\ideas\\idea_covert_ops.dds"
+	}
+
+
+    #gp_press_law
+    
+    spriteType = {
+		name = "GFX_idea_state_press"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_press_law\\_state_press.dds"
+	}
+     
+    spriteType = {
+		name = "GFX_idea_semi_independent_press"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_press_law\\_limited_censorship.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_free_press"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_press_law\\_free_press.dds"
+	}
+    
+    
+
+    #gp_immigration_policy
+
+	 spriteType = {
+		name = "GFX_idea_open_borders"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_immigration_policy\\_open_borders.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_citizenship"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_immigration_policy\\_citizenship.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_limited_citizenship"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_immigration_policy\\_limited_citizenship.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_strict_immigration_controls"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_immigration_policy\\_strict_immigration_controls.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_closed_borders"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_immigration_policy\\_closed_borders.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_political_refugees"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_immigration_policy\\_political_refugees.dds"
+	}
+    
+
+	#gp_minority_rights
+
+	 spriteType = {
+		name = "GFX_idea_affirmative_action"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_minority_rights\\_affirmative_action.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_significant_rights"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_minority_rights\\_significant_rights.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_neutral_stance"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_minority_rights\\_neutral_stance.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_racial_segregation"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_minority_rights\\_racial_segregation.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_racial_hierarchy"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_minority_rights\\_racial_hierarchy.dds"
+	}
+
+	
+	#gp_gender_equality
+
+	 spriteType = {
+		name = "GFX_idea_affirmative_actionF"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_gender_equality\\_affirmative_actionF.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_full_equality"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_gender_equality\\_full_equality.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_limited_womens_rights"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_gender_equality\\_limited_womens_rights.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_no_legal_protections"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_gender_equality\\_no_legal_protections.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_patriarchal_society"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_gender_equality\\_patriarchal_society.dds"
+	}
+
+
+	#gp_public_meetings
+
+	 spriteType = {
+		name = "GFX_idea_allowed"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_public_meetings\\_allowed.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_monitored"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_public_meetings\\_monitored.dds"
+	}
+
+	 spriteType = {
+		name = "GFX_idea_banned"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_policies\\gp_public_meetings\\_banned.dds"
+	}
+	
+	##GT##
+	
+	
+
+	#government_type
+
+	spriteType = {
+		name = "GFX_idea_slot_gt_head_of_state"
+		texturefile = "gfx\\interface\\idea_slot_political_advisor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gt_judiciary"
+		texturefile = "gfx\\interface\\idea_slot_political_advisor.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gt_government_form"
+		texturefile = "gfx\\interface\\idea_slot_political_advisor.dds"
+	}
+    
+
+	#gt_head_of_state
+
+
+	spriteType = {
+		name = "GFX_idea_monarch"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_head_of_state\\_monarch.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_prime_minister"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_head_of_state\\_prime_minister.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_president"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_head_of_state\\_president.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_military_head"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_head_of_state\\_military_head.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_chairman"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_head_of_state\\_chairman.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_federal_council"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_head_of_state\\_federal_council.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_communal_council"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_head_of_state\\_communal_council.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_workers_council"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_head_of_state\\_workers_council.dds"
+	}
+
+
+    #gt_judiciary
+ 
+    spriteType = {
+		name = "GFX_idea_Independent"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_judiciary\\_independent.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_subordinate_to_the_executive"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_judiciary\\_subordinate_to_the_executive.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_politicized"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_judiciary\\_politicized.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_corrupt"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_judiciary\\_corrupt.dds"
+	}
+
+
+	#gt_government_form #5slots
+    
+
+	spriteType = {
+		name = "GFX_idea_unitary_state"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_government_form\\_unitary_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_devolved_unitary_state"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_government_form\\_devolved_unitary_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_sassy_federated_state"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_government_form\\_federated_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_communal_state"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_government_form\\_communal_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_city_state"
+		texturefile = "gfx\\interface\\ideas\\laws\\government_type\\gt_government_form\\_city_state.dds"
+	}
+	
+	##GF##
+	
+	
+	#military jurisdiction
+
+	spriteType = {
+		name = "GFX_idea_slot_gf_command_structure"
+		texturefile = "gfx\\interface\\idea_slot_high_command.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gf_logistics_system"
+		texturefile = "gfx\\interface\\idea_slot_materiel_manufacturer.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gf_officer_training"
+		texturefile = "gfx\\interface\\idea_slot_high_command.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gf_special_forces_role"
+		texturefile = "gfx\\interface\\idea_slot_military.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gf_marine_role"
+		texturefile = "gfx\\interface\\idea_slot_military.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_gf_paratrooper_role"
+		texturefile = "gfx\\interface\\idea_slot_military.dds"
+	}
+    
+
+	#gf_command_structure #2slots
+    
+
+    spriteType = {
+		name = "GFX_idea_centralized_hierarchy"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_command_structure\\_centralized_hierarchy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_decentralized_democracy"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_command_structure\\_decentralized_democracy.dds"
+	}
+
+
+    #gf_logistics_system #2slots
+
+
+    spriteType = {
+		name = "GFX_idea_push_system"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_logistics_system\\_push_system.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_pull_system"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_logistics_system\\_pull_system.dds"
+	}
+
+
+	#gf_officer_training #4slots
+
+
+    spriteType = {
+		name = "GFX_idea_advanced_officer_training"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_officer_training\\_advanced_officer_training.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_major_officer_training"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_officer_training\\_major_officer_training.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_junior_officer_training"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_officer_training\\_junior_officer_training.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_foreign_officer_missions"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_officer_training\\_foreign_officer_missions.dds"
+	}
+
+
+	#gf_special_forces_role #3slots
+    
+
+    spriteType = {
+		name = "GFX_idea_army_support"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_special_forces_role\\_army_support.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_special_operations"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_special_forces_role\\_special_operations.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_foreign_conflicts"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_special_forces_role\\_foreign_conflicts.dds"
+	}
+
+
+	#gf_marine_role #3slots
+ 
+
+    spriteType = {
+		name = "GFX_idea_marine_army_command"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_marine_role\\_marine_army_command.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_marine_navy_command"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_marine_role\\_marine_navy_command.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_marine_spec_ops_command"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_marine_role\\_marine_spec_ops_command.dds"
+	}
+
+
+	#gf_paratrooper_role #3slots
+
+
+	spriteType = {
+		name = "GFX_idea_para_army_command"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_paratrooper_role\\_para_army_command.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_para_air_command"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_paratrooper_role\\_para_air_command.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_para_spec_ops_command"
+		texturefile = "gfx\\interface\\ideas\\laws\\general_staff\\gf_paratrooper_role\\_para_spec_ops_command.dds"
+	}
+	
+	##EP##
+	
+
+
+	#economic policies
+
+
+	spriteType = {
+		name = "GFX_idea_slot_ep_economic_model"
+		texturefile = "gfx\\interface\\Idea_slot_money.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_ep_taxation_policy"
+		texturefile = "gfx\\interface\\Idea_slot_economy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_ep_trade_tarrifs"
+		texturefile = "gfx\\interface\\Idea_slot_economy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_ep_foreign_investments"
+		texturefile = "gfx\\interface\\Idea_slot_economy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_ep_war_bonds"
+		texturefile = "gfx\\interface\\Idea_slot_economy.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_slot_ep_subsidization"
+		texturefile = "gfx\\interface\\Idea_slot_money.dds"
+	}
+
+
+	#ep_economic_model
+
+
+	spriteType = {
+		name = "GFX_idea_rentier_state"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_economic_model\\_rentier_state.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_laisezz_faire"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_economic_model\\_laisezz_faire.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_welfare_capitalism"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_economic_model\\_welfare_capitalism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_mixed_market"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_economic_model\\_mixed_market.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_state_capitalism"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_economic_model\\_state_capitalism.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_planned_economy_a"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_economic_model\\_planned_economy.dds"
+	}
+    
+	spriteType = {
+		name = "GFX_idea_communal_economy"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_economic_model\\_communal_economy.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_syndicalist_markets"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_economic_model\\_syndicalist_markets.dds"
+	}
+
+
+
+	#ep_taxation_policy
+
+
+	spriteType = {
+		name = "GFX_idea_very_high_taxation"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_taxation_policy\\_very_high_taxation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_high_taxation"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_taxation_policy\\_high_taxation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_standard_taxation"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_taxation_policy\\_standard_taxation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_low_taxation"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_taxation_policy\\_low_taxation.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_very_low_taxation"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_taxation_policy\\_very_low_taxation.dds"
+	}
+    
+	spriteType = {
+		name = "GFX_idea_mutual_aid"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_taxation_policy\\_mutual_aid.dds" 
+	}
+
+
+	#ep_trade_tarrifs 
+
+
+	spriteType = {
+		name = "GFX_idea_no_trade_tarrifs"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_trade_tarrifs\\_no_trade_tarrifs.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_low_trade_tarrifs"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_trade_tarrifs\\_low_trade_tarrifs.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_average_trade_tarrifs"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_trade_tarrifs\\_average_trade_tarrifs.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_high_trade_tarrifs"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_trade_tarrifs\\_high_trade_tarrifs.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_extreme_trade_tarrifs"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_trade_tarrifs\\_extreme_trade_tarrifs.dds"
+	}
+
+
+	#ep_foreign_investments
+
+
+	spriteType = {
+		name = "GFX_idea_foreign_investments_encouraged"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_foreign_investments\\_foreign_investments_encouraged.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_foreign_investments_allowed"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_foreign_investments\\_foreign_investments_allowed.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_foreign_investments_regulated"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_foreign_investments\\_foreign_investments_regulated.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_foreign_investments_banned"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_foreign_investments\\_foreign_investments_banned.dds"
+	}
+
+
+	#ep_war_bonds
+
+
+	spriteType = {
+		name = "GFX_idea_force_bonds_buying"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_war_bonds\\_force_bonds_buying.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_bonds_welcome"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_war_bonds\\_bonds_welcome.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_no_bonds_selling"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_war_bonds\\_no_bonds_selling.dds"
+	}
+    
+    
+    #ep_subsidization
+
+    
+    spriteType = {
+		name = "GFX_idea_military_spending"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_subsidization\\_military_spending.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_industrial_subsidies"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_subsidization\\_industrial_subsidies.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_encourage_foreign_investment"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_subsidization\\_encourage_foreign_investment.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_scientific_grants"
+		texturefile = "gfx\\interface\\ideas\\laws\\economic_policies\\ep_subsidization\\_scientific_grants.dds"
+	}
+	
+	
+
+}

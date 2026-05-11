@@ -1,0 +1,970 @@
+###these are all visual icons, text, buttons, background, etc are located in the purchase menu options############# 
+
+guiTypes = {
+
+containerWindowType = {
+		name = "money_equipment_container"
+		position = {x=610 y=80}
+		size = { width=1160 height=720 }
+
+		fade_time = 300
+		fade_type = linear
+		moveable = yes
+		
+		background = {
+			name = "Background"
+			spriteType = "GFX_browser_bg"
+		}
+		iconType = {
+			name = "state_constructions"
+			position = { x = 688 y = 12 }
+			quadTextureSprite = "GFX_diplo_details_header"
+		}
+
+		instantTextboxType = {
+			name = "money_headline"
+			position = {x=20 y=15}
+			font = "hoi_36header"
+			text = "money_headline_0"
+			maxWidth = 600
+			maxHeight = 23
+			format = left
+		}
+		
+		iconType = {
+			name ="money_icon"
+			spriteType = "GFX_money"
+			position = { x= 821 y = 27 }
+		}
+		
+		instantTextboxType = {
+			name = "Money_24"
+			position = {x=730 y=26}
+			font = "hoi_16mbs"
+			text = "current_money"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		
+		iconType = {
+			name = "text_back1" 
+			position = {x=26 y=62}	
+			spriteType = "GFX_generic_bg_307x70"
+		}
+		
+		instantTextboxType = {
+			name = "infantry_headline0"
+			position = {x=30 y=67}
+			font = "hoi_16mbs"
+			text = "infantry_h_0"
+			maxWidth = 400
+			maxHeight = 23
+			format = left
+		}
+		
+		instantTextboxType = {
+			name = "infantry_headline2"
+			position = {x=35 y=100}
+			font = "hoi_16mbs"
+			text = "infantry_h_2"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "infantry_sell"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18"
+			text = "Sell"
+			position = { x= 225 y = 91 }
+		}
+		
+		iconType = {
+			name = "text_back2" 
+			position = {x=26 y=136}	
+			spriteType = "GFX_generic_bg_307x70"
+		}
+		
+		instantTextboxType = {
+			name = "support_headline"
+			position = {x=30 y=141}
+			font = "hoi_16mbs"
+			text = "support_h_0"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		instantTextboxType = {
+			name = "support_headline2"
+			position = {x=35 y=175}
+			font = "hoi_16mbs"
+			text = "support_h_2"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		
+		buttonType = {
+			name = "support_sell"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18"
+			text = "Sell"
+			position = { x= 225 y = 166 }
+		}
+		
+		iconType = {
+			name = "text_back3" 
+			position = {x=26 y=210}	
+			spriteType = "GFX_generic_bg_307x70"
+		}
+		
+		instantTextboxType = {
+			name = "artillery_headline"
+			position = {x=30 y=215}
+			font = "hoi_16mbs"
+			text = "artillery_h_0"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		instantTextboxType = {
+			name = "artillery_headline2"
+			position = {x=35 y=249}
+			font = "hoi_16mbs"
+			text = "artillery_h_2"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		
+		buttonType = {
+			name = "artillery_sell"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18"
+			text = "Sell"
+			position = { x= 225 y = 240}
+		}
+		
+		iconType = {
+			name = "text_back4" 
+			position = {x=26 y=284}	
+			spriteType = "GFX_generic_bg_307x70"
+		}
+		
+		instantTextboxType = {
+			name = "motorized_headline"
+			position = {x=30 y=289}
+			font = "hoi_16mbs"
+			text = "motorized_h_0"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		instantTextboxType = {
+			name = "motorized_headline2"
+			position = {x=35 y=323}
+			font = "hoi_16mbs"
+			text = "motorized_h_2"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "motorized_sell"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18"
+			text = "Sell"
+			position = { x= 225 y = 314}
+		}
+		
+		iconType = {
+			name = "text_back5" 
+			position = {x=26 y=358}	
+			spriteType = "GFX_generic_bg_307x70"
+		}
+		
+		instantTextboxType = {
+			name = "anti_tank_headline"
+			position = {x=30 y=363}
+			font = "hoi_16mbs"
+			text = "anti_tank_h_0"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		instantTextboxType = {
+			name = "anti_tank_headline2"
+			position = {x=35 y=397}
+			font = "hoi_16mbs"
+			text = "anti_tank_h_2"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		
+		buttonType = {
+			name = "anti_tank_sell"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18"
+			text = "Sell"
+			position = { x= 225 y = 388}
+		}
+		
+		iconType = {
+			name = "text_back6" 
+			position = {x=26 y=432}	
+			spriteType = "GFX_generic_bg_307x70"
+		}
+		
+		instantTextboxType = {
+			name = "anti_air_headline"
+			position = {x=30 y=437}
+			font = "hoi_16mbs"
+			text = "anti_air_h_0"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		instantTextboxType = {
+			name = "anti_air_headline2"
+			position = {x=35 y=471}
+			font = "hoi_16mbs"
+			text = "anti_air_h_2"
+			maxWidth = 340
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "anti_air_sell"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18"
+			text = "Sell"
+			position = { x= 225 y = 462}
+		}
+		
+		iconType = {
+			name = "text_back09" 
+			position = {x=26 y=506}	
+			spriteType = "GFX_generic_bg_307x255"
+		}
+		instantTextboxType = {
+			name = "convoy_headline"
+			position = {x=31 y= 515}
+			font = "hoi_16mbs"
+			text = "convoy_headline0"
+			maxWidth = 170
+			maxHeight = 23
+			format = left
+		}
+		
+		buttonType = {
+			name = "convoy"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18"
+			text = "Buy"
+			position = { x= 225 y = 515}
+		}
+		containerWindowType = {
+		name = "resourcelist"
+		position = { x = 325 y = 58 }  
+		size = { width = 210 height = 600 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window"
+			}
+		}
+		
+		containerWindowType = {
+		name = "cons_speed_container"
+		position = {x=530 y=58}
+		size = { width = 350 height = 600 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window"
+			}
+		}
+		containerWindowType = {
+		name = "research_container"
+		position = {x=875 y=58}
+		size = { width = 210 height = 600 }
+
+			background = {
+				name = "Background"
+				quadTextureSprite ="GFX_tiled_window"
+			}
+		}
+
+		instantTextboxType = {
+			name = "civil_factory"
+			position = {x= 535 y=70}
+			font = "hoi_18"
+			text = "civil_factory1"
+			maxWidth = 340
+			maxHeight = 23
+			format = center
+		}
+		
+		buttonType = {
+			name = "ok_button_1"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 660 y = 90 }
+		}
+		
+		instantTextboxType = {
+			name = "military_factory"
+			position = {x= 535 y=120}
+			font = "hoi_18"
+			text = "military_factory1"
+			maxWidth = 340
+			maxHeight = 23
+			format = center
+		}
+
+		buttonType = {
+			name = "ok_button_2"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 660 y = 140 }
+		}
+		
+		instantTextboxType = {
+			name = "steel_factory"
+			position = {x=330 y=270}
+			font = "hoi_18"
+			text = "steel_factory"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		buttonType = {
+			name = "ok_button_3"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 385 y = 290 }
+		}
+		
+		instantTextboxType = {
+			name = "tungsten_factory"
+			position = {x=330 y=220}
+			font = "hoi_18"
+			text = "tungsten_factory"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+		buttonType = {
+			name = "ok_button_4"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 385 y = 240 }
+		}
+		
+		instantTextboxType = {
+			name = "oil_pump"
+			position = {x=330 y=70}
+			font = "hoi_18"
+			text = "oil_pump"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+		buttonType = {
+			name = "ok_button_5"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 385 y = 90 }
+		}
+		
+		instantTextboxType = {
+			name = "aluminium_factory"
+			position = {x=330 y=120}
+			font = "hoi_18"
+			text = "aluminium_factory"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+		buttonType = {
+			name = "ok_button_6"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 385 y = 140 }
+		}
+		
+		instantTextboxType = {
+			name = "rubber_pump"
+			position = {x=330 y=170}
+			font = "hoi_18"
+			text = "rubber_pump"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+		buttonType = {
+			name = "ok_button_7"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 385 y = 190 }
+		}
+		
+		instantTextboxType = {
+			name = "chromium_factory"
+			position = {x=330 y=320}
+			font = "hoi_18"
+			text = "chromium_factory"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+		buttonType = {
+			name = "ok_button_8"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 385 y = 340}
+		}
+
+		
+		instantTextboxType = {
+			name = "JFB_25"
+			position = {x=330 y=370}
+			font = "hoi_18"
+			text = "crystal_import"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+		buttonType = {
+			name = "JFB_25_button"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x=385  y = 390 }
+		}
+
+		instantTextboxType = {
+			name = "CB_15_1"
+			position = {x= 535 y = 470}
+			font = "hoi_18"
+			text = "CB15_200_200"
+			maxWidth = 340
+			maxHeight = 23
+			format = center
+		}
+		
+		buttonType = {
+			name = "CB15_button"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 660 y = 490 }
+		}
+		
+		instantTextboxType = {
+			name = "CB_30_1"
+			position = {x= 535 y=520}
+			font = "hoi_18"
+			text = "CB30_400_350"
+			maxWidth = 340
+			maxHeight = 23
+			format = center
+		}
+		
+		
+		instantTextboxType = {
+			name = "MB_3_1"
+			position = {x= 535 y=170}
+			font = "hoi_18"
+			text = "MB3_200_150"
+			maxWidth = 340
+			maxHeight = 23
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "MB_7_1"
+			position = {x= 535 y=220}
+			font = "hoi_18"
+			text = "MB7_400_250"
+			maxWidth = 340
+			maxHeight = 23
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "GB_3_1"
+			position = {x= 535 y=270}
+			font = "hoi_18"
+			text = "GB3_200_200"
+			maxWidth = 340
+			maxHeight = 23
+			format = center
+		}
+		
+		instantTextboxType = {
+			name = "GB_5_1"
+			position = {x= 535 y=320}
+			font = "hoi_18"
+			text = "GB5_400_300"
+			maxWidth = 340
+			maxHeight = 23
+			format = center
+		}
+		instantTextboxType = {
+			name = "MB_10_1"
+			position = {x= 535 y=370}
+			font = "hoi_18"
+			text = "MB10_200_200"
+			maxWidth = 340
+			maxHeight = 23
+			format = center
+		}
+		instantTextboxType = {
+			name = "MB_20_1"
+			position = {x= 535 y=420}
+			font = "hoi_18"
+			text = "MB20_400_350"
+			maxWidth = 340
+			maxHeight = 23
+			format = center
+		}
+		
+		
+		
+		buttonType = {
+			name = "CB30_button"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 660 y = 540 }
+		}
+		
+		buttonType = {
+			name = "MB_3_button"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 660 y = 190 }
+		}
+		
+		buttonType = {
+			name = "MB_7_button"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 660 y = 240}
+		}
+		
+		buttonType = {
+			name = "GB_3_button"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 660 y = 290 }
+		}
+		
+		buttonType = {
+			name = "GB_5_button"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 660 y = 340 }
+		}
+		buttonType = {
+			name = "MB_10_button"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 660 y = 390 }
+		}
+		buttonType = {
+			name = "MB_20_button"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "Buy"
+			position = { x= 660 y = 440 }
+		}
+
+### NEW STUFF ###
+
+# RESEARCH #
+
+	#Land breakthrough
+		buttonType = {
+			name = "landbt_pp"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "300"
+			position = { x= 890 y = 90 }
+		}
+		iconType ={
+			name ="landbt_pp_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 895 y = 90 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextboxType = {
+			name = "breakthrough_land"
+			position = {x=880 y=70}
+			font = "hoi_18"
+			text = "Buy Land Breakthrough Point"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		
+		buttonType = {
+			name = "landbt_money"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "$500M"
+			position = { x= 975 y = 90 }
+		}
+
+	#naval breakthrough
+		buttonType = {
+			name = "navalbt_pp"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "300"
+			position = { x= 890 y = 140 }
+		}
+		iconType ={
+			name ="navalbt_pp_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 895 y = 140 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextboxType = {
+			name = "breakthrough_navy"
+			position = {x=880 y=120}
+			font = "hoi_18"
+			text = "Buy Navy Breakthrough Point"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		
+		buttonType = {
+			name = "navybt_money"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "$500M"
+			position = { x= 975 y = 140 }
+		}
+	#air breakthrough
+		buttonType = {
+			name = "airbt_pp"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "300"
+			position = { x= 890 y = 190 }
+		}
+		iconType ={
+			name ="airbt_pp_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 895 y = 190 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextboxType = {
+			name = "breakthrough_air"
+			position = {x=880 y=170}
+			font = "hoi_18"
+			text = "Buy Air Breakthrough Point"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		
+		buttonType = {
+			name = "airbt_money"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "$500M"
+			position = { x= 975 y = 190 }
+		}
+	#physics breakthrough
+		buttonType = {
+			name = "physbt_pp"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "300"
+			position = { x= 890 y = 240 }
+		}
+		iconType ={
+			name ="physbt_pp_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 895 y = 240 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextboxType = {
+			name = "breakthrough_phys"
+			position = {x=880 y=220}
+			font = "hoi_18"
+			text = "Buy Phys. Breakthrough Point"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		
+		buttonType = {
+			name = "physbt_money"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "$500M"
+			position = { x= 975 y = 240 }
+		}
+	#magic breakthrough
+		buttonType = {
+			name = "magicbt_pp"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "300"
+			position = { x= 890 y = 290 }
+		}
+		iconType ={
+			name ="magicbt_pp_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 895 y = 290 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextboxType = {
+			name = "breakthrough_magic"
+			position = {x=880 y=270}
+			font = "hoi_18"
+			text = "Buy Magic Breakthrough Point"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		
+		buttonType = {
+			name = "magicbt_money"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "$500M"
+			position = { x= 975 y = 290 }
+		}
+	#all breakthrough
+		buttonType = {
+			name = "allbt_pp"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "1000"
+			position = { x= 890 y = 340 }
+		}
+		iconType ={
+			name ="allbt_pp_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 895 y = 340 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextboxType = {
+			name = "breakthrough_all"
+			position = {x=880 y=320}
+			font = "hoi_18"
+			text = "Buy Each Breakthrough Point"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		
+		buttonType = {
+			name = "allbt_money"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "$2B"
+			position = { x= 975 y = 340 }
+		}
+	#research slots
+		buttonType = {
+			name = "researchslot1_pp"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "600"
+			position = { x= 890 y = 390 }
+		}
+		iconType ={
+			name ="researchslot1_pp_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 895 y = 390 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextboxType = {
+			name = "researchslot1"
+			position = {x=880 y=370}
+			font = "hoi_18"
+			text = "Buy a Research Slot"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		
+		buttonType = {
+			name = "researchslot1_money"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "$1B"
+			position = { x= 975 y = 390 }
+		}
+	#research slots
+		buttonType = {
+			name = "researchslot2_pp"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "1000"
+			position = { x= 890 y = 440 }
+		}
+		iconType ={
+			name ="researchslot2_pp_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 895 y = 440 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextboxType = {
+			name = "researchslot2"
+			position = {x=880 y=420}
+			font = "hoi_18"
+			text = "Buy 2 Research Slots"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		
+		buttonType = {
+			name = "researchslot2_money"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "$1.5B"
+			position = { x= 975 y = 440 }
+		}
+	#research slots
+		buttonType = {
+			name = "researchslot3_pp"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "1800"
+			position = { x= 890 y = 490 }
+		}
+		iconType ={
+			name ="researchslot3_pp_icon"
+			spriteType = "GFX_pol_power_icon"
+			position = { x= 895 y = 490 }
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextboxType = {
+			name = "researchslot3"
+			position = {x=880 y=470}
+			font = "hoi_18"
+			text = "Buy 4 Research Slots"
+			maxWidth = 200
+			maxHeight = 23
+			format = center
+		}
+
+		
+		buttonType = {
+			name = "researchslot3_money"
+			quadTextureSprite = "GFX_button_94x31"
+			font = "hoi_18mbs"
+			text = "$3B"
+			position = { x= 975 y = 490 }
+		}
+
+
+
+		
+		########### with this you can see the money on the top right of your purchase menu##############
+		instantTextBoxType = {
+			name ="money_text"
+			position = { x= 800 y = 24 }
+			font = "hoi_18mbs"
+			text = "MONEY_MAIN"
+			format = center
+			maxWidth = 150
+			maxHeight = 24
+			fixedsize = yes
+			
+			pdx_tooltip = "MONEY_TOOLTIP" 
+		}
+		
+	
+		
+		buttonType = {
+			name = "exitbutton" 
+			position = {x=1065 y=15}	
+			spriteType = "GFX_closebutton"
+			shortcut = "ESCAPE"
+		}
+		
+########### this is the text box that you see in your main screen############
+	}
+	containerWindowType = {
+		name = "money_container"
+		position = { x = 20 y = 53 }#990	
+		
+		iconType ={
+			name ="money_bg"
+			spriteType = "GFX_generic_box"
+			position = { x=0 y=0 }
+		}
+		
+		iconType = {
+			name ="money_icon"
+			spriteType = "GFX_money"
+			position = { x= 3 y = 6 }
+		}
+		buttonType = {
+			name ="buy_icon"
+			spriteType = "GFX_in_stock_icon"
+			position = { x= 75 y = 1}
+			shortcut = "ctrl+g"
+		}
+		
+		instantTextBoxType = {
+			name ="money_text"
+			position = { x= 23 y = 4 }
+			font = "hoi_18mbs"
+			text = "MONEY_MAIN"
+			format = left
+			maxWidth = 150
+			maxHeight = 24
+			fixedsize = yes
+			
+			
+			pdx_tooltip = "MONEY_TOOLTIP" 
+		}
+	}
+	
+
+	
+		
+
+}

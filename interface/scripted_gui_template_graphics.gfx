@@ -1,0 +1,88 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_scripted_gui_window_background"
+		textureFile = "/gfx/interface/scripted_gui_graphics/scripted_gui_background.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_scripted_gui_window_background2"
+		textureFile = "/gfx/interface/scripted_gui_graphics/scripted_gui_background2.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_close_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/close_button.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_open_gui_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/open_gui_button.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_credit_counter"
+		textureFile = "/gfx/interface/scripted_gui_graphics/credit_counter.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_gui_header"
+		textureFile = "/gfx/interface/scripted_gui_graphics/gui_header.dds"
+	}	
+	
+	spriteType = {
+		name = "GFX_c_common"
+		textureFile = "/gfx/interface/scripted_gui_graphics/c_common.dds"
+	}		
+
+	spriteType = {
+		name = "GFX_c_uncommon"
+		textureFile = "/gfx/interface/scripted_gui_graphics/c_uncommon.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_c_rare"
+		textureFile = "/gfx/interface/scripted_gui_graphics/c_rare.dds"
+	}	
+
+	spriteType = {
+		name = "GFX_c_epic"
+		textureFile = "/gfx/interface/scripted_gui_graphics/c_epic.dds"
+	}
+
+	spriteType = {
+		name = "GFX_c_legendary"
+		textureFile = "/gfx/interface/scripted_gui_graphics/c_legendary.dds"
+	}
+
+	spriteType = {
+		name = "GFX_convert_pp"
+		textureFile = "/gfx/interface/scripted_gui_graphics/convert_pp.dds"
+	}		
+
+	spriteType = {
+		name = "GFX_convert_cp"
+		textureFile = "/gfx/interface/scripted_gui_graphics/convert_cp.dds"
+	}		
+	
+	spriteType = {
+		name = "GFX_convert_arm_exp"
+		textureFile = "/gfx/interface/scripted_gui_graphics/convert_arm_exp.dds"
+	}		
+
+	spriteType = {
+		name = "GFX_convert_air_exp"
+		textureFile = "/gfx/interface/scripted_gui_graphics/convert_air_exp.dds"
+	}
+
+	spriteType = {
+		name = "GFX_convert_nav_exp"
+		textureFile = "/gfx/interface/scripted_gui_graphics/convert_air_exp.dds"
+	}
+
+	spriteType = {
+		name = "GFX_open_crate_button"
+		textureFile = "/gfx/interface/scripted_gui_graphics/open_crate_button.dds"
+	}
+	
+}

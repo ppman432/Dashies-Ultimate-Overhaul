@@ -1,0 +1,24 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_agency_train_female_operatives"
+		texturefile = "gfx/interface/operatives/icons/agency_female_operatives.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_agency_intelligence_speed"
+		texturefile = "gfx/interface/operatives/icons/agency_faster_intelligence.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_agency_unknowledge"
+		texturefile = "gfx/interface/operatives/icons/agency_unknowledge.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_agency_intelligence_department"
+		texturefile = "gfx/interface/operatives/icons/agency_spy_master.dds"
+	}
+	
+	
+	}

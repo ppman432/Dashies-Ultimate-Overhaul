@@ -1,0 +1,101 @@
+spriteTypes = {
+
+	# EVENT PICTURES
+	spriteType = {
+		name = "GFX_yec_1937_event_picture"
+		texturefile = "gfx/pictures/yec_1937_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_yec_1938_event_picture"
+		texturefile = "gfx/pictures/yec_1938_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_yec_1939_event_picture"
+		texturefile = "gfx/pictures/yec_1939_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_yec_1940_event_picture"
+		texturefile = "gfx/pictures/yec_1940_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_yec_1941_event_picture"
+		texturefile = "gfx/pictures/yec_1941_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_yec_1942_event_picture"
+		texturefile = "gfx/pictures/yec_1942_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_yec_1943_event_picture"
+		texturefile = "gfx/pictures/yec_1943_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_yec_1944_event_picture"
+		texturefile = "gfx/pictures/yec_1944_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_yec_1945_event_picture"
+		texturefile = "gfx/pictures/yec_1945_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_yec_1939_alt_event_picture"
+		texturefile = "gfx/pictures/yec_1939_alt_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	spriteType = {
+		name = "GFX_yec_generic_event_picture"
+		texturefile = "gfx/pictures/yec_generic_event_picture.dds"
+		allwaystransparent = yes
+	}
+
+	# GUI
+	spriteType = {
+		name = "GFX_yec_event_card_background"
+		texturefile = "gfx/event_card/yec_event_card_background.dds"
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+
+	spriteType = {
+		name = "GFX_yec_event_card_btn"
+		texturefile = "gfx/event_card/yec_event_card_btn.dds"
+	}
+
+	spriteType = {
+		name = "GFX_yec_event_card_star"
+		texturefile = "gfx/event_card/yec_event_card_star.dds"
+		effectFile = "gfx/FX/buttonstate.lua"
+		animation = {
+			animationmaskfile = "gfx/event_card/yec_event_card_star.dds"
+			animationtexturefile = "gfx/interface/goals/shine_overlay.dds"
+			animationrotation = -90.0
+			animationlooping = yes
+			animationtime = 1.5
+			animationdelay = 1.5
+			animationblendmode = "add"
+			animationtype = "scrolling"
+			animationrotationoffset = { x = 0.0 y = 0.0 }
+			animationtexturescale = { x = 1.0 y = 1.0 }
+		}
+		legacy_lazy_load = no
+	}
+
+}

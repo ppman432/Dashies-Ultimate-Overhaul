@@ -1,0 +1,65 @@
+spriteTypes = {	
+ ######## slot textures
+
+ ######### Minister Textures
+	spriteType = {
+		name = "GFX_idea_extra_silent_workhorse"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_captain_of_industry"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_war_industrialist"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_fortification_engineer"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_armaments_organizer"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_quartermaster_general"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_popular_figurehead"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_prince_of_terror"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_compassionate_gentleman"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_backroom_backstabber"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_smooth_talking_charmer"
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_extra_ideological_crusader" 
+		textureFile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+}

@@ -1,0 +1,50 @@
+spriteTypes = {		
+	spriteType = {
+			name = "GFX_idea_slot_extra_silent_workhorse"
+			textureFile = "gfx/interface/idea_slot_army_chief.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_extra_captain_of_industry"
+			textureFile = "gfx/interface/idea_slot_navy_chief.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_extra_war_industrialist"
+			textureFile = "gfx/interface/idea_slot_air_chief.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_extra_fortification_engineer"
+			textureFile = "gfx/interface/idea_slot_industrial_concern.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_extra_armaments_organizer"
+			textureFile ="gfx/interface/idea_slot_political_advisor.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_extra_quartermaster_general"
+			textureFile = "gfx/interface/idea_slot_theorist.dds"
+			}	
+	spriteType = {
+			name = "GFX_idea_slot_extra_popular_figurehead"
+			textureFile = "gfx/interface/idea_slot_army_chief.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_extra_prince_of_terror"
+			textureFile = "gfx/interface/idea_slot_navy_chief.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_extra_compassionate_gentleman"
+			textureFile = "gfx/interface/idea_slot_air_chief.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_extra_backroom_backstabber"
+			textureFile = "gfx/interface/idea_slot_industrial_concern.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_extra_smooth_talking_charmer"
+			textureFile ="gfx/interface/idea_slot_political_advisor.dds"
+			}
+	spriteType = {
+			name = "GFX_idea_slot_extra_ideological_crusader"
+			textureFile = "gfx/interface/idea_slot_theorist.dds"
+			}
+		}

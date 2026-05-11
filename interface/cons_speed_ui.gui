@@ -1,0 +1,585 @@
+guiTypes = {
+	
+	containerWindowType = {
+		name = "cons_speed_opener_container"
+		position = { x = 50 y = 201 }
+		size = { width = 677 height = 1330 }
+		
+		buttonType = {
+			name = "construction_speed_open"
+			quadTextureSprite = "GFX_cons_speed"
+			position = { x = 570 y = -152 } 
+			pdx_tooltip = "construction_speed_open_tt"
+			pdx_tooltip_delayed = "construction_speed_open_tt_d"
+			shortcut = "c"
+			clicksound = click_ok
+			oversound = ui_menu_over
+		}
+	}
+	
+	containerWindowType = {
+		name = "construction_speed_panel_window"
+		position = { x = 692 y = 4 } 
+		size = { width = 200 height = 1330 }
+
+		background = {
+			name = "background"
+			spriteType = "GFX_tiled_window_transparent_transparent"
+		}
+	}
+	
+	containerWindowType = {
+		name = "cons_speed_container"
+		size = { width = 200 height = 1330 }
+		position = { x= -200 y = 0 }
+		show_position = { x= 0 y = 0 }
+		show_animation_type = accelerated 
+		hide_animation_type = decelerated
+
+		animation_time = 200
+		show_sound = open_sub_window
+        background = {
+            name = "Background"
+            quadTextureSprite ="GFX_tiled_window"
+        }
+		
+		iconType = {
+			name = "state_constructions"
+			position = { x = 5 y = 9 }
+			quadTextureSprite = "GFX_diplo_details_header"
+		}
+		
+		instantTextBoxType = {
+			name = "state_title"   
+			position = { x = 30 y = 20}
+			font = "hoi_18mbs"              
+			text = "State Buildings"	   
+			maxWidth = 150 
+			maxHeight = 20
+			format = center
+			alwaystransparent = no
+		}
+		instantTextBoxType = {
+			name = "infrastructure_speed"   
+			position = { x = 20 y = 55}
+			font = "cg_16b"              
+			text = "Infrastructure: [?modifier@production_speed_infrastructure_factor|%0=+]"	   
+			maxWidth = 500 
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "air_base_speed"   
+			position = { x = 20 y = 75}
+			font = "cg_16b"              
+			text = "Air Base: [?modifier@production_speed_air_base_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "anti_air_building_speed"   
+			position = { x = 20 y = 95}
+			font = "cg_16b"              
+			text = "Anti Air: [?modifier@production_speed_anti_air_building_factor|%0=+]"	   
+			maxWidth = 500 
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "radar_station_speed"   
+			position = { x = 20 y = 115}
+			font = "cg_16b"              
+			text = "Radar Station: [?modifier@production_speed_radar_station_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+	
+		instantTextBoxType = {
+			name = "ammuniton_storage_speed"   
+			position = { x = 20 y = 135}
+			font = "cg_16b"              
+			text = "Ammunition Storage: [?modifier@production_speed_ammunition_silo_factor|%0=+]"	   
+			maxWidth = 500 
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "ammunition_plant_speed"   
+			position = { x = 20 y = 155}
+			font = "cg_16b"              
+			text = "Ammunition Plant: [?modifier@production_speed_ammunition_plant_factor|%0=+]"	   
+			maxWidth = 500 
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "recruitment_office_speed"   
+			position = { x = 20 y = 175}
+			font = "cg_16b"              
+			text = cons_spy_text	   
+			maxWidth = 500
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "indus_expansion_speed"   
+			position = { x = 20 y = 195} 
+			font = "cg_16b"              
+			text = "Industrial Expansion: [?modifier@production_speed_industrial_expansion_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "shared_constructions"
+			position = { x = 5 y = 215 }
+			quadTextureSprite = "GFX_diplo_details_header"
+		}
+		
+		instantTextBoxType = {
+			name = "shared_title"   
+			position = { x = 30 y = 225}
+			font = "hoi_18mbs"              
+			text = "Shared Buildings"	   
+			maxWidth = 150 
+			maxHeight = 20
+			format = center
+			alwaystransparent = no
+		}
+		
+		instantTextBoxType = {
+			name = "arms_factory_speed"   
+			position = { x = 20 y = 260 }
+			font = "cg_16b"              
+			text = "Military Factory: [?modifier@production_speed_arms_factory_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "industrial_complex_speed"   
+			position = { x = 20 y = 280}
+			font = "cg_16b"              
+			text = "Civilian Factory: [?modifier@production_speed_industrial_complex_factor|%0=+]"   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "dockyard_speed"    
+			position = { x = 20 y = 300}
+			font = "cg_16b"              
+			text = "Naval Dockyard: [?modifier@production_speed_dockyard_factor|%0=+]"   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+
+		instantTextBoxType = {
+			name = "synthetic_refinery_speed"  
+			position = { x = 20 y = 320}
+			font = "cg_16b"              
+			text = "Synthetic Refinery: [?modifier@production_speed_synthetic_refinery_factor|%0=+]"
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "synth_crystal"   
+			position = { x = 20 y = 340}
+			font = "cg_16b"              
+			text = "Synth. Crystal Refin.: [?modifier@production_speed_synthetic_crystal_refinery_factor|%0=+]"	 
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "magitech_speed"   
+			position = { x = 20 y = 360}
+			font = "cg_16b"              
+			text = "Magitech Quarry: [?modifier@production_speed_magical_quarry_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "fuel_silo_speed"   
+			position = { x = 20 y = 380}
+			font = "cg_16b"              
+			text = "Fuel Silo: [?modifier@production_speed_fuel_silo_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "rocket_site_speed"   
+			position = { x = 20 y = 400}
+			font = "cg_16b"              
+			text = "Rocket Site: [?modifier@production_speed_rocket_site_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "energy_infrastructure_speed"   
+			position = { x = 20 y = 420}
+			font = "cg_16b"              
+			text = "Reinforced Elec. Grid: [?modifier@production_speed_energy_infrastructure_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "industrial_infrastructure_speed"   
+			position = { x = 20 y = 440}
+			font = "cg_16b"              
+			text = "High-Cap Elec. Grid: [?modifier@production_speed_industrial_infrastructure_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+		
+		instantTextBoxType = {
+			name = "steel_mill_speed"   
+			position = { x = 20 y = 460}
+			font = "cg_16b"              
+			text = "Steel Mill: [?modifier@production_speed_steel_mill_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "aluminum_mill_speed"   
+			position = { x = 20 y = 480}
+			font = "cg_16b"              
+			text = "Aluminum Mill: [?modifier@production_speed_aluminum_mill_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "conversion_cost"   
+			position = { x = 20 y = 500}
+			font = "cg_16b"              
+			text = "Conversion Cost: [?modifier@conversion_cost_civ_to_mil_factor|%0=-]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		iconType = {
+			name = "province_constructions"
+			position = { x = 5 y = 520 }
+			quadTextureSprite = "GFX_diplo_details_header"
+		}
+		
+		instantTextBoxType = {
+			name = "province_title"   
+			position = { x = 30 y = 530}
+			font = "hoi_18mbs"              
+			text = "Province Buildings"	   
+			maxWidth = 150 
+			maxHeight = 20
+			format = center
+			alwaystransparent = no
+		}
+
+		
+		instantTextBoxType = {
+			name = "supply_node_speed"   
+			position = { x = 20 y = 565}
+			font = "cg_16b"              
+			text = "Supply Hub: [?modifier@production_speed_supply_node_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		instantTextBoxType = {
+			name = "rail_way_speed"   
+			position = { x = 20 y = 585}
+			font = "cg_16b"              
+			text = "Railway: [?modifier@production_speed_rail_way_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "naval_base_speed"   
+			position = { x = 20 y = 605}
+			font = "cg_16b"              
+			text = "Naval Base: [?modifier@production_speed_naval_base_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "bunker_speed"   
+			position = { x = 20 y = 625}
+			font = "cg_16b"              
+			text = "Land Fort: [?modifier@production_speed_bunker_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "coastal_bunker_speed"   
+			position = { x = 20 y = 645}
+			font = "cg_16b"              
+			text = "Coastal Fort: [?modifier@production_speed_coastal_bunker_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		
+		instantTextBoxType = {
+			name = "naval_supply_hub_speed"   
+			position = { x = 20 y = 665}
+			font = "cg_16b"              
+			text = "Naval Supply Hub: [?modifier@production_speed_naval_supply_hub_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "naval_headquarters_speed"   
+			position = { x = 20 y = 685}
+			font = "cg_16b"              
+			text = "Naval Headquarters: [?modifier@production_speed_naval_headquarters_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "trench_speed"   
+			position = { x = 20 y = 705}
+			font = "cg_16b"              
+			text = "Trenches: [?modifier@production_speed_trench_defense_building_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		
+		iconType = {
+			name = "facility_constructions"
+			position = { x = 5 y = 725 }
+			quadTextureSprite = "GFX_diplo_details_header"
+		}
+		
+		instantTextBoxType = {
+			name = "facility_title"   
+			position = { x = 30 y = 735}
+			font = "hoi_18mbs"              
+			text = "Research Facilities"	   
+			maxWidth = 150 
+			maxHeight = 20
+			format = center
+			alwaystransparent = no
+		}
+		instantTextBoxType = {
+			name = "naval_facility_speed"   
+			position = { x = 20 y = 770}
+			font = "cg_16b"              
+			text = "Naval Facility: [?modifier@production_speed_naval_facility_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "nuclear_facility_speed"   
+			position = { x = 20 y = 790}
+			font = "cg_16b"              
+			text = "Nuclear Facility: [?modifier@production_speed_nuclear_facility_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "air_facility_speed"   
+			position = { x = 20 y = 810}
+			font = "cg_16b"              
+			text = "Air Facility: [?modifier@production_speed_air_facility_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "land_facility_speed"   
+			position = { x = 20 y = 830}
+			font = "cg_16b"              
+			text = "Land Facility: [?modifier@production_speed_land_facility_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "magical_facility_speed"   
+			position = { x = 20 y = 850}
+			font = "cg_16b"              
+			text = "Magical Facility: [?modifier@production_speed_magical_facility_factor|%0=+]"	   
+			maxWidth = 200  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		
+		iconType = {
+			name = "unlockable_constructions"
+			position = { x = 5 y = 870 }
+			quadTextureSprite = "GFX_diplo_details_header"
+		}
+		
+		instantTextBoxType = {
+			name = "unlockable_title"   
+			position = { x = 30 y = 880}
+			font = "hoi_18mbs"              
+			text = "Unlockable Buildings"	   
+			maxWidth = 150 
+			maxHeight = 20
+			format = center
+			alwaystransparent = no
+		}
+		
+		instantTextBoxType = {
+			name = "stronghold_network_speed"   
+			position = { x = 20 y = 915}
+			font = "cg_16b"              
+			text = "Stronghold Network: [?modifier@production_speed_stronghold_network_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "anti_ballistic_speed"   
+			position = { x = 20 y = 935}
+			font = "cg_16b"              
+			text = "Anti-Ballistic System: [?modifier@production_speed_abm_system_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "caliber_gun_speed"   
+			position = { x = 20 y = 955}
+			font = "cg_16b"              
+			text = "MCLC Gun: [?modifier@production_speed_mega_gun_emplacement_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "hardened_silo_speed"   
+			position = { x = 20 y = 975}
+			font = "cg_16b"              
+			text = "Hardened Missile Silo: [?modifier@production_speed_hardened_missile_silo_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "nuclear_reactor_speed"   
+			position = { x = 20 y = 995}
+			font = "cg_16b"              
+			text = "Nuclear Reactor: [?modifier@production_speed_nuclear_reactor_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "commercial_nuclear_reactor_speed"   
+			position = { x = 20 y = 1015}
+			font = "cg_16b"              
+			text = "Civ. Nuclear Reactor: [?modifier@production_speed_commercial_nuclear_reactor_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+		
+		instantTextBoxType = {
+			name = "modern_nuclear_reactor_speed"   
+			position = { x = 20 y = 1035}
+			font = "cg_16b"              
+			text = "Gen. 2 Civ. Reactor: [?modifier@production_speed_modern_nuclear_reactor_factor|%0=+]"	   
+			maxWidth = 500  
+			maxHeight = 20
+			format = left
+			alwaystransparent = yes
+		}
+
+		
+	}
+}

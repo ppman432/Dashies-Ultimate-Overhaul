@@ -1,0 +1,259 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "yec_event_card_ui_window"
+		size = { width = 607 height = 580 }
+		position = { x = -303 y = -310 }
+		orientation = CENTER
+		moveable = yes
+		fade_time = 300
+		fade_type = linear
+		click_to_front = yes
+		clipping = no
+
+		show_sound = event_popup
+
+		background = {
+			name = "background"
+			spriteType = "GFX_yec_event_card_background"
+		}
+
+		instantTextboxType = {
+			name = "yec_year_display"
+			position = { x = 114 y = 28 }
+			font = "hoi_24header"
+			text = "yec_year_display"
+			maxWidth = 388
+			maxHeight = 41
+			fixedsize = yes
+			format = center
+		}
+
+		iconType = {
+			name = "yec_event_card_image"
+			position = { x= 13 y = 77 }
+		}
+
+		iconType = {
+			name = "yec_event_card_star"
+			position = { x= -36 y = 80 }
+			orientation = UPPER_RIGHT
+			spriteType = "GFX_yec_event_card_star"
+			tooltip = "yec_accurate_year_tt"
+		}
+
+		instantTextboxType = {
+			name = "yec_review_title"
+			position = { x = -75 y = 113 }
+			font = "hoi_18mbs"
+			text = "yec_review_title"
+			orientation = "CENTER"
+			maxWidth = 150
+			maxHeight = 41
+			fixedsize = yes
+			format = center
+		}
+
+		# Border: 23px
+		# Content Size: 3 x 190px
+		# Padding: 10px
+		containerWindowType = {
+			name = "yec_review_container"
+			position = { x = 0 y = 0 }
+			orientation = LOWER_LEFT
+
+			containerWindowType = {
+				name = "yec_review_stats_1"
+				position = { x= 33 y = -140 }
+
+				# Countries at War
+				instantTextboxType = {
+					name = "yec_review_countries_at_war_var"
+					position = { x = 0 y = 0 }
+					font = "hoi_16mbs"
+					text = "[yec_review_countries_at_war_var]"
+					maxWidth = 30
+					format = center
+				}
+
+				instantTextboxType = {
+					name = "yec_review_countries_at_war"
+					position = { x = 34 y = 0 }
+					font = "hoi_16mbs"
+					text = "yec_review_countries_at_war"
+				}
+
+				# Governments in Exile
+				instantTextboxType = {
+					name = "yec_review_exiled_govs_var"
+					position = { x = 0 y = 20 }
+					font = "hoi_16mbs"
+					text = "[yec_review_exiled_govs_var]"
+					maxWidth = 30
+					format = center
+				}
+
+				instantTextboxType = {
+					name = "yec_review_exiled_govs"
+					position = { x = 34 y = 20 }
+					font = "hoi_16mbs"
+					text = "yec_review_exiled_govs"
+				}
+
+				# Faction Members
+				instantTextboxType = {
+					name = "yec_review_faction_members_var"
+					position = { x = 0 y = 40 }
+					font = "hoi_16mbs"
+					text = "[yec_review_faction_members_var]"
+					maxWidth = 30
+					format = center
+				}
+
+				instantTextboxType = {
+					name = "yec_review_faction_members"
+					position = { x = 34 y = 40 }
+					font = "hoi_16mbs"
+					text = "yec_review_faction_members"
+				}
+			}
+
+			containerWindowType = {
+				name = "yec_review_stats_2"
+				position = { x= 223 y = -140 }
+
+				# Civilian Factories
+				instantTextboxType = {
+					name = "yec_review_civ_factories_var"
+					position = { x = 0 y = 0 }
+					font = "hoi_16mbs"
+					text = "[yec_review_civ_factories_var]"
+					maxWidth = 30
+					format = center
+				}
+
+				instantTextboxType = {
+					name = "yec_review_civ_factories"
+					position = { x = 34 y = 0 }
+					font = "hoi_16mbs"
+					text = "yec_review_civ_factories"
+				}
+
+				# Military Factories
+				instantTextboxType = {
+					name = "yec_review_mil_factories_var"
+					position = { x = 0 y = 20 }
+					font = "hoi_16mbs"
+					text = "[yec_review_mil_factories_var]"
+					maxWidth = 30
+					format = center
+				}
+
+				instantTextboxType = {
+					name = "yec_review_mil_factories"
+					position = { x = 34 y = 20 }
+					font = "hoi_16mbs"
+					text = "yec_review_mil_factories"
+				}
+
+				# Naval Dockyards
+				instantTextboxType = {
+					name = "yec_review_nav_factories_var"
+					position = { x = 0 y = 40 }
+					font = "hoi_16mbs"
+					text = "[yec_review_nav_factories_var]"
+					maxWidth = 30
+					format = center
+				}
+
+				instantTextboxType = {
+					name = "yec_review_nav_factories"
+					position = { x = 34 y = 40 }
+					font = "hoi_16mbs"
+					text = "yec_review_nav_factories"
+				}
+			}
+
+			containerWindowType = {
+				name = "yec_review_stats_3"
+				position = { x= 413 y = -140 }
+
+				# Divisions
+				instantTextboxType = {
+					name = "yec_review_divisions_var"
+					position = { x = 0 y = 0 }
+					font = "hoi_16mbs"
+					text = "[yec_review_divisions_var]"
+					maxWidth = 30
+					format = center
+				}
+
+				instantTextboxType = {
+					name = "yec_review_divisions"
+					position = { x = 34 y = 0 }
+					font = "hoi_16mbs"
+					text = "yec_review_divisions"
+				}
+
+				# Deployed Planes
+				instantTextboxType = {
+					name = "yec_review_planes_var"
+					position = { x = -5 y = 20 }
+					font = "hoi_16mbs"
+					text = "[yec_review_planes_var]"
+					maxWidth = 40
+					format = center
+				}
+
+				instantTextboxType = {
+					name = "yec_review_planes"
+					position = { x = 34 y = 20 }
+					font = "hoi_16mbs"
+					text = "yec_review_planes"
+				}
+
+				# Ships in Fleet
+				instantTextboxType = {
+					name = "yec_review_ships_var"
+					position = { x = 0 y = 40 }
+					font = "hoi_16mbs"
+					text = "[yec_review_ships_var]"
+					maxWidth = 30
+					format = center
+				}
+
+				instantTextboxType = {
+					name = "yec_review_ships"
+					position = { x = 34 y = 40 }
+					font = "hoi_16mbs"
+					text = "yec_review_ships"
+				}
+			}
+		}
+
+		buttonType = {
+			name = "yec_data_mode_btn"
+			position = { x = -185 y = -57}
+			orientation = "LOWER_RIGHT"
+			quadTextureSprite ="GFX_yec_event_card_btn"
+			font = "hoi_18mbs"
+			text =	 "[yec_data_mode_btn]"
+			tooltip = "yec_data_mode_btn_tt"
+			clicksound = click_checkbox
+			oversound = ui_menu_over
+		}
+
+		buttonType = {
+			name = "yec_close_btn"
+			position = {x=-411 y=-60}
+			orientation = "LOWER_RIGHT"
+			quadTextureSprite ="GFX_button_221x34"
+			font = "hoi_18mbs"
+			text =	 "yec_close_btn"
+			tooltip = "yec_close_btn_tt"
+			clicksound = click_checkbox
+			oversound = ui_menu_over
+		}
+	}
+
+}

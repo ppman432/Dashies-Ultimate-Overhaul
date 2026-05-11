@@ -1,0 +1,350 @@
+spriteTypes = {	
+
+	spriteType = {
+		name = "GFX_idea_light_tank_pro"
+		texturefile = "gfx/interface/ideas/idea_generic_acquire_tanks.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_medium_tank_pro"
+		texturefile = "gfx/interface/ideas/idea_generic_acquire_tanks.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_heavy_tank_pro"
+		texturefile = "gfx/interface/ideas/idea_generic_acquire_tanks.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_super_heavy_tank_pro"
+		texturefile = "gfx/interface/ideas/idea_generic_acquire_tanks.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_modern_tank_pro"
+		texturefile = "gfx/interface/ideas/idea_generic_acquire_tanks.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_motorized_mechanized_pro"
+		texturefile = "gfx/interface/ideas/FRA_motorized_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_artillery_pro"
+		texturefile = "gfx/interface/ideas/idea_generic_artillery_regiments.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_rifle_pro"
+		texturefile = "gfx/interface/ideas/idea_generic_war_preparation.dds"
+	}	
+	spriteType = {
+		name = "GFX_idea_fighter_pro"
+		texturefile = "gfx/interface/ideas/generic_air_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_CAS_pro"
+		texturefile = "gfx/interface/ideas/generic_air_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_nav_bomber_pro"
+		texturefile = "gfx/interface/ideas/generic_air_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_tac_bomber_pro"
+		texturefile = "gfx/interface/ideas/generic_air_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_strat_bomber_pro"
+		texturefile = "gfx/interface/ideas/generic_air_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Interceptor_pro"
+		texturefile = "gfx/interface/ideas/generic_air_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_small_airframe_bba"
+		texturefile = "gfx/interface/ideas/generic_air_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_medium_airframe_bba"
+		texturefile = "gfx/interface/ideas/generic_air_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_large_airframe_bba"
+		texturefile = "gfx/interface/ideas/generic_air_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_small_fleet"
+		texturefile = "gfx/interface/ideas/idea_generic_coastal_navy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_big_fleet"
+		texturefile = "gfx/interface/ideas/idea_generic_sea_focused_navy.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_industrial_capacity"
+		texturefile = "gfx/interface/ideas/generic_production_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_production_speed"
+		texturefile = "gfx/interface/ideas/idea_generic_exploit_mines.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_doctrine"
+		texturefile = "gfx/interface/ideas/idea_general_staff.dds"
+	}
+###gav########################
+	spriteType = {
+		name = "GFX_idea_liberalism"
+		texturefile = "gfx/interface/ideas/generic_democratic_drift_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_controlism"
+		texturefile = "gfx/interface/ideas/generic_morale_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_MP"
+		texturefile = "gfx/interface/ideas/generic_spy_intel.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_War_propaganda"
+		texturefile = "gfx/interface/ideas/idea_yug_all_yugoslavian_regiments.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Independence_movement"
+		texturefile = "gfx/interface/ideas/FRA_national_mobilization_focus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Stop_of_autonomy"
+		texturefile = "gfx/interface/ideas/FRA_matignon_agreements.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_secret_plan"
+		texturefile = "gfx/interface/ideas/generic_victors_of_ww1.dds"
+	}
+	spriteType = {
+	name = "GFX_idea_Promote_mining"
+	texturefile = "gfx/interface/ideas/idea_generic_refining_concern_1.dds"
+	}
+	
+	### director ##################
+	spriteType = {
+		name = "GFX_idea_Seasoned_General"
+		texturefile = "gfx/interface/endgame_army_button.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Accomplished_Admiral"
+		texturefile = "gfx/interface/endgame_navy_button.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Sky_Warden"
+		texturefile = "gfx/interface/endgame_air_button.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Grizzled_Instructor"
+		texturefile = "gfx/interface/ideas/idea_eng_special_air_service.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Master_of_Disguise"
+		texturefile = "gfx/interface/ideas/generic_spy_political.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Driven_Detective"
+		texturefile = "gfx/interface/ideas/generic_spy_coup.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Challenging_inventor"
+		texturefile = "gfx/interface/ideas/generic_research_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Revered_Auditor"
+		texturefile = "gfx/interface/ideas/idea_man_five_year_plan_industry.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Oil_capitalists"
+		texturefile = "gfx/interface/ideas/idea_generic_refining_concern_1.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Master_of_propaganda"
+		texturefile = "gfx/interface/ideas/idea_chi_war_of_resistance3.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Genius_organizer"
+		texturefile = "gfx/interface/ideas/idea_generic_foreign_capital.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_Democratic_idealist"
+		texturefile = "gfx/interface/ideas/generic_democratic_drift_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Revolutionary_leader"
+		texturefile = "gfx/interface/ideas/generic_communism_drift_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Fascist_crusader"
+		texturefile = "gfx/interface/ideas/generic_fascism_drift_bonus.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Neutral_parliament"
+		texturefile = "gfx/interface/ideas/neutrality_idea.dds"
+	}
+	
+### land_land ##################
+	spriteType = {
+		name = "GFX_idea_manoeuvre"
+		texturefile = "gfx/interface/technologies/continuous_offensive.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_fire_support"
+		texturefile = "gfx/interface/technologies/centralized_fire_control.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_mass_combat"
+		texturefile = "gfx/interface/technologies/peoples_army.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_psychology"
+		texturefile = "gfx/interface/technologies/night_assault_tactics.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_defence"
+		texturefile = "gfx/interface/technologies/defence_in_depth.dds"
+	}
+
+###land###
+	spriteType = {
+		name = "GFX_idea_elastic_defence_doctrine"
+		texturefile = "gfx/interface/technologies/elastic_defence.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_static_defence_doctrine"
+		texturefile = "gfx/interface/technologies/attritional_containment.dds"
+	}
+		spriteType = {
+		name = "GFX_idea_armoured_spearhead_doctrine"
+		texturefile = "gfx/interface/technologies/modern_blitzkrieg.dds"
+	}
+		spriteType = {
+		name = "GFX_idea_decisive_battle_doctrine"
+		texturefile = "gfx/interface/technologies/human_wave_offensive.dds"
+	}
+		spriteType = {
+		name = "GFX_idea_guns_and_butter_doctrine"
+		texturefile = "gfx/interface/technologies/trench_warfare.dds"
+	}
+###naval###
+spriteType = 
+	{
+		name = "GFX_idea_open_seas_doctrine"
+		texturefile = "gfx/interface/technologies/carrier_battlegroups.dds"
+	}
+	spriteType = 
+	{
+		name = "GFX_idea_decisive_battle_doctrine2"
+		texturefile = "gfx/interface/technologies/fleet_in_being.dds"
+	}
+		spriteType = 
+	{
+		name = "GFX_idea_power_projection_doctrine"
+		texturefile = "gfx/interface/technologies/battlefleet_concentration.dds"
+	}
+		spriteType =
+	{
+		name = "GFX_idea_indirect_approach_doctrine"
+		texturefile = "gfx/interface/technologies/trade_interdiction.dds"
+	}
+		spriteType = 
+	{
+		name = "GFX_idea_base_control_doctrine"
+		texturefile = "gfx/interface/technologies/base_strike.dds"
+	}
+###air###
+spriteType = {
+		name = "GFX_idea_air_superiority_doctrine"
+		texturefile = "gfx/interface/technologies/formation_flying.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_naval_aviation_doctrine"
+		texturefile = "gfx/interface/technologies/naval_strike_torpedo_tactics.dds"
+	}
+		spriteType = {
+		name = "GFX_idea_army_aviation_doctrine"
+		texturefile = "gfx/interface/technologies/hunt_and_destroy.dds"
+	}
+		spriteType = {
+		name = "GFX_idea_carpet_bombing_doctrine"
+		texturefile = "gfx/interface/technologies/strategic_destruction.dds"
+	}
+		spriteType = {
+		name = "GFX_idea_vertical_envelopment_doctrine"
+		texturefile = "gfx/interface/technologies/ground_support_integration.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_army_exp"
+		texturefile = "gfx/interface/ideas/german_advisors.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_navy_exp"
+		texturefile = "gfx/interface/ideas/german_advisors.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_air_exp"
+		texturefile = "gfx/interface/ideas/german_advisors.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Attack_preparation_1"
+		texturefile = "gfx/interface/ideas/idea_generic_constitutional_guarantee.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Attack_preparation_2"
+		texturefile = "gfx/interface/ideas/idea_generic_constitutional_guarantee.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Attack_preparation_3"
+		texturefile = "gfx/interface/ideas/idea_generic_constitutional_guarantee.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_Attack_preparation_4"
+		texturefile = "gfx/interface/ideas/idea_generic_constitutional_guarantee.dds"
+	}
+	
+	####################   decisions
+
+	spriteType = {
+		name = "GFX_idea_level_1"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_level_2"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_level_3"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_level_4"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_level_5"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_level_6"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_level_7"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_level_8"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_level_9"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	spriteType = {
+		name = "GFX_idea_level_10"
+		texturefile = "gfx/interface/ideas/idea_generic_political_support.dds"
+	}
+	
+}
