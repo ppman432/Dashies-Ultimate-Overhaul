@@ -1,8 +1,0 @@
-spriteTypes = {
-
-	spriteType = {
-		name = "GFX_eventpictures_ecf_event_logo_finished"
-		texturefile = "gfx/event_pictures/ecf_event_logo_finished.dds"
-	}
-
-}
