@@ -1,8 +1,0 @@
-﻿l_english:
-transfer_navy_mod:0 "Transfer Navy"
-transfer_navy_mod_desc:0 "There are two kinds of decisons: \n\n(1)§YTransfer puppets' Navy§!. You can take control your puppet's navy, don't need to annex the country. For example, UK can take over Australia's and Canada's navy at the start of the game, but RAJ don't have ships at start, so you can't take over RAJ's navy.\n\n(2)§YTransfer losers' Navy§!. Use this decision first and your enemy surrender to YOU. Then the loser will transfer their navy to you. §YIf they surrender to others, then you can't get their navy.§!\nThis decision can work in §GKaiserreich§! (It seems this decision doesn't work with Deutsches Reich) . §RIf you cannot make sure the loser will surrender to you, I suggest you puppet them in the peace conference and take over their navy with the first decision§!"
-transfer_your_subject_navy:0 "Take Over [From.GetAdjective] Navy"
-transfer_your_capitulated_enemies_navy:0 "Take Over [From.GetAdjective] Navy §YAfter Surrender§!"
-transfer_your_capitulated_enemies_navy_custom_effect:0 "The loser will transfer their navy to you.§YIf they surrender to others, then you can't get their navy.§!"
-capitulation_transfer_navy:0 "§Yhave not planned to transfer losers'navy§!"
-nothad_transfer_subject_navy:0 "§Yhave not transfered puppets'navy§!"

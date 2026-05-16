@@ -1,8 +1,0 @@
-﻿l_english:
-RMfT_decisions_cat:0 "Reliability Modules"
-RMfT_decision:0 "Unlock Reliability Modules"
- lower_rel_chassis:0 "Cheaper Chassis"
- lower_rel_chassis_desc:0 "By using alternative material, tanks will be easier to produce, however the tanks will have reliability issues more often."
- higher_rel_chassis:0 "Quality Chassis"
- higher_rel_chassis_desc:0 "By using only the best material, tanks will be harder to produce, however will be more reliable."
- new_tank_modules:0 "Reliability Modules"

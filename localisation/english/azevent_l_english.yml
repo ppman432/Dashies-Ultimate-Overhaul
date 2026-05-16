@@ -1,5 +1,0 @@
-﻿l_english:
- getzhg_event.11.t:0"We have Defeated [FROM.GetName]." 
- getzhg_event.11.d:0"The [FROM.GetName] army has been defeated by us. Under coercion and inducement, their generals have given up their resistance and joined our camp." 
- getzhg_event.11.a:0"Welcome!" 
- getzhg_event.11.b:0"We don't need their incompetent leadership." 

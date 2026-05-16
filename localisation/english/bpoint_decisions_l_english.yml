@@ -1,8 +1,0 @@
-﻿l_english:
- bpoint_decisions:0 "Research Bureau"
- trait_pp_to_bpoint_land:0 "Invest in Land Science"
- trait_pp_to_bpoint_naval:0 "Invest in Naval Science"
- trait_pp_to_bpoint_air:0 "Invest in Air Science"
- trait_pp_to_bpoint_nuclear:0 "Invest in Nuclear Science"
- trait_pp_to_bpoint_magic:0 "Invest in Magic Science"
- trait_pp_to_bpoint_all_type:0 "Major Investment in Science"
