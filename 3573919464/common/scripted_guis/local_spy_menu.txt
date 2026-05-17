@@ -1,0 +1,553 @@
+scripted_gui = {
+
+	local_spy_menu = {
+		context_type = player_context
+		
+		window_name = "local_spy_menu_container"
+		visible={
+		check_variable = { show_local_spy_menu > 0.00 }
+		NOT = {
+			has_game_rule = {
+				rule = espionage_rule
+				option = esn
+			}
+		}
+		}
+		
+		properties = {
+			
+		}
+		
+		effects = {
+		 local_spy_menu_exit_click = {
+				set_variable = { show_local_spy_menu = 0 }
+			}
+			
+		Portrait_click = {}
+			
+			
+		level_1_click = {
+				
+}
+		level_button2_click	= {
+				set_variable = { Spy_Director_Level = 2  }
+				subtract_from_variable = {spy_xp = 100}}
+		
+		level_button3_click	= {
+				set_variable = { Spy_Director_Level = 3  }
+				subtract_from_variable = {spy_xp = 100}
+		}		
+			
+			
+		Training_Button_click = {
+				set_variable = { Training_Active = 1  }
+				subtract_from_variable = {spy_xp = 50}
+			
+			}
+			
+		
+		Increase_Training_click = {
+				add_to_variable = { training_spies = 10  }
+				add_to_variable = { training_efficiency = 1}
+				subtract_from_variable = {spies_available = 10}
+				
+			}
+			
+		Decrease_Training_click = {
+				subtract_from_variable = { training_spies = 10  }
+				subtract_from_variable = { training_efficiency = 1  }
+				add_to_variable = {spies_available = 10}
+			}
+			
+			
+		War_Propaganda_Button_click = {
+				set_variable = { War_Propaganda_Active = 1  }
+				subtract_from_variable = {spy_xp = 50}
+				
+			}
+		
+		Increase_War_Propaganda_click = {
+				add_to_variable = { war_propaganda_spies = 50  }
+				add_to_variable = { war_propaganda_weekly = 0.1}
+				subtract_from_variable = {spies_available = 50}
+				
+			
+				
+				if = {limit = { check_variable = { war_propaganda_spies = 50} }
+				swap_ideas = { remove_idea = propaganda_100 add_idea = propaganda_50}
+				
+				}
+				
+				if = {limit = { check_variable = { war_propaganda_spies = 100} }
+			    swap_ideas = { remove_idea = propaganda_50 add_idea = propaganda_100}
+				
+				}}
+				
+			
+			
+		Decrease_War_Propaganda_click = {
+				subtract_from_variable = { war_propaganda_spies = 50  }
+				subtract_from_variable = { war_propaganda_weekly = 0.1}
+				add_to_variable = {spies_available = 50}
+				
+				if = {limit = { check_variable = { war_propaganda_spies = 0} }
+				remove_ideas = propaganda_50 }
+				
+				
+				if = {limit = { check_variable = { war_propaganda_spies = 50} }
+				swap_ideas = { remove_idea = propaganda_100 add_idea = propaganda_50}
+				
+				}
+				
+				if = {limit = { check_variable = { war_propaganda_spies = 100} }
+			    swap_ideas = { remove_idea = propaganda_50 add_idea = propaganda_100}
+				
+				}
+			}
+			
+			
+		Research_Aid_Button_click = {
+				set_variable = { Research_Aid_Active = 1  }
+				subtract_from_variable = {spy_xp = 50}
+				
+			}
+		
+		Increase_Research_Aid_click = {
+				add_to_variable = { research_spies = 50  }
+				add_to_variable = { spy_research_bonus = 2.5}
+				subtract_from_variable = {spies_available = 50}
+				
+			
+				
+				if = {limit = { check_variable = { research_spies = 50} }
+				swap_ideas = { remove_idea = research_100 add_idea = research_50}
+				
+				}
+				
+				if = {limit = { check_variable = { research_spies = 100} }
+			    swap_ideas = { remove_idea = research_50 add_idea = research_100}
+				
+				}}
+				
+			
+			
+		Decrease_Research_Aid_click = {
+				subtract_from_variable = { research_spies = 50  }
+				subtract_from_variable = { spy_research_bonus = 2.5}
+				add_to_variable = {spies_available = 50}
+				
+				if = {limit = { check_variable = { research_spies = 0}}
+				swap_ideas = { remove_idea = research_50 add_idea = research_0}}
+				
+				
+				if = {limit = { check_variable = { research_spies = 50} }
+				swap_ideas = { remove_idea = research_100 add_idea = research_50}
+				
+				}
+				
+				if = {limit = { check_variable = { research_spies = 100} }
+			    swap_ideas = { remove_idea = research_50 add_idea = research_100}
+				
+				}
+			}
+			
+		Suppress_Resistance_Button_click = {
+				set_variable = { Suppress_Resistance_Active = 1  }
+				subtract_from_variable = {spy_xp = 50}
+				
+			}
+		
+		Increase_suppress_resistance_click = {
+				add_to_variable = { resistance_spies = 25  }
+				add_to_variable = { suppress_resistance_effect = 10}
+				subtract_from_variable = {spies_available = 25}
+				
+			
+				
+				if = {limit = { check_variable = { resistance_spies = 25} }
+				swap_ideas = { remove_idea = resistance_50 add_idea = resistance_25}}
+			
+				
+				
+				if = {limit = { check_variable = { resistance_spies = 50} }
+			    swap_ideas = { remove_idea = resistance_25 add_idea = resistance_50}
+				}
+				
+				if = {limit = { check_variable = { resistance_spies = 75} }
+			    swap_ideas = { remove_idea = resistance_50 add_idea = resistance_75}
+				}
+				
+				if = {limit = { check_variable = { resistance_spies = 100} }
+			    swap_ideas = { remove_idea = resistance_50 add_idea = resistance_100}
+				}}
+			
+			
+		Decrease_suppress_resistance_click = {
+				subtract_from_variable = { resistance_spies = 25  }
+				subtract_from_variable = { suppress_resistance_effect = 10}
+				add_to_variable = {spies_available = 25}
+				
+				if = {limit = { check_variable = { resistance_spies = 0} }
+				remove_ideas = resistance_25 }
+				
+				if = {limit = { check_variable = { resistance_spies = 25} }
+				swap_ideas = { remove_idea = resistance_50 add_idea = resistance_25}
+				}
+				
+				
+				if = {limit = { check_variable = { resistance_spies = 50} }
+				swap_ideas = { remove_idea = resistance_75 add_idea = resistance_50}
+				}
+				
+				if = {limit = { check_variable = { resistance_spies = 75} }
+			    swap_ideas = { remove_idea = resistance_100 add_idea = resistance_75}
+				
+				}
+			}
+			
+			
+		Freiwillige_Button_click = {
+				set_variable = { Freiwillige_Active = 1  }
+				subtract_from_variable = {spy_xp = 50}
+				
+				
+			}
+		
+		Increase_Freiwillige_click = {
+				add_to_variable = { Freiwillige_spies = 25  }
+				add_to_variable = { Freiwillige_effect = 5}
+				subtract_from_variable = {spies_available = 25}
+				
+			
+				
+				if = {limit = { check_variable = { Freiwillige_spies = 25} }
+				swap_ideas = { remove_idea = Freiwillige_50 add_idea = Freiwillige_25}}
+			
+				
+				
+				if = {limit = { check_variable = { Freiwillige_spies = 50} }
+			    swap_ideas = { remove_idea = Freiwillige_25 add_idea = Freiwillige_50}
+				}
+				
+				if = {limit = { check_variable = { Freiwillige_spies = 75} }
+			    swap_ideas = { remove_idea = Freiwillige_50 add_idea = Freiwillige_75}
+				}
+				
+				if = {limit = { check_variable = { Freiwillige_spies = 100} }
+			    swap_ideas = { remove_idea = Freiwillige_75 add_idea = Freiwillige_100}
+				}}
+			
+			
+		Decrease_Freiwillige_click = {
+				subtract_from_variable = { Freiwillige_spies = 25}
+				subtract_from_variable = { Freiwillige_effect = 5}
+				add_to_variable = {spies_available = 25}
+				
+				
+				
+
+				if = {limit = { check_variable = { Freiwillige_spies = 0} }
+				remove_ideas = Freiwillige_25 }
+				
+				if = {limit = { check_variable = { Freiwillige_spies = 25} }
+				swap_ideas = { remove_idea = Freiwillige_50 add_idea = Freiwillige_25}
+				}
+				
+				
+				if = {limit = { check_variable = { Freiwillige_spies = 50} }
+				swap_ideas = { remove_idea = Freiwillige_75 add_idea = Freiwillige_50}
+				}
+				
+				if = {limit = { check_variable = { Freiwillige_spies = 75} }
+			    swap_ideas = { remove_idea = Freiwillige_100 add_idea = Freiwillige_75}
+				}
+			}
+			
+			
+			Increase_Laboratory_click = { add_to_variable = {Laboratory_spies = 200 }
+			                              subtract_from_variable = {spies_available = 200}}
+			Decrease_Laboratory_click = { subtract_from_variable = {laboratory_spies = 200 }
+			                              add_to_variable = {spies_available = 200}}
+			
+			
+			Medium_Armor_Model_click = {
+
+			if = {limit = { check_variable = {medium_armor_difference = 1}}
+			set_variable = { medium_armor_cloning_progress = 2 }
+			var:spy_target = { ROOT = { subtract_from_variable = {research_points@PREV = 500}}}
+			}}
+			
+			Light_Armor_Model_click = {
+
+			if = {limit = { check_variable = {light_armor_difference = 1}}
+			set_variable = { light_armor_cloning_progress = 2 }
+			var:spy_target = { ROOT = { subtract_from_variable = {research_points@PREV = 500}}}
+			}}
+			
+			Heavy_Armor_Model_click = {
+
+			if = {limit = { check_variable = {heavy_armor_difference = 1}}
+			set_variable = { heavy_armor_cloning_progress = 2 }
+			var:spy_target = { ROOT = { subtract_from_variable = {research_points@PREV = 500}}}
+			}}
+			
+			
+		    Fighter_Model_click = {
+
+			if = {limit = { check_variable = {fighter_difference = 1}}
+			set_variable = { fighter_cloning_progress = 2 }
+			var:spy_target = { ROOT = { subtract_from_variable = {research_points@PREV = 500}}}
+			}}
+			
+			CAS_Model_click = {
+
+			if = {limit = { check_variable = {CAS_difference = 1}}
+			set_variable = { CAS_cloning_progress = 2 }
+			var:spy_target = { ROOT = { subtract_from_variable = {research_points@PREV = 500}}}
+			}}
+			
+			Strategic_Bomber_Model_click = {
+
+			if = {limit = { check_variable = {strategic_bomber_difference = 1}}
+			set_variable = { strategic_bomber_cloning_progress = 2 }
+			var:spy_target = { ROOT = { subtract_from_variable = {research_points@PREV = 500}}}
+			}}
+			
+			
+			
+			Cancel_Infiltration_click = {
+			
+			clr_country_flag = currently_infiltrating
+			
+			set_variable = {spy_target = 0}
+			set_variable = {target_num_of_civilian_factories = 0}
+			set_variable = {target_num_of_military_factories = 0}
+			set_variable = {target_num_of_naval_factories = 0}		
+			set_variable = {target_manpower_k = 0}
+			set_variable = {target_amount_manpower_in_deployment_queue = 0}
+			set_variable = {target_num_divisions = 0}
+			set_variable = {target_num_of_nukes = 0}
+			set_variable = {target_land_doctrine_level = 0}
+			set_variable = {target_light_armor = 0}
+			set_variable = {target_medium_armor = 0}
+			set_variable = {target_heavy_armor = 0}
+			set_variable = {target_carrier = 0}
+			set_variable = {target_battleship = 0}
+			set_variable = {target_heavy_cruiser = 0}
+			set_variable = {target_submarine = 0}
+			
+			add_to_variable = { spies_available = 150}
+			
+			}
+			
+			Spy_Encryption_click ={
+			set_variable = {Encryption_Selected = 1 }
+			set_variable = {Decryption_Selected = 0 }
+			swap_ideas = { remove_idea = Decryption_Focus add_idea = Encryption_Focus }
+			}
+			
+			Spy_Decryption_click ={
+			set_variable = {Decryption_Selected = 1 }
+			set_variable = {Encryption_Selected = 0 }
+			swap_ideas = { remove_idea = Encryption_Focus add_idea = Decryption_Focus }
+			}
+			
+			}
+			
+		triggers = {
+		Increase_Training_click_enabled = {check_variable = { Training_Active = 1 }
+                                           check_variable = { Training_Spies < 100 }
+										   check_variable = { spies_available > 9}}
+										   
+        Decrease_Training_click_enabled = {check_variable = { Training_spies > 0 }}
+		Increase_War_Propaganda_click_enabled = {check_variable = { War_Propaganda_Active = 1 }
+                                                 check_variable = { war_propaganda_spies < 100 }
+												 check_variable = { spies_available > 49}}
+										   
+        Decrease_War_Propaganda_click_enabled = {check_variable = { war_propaganda_spies > 0 }}
+		Increase_Research_Aid_click_enabled = {check_variable = { Research_Aid_Active = 1 }
+                                               check_variable = { Research_Spies < 100 }
+											   check_variable = { spies_available > 49}}
+										   
+        Decrease_Research_Aid_click_enabled = {check_variable = { Research_spies > 0 }}
+		Increase_suppress_resistance_click_enabled = {check_variable = { Suppress_Resistance_Active = 1 }
+                                                      check_variable = { resistance_spies < 100 }
+													  check_variable = { spies_available > 24}}
+										   
+        Decrease_suppress_resistance_click_enabled = {check_variable = { resistance_spies > 0 }}
+		Increase_Freiwillige_click_enabled = {check_variable = { Freiwillige_Active = 1 }
+                                                      check_variable = { Freiwillige_spies < 100 }
+													  check_variable = { spies_available > 24}}
+										   
+        Decrease_Freiwillige_click_enabled = {check_variable = { Freiwillige_spies > 0 }}
+		
+		
+		
+		level_1_active_visible = {check_variable = {Spy_Director_Level = 0}}
+
+								 
+		level_button2_active_visible = {check_variable = {Spy_Director_Level = 2 }}
+		
+		level_button3_active_visible = {check_variable = {Spy_Director_Level = 3 }}
+		
+		
+		level_1_click_enabled = {check_variable = {never = 1}}
+		level_button2_click_enabled = { check_variable = { spy_xp > 99}
+		                                check_variable = {Spy_Director_Level = 0}}
+		level_button3_click_enabled = { check_variable = { spy_xp > 99}
+		                                check_variable = {Spy_Director_Level = 2}}
+		
+		
+		
+		Training_Button_click_enabled = { check_variable = { spy_xp > 49}
+		                                  check_variable = {Training_Active = 0}}
+        Training_Button_Active_visible = { check_variable = {Training_Active = 1}}
+		War_Propaganda_Button_click_enabled = { check_variable = { spy_xp > 49}
+		                                        check_variable = {War_Propaganda_Active = 0}
+												check_variable = {Spy_Director_Level > 0 }}
+        War_Propaganda_Button_Active_visible = { check_variable = {War_Propaganda_Active = 1}}
+		Research_Aid_Button_click_enabled = { check_variable = { spy_xp > 49}
+		                                        check_variable = {Research_Aid_Active = 0}
+												check_variable = {Spy_Director_Level > 0 }}
+        Research_Aid_Button_Active_visible = { check_variable = {Research_Aid_Active = 1}}
+		Suppress_Resistance_Button_click_enabled = { check_variable = { spy_xp > 49}
+		                                        check_variable = {Suppress_Resistance_Active = 0}
+												check_variable = {Spy_Director_Level > 0 }}
+        Suppress_Resistance_Button_Active_visible = { check_variable = {Suppress_Resistance_Active = 1}}
+		Freiwillige_Button_click_enabled = { check_variable = { spy_xp > 49}
+		                                        check_variable = {Freiwillige_Active = 0}
+												check_variable = {Spy_Director_Level > 2 }}
+        Freiwillige_Button_Active_visible = { check_variable = {Freiwillige_Active = 1}}
+
+        Increase_Laboratory_click_enabled = {check_variable = {Spy_Director_Level = 3}
+		                                     check_variable = {Laboratory_Spies = 0}
+											 check_variable = { spies_available > 199}}
+        Decrease_Laboratory_click_enabled = {check_variable = {Spy_Director_Level = 3}
+		                                     check_variable = {Laboratory_Spies > 0}}
+	
+		Medium_Armor_Model_click_enabled = { var:spy_target = { ROOT = { check_variable = {research_points@PREV > 499}}}
+		                                     check_variable = {medium_armor_difference = 1}
+											 check_variable = {medium_armor_cloning_progress = 0}}
+		Heavy_Armor_Model_click_enabled = { var:spy_target = { ROOT = { check_variable = {research_points@PREV > 499}}}
+		                                    check_variable = {heavy_armor_difference = 1}
+		                                    check_variable = {heavy_armor_cloning_progress = 0}}
+		Light_Armor_Model_click_enabled = { var:spy_target = { ROOT = { check_variable = {research_points@PREV > 499}}}
+		                                    check_variable = {light_armor_difference = 1}
+		                                    check_variable = {light_armor_cloning_progress = 0}}
+		Fighter_Model_click_enabled = { var:spy_target = { ROOT = { check_variable = {research_points@PREV > 499}}}
+		                                check_variable = {fighter_difference = 1}
+		                                check_variable = {fighter_cloning_progress = 0}}
+		CAS_Model_click_enabled = { var:spy_target = { ROOT = { check_variable = {research_points@PREV > 499}}}
+		                            check_variable = {CAS_difference = 1}
+		                            check_variable = {CAS_cloning_progress = 0}}
+		Strategic_Bomber_Model_click_enabled = { var:spy_target = { ROOT = { check_variable = {research_points@PREV > 499}}}
+		                                         check_variable = {Strategic_Bomber_difference = 1}
+		                                         check_variable = {Strategic_Bomber_cloning_progress = 0}}
+												 
+												 
+		Cancel_Infiltration_click_enabled = { has_country_flag = currently_infiltrating}
+		
+		Spy_Decryption_click_enabled = { check_variable = {Spy_Director_Level = 3}}
+		Spy_Encryption_click_enabled = { check_variable = {Spy_Director_Level = 3}}
+		
+	}
+	
+	
+	
+	
+	
+		ai_enabled = {
+            always = yes
+        }
+		
+		ai_check = {
+            check_variable = { show_local_spy_menu = 1 }
+        }
+		
+	    ai_test_interval = 100
+        ai_test_variance = 0.3
+		
+		ai_max_weight_taken_per_test = 11
+		
+		ai_weights = {
+        level_button2_click = {
+		    weight = 4
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		level_button3_click = {
+		    weight = 4
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		Training_Button_click = {
+		    weight = 4
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		Increase_Training_click = {
+		    weight = 2
+		        ai_will_do = { 
+		               factor = 2}
+		}
+	    War_Propaganda_Button_click = {
+		    weight = 4
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		Increase_War_Propaganda_click = {
+		    weight = 2
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		Research_Aid_Button_click = {
+		    weight = 4
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		Increase_Research_Aid_click = {
+		    weight = 2
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		Suppress_Resistance_Button_click = {
+		    weight = 4
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		Increase_suppress_resistance_click = {
+		    weight = 2
+		        ai_will_do = { 
+		               factor = 2}
+		}
+	    Freiwillige_Button_click = {
+		    weight = 4
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		Increase_Freiwillige_click = {
+		    weight = 2
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		
+		Cancel_Infiltration_click = {
+		    weight = 20
+		        ai_will_do = { 
+		               factor = 2}
+		}
+		Increase_Laboratory_click = {
+		    weight = 20
+		        ai_will_do = { 
+		               factor = 2}
+					   }
+					   
+		local_spy_menu_exit_click = {
+		    weight = 1
+		        ai_will_do = { 
+		               factor = 1}
+       }
+	   
+	   }
+}}
+

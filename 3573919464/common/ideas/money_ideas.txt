@@ -1,0 +1,317 @@
+##################### there are all posible ideas in the mod some of them are not been used other can only be seen under some conditions###########
+
+ideas = {
+#######Not Used###################
+	country = {
+		very_high_money = {
+			picture = very_high_money
+			
+			allowed = { }
+			
+			available = {  }
+			
+			cancel = { }
+			
+			Removal_cost = -1
+			
+			
+			
+			modifier = {
+				political_power_gain = 0.5
+				consumer_goods_factor = -0.05
+				local_resources_factor = 0.05
+				max_fuel_factor = 0.5
+				stability_factor = 0.2
+				production_speed_buildings_factor = 0.2
+				production_oil_factor = 0.2
+				research_speed_factor = 0.09
+			}
+
+		}
+		
+		medium_money = {
+			picture = medium_money
+			
+			allowed = { }
+			
+			available = { }
+			
+			cancel = { }
+			
+			Removal_cost = -1
+			
+			
+			
+			modifier = {
+				political_power_gain = 0.4
+				consumer_goods_factor = -0.03
+				local_resources_factor = 0.03
+				max_fuel_factor = 0.2
+				stability_factor = 0.15
+				production_speed_buildings_factor =0.1
+				production_oil_factor = 0.1
+				research_speed_factor = 0.07
+			}
+
+		}
+		
+############ used, this is ideas will be added to your country based on how much money do you have###############	
+		normal_money = {
+			picture = normal_money
+			
+			allowed = { }
+			
+			available = {  }
+			
+			cancel = {  }
+			
+			Removal_cost = -1
+			
+			
+			
+			modifier = {
+				political_power_gain = 0.01
+				consumer_goods_factor = -0.01
+				local_resources_factor = 0.01
+				max_fuel_factor = 0.05
+				stability_factor = 0.01
+				production_speed_buildings_factor = 0.01
+				production_oil_factor = 0.01
+				research_speed_factor  = 0.01
+			}
+
+		}
+		
+		low_money = {
+			picture = low_money
+			
+			allowed = { }
+			
+			available = { }
+			
+			cancel = {  }
+
+			Removal_cost = -1
+			
+			
+			
+			modifier = {
+				political_power_gain = -0.05
+				consumer_goods_factor = 0.02
+				local_resources_factor = -0.02
+				max_fuel_factor = -0.05
+				stability_factor = -0.15
+				production_speed_buildings_factor = -0.05
+				production_oil_factor = -0.01
+				research_speed_factor  = -0.03	
+			}
+
+		}
+		
+		bad_money = {
+			picture = bad_money
+			
+			allowed = { }
+			
+			available = { }
+			
+			cancel = {  }
+
+			Removal_cost= -1
+			
+			
+			
+			modifier = {
+				political_power_gain = -0.09
+				consumer_goods_factor = 0.05
+				local_resources_factor = -0.02
+				max_fuel_factor = -0.05
+				stability_factor = -0.20
+				production_speed_buildings_factor = -0.08
+				production_oil_factor = -0.02
+				research_speed_factor  = -0.035	
+			}
+
+		}
+		
+		very_low_money = {
+			picture = very_low_money
+			
+			allowed = { }
+			
+			available = { }
+			
+			cancel = {  }
+			
+			Removal_cost = -1
+			
+			
+			modifier = {
+				political_power_gain = -0.15
+				consumer_goods_factor = 0.11
+				local_resources_factor = -0.02
+				max_fuel_factor = -0.05
+				stability_factor = -0.25
+				production_speed_buildings_factor = -0.1
+				production_oil_factor = -0.03
+				research_speed_factor  = -0.04	
+			}
+
+		}
+		
+		
+		
+	}
+######################## these are the idea bonus that you can buy in the menu	################
+	hidden_ideas = {
+		CB_15 = {
+			picture = generic_infantry_bonus
+			
+			allowed = { }
+			
+			available = { }
+			
+			cancel = {  }
+			
+			Removal_cost = -1
+			
+			
+			modifier = {
+				political_power_gain = 0.01
+				production_speed_buildings_factor = 0.15
+				
+			}
+
+		}
+		
+		CB_30 = {
+			picture = generic_infantry_bonus
+			
+			allowed = { }
+			
+			available = { }
+			
+			cancel = {  }
+			
+			Removal_cost = -1
+			
+			
+			modifier = {
+				political_power_gain = 0.01
+				production_speed_buildings_factor = 0.30
+				
+			}
+
+		}
+		
+		MB_3 = {
+			picture = generic_infantry_bonus
+			
+			allowed = { }
+			
+			available = {  }
+			
+			cancel = {  }
+
+
+			
+			modifier = {
+				political_power_gain = 0.01
+				conscription  = 0.03
+			}
+
+		}
+		
+		MB_7 = {
+			picture = generic_infantry_bonus
+			
+			allowed = { }
+			
+			available = {  }
+			
+			cancel = {  }
+
+
+			
+			modifier = {
+				political_power_gain = 0.01
+				conscription  = 0.07
+			}
+
+		}
+		
+		GB_3 = {
+			picture = generic_infantry_bonus
+			
+			allowed = { }
+			
+			available = {  }
+			
+			cancel = {  }
+
+
+			
+			modifier = {
+				political_power_gain = 0.01
+				consumer_goods_factor = -0.03
+			}
+
+		}
+		
+		GB_5 = {
+			picture = generic_infantry_bonus
+			
+			allowed = { }
+			
+			available = {  }
+			
+			cancel = { }
+
+
+			
+			modifier = {
+				political_power_gain = 0.01
+				consumer_goods_factor = -0.05
+			}
+
+		}
+		
+		MB_10 = {
+			picture = generic_infantry_bonus
+			
+			allowed = { }
+			
+			available = {  }
+			
+			cancel = {  }
+
+
+			
+			modifier = {
+				political_power_gain = 0.01
+				local_resources_factor = 0.1
+			}
+
+		}
+		
+		MB_20 = {
+			picture = generic_infantry_bonus
+			
+			allowed = { }
+			
+			available = {  }
+			
+			cancel = {  }
+
+
+			
+			modifier = {
+				political_power_gain = 0.01
+				local_resources_factor = 0.2
+			}
+
+		}
+		
+	}
+
+}

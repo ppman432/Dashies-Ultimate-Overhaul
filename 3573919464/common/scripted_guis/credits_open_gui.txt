@@ -1,0 +1,31 @@
+scripted_gui = {
+  credits_open_gui = {
+    window_name = "open_credits_gui_window"
+    context_type = player_context
+	parent_window_token = trade_tab
+
+    visible = {
+		has_game_rule = {
+			rule = Lootbox_rule
+			option = enable_Lootbox
+		}
+    }
+
+    effects = {
+		open_button_click = {
+			if = {
+				limit = { NOT = { has_country_flag = credits_gui_opened } }
+				set_country_flag = credits_gui_opened
+			}
+			else = {
+				clr_country_flag = credits_gui_opened
+			}
+		}
+    }
+
+    ai_enabled = {
+		always = no
+    }
+
+  }
+}

@@ -1,0 +1,18 @@
+ST_HOST_CAT = {
+	picture = GFX_decision_cat_picture_government_in_exile
+	priority = 100
+	available = {
+		#always = yes
+		has_game_rule = {
+			rule = MP_mode_rule
+			option = Enable_multimode
+		}
+	}
+	visible = {
+		#always = yes
+		has_game_rule = {
+			rule = MP_mode_rule
+			option = Enable_multimode
+		}
+	}
+}

@@ -1,0 +1,1486 @@
+ideas = {
+
+	### Generic advisors
+	
+	
+	social_welfare = {
+		law = yes
+
+		welfare_no_welfare = {
+		
+			available = {
+			}
+						
+			cost = 50
+			removal_cost = -1
+			level = 6
+
+			modifier = {
+				conscription_factor = -0.2
+				stability_weekly  = -0.005 
+				political_power_gain = 1
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.15
+				compliance_gain = -0.01
+				research_speed_factor = -0.05
+			}
+			
+			ai_will_do = {
+				factor = 0
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		welfare_state_education = {
+		
+			available = {
+			}
+			
+			default = yes
+						
+			cost = 100
+			removal_cost = -1
+			level = 5
+
+			modifier = {
+				stability_weekly  = 0.001 
+				war_support_weekly = -0.001
+				research_speed_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		welfare_labour_program = {
+		
+			available = {
+			}
+						
+			cost = 100
+			removal_cost = -1
+			level = 4
+
+			modifier = {
+				political_power_gain = -0.1
+				stability_weekly  = 0.002 
+				war_support_weekly = -0.002
+				industrial_capacity_factory = 0.05
+				research_speed_factor = 0.1
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		welfare_social_housing = {
+		
+			available = {
+			}
+						
+			cost = 100
+			removal_cost = -1
+			level = 3
+
+			modifier = {
+				political_power_gain = -0.15
+				stability_weekly  = 0.002
+				war_support_weekly = -0.002
+				industrial_capacity_factory = 0.1
+				line_change_production_efficiency_factor = 0.1
+				compliance_gain = 0.01
+				research_speed_factor = 0.15
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		welfare_national_healthcare = {
+		
+			available = {
+			}
+						
+			cost = 100
+			removal_cost = -1
+			level = 2
+
+			modifier = {
+				political_power_gain = -0.25
+				stability_weekly  = 0.003 
+				war_support_weekly = -0.002
+				industrial_capacity_factory = 0.1
+				line_change_production_efficiency_factor = 0.15
+				conscription_factor = 0.2
+				compliance_gain = 0.02
+				research_speed_factor = 0.2
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		welfare_basic_income = {
+		
+			available = {
+			}
+						
+			cost = 100
+			removal_cost = -1
+			level = 1
+
+			modifier = {
+				stability_weekly  = 0.004 
+				war_support_weekly = -0.003
+				political_power_gain = -0.3
+				research_speed_factor = 0.25
+				industrial_capacity_factory = 0.5
+				consumer_goods_factor = 0.1
+				conscription_factor = 0.2
+				line_change_production_efficiency_factor = 0.2
+				compliance_gain = 0.03
+			}
+			
+			cancel_if_invalid = no
+		}
+
+		welfare_corporate_subsidies = {
+		
+			available = {
+			}
+						
+			cost = 100
+			removal_cost = -1
+			level = 1
+
+			modifier = {
+				political_power_gain = -0.5
+				stability_weekly  = 0.003 
+				war_support_weekly = -0.003
+				industrial_capacity_factory = 0.25
+				production_speed_buildings_factor = 0.3
+				trade_opinion_factor = 0.5
+				conscription_factor = 0.2
+				compliance_gain = 0.02
+				research_speed_factor = 0.2
+			}
+			
+			cancel_if_invalid = no
+		}
+	}
+	
+	
+	
+	
+    wp_labour_laws = {
+        law = yes
+        use_list_view = yes
+
+        eight_hour_workday = {
+
+            available = {
+
+            }
+
+            level = 2
+
+            modifier =  {
+                consumer_goods_factor = 0.05
+                monthly_population = 0.05
+                line_change_production_efficiency_factor = 0.05
+                production_factory_efficiency_gain_factor = 0.05
+                industrial_capacity_factory = 0.10
+                drift_defence_factor = 0.05
+                stability_factor = 0.10
+
+            }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+                    has_idea = welfare_capitalism
+                    add = 100
+                }
+
+                modifier = {
+
+                    OR = {
+                        has_idea = syndicalist_markets
+                        has_idea = communal_economy
+                    }
+
+                    add = 100
+                }
+
+                modifier = {
+                    has_government = communism
+                    add = 20
+                }
+
+                modifier = {
+                    tag = ITA
+                    has_government = fascism
+                    add = 40
+                }
+
+                modifier = {
+                    has_government = democratic
+                    add = 100
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        twelve_hour_workday = {
+
+            available = {
+
+            }
+
+            level = 1
+
+            modifier = {
+                #local_resources #= #0.025
+                production_factory_start_efficiency_factor = 0.025
+                industrial_capacity_factory = 0.05
+                stability_factor = 0.05
+            }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+                    has_idea = mixed_market
+                    add = 10
+                }
+
+                modifier = {
+                    has_government = neutrality
+                    add = 10
+                }
+
+                modifier = {
+                    has_idea = state_capitalism
+                    add = 10
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        fourteen_hour_workday = {
+
+            available = {
+                
+            }
+
+            level = 3
+
+            modifier = {
+                consumer_goods_factor = -0.05
+                local_resources = 0.05
+                production_factory_start_efficiency_factor = 0.05
+                #industrial_capacity_factory # #-0.05
+                monthly_population = -0.05
+                recruitable_population_factor = -0.05
+            }
+
+            ai_will_do = {
+                base = 30
+                
+                modifier = {
+                    has_government = fascism
+                    NOT = { 
+                        
+                        OR = {
+                            tag = ITA 
+                            tag = GER 
+                        }
+                    }
+
+                    add = 40
+                }
+
+                modifier = {
+                    
+                    NOT = {
+                        has_government = democratic
+                    }
+                    OR = {
+                        has_idea = laisezz_faire
+                        has_idea = rentier_state
+                    }
+
+                    add = 60
+                }
+
+                modifier = {
+
+                    NOT = {
+
+                          has_government = democratic
+                          has_government = communism
+                        
+                    }
+
+                    OR = {
+
+                        has_idea = state_capitalism
+                        has_idea = mixed_market
+                    }
+
+                    add = 20
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        eighteen_hour_workday = {
+
+            available = {
+
+                NOT = {
+
+                    has_government = communism
+                    has_government = democratic
+                }
+            }
+
+            level = 4
+            
+            modifier = {
+                consumer_goods_factor = -0.10
+                local_resources = 0.075
+                production_factory_start_efficiency_factor = 0.10
+                #industrial_capacity_factory #= #-0.10
+                monthly_population = -0.10
+                recruitable_population_factor = -0.10
+                production_factory_max_efficiency_factor = 0.05
+            }
+
+            ai_will_do = {
+                base = 20
+
+                modifier = {
+                   has_government = fascism
+
+                OR = {
+                    has_idea = laisezz_faire
+                    has_idea = rentier_state
+                 }
+
+                  add = 40
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        no_work_hour_limits = {
+
+            available = {
+                
+                OR = {
+                    has_idea = laisezz_faire
+                    has_idea = rentier_state
+                    has_idea = planned_economy
+                    has_idea = state_capitalism
+                }
+                OR = {
+                    has_government = fascism
+                    has_government = neutrality
+                }
+            }
+
+            level = 5
+
+            modifier = {
+                consumer_goods_factor = -0.10
+                local_resources = 0.10
+                production_factory_start_efficiency_factor = 0.10
+                #industrial_capacity_factory #= #-0.15
+                monthly_population = -0.15
+                recruitable_population_factor = -0.15
+                production_factory_max_efficiency_factor = 0.05
+            }
+
+            ai_will_do = {
+                base = 10
+
+                modifier = {
+                    has_government = fascism
+
+                    OR = {
+                        has_idea = laisezz_faire
+                        has_idea = rentier_state
+                
+                    }
+
+                    add = 20
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+    }
+	
+	
+	
+	
+    wp_benefits_policy = {
+        law = yes
+        use_list_view = yes
+
+        generous_state_welfare = {
+
+            available = {
+                NOT = {
+                    has_idea = laisezz_faire
+                }
+            }
+
+            level = 4
+
+            modifier = {
+                political_power_factor = 0.10
+                monthly_population = 0.10
+                consumer_goods_factor = 0.05
+                stability_factor = 0.05
+                line_change_production_efficiency_factor = 0.10
+                drift_defence_factor = 0.20
+            }
+
+            ai_will_do = {
+                base = 30
+
+                modifier = {
+                    has_idea = welfare_capitalism
+                    add = 20
+                }
+
+                modifier = {
+                    has_government = communism
+                    add = 50
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        moderate_state_welfare = {
+
+            available = {
+                
+            }
+
+            level = 3
+
+            modifier = {
+                political_power_factor = 0.05
+                monthly_population = 0.05
+                consumer_goods_factor = 0.03
+                stability_factor = 0.025
+                line_change_production_efficiency_factor = 0.05
+                drift_defence_factor = 0.10
+            }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+                    has_idea = welfare_capitalism
+                    add = 40
+                }
+
+                modifier = {
+                    has_government = communism
+                    add = 10
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        basic_state_welfare = {
+
+            available = {
+
+            }
+
+            level = 2
+
+            modifier = {
+                political_power_factor = 0.02
+                monthly_population = 0.025
+                stability_factor = 0.01
+                line_change_production_efficiency_factor = 0.025
+            }
+            
+            ai_will_do = {
+                base = 40
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        no_state_welfare = {
+
+            available = {
+
+                NOT = {
+                    has_government = communism
+                    has_idea = welfare_capitalism
+                    has_idea = planned_economy
+                }
+            }
+
+            level = 1
+
+            modifier = {
+                political_power_factor = -0.05
+                monthly_population = -0.05
+                consumer_goods_factor = -0.10
+                stability_factor = -0.05
+                line_change_production_efficiency_factor = -0.10
+                drift_defence_factor = -0.20
+            }
+
+            ai_will_do = {
+                base = 10
+
+                modifier = {
+                    has_idea = laisezz_faire
+                    add = 60
+                }
+
+                modifier = {
+                    has_government = democratic
+                    add = -10
+                }
+    
+            }
+
+            cancel_if_invalid = yes
+        }
+    }
+	
+	
+	
+	
+    wp_healthcare_policy = {
+        law = yes
+        use_list_view = yes
+
+        comprehensive_healthcare_system = {
+
+            available = {
+
+            }
+            
+            level = 4
+
+            modifier = {
+                consumer_goods_factor = 0.10
+                monthly_population = 0.20
+                stability_factor = 0.15
+                experience_loss_factor = -0.10
+            }
+
+            ai_will_do = {
+                base = 30
+
+                modifier = {
+                    has_government = communism
+                    add = 100
+                }
+
+                modifier = {
+                    has_government = democratic
+                    add = 10
+                }
+
+                modifier = {
+                    has_idea = welfare_capitalism 
+                    add = 20
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        standard_healthcare_system = {
+
+            available = {
+                
+            }
+
+            level = 3
+
+            modifier = {
+                consumer_goods_factor = 0.05
+                monthly_population = 0.10
+                stability_factor = 0.07
+                experience_loss_factor = -0.05
+            }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+                    has_government = communism
+                    add = 50
+                }
+
+                modifier = {
+                    has_idea = welfare_capitalism
+                    add = 20
+                }
+
+                modifier = {
+                    has_government = democratic
+                    add = 10
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        basic_healthcare_system = {
+
+            available = {
+
+            }
+            
+            cost = 10
+            level = 2
+
+            modifier = {
+
+                monthly_population = 0.05
+                stability_factor = 0.02
+
+            }
+
+            ai_will_do = {
+                base = 30
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        no_national_healthcare_system = {
+
+            available = {
+                
+                OR = {
+                    has_idea = rentier_state
+                    has_idea = laisezz_faire
+                }
+            }
+
+            level = 1
+
+            modifier = {
+                consumer_goods_factor = -0.10
+                monthly_population = -0.15
+                stability_factor = -0.10
+                experience_loss_factor = 0.10
+            }
+
+            ai_will_do = {
+                base = 10
+
+                modifier = {
+                    
+                    OR = {
+                        has_idea = rentier_state
+                        has_idea = laisezz_faire
+                    }
+                    add = 30
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+    }
+	
+	
+	
+	
+    wp_healthcare_focus = {
+        law = yes
+        use_list_view = yes
+
+        military_hospitals = {
+
+            available = {
+                
+            }
+
+            cost = 70
+            removal_cost = 10
+
+            modifier = {
+                 experience_loss_factor = -0.10
+                 research_speed_factor = 0.01
+                 attrition = -0.05
+                 army_morale_factor = 0.05
+            }
+
+             research_bonus = { hospital_tech = 0.50 }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+
+                    has_idea = military_head
+                    add = 40
+                }
+
+                modifier = {
+                    has_government = fascism
+                    add = 20
+                }
+                
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        research_focus = {
+
+            available = {
+                
+            }
+
+            cost = 70
+            removal_cost = 10
+
+            modifier = {
+                research_speed_factor = 0.07
+            }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+                    has_government = communism
+                    add = 40
+                }
+
+                modifier = {
+                    has_government = democratic
+                    add = 20
+                }   
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        health_focus = {
+
+            available = {
+
+            }
+            
+            cost = 70
+            removal_cost = 10
+
+            modifier = {
+                monthly_population = 0.10
+                research_speed_factor = 0.01
+                experience_loss_factor = -0.05
+                stability_factor = 0.025
+            }
+
+            ai_will_do = {
+                base = 40
+
+                modifier = {
+                    has_government = democratic
+                    add = 10
+                }
+
+                modifier = {
+                    has_government = communism
+                    add = 20
+                }
+            }
+            
+            cancel_if_invalid =yes
+        }
+    }
+	
+	
+	
+	
+	
+	etgi_ideas_social_balance = {
+	
+		law = yes
+		
+		#Cultural Norms
+		etgi_laws_social_balance_d = {
+			
+			modifier = {
+			
+				political_power_gain = 0.1
+				stability_weekly = 0.001
+			
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {
+			
+   				factor = 15
+				
+   			}
+			
+		}
+		
+		#Hierarchy
+		etgi_laws_social_balance_1 = {
+			
+			modifier = {
+			
+				production_speed_arms_factory_factor = 0.20
+				army_attack_factor = 0.1
+				attrition = 0.1
+			
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+				
+					factor = 10	
+				}
+   			}
+		}
+		
+		#Revolutionary Mindset
+		etgi_laws_social_balance_2 = {
+			
+			modifier = {
+			
+				research_speed_factor = 0.2
+				production_speed_nuclear_reactor_factor = 0.50
+				production_speed_rocket_site_factor = 0.50
+				stability_weekly  = -0.005 
+				war_support_weekly = -0.005
+			
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+			
+   				factor = 1
+				
+   			}
+		}
+		
+		#Melting Pot
+		etgi_laws_social_balance_3 = {
+			
+			modifier = {
+			
+				production_speed_buildings_factor = 0.2
+				monthly_population = 0.1
+				stability_weekly  = -0.003 
+				war_support_weekly = -0.003
+			
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+   				modifier = {
+				
+					factor = 10
+				}
+   			}
+		}
+		
+		#The Greater Good
+		etgi_laws_social_balance_4 = {
+			
+			modifier = {
+				stability_weekly  = -0.005 
+				war_support_weekly = -0.005
+				conversion_cost_mil_to_civ_factor = -0.4
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+				conscription = 0.05
+			}
+			
+			cancel_if_invalid = no
+
+			ai_will_do = {
+   				factor = 1
+
+				modifier = {
+				
+					factor = 10
+				}		
+   			}
+		}
+	}
+	
+	
+	
+	mod_pro = {
+		
+		law = yes
+		
+		light_tank_pro=
+			{
+				removal_cost = -1
+				cancel_if_invalid = no
+			
+				equipment_bonus = 
+				{
+					light_tank_chassis = 
+					{
+						build_cost_ic = -0.15 instant = yes
+					}
+				}
+				equipment_bonus = 
+				{
+				light_tank_artillery_chassis = 
+					{
+						build_cost_ic = -0.1 instant = yes
+					}
+				}
+				equipment_bonus = 
+				{
+				light_tank_destroyer_chassis = 
+					{
+						build_cost_ic = -0.1 instant = yes
+					}
+				}
+				equipment_bonus = 
+				{
+					light_tank_aa_chassis = 
+					{
+						build_cost_ic = -0.1 instant = yes
+					}
+				}
+				ai_will_do = {
+					factor = 2
+					modifier = {
+						factor = 3
+						OR = {
+							has_doctrine = new_mobile_warfare
+						}
+					}
+				}
+			}
+			
+		medium_tank_pro = 
+			{
+			removal_cost = -1
+			cancel_if_invalid = no
+				
+				equipment_bonus = 
+				{
+					medium_tank_chassis = 
+					{
+						build_cost_ic = -0.15 instant = yes
+					}
+				}
+				equipment_bonus = 
+				{
+					medium_tank_artillery_chassis = 
+					{
+						build_cost_ic = -0.1 instant = yes
+					}
+				}
+				equipment_bonus = 
+				{
+					medium_tank_destroyer_chassis = 
+					{
+						build_cost_ic = -0.1 instant = yes
+					}
+				}
+				equipment_bonus = 
+				{
+					medium_tank_aa_chassis = 
+					{
+						build_cost_ic = -0.1 instant = yes
+					}
+				}
+				ai_will_do = {
+					factor = 2
+					modifier = {
+						factor = 3
+						OR = {
+							has_doctrine = new_mobile_warfare
+						}
+					}
+				}
+			}
+		
+		heavy_tank_pro  = 
+			{
+				removal_cost = -1
+				cancel_if_invalid = no
+			
+				ai_will_do = {
+					factor = 0
+				}
+				
+			
+				equipment_bonus = 
+				{
+					heavy_tank_chassis = 
+					{
+						build_cost_ic = -0.15 instant = yes
+					}
+				}
+				equipment_bonus = 
+				{
+					heavy_tank_artillery_chassis = 
+					{
+						build_cost_ic = -0.1 instant = yes
+					}
+				}
+				equipment_bonus = 
+				{
+					heavy_tank_destroyer_chassis = 
+					{
+						build_cost_ic = -0.1 instant = yes
+					}
+				}
+				equipment_bonus = 
+				{
+						heavy_tank_aa_chassis = 
+						{
+							build_cost_ic = -0.1 instant = yes
+						}
+				}
+			}
+		
+		super_heavy_tank_pro  = 
+			{
+				removal_cost = -1
+				cancel_if_invalid = no
+			
+				ai_will_do = {
+					factor = 0
+				}
+				
+				equipment_bonus = 
+				{
+						super_heavy_tank_chassis = 
+						{
+							build_cost_ic = -0.15 instant = yes
+						}
+				}
+				equipment_bonus = 
+				{
+						super_heavy_tank_artillery_chassis = 
+						{
+							build_cost_ic = -0.1 instant = yes
+						}
+				}
+				equipment_bonus = 
+				{
+						super_heavy_tank_destroyer_chassis = 
+						{
+							build_cost_ic = -0.1 instant = yes
+						}
+				}
+				equipment_bonus = 
+				{
+						super_heavy_tank_aa_chassis = 
+						{
+							build_cost_ic = -0.1 instant = yes
+						}
+				}
+			}
+		modern_tank_pro  = 
+			{
+					removal_cost = -1
+					cancel_if_invalid = no
+			
+				ai_will_do = {
+					factor = 0
+				}
+				
+					equipment_bonus = 
+					{
+							modern_tank_chassis = 
+							{
+								build_cost_ic = -0.15 instant = yes
+							}
+					}
+					equipment_bonus = 
+					{
+							modern_tank_artillery_chassis = 
+							{
+								build_cost_ic = -0.1 instant = yes
+							}
+					}
+					equipment_bonus = 
+					{
+							modern_tank_destroyer_chassis = 
+							{
+								build_cost_ic = -0.1 instant = yes
+							}
+					}
+					equipment_bonus = 
+					{
+							modern_tank_aa_chassis = 
+							{
+								build_cost_ic = -0.1 instant = yes
+							}
+					}
+			}
+			
+		motorized_mechanized_pro  = 
+		{
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			equipment_bonus = 
+			{
+				motorized_equipment = 
+				{
+						build_cost_ic = -0.1 instant = yes
+				}
+			}
+			equipment_bonus = 
+			{
+				mechanized_equipment = 
+				{
+						build_cost_ic = -0.1 instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 3
+					OR = {
+						has_doctrine = new_mobile_warfare
+					}
+				}
+			}
+		}
+		
+		rifle_pro = 
+		{
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			cost = 150
+			equipment_bonus = 
+			{
+				infantry_equipment = 
+				{
+					build_cost_ic = -0.1 instant = yes
+				}
+				support_equipment= 
+				{
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 3
+					OR = {
+						has_doctrine = mass_assault
+					}
+				}
+			}
+		}
+		artillery_pro = 
+		{
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			cost = 150
+			equipment_bonus = 
+			{
+				artillery_equipment = 
+				{
+					build_cost_ic = -0.1 instant = yes
+				}
+				rocket_artillery_equipment = 
+				{
+					build_cost_ic = -0.1 instant = yes
+				}
+				anti_air_equipment = 
+				{
+					build_cost_ic = -0.1 instant = yes
+				}
+				anti_tank_equipment = 
+				{
+					build_cost_ic = -0.1 instant = yes
+				}
+			}
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 3
+					OR = {
+						has_doctrine = superior_firepower
+					}
+				}
+			}
+		}
+		
+######################################
+
+		small_airframe_bba  = 
+		{
+			visible = {
+				has_dlc = "By Blood Alone"
+			}
+
+			removal_cost = -1	
+			cancel_if_invalid = no
+			
+			equipment_bonus = 
+			{
+				small_plane_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				cv_small_plane_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				small_plane_cas_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				cv_small_plane_cas_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				small_plane_naval_bomber_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				cv_small_plane_naval_bomber_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 3
+					OR = {
+						has_doctrine = new_operational_integrity
+					}
+				}
+			}
+		}
+
+		medium_airframe_bba  = 
+		{
+			visible = {
+				has_dlc = "By Blood Alone"
+			}
+
+			removal_cost = -1	
+			cancel_if_invalid = no
+			
+			equipment_bonus = 
+			{
+				medium_plane_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				medium_plane_fighter_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				medium_plane_scout_plane_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 3
+					OR = {
+						has_doctrine = new_battlefield_support
+					}
+				}
+			}
+		}
+
+		large_airframe_bba  = 
+		{
+			visible = {
+				has_dlc = "By Blood Alone"
+			}
+
+			removal_cost = -1	
+			cancel_if_invalid = no
+			
+			equipment_bonus = 
+			{
+				large_plane_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				large_plane_maritime_patrol_plane_airframe = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+				transport_plane_equipment = 
+				{
+					instant = yes
+					build_cost_ic = -0.2
+				}
+			}
+
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 3
+					OR = {
+						has_doctrine = new_battlefield_support
+					}
+				}
+			}
+		}
+
+		Interceptor_pro =
+		{
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			equipment_bonus = 
+			{
+				rocket_interceptor_equipment = 
+				{
+					instant = yes
+					build_cost_ic = -0.20
+				}
+				guided_missile_equipment = 
+				{
+					instant = yes
+					build_cost_ic = -0.20
+				}
+			}
+				ai_will_do = {
+					factor = 0
+				}
+				
+		}
+		
+		big_fleet = 
+		{
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			equipment_bonus = 
+			{
+				capital_ship = 
+				{
+					instant = yes
+					build_cost_ic = -0.20
+				}
+				carrier =
+				{
+					instant = yes
+					build_cost_ic = -0.20
+				}
+			}
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 3
+					OR = {
+						has_doctrine = new_fleet_in_being
+						has_doctrine = new_base_strike
+					}
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						is_major = no
+					}
+				}
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							is_coastal = no
+							dockyard < 10
+						}
+					}
+				}
+			}
+		}
+		small_fleet = {
+			removal_cost = -1
+			cancel_if_invalid = no
+			
+			equipment_bonus = 
+			{
+				screen_ship = 
+				{
+					instant = yes
+					build_cost_ic = -0.20
+				}
+				submarine = 
+				{
+					instant = yes
+					build_cost_ic = -0.20
+				}
+				
+			}
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 3
+					OR = {
+						has_doctrine = new_convoy_raiding
+					}
+				}
+				modifier = {
+					factor = 0
+					all_owned_state = {
+						OR = {
+							is_coastal = no
+							dockyard < 1
+						}
+					}
+				}
+			}
+		}		
+	}
+	
+	
+	
+	
+	
+}

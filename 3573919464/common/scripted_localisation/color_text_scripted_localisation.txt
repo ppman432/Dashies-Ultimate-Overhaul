@@ -1,0 +1,18 @@
+# Color Text   #Define the color of some text(not used)
+# 0.8 Update
+
+defined_text = {
+	name = Getpp_buy_show2
+	text = {
+		trigger = {
+			has_political_power > 99
+		}
+		localization_key = GREEN_100_TEXT
+	}
+	text = {
+		trigger = {
+			has_political_power < 100
+		}
+		localization_key = RED_100_TEXT
+	}
+}

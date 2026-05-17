@@ -1,0 +1,336 @@
+special_forces_tech_decisions = {
+	mountaineers_decision = {
+		
+		visible = {
+			AND = {
+				NOT = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				NOT = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_tech = mountaineers_c
+				}
+			}
+		}
+		available = {
+			hidden_trigger = { has_army_experience > 50 }
+			if = {
+				limit = {
+					has_country_flag = es_specialist_cooldown
+				}
+				custom_trigger_tooltip = {
+					tooltip = es_specialist_cooldown_days_tt
+					NOT = {	has_country_flag = es_specialist_cooldown }
+				}
+			}
+			has_tech = equipment_upgrade_0
+			has_tech = tech_support
+		}
+
+		custom_cost_trigger = {
+			has_army_experience > 50
+		}
+
+		custom_cost_text = decision_cost_army_xp_50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			set_country_flag = { flag = es_specialist_cooldown days = 100 value = 1 }
+		}
+
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = tech_mountaineers
+					}
+				}
+				set_technology = {
+					tech_mountaineers = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = tech_mountaineers2
+					}
+				}
+				set_technology = {
+					tech_mountaineers2 = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = tech_mountaineers3
+					}
+				}
+				set_technology = {
+					tech_mountaineers3 = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = mountaineers_a
+					}
+				}
+				set_technology = {
+					mountaineers_a = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = mountaineers_b
+					}
+				}
+				set_technology = {
+					mountaineers_b = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = mountaineers_c
+					}
+				}
+				set_technology = {
+					mountaineers_c = 1
+				}
+			}
+		}
+	}
+	
+	marines_decision = {
+		
+		visible = {
+			AND = {
+				NOT = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				NOT = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_tech = marines_c
+				}
+			}
+		}
+		available = {
+			hidden_trigger = { has_army_experience > 50 }
+			if = {
+				limit = {
+					has_country_flag = es_specialist_cooldown
+				}
+				custom_trigger_tooltip = {
+					tooltip = es_specialist_cooldown_days_tt
+					NOT = {	has_country_flag = es_specialist_cooldown }
+				}
+			}
+			AND = {
+				has_tech = mtg_transport
+				has_tech = tech_support
+			}
+		}
+
+		custom_cost_trigger = {
+			has_navy_experience > 50
+		}
+
+		custom_cost_text = decision_cost_navy_xp_50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			set_country_flag = { flag = es_specialist_cooldown days = 100 value = 1 }
+		}
+		
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = marines
+					}
+				}
+				set_technology = {
+					marines = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = marines2
+					}
+				}
+				set_technology = {
+					marines2 = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = marines3
+					}
+				}
+				set_technology = {
+					marines3 = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = marines_a
+					}
+				}
+				set_technology = {
+					marines_a = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = marines_b
+					}
+				}
+				set_technology = {
+					marines_b = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = marines_c
+					}
+				}
+				set_technology = {
+					marines_c = 1
+				}
+			}
+		}
+	}
+	
+	paratroopers_decision = {
+		
+		visible = {
+			AND = {
+				NOT = {
+					has_dlc = "No Compromise, No Surrender"
+				}
+				NOT = {
+					has_dlc = "Arms Against Tyranny"
+				}
+				NOT = {
+					has_tech = paratroopers_c
+				}
+			}
+		}
+		available = {
+			if = {
+				limit = {
+					has_country_flag = es_specialist_cooldown
+				}
+				custom_trigger_tooltip = {
+					tooltip = es_specialist_cooldown_days_tt
+					NOT = {	has_country_flag = es_specialist_cooldown }
+				}
+			}
+			if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				has_tech = bba_early_transport_plane
+				
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				has_tech = early_transport_plane
+				
+			}
+			has_tech = tech_support
+			hidden_trigger = { has_army_experience > 50 }
+		}
+
+		custom_cost_trigger = {
+			has_air_experience > 50
+		}
+
+		custom_cost_text = decision_cost_air_xp_50
+		
+		days_remove = 75
+		
+		complete_effect = {
+			set_country_flag = { flag = es_specialist_cooldown days = 100 value = 1 }
+		}
+		
+		remove_effect = {
+			if = {
+				limit = {
+					NOT = {
+						has_tech = paratroopers
+					}
+				}
+				set_technology = {
+					paratroopers = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = paratroopers2
+					}
+				}
+				set_technology = {
+					paratroopers2 = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = paratroopers3
+					}
+				}
+				set_technology = {
+					paratroopers3 = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = paratroopers_a
+					}
+				}
+				set_technology = {
+					paratroopers_a = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = paratroopers_b
+					}
+				}
+				set_technology = {
+					paratroopers_b = 1
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_tech = paratroopers_c
+					}
+				}
+				set_technology = {
+					paratroopers_c = 1
+				}
+			}
+		}
+	}
+}

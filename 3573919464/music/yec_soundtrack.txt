@@ -1,0 +1,19 @@
+music_station = "base_music"
+
+music = {
+	song = "yec_event_music_long"
+	chance = {
+		modifier = {
+			factor = 0
+		}
+	}
+}
+
+music = {
+	song = "yec_event_music_short"
+	chance = {
+		modifier = {
+			factor = 0
+		}
+	}
+}

@@ -1,0 +1,539 @@
+ideas = {
+
+
+    ip_construction_focus = {
+        law = yes
+        use_list_view = yes
+
+        industrial_complexes = {
+
+
+            available = {
+
+            }
+
+            removal_cost = 0
+
+            modifier = {
+                production_speed_buildings_factor = -0.05
+                production_speed_industrial_complex_factor = 0.25
+            }
+
+            ai_will_do = {
+                base = 20
+            }
+
+            cancel_if_invalid = no
+        }
+
+        military_buildings = {
+
+            available = {
+
+            }
+
+            removal_cost = 0
+
+            modifier = {
+                production_speed_buildings_factor = -0.05
+                production_speed_arms_factory_factor = 0.30
+                production_speed_dockyard_factor = 0.30
+            }
+
+            ai_will_do = {
+                base = 20
+            }
+        }
+
+        defense_focus = {
+            
+            available = {
+
+            }
+
+            removal_cost = 0
+
+            modifier = {
+               production_speed_buildings_factor = -0.05
+               production_speed_bunker_factor = 0.35
+               production_speed_coastal_bunker_factor = 0.35
+               production_speed_anti_air_building_factor = 0.35
+            }
+
+            ai_will_do = {
+                base = 0
+            }
+    
+        }
+
+        infrastructure_focus = {
+
+            available = {
+                
+            }
+
+            removal_cost = 0
+
+            modifier = {
+               production_speed_buildings_factor = -0.05
+               production_speed_infrastructure_factor = 0.25
+               production_speed_air_base_factor = 0.25
+               production_speed_supply_node_factor = 0.30
+               production_speed_naval_base_factor = 0.35
+               production_speed_rail_way_factor = 0.35
+               production_speed_radar_station_factor = 0.65
+            }
+
+            ai_will_do = {
+                base = 20
+            }
+        }
+    }
+	
+	
+	
+    ip_resource_efforts = {
+        law = yes
+        use_list_view = yes
+
+        synthetic_fuel = {
+
+            available = {
+
+            }
+
+            modifier = {
+                fuel_gain_factor_from_states = 0.20
+                army_fuel_consumption_factor = -0.05
+                navy_fuel_consumption_factor = -0.05
+                air_fuel_consumption_factor = -0.05
+            }
+
+            ai_will_do = {
+                base = 20
+                
+                modifier = {
+                    fuel_ratio < 0.5
+                    has_war = yes
+                    add = 60
+                }
+            }
+
+        }
+
+        alternative_materials = {
+
+            available = {
+
+            }
+
+            modifier = {
+                #production_oil_factor #= #0.10 #this would give synthetic oil +10%
+                production_factory_max_efficiency_factor = -0.05
+                production_lack_of_resource_penalty_factor = -0.20
+            }
+
+            ai_will_do = {
+                base = 0
+            }
+        }
+
+        extraction_programs = {
+            
+            available = {
+
+            }
+
+            modifier = {
+                industrial_capacity_factory = -0.05
+                production_speed_buildings_factor = -0.05
+                local_resources_factor = 0.15
+            }
+
+            ai_will_do = {
+                base = 10
+                
+                modifier = {
+                    has_idea = rentier_state
+                    add = 40
+                }
+            }
+        }
+    }
+	
+	
+	
+    gf_logistics_system = {
+        law = yes
+        use_list_view = yes
+
+        push_system = {
+
+            available = {
+
+            }
+
+            cost = 80
+            removal_cost = 0
+
+            modifier = {
+                supply_factor = 0.30
+                out_of_supply_factor = 0.20
+                max_fuel_factor = 0.20
+                army_fuel_capacity_factor = 0.20
+                planning_speed = -0.10
+            }
+            
+            ai_will_do = {
+                base = 20
+
+
+                modifier = {
+                    has_government = fascism
+                    add = 40
+                }
+
+                modifier = {
+                    has_idea = military_head
+                    add = 60
+                }
+                
+            }
+
+            cancel_if_invalid = yes
+        }
+
+        pull_system = {
+
+            available = {
+
+            }
+
+            cost = 80
+            removal_cost = 0
+
+            modifier = {
+                out_of_supply_factor = -0.20
+                supply_combat_penalties_on_core_factor = -0.50
+                attrition = -0.05
+                truck_attrition_factor = -0.10
+            }
+
+            ai_will_do = {
+                base = 20
+                
+                modifier = {
+                    has_government = democratic
+                    add = 40
+                }
+
+                modifier = {
+
+                    add = 60
+                }
+
+                modifier = {
+
+                    OR = {
+                        has_idea = workers_council
+                        has_idea = communal_council
+                    }
+                    add = 60
+                }
+            }
+
+            cancel_if_invalid = yes
+        }
+    }
+	
+	
+	recruitment_drive = { 
+	
+		law = yes
+		
+		recruitment_drive0 = {
+			default = yes	
+			modifier = {
+			
+			}
+			cost = 150
+			cancel_if_invalid = no
+			
+			available = {
+				OR = {
+					has_idea = recruitment_drive1
+
+				}
+			}
+			
+			ai_will_do = {			
+   				factor = 15				
+   			}			
+		}
+		
+		recruitment_drive1 = {
+			
+			modifier = {
+			political_power_gain = -0.05
+			operative_slot = 1			
+			}
+			cost = 150
+			cancel_if_invalid = no
+			
+			available = {
+				OR = {
+					has_idea = recruitment_drive0
+					has_idea = recruitment_drive2
+				}
+			}
+
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+		
+		recruitment_drive2 = {
+			
+			modifier = {			
+			political_power_gain = -0.1
+			operative_slot = 2				
+			}
+			cost = 150
+			cancel_if_invalid = no
+			
+			available = {
+				OR = {
+					has_idea = recruitment_drive1
+					has_idea = recruitment_drive3
+				}
+			}
+
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+		
+		recruitment_drive3 = {	
+		
+			modifier = {
+			political_power_gain = -0.15
+			operative_slot = 3
+			}	
+			cost = 150
+			cancel_if_invalid = no
+			
+			available = {
+				OR = {
+					has_idea = recruitment_drive2
+				}
+			}
+			
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+	}
+	
+	counter_operations = { 
+	
+		law = yes
+		
+		counter_operations0 = {
+			default = yes	
+			modifier = {
+			
+			}
+			cost = 150
+			cancel_if_invalid = no
+			
+			available = {
+				OR = {
+					has_idea = counter_operations1
+
+				}
+			}
+			
+			ai_will_do = {			
+   				factor = 15				
+   			}			
+		}
+		
+		counter_operations1 = {
+			
+			modifier = {
+			political_power_gain = -0.05
+			intelligence_agency_defense = 0.25		
+			}
+			cost = 150
+			cancel_if_invalid = no
+			
+			available = {
+				OR = {
+					has_idea = counter_operations0
+					has_idea = counter_operations2
+				}
+			}
+
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+		
+		counter_operations2 = {
+			
+			modifier = {			
+			political_power_gain = -0.1
+			intelligence_agency_defense = 0.5			
+			}
+			cost = 150
+			cancel_if_invalid = no
+			
+			available = {
+				OR = {
+					has_idea = counter_operations1
+					has_idea = counter_operations3
+				}
+			}
+
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+		
+		counter_operations3 = {	
+		
+			modifier = {
+			political_power_gain = -0.25
+			intelligence_agency_defense = 1.0
+			}	
+			cost = 150
+			cancel_if_invalid = no
+			
+			available = {
+				OR = {
+					has_idea = counter_operations2
+				}
+			}
+			
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+	}
+	
+	intel_gathering = { 
+	
+		law = yes
+		
+		intel0 = {
+			default = yes	
+			modifier = {
+			
+			}
+			
+			cancel_if_invalid = no
+			
+			ai_will_do = {			
+   				factor = 15				
+   			}			
+		}
+		
+		intel_economy = {
+			
+			modifier = {
+			civilian_intel_factor = 0.15	
+			}
+			cost = 200
+			cancel_if_invalid = no
+
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+		intel_army = {
+			
+			
+			modifier = {
+			army_intel_factor = 0.15 	
+			}
+			cost = 200
+			cancel_if_invalid = no
+
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+		intel_navy = {
+			
+			modifier = {
+			navy_intel_factor = 0.15	
+			}
+			cost = 200
+			cancel_if_invalid = no
+
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+		intel_air = {
+			
+			
+			modifier = {
+			airforce_intel_factor = 0.15
+			}
+			cost = 200
+			cancel_if_invalid = no
+
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+	}
+	
+	cryptology = { 
+	
+		law = yes
+		
+		cryptology0 = {
+			default = yes	
+			modifier = {
+			
+			}
+			
+			cancel_if_invalid = no
+			
+			modifier = {			
+   				command_power_gain = 0.05	
+				experience_gain_army = 0.05
+   			}			
+		}
+		
+		encryption = {
+			
+			modifier = {
+			encryption_factor = 0.25		
+			}
+			cost = 300
+			cancel_if_invalid = no
+
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+		decryption = {
+			
+			
+			modifier = {
+			decryption_factor = 0.25		
+			}
+			cost = 300
+			cancel_if_invalid = no
+
+			ai_will_do = {			
+   				factor = 1
+   			}
+		}
+	}
+	
+	
+}

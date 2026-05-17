@@ -1,0 +1,188 @@
+defined_text = { # state
+	name = mark_state_tooltip
+
+	text = {
+		trigger = {
+			check_variable = { ROOT.marked_for_transfer_@THIS > 0 }
+		}
+		localization_key = mark_state_no
+	}
+	text = {
+		localization_key = mark_state_yes
+	}
+}
+
+defined_text = { # global
+	name = transfer_states_tooltip
+
+	text = {
+		trigger = {
+			has_country_flag = transfer_enabled
+		}
+		localization_key = transfer_states_off
+	}
+	text = {
+		localization_key = transfer_states_on
+	}
+}
+
+defined_text = { # global
+	name = ST_TOOLTIP
+
+	text = {
+		trigger = {
+			has_country_flag = transfer_enabled
+		}
+		localization_key = ST_TOOLTIP_off
+	}
+	text = {
+		localization_key = ST_TOOLTIP_on
+	}
+}
+
+defined_text = { # global
+	name = mark_status
+
+	text = {
+		trigger = {
+			check_variable = { ROOT.marked_for_transfer_@THIS > 0 }
+		}
+		localization_key = mark_status_marked
+	}
+	text = {
+		localization_key = mark_status_unmarked
+	}
+}
+
+#NEW STUFF
+
+defined_text = {
+	name = MARK_ALL_STATES_SCRIPT
+	text = {
+		trigger = {
+			NOT = {ROOT = {has_country_flag = ST_HOST}}
+			is_ai = no
+			NOT = {check_variable = {THIS = ROOT}}
+		}
+		localization_key = MARK_ALL_STATES_2
+	}
+	text = {
+		trigger = {
+			all_owned_state = {
+				check_variable = { ROOT.marked_for_transfer_@THIS > 0 }
+			}
+		}
+		localization_key = MARK_ALL_STATES_1
+	}
+	text = {
+		localization_key = MARK_ALL_STATES_3
+	}
+}
+
+defined_text = {
+	name = MARK_COLONIES_SCRIPT
+	
+	text = {
+		trigger = {
+			all_owned_state = {
+				OR = {
+					is_in_home_area = yes
+					is_core_of = PREV
+				}
+			}
+		}
+		localization_key = MARK_COLONIES_4
+	}
+	
+	text = {
+		trigger = {
+			NOT = {ROOT = {has_country_flag = ST_HOST}}
+			is_ai = no
+			NOT = {check_variable = {THIS = ROOT}}
+		}
+		localization_key = MARK_COLONIES_2
+	}
+	text = {
+		trigger = {
+			all_owned_state = {
+				OR = {
+					is_in_home_area = yes
+					check_variable = { ROOT.marked_for_transfer_@THIS > 0 }
+					is_core_of = PREV
+				}
+			}
+		}
+		localization_key = MARK_COLONIES_1
+	}
+	text = {
+		localization_key = MARK_COLONIES_3
+	}
+}
+
+defined_text = {
+	name = CLEAR_ALL_MARKINGS_SCRIPT
+	text = {
+		trigger = {
+			all_state = {
+				NOT = {check_variable = { ROOT.marked_for_transfer_@THIS > 0 }}
+			}
+		}
+		localization_key = CLEAR_ALL_MARKINGS_1
+	}
+	text = {
+		localization_key = CLEAR_ALL_MARKINGS_2
+	}
+}
+
+defined_text = {
+	name = AWARD_STATES_SCRIPT
+	text = {
+		trigger = {
+			all_state = {
+				NOT = {check_variable = { ROOT.marked_for_transfer_@THIS > 0 }}
+			}
+		}
+		localization_key = AWARD_STATES_1
+	}
+	text = {
+		trigger = {
+			any_state = {
+				owner = {
+					NOT = {ROOT = {has_country_flag = ST_HOST}}
+					is_ai = no
+					NOT = {check_variable = {THIS = ROOT}}
+				}
+				check_variable = { ROOT.marked_for_transfer_@THIS > 0 }
+			}
+		}
+		localization_key = AWARD_STATES_2
+	}
+	text = {
+		trigger = {
+			any_state = {
+				check_variable = { ROOT.marked_for_transfer_@THIS > 0 }
+				is_owned_by = PREV
+			}
+		}
+		localization_key = AWARD_STATES_4
+	}
+	text = {
+		localization_key = AWARD_STATES_3
+	}
+}
+defined_text = {
+	name = ST_STATE_MARK_FOR_TRANSFER_SCRIPT
+	text = {
+		trigger = {
+			owner = {
+				NOT = {ROOT = {has_country_flag = ST_HOST}}
+				is_ai = no
+				NOT = {check_variable = {ROOT = THIS}}
+			}
+		}
+		localization_key = ST_STATE_MARK_FOR_TRANSFER_1
+	}
+	text = {
+		localization_key = ST_STATE_MARK_FOR_TRANSFER_2
+	}
+}

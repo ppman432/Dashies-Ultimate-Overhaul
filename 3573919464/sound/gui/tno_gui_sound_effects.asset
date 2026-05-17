@@ -1,0 +1,71 @@
+soundeffect = {
+	name = "distance_airplane_jet_idle"
+	sounds = {
+		sound = distance_airplane_jet_idle
+	}
+	volume = 0
+}
+
+soundeffect = {
+	name = "distance_airplane_crash"
+	sounds = {
+		sound = distance_airplane_crash
+	}
+	volume = 0
+}
+
+soundeffect = {
+	name = "distance_mechanized_units_mg_fire"
+	sounds = {
+		sound = distance_mechanized_units_mg_fire
+	}
+	volume = 0
+}
+
+soundeffect = {
+	name = "distance_airplane_light_fire"
+	sounds = {
+		sound = distance_airplane_light_fire
+	}
+	volume = 0
+}
+
+soundeffect = {
+	name = "distance_airplane_ger_jet_fire"
+	sounds = {
+		sound = distance_airplane_ger_jet_fire
+	}
+	volume = 0
+}
+
+soundeffect = {
+	name = "distance_airplane_medium_idle_01"
+	sounds = {
+		sound = distance_airplane_medium_idle_01
+	}
+	volume = 0
+}
+
+soundeffect = {
+	name = "distance_airplane_idle"
+	sounds = {
+		sound = distance_airplane_idle
+	}
+	volume = 0
+}
+
+soundeffect = {
+	name = "distance_airplane_heavy_idle_01"
+	sounds = {
+		sound = distance_airplane_heavy_idle_01
+	}
+	volume = 0
+}
+
+soundeffect = {
+	name = "tno_button_empty"
+	sounds = {
+		sound = tno_button_empty
+	}
+	volume = 0.75
+}

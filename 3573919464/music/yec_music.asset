@@ -1,0 +1,11 @@
+music = {
+	name = "yec_event_music_long"
+	file = "yec/yec_event_music_long.ogg"
+  volume = 2
+}
+
+music = {
+	name = "yec_event_music_short"
+	file = "yec/yec_event_music_short.ogg"
+  volume = 2
+}

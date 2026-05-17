@@ -1,8 +1,0 @@
-transfer_navy_mod = {
-	visible = {
-		always = yes
-	}
-	allowed = {
-		always = yes
-	}
-}

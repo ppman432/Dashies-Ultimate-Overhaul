@@ -1,0 +1,38 @@
+scripted_gui = {
+
+	Army_Icons_by = {
+		context_type = player_context
+		parent_window_name = insignia_selection_window
+		window_name = "Army_Icons_by"
+
+		effects = {
+			by_tag_enabled_click = {
+				set_global_flag = eawarmyicons_tag_check_disabled
+			}
+			by_tag_disabled_click = {
+				clr_global_flag = eawarmyicons_tag_check_disabled
+			}
+			by_ideology_enabled_click = {
+				set_global_flag = eawarmyicons_ideology_check_disabled
+			}
+			by_ideology_disabled_click = {
+				clr_global_flag = eawarmyicons_ideology_check_disabled
+			}
+		}
+		triggers = {
+			by_tag_enabled_visible = {
+				NOT = { has_global_flag = eawarmyicons_tag_check_disabled }
+			}
+			by_tag_disabled_visible = {
+				has_global_flag = eawarmyicons_tag_check_disabled
+			}
+			by_ideology_enabled_visible = {
+				NOT = { has_global_flag = eawarmyicons_ideology_check_disabled }
+			}
+			by_ideology_disabled_visible = {
+				has_global_flag = eawarmyicons_ideology_check_disabled
+			}
+		}
+	}
+
+}

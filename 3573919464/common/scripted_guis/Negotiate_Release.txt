@@ -1,0 +1,140 @@
+scripted_gui = {
+
+	Negotiate_Release = {
+		context_type = player_context
+		
+		window_name = "Negotiate_Release_container"
+		
+		visible={
+		check_variable = { ROOT.show_Negotiate_Release > 0 }
+
+		}
+		
+ 
+		effects = { 
+		 
+		    Increase_Spies_Released_click = {
+						 
+			var:show_Negotiate_Release = {
+		      add_to_variable = {ROOT.Spies_Demand@THIS = 100}
+			  add_to_variable = {ROOT.Deal_Favorability@THIS = -50}
+			  set_variable = {Opinion_Factor = THIS.opinion@ROOT}
+			  }}
+			  
+		    Decrease_Spies_Released_click = {
+						 
+			var:show_Negotiate_Release = {
+		      subtract_from_variable = {ROOT.Spies_Demand@THIS = 100}
+			  subtract_from_variable = {ROOT.Deal_Favorability@THIS = -50}
+			  set_variable = {Opinion_Factor = THIS.opinion@ROOT}
+			  }}
+			 
+			
+		 
+            Increase_Spies_Released_Return_click = {
+			 
+			var:show_Negotiate_Release = {
+		      add_to_variable = {ROOT.Spies_Offer@THIS = 100}
+			  add_to_variable = {ROOT.Deal_Favorability@THIS = 50}
+			  set_variable = {Opinion_Factor = THIS.opinion@ROOT}
+			  }}
+			  
+			Decrease_Spies_Released_Return_click = {
+			 
+			var:show_Negotiate_Release = {
+		      subtract_from_variable = {ROOT.Spies_Offer@THIS = 100}
+			  subtract_from_variable = {ROOT.Deal_Favorability@THIS = 50}
+			  set_variable = {Opinion_Factor = THIS.opinion@ROOT}
+			  }}
+			  
+			Increase_Equipment_Return_click = {
+			 
+			var:show_Negotiate_Release = { 
+		      add_to_variable = {ROOT.Equipment_Offer@THIS = 1000}
+			  add_to_variable = {ROOT.Deal_Favorability@THIS = 10}
+			  set_variable = {Opinion_Factor = THIS.opinion@ROOT}
+			  }}
+			     
+			Decrease_Equipment_Return_click = {
+			 
+			var:show_Negotiate_Release = {
+		      subtract_from_variable = {ROOT.Equipment_Offer@THIS = 1000}
+			  subtract_from_variable = {ROOT.Deal_Favorability@THIS = 10}
+			  set_variable = {Opinion_Factor = THIS.opinion@ROOT}
+			  }
+			}
+			  
+			Letter_Cancel_click = {
+			
+			clear_variable = ROOT.Opinion_Factor 
+			clear_variable = ROOT.Deal_Favorability@ROOT.show_Negotiate_Release 
+			clear_variable = ROOT.Spies_Offer@ROOT.show_Negotiate_Release
+			clear_variable = ROOT.Spies_Demand@ROOT.show_Negotiate_Release
+			clear_variable = ROOT.Equipment_Offer@ROOT.show_Negotiate_Release
+			clear_variable = ROOT.show_Negotiate_Release 
+		}
+		 
+		Letter_Send_click = {  
+		 
+   
+		
+		var:show_Negotiate_Release = {
+		set_variable = {ROOT.Spies_Demand = ROOT.Spies_Demand@THIS}
+		set_variable = {ROOT.Spies_Offer = ROOT.Spies_Offer@THIS}
+		set_variable = {ROOT.Equipment_Offer = ROOT.Equipment_Offer@THIS}
+		country_event = {id = espionage.news.380 days = 1}}
+		clear_variable =  ROOT.show_Negotiate_Release 
+		
+		}   
+		} 
+		
+		triggers = {
+		Increase_Spies_Released_click_enabled = {
+
+		var:show_Negotiate_Release = {
+		check_variable = {THIS.Spies_Captured@ROOT > ROOT.Spies_Demand@THIS}		
+		}}
+		Decrease_Spies_Released_click_enabled = {	
+		
+		var:show_Negotiate_Release = {
+		
+		check_variable = {ROOT.Spies_Demand@THIS > 0}}		
+		}
+		
+		Increase_Spies_Released_Return_click_enabled = {
+		var:show_Negotiate_Release = {
+		check_variable = {ROOT.Spies_Captured@THIS > ROOT.Spies_Offer@THIS}}	
+		}
+		
+		Decrease_Spies_Released_Return_click_enabled = {
+        var:show_Negotiate_Release = {		
+		check_variable = {ROOT.Spies_Offer@THIS > 0}}		
+		}
+		
+		Increase_Equipment_Return_click_enabled = {
+		
+	    var:show_Negotiate_Release = {
+		ROOT = { has_equipment = { infantry_equipment_1 > ROOT.Equipment_Offer@PREV }
+		has_equipment = { infantry_equipment_1 > 999 }
+		check_variable = { ROOT.Equipment_Offer@PREV < 20001}
+		}}}
+		
+		Decrease_Equipment_Return_click_enabled = {
+		var:show_Negotiate_Release = {
+		check_variable = { ROOT.Equipment_Offer@THIS > 0}
+		}}
+		
+		Letter_Send_click_enabled = { check_variable = {ROOT.Spies_Demand@ROOT.show_Negotiate_Release > 0}}
+		
+		}
+		ai_max_weight_taken_per_test = 1
+		
+		
+		ai_weights = {
+        }
+		
+		
+	}
+    
+}
+

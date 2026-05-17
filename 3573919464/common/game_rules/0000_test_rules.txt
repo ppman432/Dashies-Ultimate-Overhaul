@@ -1,0 +1,365 @@
+#
+# List of options showing in the Game Rules screen
+#
+# format is:
+
+ national_ideas_rule = {
+	name = "toggle_nat_ideas"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_take_over_faction_leadership"				# Optional icon
+	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = Enable_nat_ideas
+		text = "TEXT_natid_1"
+		desc = "natid_desc" #Specify it gets rid of all three, AND propaganda
+		allow_achievements = yes
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = only_eu4
+		text = "TEXT_natid_3"
+		desc = "only_eu4_desc"
+		allow_achievements = yes
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = only_bluemoon
+		text = "TEXT_natid_4"
+		desc = "only_bluemoon_desc"
+		allow_achievements = yes
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = only_cookiecrumb
+		text = "TEXT_natid_5"
+		desc = "only_cookiecrumb_desc"
+		allow_achievements = yes
+	}
+	option = {										# Unless other specified, the first option is the default option
+		name = Disable_nat_ideas
+		text = "TEXT_natid_2"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "natid_desc"
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	
+ }
+ yec_event_music_enabled = {
+	name = "YEC_RULE_MUSIC_ENABLED"
+	group = "HEPO_Options"
+	icon = "GFX_take_over_faction_leadership"
+	default = {
+		name = "DYNAMIC"
+		text = YEC_RULE_OPTION_DYNAMIC
+		desc = "YEC_RULE_MUSIC_ENABLED_DYNAMIC_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "SHORT"
+		text = YEC_RULE_OPTION_SHORT
+		desc = "YEC_RULE_MUSIC_ENABLED_SHORT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "LONG"
+		text = YEC_RULE_OPTION_LONG
+		desc = "YEC_RULE_MUSIC_ENABLED_LONG_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "OFF"
+		text = YEC_RULE_OPTION_OFF
+		desc = "YEC_RULE_MUSIC_ENABLED_OFF_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = "DISABLED"
+		text = YEC_DISABLED
+		desc = "YEC_DISABLED_DESC"
+		allow_achievements = yes
+	}
+}
+
+ 
+ si_increase_ai_rejectance_rules = {
+
+	name = "SI_AI_REJECT_RULES"
+	group = "HEPO_Options"
+	icon = GFX_production_licenses
+
+	default = {
+		name = SI_AI_REJECT_DEFAULT
+		text = "SI_AI_REJECT_DEFAULT"
+		desc = "SI_AI_REJECT_DEFAULT_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SI_AI_REJECT_INCREASED_FOR_PLAYERS
+		text = "SI_AI_REJECT_INCREASED_FOR_PLAYERS"
+		desc = "SI_AI_REJECT_INCREASED_FOR_PLAYERS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = SI_AI_REJECT_DECREASED_FOR_PLAYERS
+		text = "SI_AI_REJECT_DECREASED_FOR_PLAYERS"
+		desc = "SI_AI_REJECT_DECREASED_FOR_PLAYERS_DESC"
+		allow_achievements = no
+	}
+ }
+ 
+ devastation_rule = {
+	name = "toggle_devastation"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_take_over_faction_leadership"				# Optional icon
+	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = Enable_devastation
+		text = "TEXT_devastation_1"
+		desc = "devastation_desc"
+		allow_achievements = yes
+	}
+	option = {										# Unless other specified, the first option is the default option
+		name = Disable_devastation
+		text = "TEXT_devastation_2"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "devastation_desc"
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	
+ }
+ 
+ world_dom_rule = {
+	name = "toggle_world_dom"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_take_over_faction_leadership"				# Optional icon
+	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = Enable_world_dom
+		text = "TEXT_world_dom_1"
+		desc = "world_dom_desc"
+		allow_achievements = yes
+	}
+	option = {										# Unless other specified, the first option is the default option
+		name = Disable_world_dom
+		text = "TEXT_world_dom_2"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "world_dom_desc"
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	
+ }
+
+
+
+
+ MP_mode_rule = {
+	name = "Enable_MPmode"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_take_over_faction_leadership"				# Optional icon
+	option = {										# Unless other specified, the first option is the default option
+		name = Enable_multimode
+		text = "TEXT_MPMODE_1"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "mpmode_desc"
+		allow_achievements = no					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = disable_multimode
+		text = "TEXT_MPMODE_2"
+		desc = "mpmode_desc"
+		allow_achievements = yes
+	}
+ }
+ Peace_conference_rule = {
+	name = "Enable_PLPC"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_production_licenses"				# Optional icon
+	default = {										# Unless other specified, the first option is the default option
+		name = Enable_Player_led
+		text = "TEXT_KEY_PLC1"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "Enable_PLPC_desc"
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = disable_Player_led
+		text = "TEXT_KEY_PLC2"
+		desc = "Enable_PLPC_desc"
+		allow_achievements = yes
+	}
+ }
+ National_level_rule = {
+	name = "Enable_NL"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_take_over_faction_leadership"		# Optional icon
+	default = {										# Unless other specified, the first option is the default option
+		name = enable_national_level
+		text = "TEXT_KEY_NL1"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "Enable_NL_desc"
+		allow_achievements = yes						# If not specified, this is set to yes for default options and no for all other options.
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = disable_national_level
+		text = "TEXT_KEY_NL2"
+		desc = "Enable_NL_desc"
+		allow_achievements = yes
+	}
+ }
+ 
+ Lootbox_rule = {
+	name = "Enable_LB"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Games"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_scorched_earth"						# Optional icon
+	default = {										# Unless other specified, the first option is the default option
+		name = enable_Lootbox
+		text = "TEXT_KEY_LB1"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "Enable_LB_desc"
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = disable_Lootbox
+		text = "TEXT_KEY_LB2"
+		desc = "Enable_LB_desc"
+		allow_achievements = yes
+	}
+ }
+ Tiktaktoe_rule = {
+	name = "Enable_TTT"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Games"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_scorched_earth"						# Optional icon
+	default = {										# Unless other specified, the first option is the default option
+		name = enable_TTT
+		text = "TTT_on"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "TTT_on_desc"
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = disable_TTT
+		text = "TTT_off"
+		desc = "TTT_off_desc"
+		allow_achievements = yes
+	}
+ }
+ war_exhaustion_enable_rule = {
+	name = "Enable_war_exhaustion_Mod"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_coups"								# Optional icon
+	default = {										# Unless other specified, the first option is the default option
+		name = Enable_war_exhaustion_rule
+		text = "Enable_war_exhaustion"					# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "Enable_war_exhaustion_desc"
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = Disable_war_exhaustion_rule
+		text = "Disable_war_exhaustion"
+		desc = "Disable_war_exhaustion_desc"
+		allow_achievements = yes
+	}
+ }
+ Poker_enable_rule = {
+	name = "Enable_Poker_Mod"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Games"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_scorched_earth"						# Optional icon
+	default = {										# Unless other specified, the first option is the default option
+		name = Enable_Poker_rule
+		text = "Enable_Poker"					# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "Enable_Poker_desc"
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = Disable_Poker_rule
+		text = "Disable_Poker"
+		desc = "Disable_Poker_desc"
+		allow_achievements = yes
+	}
+ }
+ Money_top_bar = {
+	name = "Enable_MTB"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_boosting_party_popularity"			# Optional icon
+	default = {										# Unless other specified, the first option is the default option
+		name = MTB1
+		text = "TEXT_KEY_MTB1"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		desc = "Enable_MTB_desc"	
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = MTB2
+		text = "TEXT_KEY_MTB2"
+		desc = "Enable_MTB_desc"
+		allow_achievements = yes
+	}
+ }
+ Economy_buff_rule = {
+	name = "Enable_EB"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_coups"								# Optional icon
+	default = {										# Unless other specified, the first option is the default option
+		name = EBEnable
+		desc = "Enable_EB_desc"
+		text = "TEXT_KEY_EB1"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = EBDisable
+		desc = "Enable_EB_desc"
+		text = "TEXT_KEY_EB2"
+		allow_achievements = yes
+	}
+ }
+ Ammunition_rule = {
+	name = "Enable_Ammo"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_scorched_earth"								# Optional icon
+	default = {										# Unless other specified, the first option is the default option
+		name = Ammoy
+		desc = "Enable_ammo_desc"
+		text = "TEXT_KEY_ammo1"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = Ammon
+		desc = "Disable_ammo_desc"
+		text = "TEXT_KEY_ammo2"
+		allow_achievements = yes
+	}
+ }
+ Civil_war_rule = {
+	name = "Enable_cw_stability"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_coups"								# Optional icon
+	option = {										# Unless other specified, the first option is the default option
+		name = cwy
+		desc = "Enable_civil_desc"
+		text = "TEXT_KEY_civily"						# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	default = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = cwn
+		desc = "Disable_civil_desc"
+		text = "TEXT_KEY_civiln"
+		allow_achievements = yes
+	}
+ }
+ espionage_rule = {
+	name = "espionage_rule_txt"
+	#required_dlc = "Name of the Required DLC"
+	group = "HEPO_Options"							# Used for filtering. A single rule can be in multiple groups 
+	icon = "GFX_coups"								# Optional icon
+	default = {										# Unless other specified, the first option is the default option
+		name = esy
+		desc = "Enable_espionage"
+		text = "TEXT_KEY_espionagey"				# Achievements cannot be earned if one or more game rules are set to an option that has this property set to no.
+		allow_achievements = yes					# If not specified, this is set to yes for default options and no for all other options.
+	}
+	option = {										# Specify an option with the "default" token to override the behavior of treating the first option as the default.
+		name = esn
+		desc = "Disable_espionage_desc"
+		text = "TEXT_KEY_espionagen"
+		allow_achievements = yes
+	}
+ }

@@ -1,0 +1,120 @@
+military_training_category = {
+    transfer_your_subject_navy = {
+    	
+    	#可见要求#
+		visible = {
+	    	FROM = { 
+	    		is_subject_of = ROOT 
+	    		has_navy_size = { size > 0 }
+				custom_trigger_tooltip = {
+					tooltip = nothad_transfer_subject_navy
+					NOT = { has_country_flag = nothad_transfer_subject_navy }
+				}
+	    	}
+		}
+			
+		#使用要求#
+		available = {
+			is_subject = no
+			FROM = {
+				has_navy_size = { size > 0 }
+				is_ai = yes
+				custom_trigger_tooltip = {
+					tooltip = nothad_transfer_subject_navy
+					NOT = { has_country_flag = nothad_transfer_subject_navy }
+				}
+			}
+		}
+		
+		#不满足要求则取消#
+		cancel_if_not_visible = yes
+		
+		#目标对象与要求#
+		target_array = subjects
+		target_trigger = {
+			FROM = {
+				is_subject_of = ROOT
+				has_navy_size = { size > 0 }
+				NOT = { has_country_flag = nothad_transfer_subject_navy }
+			}
+		}
+		
+		#花费天数和点数#
+		# days_remove = 1
+		cost = 25
+		
+		#图标#
+		icon = generic_naval
+		
+		#决议移除时的效果#
+		complete_effect = {
+			FROM = { transfer_navy = { target = ROOT } }
+			
+			#隐藏效果#
+			hidden_effect = {
+				#给傀儡海军经验是因为改装花费的是它的海军经验#
+				# FROM = { navy_experience = 500 }
+				FROM = { set_country_flag = nothad_transfer_subject_navy }
+			}
+		}
+		
+		#AI使用意愿#
+		ai_will_do = {
+			factor = 0
+		}
+    }
+    
+	transfer_your_capitulated_enemies_navy = {
+    	
+		visible = {
+	    	FROM = { 
+	    		has_war_with = ROOT
+	    		has_navy_size = { size > 0 }
+				custom_trigger_tooltip = {
+					tooltip = capitulation_transfer_navy
+					NOT = { has_country_flag = capitulation_transfer_navy }
+				}
+				has_capitulated = no
+	    	}
+		}
+			
+		available = {
+			is_subject = no
+			FROM = {
+				has_navy_size = { size > 0 }
+				is_ai = yes
+				custom_trigger_tooltip = {
+					tooltip = capitulation_transfer_navy
+					NOT = { has_country_flag = capitulation_transfer_navy }
+				}
+			}
+		}
+		
+		cancel_if_not_visible = yes
+		
+		target_array = enemies
+		target_trigger = {
+			FROM = {
+				has_war_with = ROOT
+				has_navy_size = { size > 0 }
+				NOT = { has_country_flag = capitulation_transfer_navy }
+			}
+		}
+		
+		# days_remove = 1
+		cost = 50
+		
+		icon = generic_naval
+		
+		complete_effect = {
+			hidden_effect = {
+				FROM = { set_country_flag = capitulation_transfer_navy }
+			}
+			custom_effect_tooltip = transfer_your_capitulated_enemies_navy_custom_effect
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+    }
+}

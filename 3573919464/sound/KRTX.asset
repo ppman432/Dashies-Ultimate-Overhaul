@@ -1,0 +1,73 @@
+# Kindly borrowed from TNO
+
+category = {
+	name = "KRTX_Effects"
+	soundeffects = {
+		####### Unit Animation SFX
+		helicopter_unit_move_animation
+
+		####### Ships SFX
+		distance_light_cruiser_attack
+		distance_light_cruiser_attack_damaged
+		distance_light_cruiser_defend_damaged_01
+		distance_ship_destroyer_damaged_attacking_01
+		distance_ship_destroyer_damaged_defending_01
+		distance_ships_destroyer_attack
+		distance_ships_destroyer_attacked
+		distance_ships_destroyer_death
+		distance_ships_light_cruiser_attacked
+		distance_ships_light_cruiser_death
+		distance_super_heavy_battleship_attack
+		distance_super_heavy_battleship_attacked
+		distance_super_heavy_battleship_damaged_attack
+		distance_super_heavy_battleship_damaged_defend
+		distance_super_heavy_battleship_defend
+		distance_super_heavy_battleship_destroyed
+
+		####### Misc sound effects
+		tno_button_empty
+	}
+	compressor = {
+		enabled = yes
+		pregain = 3.0
+		postgain = 0.0
+		ratio = 10.0
+		threshold = -15.0
+		attacktime = 0.030
+		releasetime = 1.2
+	}
+}
+
+category = {
+	name = "KRTX_Battle"
+
+	soundeffects = {
+		airplane_A10_fire
+		distance_airplane_A10_fire
+		TNO_Rocket_fire
+	}
+
+	compressor = {
+		enabled = yes
+		pregain = 4.0
+		postgain = 1.5
+		ratio = 10.0
+		threshold = -9.0
+		attacktime = 0.03
+		releasetime = 0.0
+	}
+}
+
+category = {
+	name = "KRTX forgot these"
+	soundeffects = {
+		distance_airplane_jet_idle
+		distance_airplane_crash
+		distance_mechanized_units_mg_fire
+		distance_airplane_light_fire
+		distance_airplane_ger_jet_fire
+		distance_airplane_medium_idle_01
+		distance_airplane_idle
+		distance_airplane_heavy_idle_01
+	}
+}

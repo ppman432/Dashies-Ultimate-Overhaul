@@ -1,0 +1,372 @@
+ideas = {
+
+
+
+hidden_ideas = {
+        Civilian_Industry_Disrupted = {
+		allowed = {
+				always = yes
+			}
+
+			picture = FRA_factory_strikes
+			
+			modifier = {
+				production_speed_industrial_complex_factor = -0.15
+			}
+		}
+		 
+		
+		Military_Industry_Disrupted = {
+		allowed = {
+				always = yes
+			}
+
+			picture = FRA_factory_strikes
+			
+			modifier = {
+				production_speed_arms_factory_factor = -0.15
+			}
+		}
+		
+		Production_Sabotaged = {
+		allowed = {
+				always = yes
+			}
+
+			picture = idea_generic_license_production
+			
+			modifier = {
+				industrial_capacity_factory = -0.15
+			}
+		}
+		
+		Extraction_Sabotaged = {
+		allowed = {
+				always = yes
+			}
+
+			picture = generic_production_bonus
+			
+			modifier = {
+				local_resources_factor = -0.15 
+			}
+		}
+		
+		
+		   Foreign_Activities_Repelled = {
+		allowed = {
+				always = yes
+			}
+
+			picture = idea_yug_federal_defense_council
+			
+			modifier = {
+				war_support_weekly = 0.001
+			}
+		}
+		
+
+		recruitment_sabotaged = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				conscription = -0.05
+			}
+		}
+		
+		planning_sabotaged = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				planning_speed = -0.3
+				max_planning = -0.25
+			}
+		}
+		
+		supply_disrupted = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				land_reinforce_rate = -0.05
+				supply_consumption_factor = 0.10
+				out_of_supply_factor = 0.2
+				attrition = 0.1
+			}
+		}
+		
+		radars_jammed = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				army_bonus_air_superiority_factor = -0.1
+				air_accidents_factor = 0.2
+				air_night_penalty = 0.2
+				air_weather_penalty = 0.2
+			}
+		}
+		
+		pacifists_supported = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				war_support_weekly = -0.01
+				mobilization_speed = -0.3
+			}
+		}
+		
+		research_sabotaged = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				research_speed_factor = -0.15
+			}
+		}
+		
+		propaganda_100 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				mobilization_speed = 0.25
+				army_core_defence_factor = 0.10
+			}
+		}
+		
+
+		
+		propaganda_50 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+				mobilization_speed = 0.10
+				army_core_defence_factor = 0.05
+			}
+		}
+		
+		research_50 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					research_speed_factor = 0.025
+			}
+		}
+		
+		research_0 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					research_speed_factor = 0
+			}
+		}
+
+		research_100 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					research_speed_factor = 0.050
+			}
+		}
+
+
+		Decryption_Focus = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					intel_network_gain_factor = 0.1
+			}
+		}
+		
+		
+		resistance_25 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					resistance_growth_on_our_occupied_states = 0.9
+			}
+		}
+
+		resistance_50 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					resistance_growth_on_our_occupied_states = 0.8
+			}
+		}
+		resistance_75 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					resistance_growth_on_our_occupied_states = 0.3
+			}
+		}
+		resistance_100 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					resistance_growth_on_our_occupied_states = 0.6
+			}
+		}
+
+		freiwillige_25 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					non_core_manpower = 0.05
+			}
+		}
+		freiwillige_50 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					non_core_manpower = 0.1
+			}
+		}
+		freiwillige_75 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					non_core_manpower = 0.15
+			}
+		}
+		freiwillige_100 = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					non_core_manpower = 0.2
+			}
+		}
+		Encryption_Focus = {
+		
+			
+			allowed = {
+				always = yes
+			}
+
+			picture = generic_infantry_bonus
+			
+			modifier = {
+					crypto_strength = 0.1
+			}
+
+
+
+}

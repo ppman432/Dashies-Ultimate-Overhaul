@@ -1,0 +1,437 @@
+equipment_modules = {
+	
+	#Here's a quick rundown of the situation:
+	#in order to have a dedicated slot for ammunition, I had to specify a new slot in tank_designer_view.gui, and apparently
+	#the role of such slot is defined in order of declaration inside of the tank_chassis.txt file (units\equipment)
+	#meaning that, the first module_slot declared in tank_chassis.txt will take the first pos_custom_module_slot_window_x, and so on
+	#So, as a workaround for all the module slots made by the first dev (which I couldn't be bothered to see which one goes where), I set the ammo slot as the first one
+	#This creates a problem though, which is I can't stop mechanised from not using the ammo slot, which I wanted to do.
+	#Therefore, here are the mech ammo which are different from tank ammo
+	#prefix mech_ is for modules for both tanks and armoured cars (why mech_ explained by comment lower)
+	#suffix _actual_mech is for modules used by mechanised
+	
+	#in the end most of the above has been rendered ineffective by the fact that I decided to let mech use normal ammo
+	
+	
+	#initially I wanted to give these ammo only for mech, then I realised that was bs and so these two have the "mech" prefix
+	#can't be bothered to change it everywhere <3
+	mech_dft_shell_ap = {
+		abbreviation = "dftsh"
+		category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		
+		xp_cost = 1
+	}
+	
+	mech_cheap_shell_ap = {
+		abbreviation = "chpsh"
+		category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		
+		add_stats = {
+			reliability = -0.1
+		}
+		
+		multiply_stats = {
+			ap_attack = -0.15
+			build_cost_ic = -0.2
+		}
+		
+		xp_cost = 1
+	}
+	mech_dft_shell_he = {
+		abbreviation = "dftsh"
+		category = tank_ammo_he
+		sfx = sfx_ui_sd_module_sonar
+		
+		xp_cost = 1
+	}
+	
+	mech_cheap_shell_he = {
+		abbreviation = "chpsh"
+		category = tank_ammo_he
+		sfx = sfx_ui_sd_module_sonar
+		
+		add_stats = {
+			reliability = -0.1
+		}
+		
+		multiply_stats = {
+			soft_attack = -0.15
+			build_cost_ic = -0.2
+		}
+		
+		xp_cost = 1
+	}
+	
+	mech_he_shell_1 = {
+		abbreviation = "mhsh"
+		category = tank_ammo_he
+		sfx = sfx_ui_sd_module_sonar
+		
+
+		add_stats = {
+			build_cost_ic = 2
+		}
+		multiply_stats = {
+			soft_attack = 0.1
+		}
+		
+		xp_cost = 4
+	}
+	
+	mech_he_shell_2 = {
+		abbreviation = "mhsh"
+		category = tank_ammo_he
+		sfx = sfx_ui_sd_module_sonar
+		
+
+		add_stats = {
+			build_cost_ic = 2.5
+		}
+		multiply_stats = {
+			soft_attack = 0.2
+		}
+		
+		xp_cost = 4
+	}
+	
+	mech_he_shell_3 = {
+		abbreviation = "mhsh"
+		category = tank_ammo_he
+		sfx = sfx_ui_sd_module_sonar
+		
+
+		add_stats = {
+			build_cost_ic = 3
+		}
+		multiply_stats = {
+			soft_attack = 0.3
+		}
+		
+		xp_cost = 4
+	}
+	mech_he_shell_4 = {
+		abbreviation = "mhsh"
+		category = tank_ammo_he
+		sfx = sfx_ui_sd_module_sonar
+		
+
+		add_stats = {
+			build_cost_ic = 3
+		}
+		multiply_stats = {
+			soft_attack = 0.4
+		}
+		
+		xp_cost = 4
+	}		
+	mech_he_shell_1_atgm = {
+		abbreviation = "mhsh"
+		category = tank_ammo_he_atgm
+#		gui_category = tank_ammo_he
+		sfx = sfx_ui_sd_module_sonar
+		
+
+		add_stats = {
+			build_cost_ic = 2
+			soft_attack = 10
+		}
+		multiply_stats = {
+		}
+		
+		xp_cost = 4
+	}
+	
+	mech_he_shell_2_atgm = {
+		abbreviation = "mhsh"
+		category = tank_ammo_he_atgm
+#		gui_category = tank_ammo_he
+		sfx = sfx_ui_sd_module_sonar
+		
+
+		add_stats = {
+			build_cost_ic = 2.5
+			soft_attack = 20
+		}
+		multiply_stats = {
+		}
+		
+		xp_cost = 4
+	}
+	
+	mech_he_shell_3_atgm = {
+		abbreviation = "mhsh"
+		category = tank_ammo_he_atgm
+#		gui_category = tank_ammo_he
+		sfx = sfx_ui_sd_module_sonar
+		
+
+		add_stats = {
+			build_cost_ic = 3
+			soft_attack = 30
+		}
+		multiply_stats = {
+		}
+		
+		xp_cost = 4
+	}
+	mech_he_shell_4_atgm = {
+		abbreviation = "mhsh"
+		category = tank_ammo_he_atgm
+#		gui_category = tank_ammo_he
+		sfx = sfx_ui_sd_module_sonar
+		
+
+		add_stats = {
+			build_cost_ic = 4
+			soft_attack = 40
+		}
+		multiply_stats = {
+		}
+		
+		xp_cost = 4
+	}
+	mech_ap_shell_1 = {
+		abbreviation = "mash"
+		category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		forbid_module_categories = { tank_ammo_heat }
+
+		add_stats = {
+			build_cost_ic = 2
+		}
+		
+		multiply_stats = {
+			ap_attack = 0.1
+		}
+
+		build_cost_resources = {
+			tungsten = 1
+		}
+		
+		xp_cost = 4
+	}
+	
+	mech_ap_shell_2 = {
+		abbreviation = "mash"
+		category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		forbid_module_categories = { tank_ammo_heat }		
+
+		add_stats = {
+			build_cost_ic = 2.5
+		}
+		
+		multiply_stats = {
+			ap_attack = 0.2
+		}
+
+		build_cost_resources = {
+			tungsten = 1
+		}
+		
+		xp_cost = 4
+	}
+	
+	mech_ap_shell_3 = {
+		abbreviation = "mash"
+		category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		forbid_module_categories = { tank_ammo_heat }		
+
+		add_stats = {
+			build_cost_ic = 3
+		}
+		
+		multiply_stats = {
+			ap_attack = 0.3
+		}
+
+		build_cost_resources = {
+			tungsten = 1
+		}
+		
+		xp_cost = 4
+	}
+	mech_ap_shell_4 = {
+		abbreviation = "mash"
+		category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		forbid_module_categories = { tank_ammo_heat }		
+
+		add_stats = {
+			build_cost_ic = 3
+		}
+		
+		multiply_stats = {
+			ap_attack = 0.4
+			hard_attack = 0.1
+		}
+
+		build_cost_resources = {
+			tungsten = 1
+		}
+		
+		xp_cost = 4
+	}
+#	mech_ap_shell_4_atgm = {
+#		abbreviation = "mash"
+#		category = tank_ammo_ap_atgm
+#		gui_category = tank_ammo_ap
+#		sfx = sfx_ui_sd_module_sonar
+#		
+#
+#		add_stats = {
+#			build_cost_ic = 3
+#			ap_attack = 100
+#		
+#		}
+#
+#		build_cost_resources = {
+#			crystals = 1
+#		}
+#		
+#		xp_cost = 4
+#	}
+	mech_heat_shell_1 = {
+		abbreviation = "mash"
+		category = tank_ammo_heat
+		#gui_category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		forbid_module_categories = { tank_ammo_ap }		
+
+		add_stats = {
+			build_cost_ic = 2
+			hard_attack = 4
+			ap_attack = 15
+		}
+		
+
+		build_cost_resources = {
+			crystals = 1
+		}
+		
+		xp_cost = 4
+	}
+	
+	mech_heat_shell_2 = {
+		abbreviation = "mash"
+		category = tank_ammo_heat
+		#gui_category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		forbid_module_categories = { tank_ammo_ap }		
+
+		add_stats = {
+			build_cost_ic = 2.5
+			hard_attack = 10
+			ap_attack = 40
+		}
+		
+
+		build_cost_resources = {
+			crystals = 1
+		}
+		
+		xp_cost = 4
+	}	
+	mech_heat_shell_3 = {
+		abbreviation = "mash"
+		category = tank_ammo_heat
+		#gui_category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		forbid_module_categories = { tank_ammo_ap }		
+
+		add_stats = {
+			build_cost_ic = 3
+			hard_attack = 15
+			ap_attack = 55
+		}
+		
+
+		build_cost_resources = {
+			crystals = 1
+		}
+		
+		xp_cost = 4
+	}
+	mech_heat_shell_4 = {
+		abbreviation = "mash"
+		category = tank_ammo_heat
+		#gui_category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		forbid_module_categories = { tank_ammo_ap }		
+
+		add_stats = {
+			build_cost_ic = 3
+			hard_attack = 20
+			ap_attack = 70
+		}
+		
+
+		build_cost_resources = {
+			crystals = 1
+		}
+		
+		xp_cost = 4
+	}
+	mech_atgm_upgrade = {
+		abbreviation = "atgmu"
+		category = tank_ammo_ap_atgm
+		gui_category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+		
+
+		add_stats = {
+			build_cost_ic = 4.5
+		}
+		multiply_stats = {
+			hard_attack = 0.1
+			ap_attack = 0.5
+		}
+
+		build_cost_resources = {
+			crystals = 3
+		}
+		
+		xp_cost = 4
+	}
+	mech_hesh_shell = {
+		abbreviation = "hesh"
+		category = tank_ammo_ap
+#		gui_category = tank_ammo_ap
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 3
+		}
+		multiply_stats = {
+			soft_attack = 0.2
+			hard_attack = 0.1
+			ap_attack = 0.1
+		}
+
+		build_cost_resources = {
+			crystals = 1
+		}
+		
+		xp_cost = 4
+	}
+	mech_hesh_shell_avre = {
+		abbreviation = "hesh2"
+		category = tank_ammo_hesh_avre
+		sfx = sfx_ui_sd_module_sonar
+
+		add_stats = {
+			build_cost_ic = 3	
+			soft_attack = 20
+			hard_attack = 10
+			ap_attack = 40 #heat 2
+		}
+		build_cost_resources = {
+			crystals = 1
+		}
+		
+		xp_cost = 4
+	}
+}

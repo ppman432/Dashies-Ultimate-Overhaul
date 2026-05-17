@@ -1,0 +1,53 @@
+scripted_gui = {
+  open_epic_crate = {
+    window_name = "open_epic_crate_gui_window"
+    context_type = player_context
+
+    visible = {
+		has_country_flag = epic_crate_gui_opened
+    }
+
+    effects = {
+		open_crate_button_click = {
+			random_list = {
+				50 = { 
+					add_offsite_building = { type = arms_factory level = 10 }
+				}	
+				50 = { 
+					add_offsite_building = { type = industrial_complex level = 10 }
+				}
+			}
+			random_list = {
+				50 = { 
+					add_offsite_building = { type = arms_factory level = 5 }
+				}	
+				50 = { 
+					add_offsite_building = { type = industrial_complex level = 5 }
+				}
+			}			
+			random_list = {
+				25 = { 
+					add_equipment_to_stockpile = {
+						type = transport_plane_equipment
+						amount = 850
+					}					
+				}		
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 3000
+			}
+			add_equipment_to_stockpile = {
+				type = artillery_equipment
+				amount = 500
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 850
+			}		
+			clr_country_flag = epic_crate_gui_opened
+		}
+    }
+
+  }
+}

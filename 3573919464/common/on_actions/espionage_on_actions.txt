@@ -1,0 +1,733 @@
+on_actions = {
+
+	on_daily = {
+		effect = { 
+			if = { 
+				limit = {
+					has_game_rule = {
+						rule = espionage_rule
+						option = esn
+					}
+				} 
+                set_variable={d = 0}
+				set_variable = {dm = 0}
+				add_to_variable = {var = spies_available value = d}
+			}
+			else_if = {
+				limit = {
+					Spy_University > 4
+				}
+                set_variable = {d = 2}
+				set_variable = {dm = 60}
+				add_to_variable = {var = spies_available value = d}
+			}
+						 
+			else_if = { 
+				limit = {
+					Spy_University > 3
+				}
+                set_variable = {d = 1.67}
+				set_variable = {dm = 50}
+				add_to_variable = {var = spies_available value = d}
+			}		
+
+			else_if = { 
+				limit = {
+					Spy_University > 2
+				} 
+                set_variable = {d = 1.33}
+				set_variable = {dm = 40}
+				add_to_variable = {var = spies_available value = d}
+			}	
+						
+			else_if = { 
+				limit = {
+					Spy_University > 1
+				} 
+				set_variable = {d = 1}
+				set_variable = {dm = 30}
+				add_to_variable = {var = spies_available value = d}
+			}	
+						
+			else_if = { 
+				limit = {
+					Spy_University > 0
+				} 
+                set_variable={d = 0.5}
+				set_variable = {dm = 15}
+				add_to_variable = {var = spies_available value = d}
+			}					
+			set_variable = {spies_display = spies_available}
+			round_variable = spies_display
+			
+			if = {
+				limit = {
+					is_major = yes
+				}
+				clamp_variable = {
+                var = spies_available
+                min = 0
+                max = 2500
+				}
+			}
+			else = {
+				clamp_variable = {
+                var = spies_available
+                min = 0
+                max = 1000
+				}
+			}
+		}
+	}
+
+	
+	on_daily = {
+		effect = { 
+		set_temp_variable = { temp0 = ROOT.Spy_University }
+		add_to_variable = {var = spies_available value = temp0}
+		}}
+		
+		
+
+		
+		
+	on_daily = {
+		effect = { 
+			if = { limit = {has_country_flag = currently_infiltrating}
+			var:spy_target = { ROOT = { set_variable = {target_num_of_civilian_factories = PREV.num_of_civilian_factories}}}
+			var:spy_target = { ROOT = { set_variable = {target_num_of_military_factories = PREV.num_of_military_factories}}}
+			var:spy_target = { ROOT = { set_variable = {target_num_of_naval_factories = PREV.num_of_naval_factories}}}
+			var:spy_target = { ROOT = { set_variable = {target_manpower_k = PREV.manpower_k}}}
+			var:spy_target = { ROOT = { set_variable = {target_amount_manpower_in_deployment_queue = PREV.amount_manpower_in_deployment_queue}}}
+			var:spy_target = { ROOT = { set_variable = {target_num_divisions = PREV.num_divisions}}}
+			var:spy_target = { ROOT = { set_variable = {target_num_of_nukes = PREV.num_of_nukes}}}
+			var:spy_target = { ROOT = { set_variable = {target_land_doctrine_level = PREV.land_doctrine_level}}}
+			var:spy_target = { ROOT = { set_variable = {target_command_power_daily = PREV.command_power_daily}}}
+			var:spy_target = { ROOT = { set_variable = {target_command_power = PREV.command_power}}}
+			var:spy_target = { ROOT = { set_variable = {target_spy_efficiency = PREV.spy_efficiency}}}
+			var:spy_target = { ROOT = { set_variable = {target_light_armor = PREV.num_armies_with_type@light_armor}}}
+			var:spy_target = { ROOT = { set_variable = {target_medium_armor = PREV.num_armies_with_type@medium_armor}}}
+			var:spy_target = { ROOT = { set_variable = {target_heavy_armor = PREV.num_armies_with_type@heavy_armor}}}
+			var:spy_target = { ROOT = { set_variable = {target_carrier = PREV.num_ships_with_type@carrier}}}
+			var:spy_target = { ROOT = { set_variable = {target_battleship = PREV.num_ships_with_type@battleship}}}
+			var:spy_target = { ROOT = { set_variable = {target_heavy_cruiser = PREV.num_ships_with_type@heavy_cruiser}}}
+			var:spy_target = { ROOT = { set_variable = {target_submarine = PREV.num_ships_with_type@submarine}}}
+	}	}}
+		
+		
+
+		
+		
+
+		
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating}
+	 
+		if = { limit = {var:spy_target = { has_tech = basic_medium_tank_chassis } } 
+				ROOT = {set_variable = {enemy_medium_armor_year = 1939}}
+				ROOT = {set_variable = {enemy_medium_level = 1}}}
+		if = { limit = {var:spy_target ={ has_tech = improved_medium_tank_chassis }}
+				ROOT = {set_variable = {enemy_medium_armor_year = 1941}}
+				ROOT = {set_variable = {enemy_medium_level = 2}}}
+		if = { limit  = {var:spy_target = { has_tech = advanced_medium_tank_chassis}}
+			    ROOT = {set_variable = {enemy_medium_armor_year = 1943}}
+			    ROOT = {set_variable = {enemy_medium_level = 3}}}
+		if = { limit  = {var:spy_target = { has_tech = main_battle_tank_chassis }}
+		        ROOT = {set_variable = {enemy_medium_armor_year = 1945}}
+		        ROOT = {set_variable = {enemy_medium_level = 4}}}
+		
+		
+		if = { limit = {var:spy_target ={ has_tech = basic_heavy_tank_chassis }}
+				ROOT = {set_variable = {enemy_heavy_armor_year = 1934}}
+				ROOT = {set_variable = {enemy_heavy_level = 1}}}
+		if = { limit  = {var:spy_target = { has_tech = improved_heavy_tank_chassis}}
+				ROOT = {set_variable = {enemy_heavy_armor_year = 1941}}
+				ROOT = {set_variable = {enemy_heavy_level = 2}}}
+		if = { limit  = {var:spy_target = { has_tech = advanced_heavy_tank_chassis}}
+		       ROOT = {set_variable = {enemy_heavy_armor_year = 1943}}
+		       ROOT = {set_variable = {enemy_heavy_level = 3}}}
+		
+		if = { limit = {var:spy_target = { has_tech = gwtank_chassis  } } 
+				ROOT = {set_variable = {enemy_light_armor_year = 1918}}
+				ROOT = {set_variable = {enemy_light_level = 1}}}
+		if = { limit = {var:spy_target ={ has_tech = basic_light_tank_chassis }}
+				ROOT = {set_variable = {enemy_light_armor_year = 1934}}
+				ROOT = {set_variable = {enemy_light_level = 2}}}
+		if = { limit  = {var:spy_target = { has_tech = improved_light_tank_chassis}}
+				ROOT = {set_variable = {enemy_light_armor_year = 1936}}
+				ROOT = {set_variable = {enemy_light_level = 3}}}
+		if = { limit  = {var:spy_target = { has_tech = advanced_light_tank_chassis}} 
+		        ROOT = {set_variable = {enemy_light_armor_year = 1941}}
+		        ROOT = {set_variable = {enemy_light_level = 4}}}
+		
+		
+		if = { limit = {var:spy_target = { has_tech = iw_small_airframe }} 
+				ROOT = {set_variable = {enemy_fighter_year = 1933}}
+				ROOT = {set_variable = {enemy_fighter_level = 1}}}
+		if = { limit = {var:spy_target ={ has_tech = basic_small_airframe }}
+				ROOT = {set_variable = {enemy_fighter_year = 1936}}
+				ROOT = {set_variable = {enemy_fighter_level = 2}}}
+		if = { limit  = {var:spy_target = { has_tech = improved_small_airframe}} 
+				ROOT = {set_variable = {enemy_fighter_year = 1940}}
+				ROOT = {set_variable = {enemy_fighter_level = 3}}}
+		if = { limit  = {var:spy_target = { has_tech = advanced_small_airframe}} 
+		        ROOT = {set_variable = {enemy_fighter_year = 1944}}
+				ROOT = {set_variable = {enemy_fighter_level = 4}}}
+		if = { limit  = {var:spy_target = { has_tech = modern_small_airframe}} 
+		        ROOT = {set_variable = {enemy_fighter_year = 1945}}
+				ROOT = {set_variable = {enemy_fighter_level = 5}}}
+		
+		
+		if = { limit = {var:spy_target ={ has_tech = basic_small_airframe }}
+				ROOT = {set_variable = {enemy_CAS_year = 1936}}
+				ROOT = {set_variable = {enemy_CAS_level = 1}}}
+		if = { limit  = {var:spy_target = { has_tech = improved_small_airframe}} 
+				ROOT = {set_variable = {enemy_CAS_year = 1940}}
+				ROOT = {set_variable = {enemy_CAS_level = 2}}}
+		if = { limit  = {var:spy_target = { has_tech = advanced_small_airframe}} 
+		        ROOT = {set_variable = {enemy_CAS_year = 1944}}
+				ROOT = {set_variable = {enemy_CAS_level = 3}}}
+		
+		if = { limit = {var:spy_target ={ has_tech = basic_large_airframe }}
+				ROOT = {set_variable = {enemy_strategic_bomber_year = 1936}}
+				ROOT = {set_variable = {enemy_strategic_bomber_level = 1}}}
+		if = { limit  = {var:spy_target = { has_tech = improved_large_airframe}} 
+				ROOT = {set_variable = {enemy_strategic_bomber_year = 1940}}
+				ROOT = {set_variable = {enemy_strategic_bomber_level = 2}}}
+		if = { limit  = {var:spy_target = { has_tech = advanced_large_airframe}} 
+		        ROOT = {set_variable = {enemy_strategic_bomber_year = 1944}}
+				ROOT = {set_variable = {enemy_strategic_bomber_level = 3}}}
+		if = { limit  = {var:spy_target = { has_tech = modern_large_airframe}} 
+		        ROOT = {set_variable = {enemy_strategic_bomber_year = 1950}}
+				ROOT = {set_variable = {enemy_strategic_bomber_level = 4}}}
+	
+				}}}
+				
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating}
+	 
+		if = { limit = {ROOT = { has_tech = basic_medium_tank_chassis } } 
+				ROOT = {set_variable = {medium_level = 1}}}
+		if = { limit = {ROOT ={ has_tech = improved_medium_tank_chassis } }
+				ROOT = {set_variable = {medium_level = 2}}}
+		if = { limit  = {ROOT = { has_tech = advanced_medium_tank_chassis}} 
+			    ROOT = {set_variable = {medium_level = 3}}}
+		if = { limit  = {ROOT = { has_tech = main_battle_tank_chassis}}
+		        ROOT = {set_variable = {medium_level = 4}}}
+		
+		
+		if = { limit = {ROOT ={ has_tech = basic_heavy_tank_chassis }}
+				ROOT = {set_variable = {heavy_level = 1}}}
+		if = { limit  = {ROOT = { has_tech = improved_heavy_tank_chassis}}
+				ROOT = {set_variable = {heavy_level = 2}}}
+		if = { limit  = {ROOT = { has_tech = advanced_heavy_tank_chassis}}
+		       ROOT = {set_variable = {heavy_level = 3}}}
+		
+		if = { limit = {ROOT = { has_tech = gwtank_chassis } } 
+				ROOT = {set_variable = {light_level = 1}}}
+		if = { limit = {ROOT ={ has_tech = basic_light_tank_chassis }}
+				ROOT = {set_variable = {light_level = 2}}}
+		if = { limit  = {ROOT = { has_tech = improved_light_tank_chassis}}
+				ROOT = {set_variable = {light_level = 3}}}
+		if = { limit  = {ROOT = { has_tech = advanced_light_tank_chassis}} 
+		        ROOT = {set_variable = {light_level = 4}}}
+		
+		
+		if = { limit = {ROOT = { has_tech = iw_small_airframe }} 
+				ROOT = {set_variable = {fighter_level = 1}}}
+		if = { limit = {ROOT ={ has_tech = basic_small_airframe }}
+				ROOT = {set_variable = {fighter_level = 2}}}
+		if = { limit  = {ROOT = { has_tech = improved_small_airframe}} 
+				ROOT = {set_variable = {fighter_level = 3}}}
+		if = { limit  = {ROOT = { has_tech = advanced_small_airframe}} 
+				ROOT = {set_variable = {fighter_level = 4}}}
+		if = { limit  = {ROOT = { has_tech = modern_small_airframe}} 
+				ROOT = {set_variable = {fighter_level = 5}}}
+		
+		
+		if = { limit = {ROOT ={ has_tech = basic_small_airframe }}
+				ROOT = {set_variable = {CAS_level = 1}}}
+		if = { limit  = {ROOT = { has_tech = improved_small_airframe}} 
+				ROOT = {set_variable = {CAS_level = 2}}}
+		if = { limit  = {ROOT = { has_tech = advanced_small_airframe}} 
+				ROOT = {set_variable = {CAS_level = 3}}}
+		
+		if = { limit = {ROOT = { has_tech = basic_large_airframe }}
+				ROOT = {set_variable = {strategic_bomber_level = 1}}}
+		if = { limit  = {ROOT = { has_tech = improved_large_airframe}} 
+				ROOT = {set_variable = {strategic_bomber_level = 2}}}
+		if = { limit  = {ROOT = { has_tech = advanced_large_airframe}} 
+				ROOT = {set_variable = {strategic_bomber_level = 3}}}
+		if = { limit  = {ROOT = { has_tech = modern_large_airframe}} 
+				ROOT = {set_variable = {strategic_bomber_level = 4}}}
+	
+				}}}
+				
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating}
+		if = { limit = { check_variable = { medium_armor_cloning_progress = 100}
+	                 check_variable = { enemy_medium_level = 1}
+					 check_variable = { medium_armor_difference = 1}}
+					 set_technology = { basic_medium_tank_chassis = 1 }
+					 set_variable = {medium_armor_cloned = 1 }}
+		if = { limit = { check_variable = { medium_armor_cloning_progress = 100}
+	                 check_variable = { enemy_medium_level = 2}
+					 check_variable = { medium_armor_difference = 1}}
+					 set_technology = { improved_medium_tank_chassis = 1 }
+					 set_variable = {medium_armor_cloned = 1 }}
+		if = { limit = { check_variable = { medium_armor_cloning_progress = 100}
+	                 check_variable = { enemy_medium_level = 3}
+					 check_variable = { medium_armor_difference = 1}}
+					 set_technology = { advanced_medium_tank_chassis = 1 }
+					 set_variable = {medium_armor_cloned = 1 }}
+		if = { limit = { check_variable = { medium_armor_cloning_progress = 100}
+	                 check_variable = { enemy_medium_level = 4}
+					 check_variable = { medium_armor_difference = 1}}
+					 set_technology = { main_battle_tank_chassis = 1 }
+					 set_variable = {medium_armor_cloned = 1 }}
+		if = { limit = { check_variable = { light_armor_cloning_progress = 100}
+	                 check_variable = { enemy_light_level = 1}
+					 check_variable = { light_armor_difference = 1}}
+					 set_technology = { gwtank_chassis = 1 }
+					 set_variable = {light_armor_cloned = 1 }}
+		if = { limit = { check_variable = { light_armor_cloning_progress = 100}
+	                 check_variable = { enemy_light_level = 2}
+					 check_variable = { light_armor_difference = 1}}
+					 set_technology = { basic_light_tank_chassis = 1 }
+					 set_variable = {light_armor_cloned = 1 }}
+		if = { limit = { check_variable = { light_armor_cloning_progress = 100}
+	                 check_variable = { enemy_light_level = 3}
+					 check_variable = { light_armor_difference = 1}}
+					 set_technology = { improved_light_tank_chassis = 1 }
+					 set_variable = {light_armor_cloned = 1 }}
+		if = { limit = { check_variable = { light_armor_cloning_progress = 100}
+	                 check_variable = { enemy_light_level = 4}
+					 check_variable = { light_armor_difference = 1}}
+					 set_technology = { advanced_light_tank_chassis= 1 }
+					 set_variable = {light_armor_cloned = 1 }}
+		if = { limit = { check_variable = { heavy_armor_cloning_progress = 100}
+	                 check_variable = { enemy_heavy_level = 1}
+					 check_variable = { light_armor_difference = 1}}
+					 set_technology = { basic_heavy_tank_chassis = 1 }
+					 set_variable = {heavy_armor_cloned = 1 }}
+		if = { limit = { check_variable = { heavy_armor_cloning_progress = 100}
+	                 check_variable = { enemy_heavy_level = 2}
+					 check_variable = { heavy_armor_difference = 1}}
+					 set_technology = { improved_heavy_tank_chassis = 1 }
+					 set_variable = {heavy_armor_cloned = 1 }}
+		if = { limit = { check_variable = { heavy_armor_cloning_progress = 100}
+	                 check_variable = { enemy_heavy_level = 3}
+					 check_variable = { heavy_armor_difference = 1}}
+					 set_technology = { advanced_heavy_tank_chassis = 1 }
+					 set_variable = {heavy_armor_cloned = 1 }}
+					 
+					 
+		if = { limit = { check_variable = { fighter_cloning_progress = 100}
+	                 check_variable = { enemy_fighter_level = 1}
+					 check_variable = { fighter_difference = 1}}
+					 set_technology = { iw_small_airframe = 1 }
+					 set_variable = {fighter_cloned = 1 }}
+		if = { limit = { check_variable = { fighter_cloning_progress = 100}
+	                 check_variable = { enemy_fighter_level = 2}
+					 check_variable = { fighter_difference = 1}}
+					 set_technology = { basic_small_airframe = 1 }
+					 set_variable = {fighter_cloned = 1 }}
+		if = { limit = { check_variable = { fighter_cloning_progress = 100}
+	                 check_variable = { enemy_fighter_level = 3}
+					 check_variable = { fighter_difference = 1}}
+					 set_technology = { improved_small_airframe = 1 }
+					 set_variable = {fighter_cloned = 1 }}
+		if = { limit = { check_variable = { fighter_cloning_progress = 100}
+	                 check_variable = { enemy_fighter_level = 4}
+					 check_variable = { fighter_difference = 1}}
+					 set_technology = { advanced_small_airframe = 1 }
+					 set_variable = {fighter_cloned = 1 }}					 
+		if = { limit = { check_variable = { fighter_cloning_progress = 100}
+	                 check_variable = { enemy_fighter_level = 5}
+					 check_variable = { fighter_difference = 1}}
+					 set_technology = { modern_small_airframe = 1 }
+					 set_variable = {fighter_cloned = 1 }}		
+		if = { limit = { check_variable = { CAS_cloning_progress = 100}
+	                 check_variable = { enemy_CAS_level = 1}
+					 check_variable = { CAS_difference = 1}}
+					 set_technology = { basic_small_airframe = 1 }
+					 set_variable = {CAS_cloned = 1 }}	
+		if = { limit = { check_variable = { CAS_cloning_progress = 100}
+	                 check_variable = { enemy_CAS_level = 2}
+					 check_variable = { CAS_difference = 1}}
+					 set_technology = { improved_small_airframe = 1 }
+					 set_variable = {CAS_cloned = 1 }}		
+		if = { limit = { check_variable = { CAS_cloning_progress = 100}
+	                 check_variable = { enemy_CAS_level = 3}
+					 check_variable = { CAS_difference = 1}}
+					 set_technology = { advanced_small_airframe = 1 }
+					 set_variable = {CAS_cloned = 1 }}		
+		if = { limit = { check_variable = { strategic_bomber_cloning_progress = 100}
+	                 check_variable = { enemy_strategic_bomber_level = 1}
+					 check_variable = { strategic_bomber_difference = 1}}
+					 set_technology = { basic_large_airframe = 1 }
+					 set_variable = {strategic_bomber_cloned = 1 }}		
+		if = { limit = { check_variable = { strategic_bomber_cloning_progress = 100}
+	                 check_variable = { enemy_strategic_bomber_level = 2}
+					 check_variable = { strategic_bomber_difference = 1}}
+					 set_technology = { improved_large_airframe = 1 }
+					 set_variable = {strategic_bomber_cloned = 1 }}			
+		if = { limit = { check_variable = { strategic_bomber_cloning_progress = 100}
+	                 check_variable = { enemy_strategic_bomber_level = 3}
+					 check_variable = { strategic_bomber_difference = 1}}
+					 set_technology = { advanced_large_airframe = 1 }
+					 set_variable = {strategic_bomber_cloned = 1 }}			
+		if = { limit = { check_variable = { strategic_bomber_cloning_progress = 100}
+	                 check_variable = { enemy_strategic_bomber_level = 4}
+					 check_variable = { strategic_bomber_difference = 1}}
+					 set_technology = { modern_large_airframe = 1 }
+					 set_variable = {strategic_bomber_cloned = 1 }}						 					 
+					 
+ }}	}				
+
+	 
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating
+	                 check_variable = {laboratory_spies >99}}
+		var:spy_target = { ROOT = { add_to_variable = {research_points@PREV = 1}}}
+		var:spy_target = { ROOT = { set_variable = {research_points = research_points@PREV}}
+		}}}}
+		
+		
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating}
+		if = { limit = { check_variable = { medium_armor_cloning_progress > 0}
+	                 check_variable = { medium_armor_cloning_progress < 99}
+	                 }
+					 add_to_variable = {medium_armor_cloning_progress = 2}}
+		if = { limit = { check_variable = { light_armor_cloning_progress > 0}
+	                 check_variable = { light_armor_cloning_progress < 99}
+	                 }
+					 add_to_variable = {light_armor_cloning_progress = 2}}
+		if = { limit = { check_variable = { heavy_armor_cloning_progress > 0}
+	                 check_variable = { heavy_armor_cloning_progress < 99} 
+	                 }
+					 add_to_variable = {heavy_armor_cloning_progress = 2}}	
+		if = { limit = { check_variable = { fighter_cloning_progress > 0}
+	                 check_variable = { fighter_cloning_progress < 99}
+	                 }
+					 add_to_variable = {fighter_cloning_progress = 2}}	
+		if = { limit = { check_variable = { CAS_cloning_progress > 0}
+	                 check_variable = { CAS_cloning_progress < 99}
+	                 }
+					 add_to_variable = {CAS_cloning_progress = 2}}		
+		if = { limit = { check_variable = { strategic_bomber_cloning_progress > 0}
+	                 check_variable = { strategic_bomber_cloning_progress < 99}
+	                 }
+					 add_to_variable = {strategic_bomber_cloning_progress = 2}}						 
+					 
+					 }}}		
+ 
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating}
+		set_variable = { light_armor_difference = enemy_light_level}
+		subtract_from_variable = { light_armor_difference = light_level}
+		if = { limit = { check_variable = { light_armor_cloning_progress = 100}
+	                 check_variable = { light_armor_difference > 0}
+					 check_variable = { light_armor_cloned = 1}}
+					 set_variable = { light_armor_cloning_progress = 0}}}}}
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating}
+		set_variable = { medium_armor_difference = enemy_medium_level}
+		subtract_from_variable = { medium_armor_difference = medium_level}
+		if = { limit = { check_variable = { medium_armor_cloning_progress = 100}
+	                 check_variable = { medium_armor_difference > 0}
+					 check_variable = { medium_armor_cloned = 1}}
+					 set_variable = { medium_armor_cloning_progress = 0}
+					 set_variable = {medium_armor_cloned = 0}}}}}
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating}
+		set_variable = { heavy_armor_difference = enemy_heavy_level}
+		subtract_from_variable = { heavy_armor_difference = heavy_level}
+		if = { limit = { check_variable = { heavy_armor_cloning_progress = 100}
+						check_variable = { heavy_armor_difference > 0}
+						check_variable = { heavy_armor_cloned = 1}}
+					 set_variable = { heavy_armor_cloning_progress = 0}}}}}
+					 
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating}
+		set_variable = { fighter_difference = enemy_fighter_level}
+		subtract_from_variable = { fighter_difference = fighter_level}
+		if = { limit = { check_variable = { fighter_cloning_progress = 100}
+	                 check_variable = { fighter_difference > 0}
+					 check_variable = { fighter_cloned = 1}}
+					 set_variable = { fighter_cloning_progress = 0}}}}}
+					 
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating}
+		set_variable = { CAS_difference = enemy_CAS_level}
+		subtract_from_variable = { CAS_difference = CAS_level}
+		if = { limit = { check_variable = { CAS_cloning_progress = 100}
+	                 check_variable = { CAS_difference > 0}
+					 check_variable = { CAS_cloned = 1}}
+					 set_variable = { CAS_cloning_progress = 0}}}}}
+					 
+	on_daily = {
+		effect = { 
+		if = { limit = {has_country_flag = currently_infiltrating}
+		set_variable = { strategic_bomber_difference = enemy_strategic_bomber_level}
+		subtract_from_variable = { strategic_bomber_difference = strategic_bomber_level}
+		if = { limit = { check_variable = { strategic_bomber_cloning_progress = 100}
+	                 check_variable = { strategic_bomber_difference > 0}
+					 check_variable = { strategic_bomber_cloned = 1}}
+					 set_variable = { strategic_bomber_cloning_progress = 0}}}}}
+		
+
+	
+	on_daily = {
+		effect = {
+		clear_variable = Spy_Efficiency_Stability
+		clear_variable = Spy_Efficiency
+		clear_variable = encryption_decryption_efficiency
+		set_temp_variable = { temp1 = ROOT.stability }
+		multiply_temp_variable = { temp1 = 10 }
+		set_variable = { Spy_Efficiency_Stability = temp1 }
+		round_variable = Spy_Efficiency_Stability
+	}}
+	
+	on_daily = {
+		effect = {
+		if = {limit = {has_tech = electronic_mechanical_engineering }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+	
+		if = {limit = {has_tech = radio }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+
+		if = {limit = {has_tech = mechanical_computing }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+	
+		if = {limit = {has_tech = computing_machine }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+	
+		if = {limit = {has_tech = improved_computing_machine }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+
+		if = {limit = {has_tech = advanced_computing_machine }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+		
+		if = {limit = {has_tech = radio_detection }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+		
+		if = {limit = {has_tech = cavity_magnatron }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+
+		if = {limit = {has_tech = centimetric_radar }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+		
+		if = {limit = {has_tech = phased_array }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+		
+		if = {limit = {has_tech = monopulse_radar }
+		add_to_variable = {encryption_decryption_efficiency = 5}}
+
+	}}
+	
+	on_daily = {
+		effect = {
+          
+			if = {limit = {check_variable = {network1_target > 0}}
+			var:network1_target = { ROOT = {
+			if = {limit = {check_variable = {network_strength@PREV < 100}}
+			set_temp_variable = { temp1 = network_spies@PREV}
+			divide_temp_variable = { temp1 = 200}
+			add_to_variable = {network_strength@PREV = temp1}
+			if = {limit = {check_variable = {network_strength@PREV > 100}}
+			set_variable = {network_strength@PREV = 100}}}
+			
+			}}}}}
+			
+			
+	on_daily = {
+		effect = {		
+			
+			if = {limit = {check_variable = {network2_target > 0}}
+			var:network2_target = { ROOT = {
+			set_temp_variable = { temp2 = network_spies@PREV}
+			divide_temp_variable = { temp2 = 200}
+			add_to_variable = {network_strength@PREV = temp2}
+			if = {limit = {check_variable = {network_strength@PREV > 100}}
+			set_variable = {network_strength@PREV = 100}}
+			
+			}}}}}
+	
+	on_daily = {
+		effect = {	
+			
+			if = {limit = {check_variable = {network3_target > 0}}
+			var:network3_target = { ROOT = {
+			set_temp_variable = { temp3 = network_spies@PREV}
+			divide_temp_variable = { temp3 = 200}
+			add_to_variable = {network_strength@PREV = temp3}
+			if = {limit = {check_variable = {network_strength@PREV > 100}}
+			set_variable = {network_strength@PREV = 100}}
+			
+			}}}}}
+			
+    on_daily = {
+		effect = {	
+			
+			if = {limit = {check_variable = {network4_target > 0}}
+			var:network4_target = { ROOT = {
+			set_temp_variable = { temp4 = network_spies@PREV}
+			divide_temp_variable = { temp4 = 200}
+			add_to_variable = {network_strength@PREV = temp4}
+			if = {limit = {check_variable = {network_strength@PREV > 100}}
+			set_variable = {network_strength@PREV = 100}}
+			
+			}}}}}
+
+    on_daily = {
+		effect = {	
+			
+			if = {limit = {check_variable = {network5_target > 0}}
+			var:network5_target = { ROOT = {
+			set_temp_variable = { temp5 = network_spies@PREV}
+			divide_temp_variable = { temp5 = 200}
+			add_to_variable = {network_strength@PREV = temp5}
+			if = {limit = {check_variable = {network_strength@PREV > 100}}
+			set_variable = {network_strength@PREV = 100}}
+			
+			}}}
+	
+	}}
+	
+	
+	on_daily = {
+		effect = {
+	add_to_variable = { Spy_Efficiency = Spy_Efficiency_Stability }
+	add_to_variable = { Spy_Efficiency = ROOT.training_efficiency }
+	add_to_variable = { Spy_Efficiency = ROOT.encryption_decryption_efficiency }
+	}}
+	
+	on_annex = {
+		effect = {
+	
+	
+	every_country = {
+	limit = {check_variable = {network_spies@FROM > 0}}
+	
+	if = {
+			limit = {check_variable = {network1_target = FROM.id }}
+			set_variable = {network1_target = 0}
+			add_to_variable = {spies_available = network_spies@FROM }
+			add_to_variable = {networks_used = -1}
+			clear_variable = network_strength@FROM 
+			clear_variable = network_spies@FROM 
+			} 
+				
+			else_if = {
+			limit = {check_variable = {network2_target = FROM.id }}
+			set_variable = {network2_target = 0}
+			add_to_variable = {spies_available = network_spies@FROM }
+			add_to_variable = {networks_used = -1}
+			clear_variable = network_strength@FROM 
+			clear_variable = network_spies@FROM 
+			}	
+			
+			else_if = {
+			limit = {check_variable = {network3_target = FROM.id }}
+			set_variable = {network3_target = 0}
+			add_to_variable = {spies_available = network_spies@FROM }
+			add_to_variable = {networks_used = -1}
+			clear_variable = network_strength@FROM 
+			clear_variable = network_spies@FROM 
+			}	
+				
+			else_if = {
+			limit = {check_variable = {network4_target = FROM.id }}
+			set_variable = {network4_target = 0}
+			add_to_variable = {spies_available = network_spies@FROM }
+			add_to_variable = {networks_used = -1}
+			clear_variable = network_strength@FROM 
+			clear_variable = network_spies@FROM 
+			}		
+			
+			else_if = {
+			limit = {check_variable = {network5_target = FROM.id }}
+			set_variable = {network5_target = 0}
+			add_to_variable = {spies_available = network_spies@FROM }
+			add_to_variable = {networks_used = -1}
+			clear_variable = network_strength@FROM 
+			clear_variable = network_spies@FROM 
+			}
+	
+	
+	
+	}}}
+	
+	
+	
+	on_capitulation = {
+		effect = {
+	
+
+	
+	every_country = {
+	limit = {check_variable = {network_spies@ROOT > 0}}
+	
+	if = {
+			limit = {check_variable = {network1_target = ROOT.id }}
+			set_variable = {network1_target = 0}
+			add_to_variable = {spies_available = network_spies@ROOT}
+			add_to_variable = {networks_used = -1}
+			clear_variable = network_strength@ROOT 
+			clear_variable = network_spies@ROOT
+			} 
+				
+			else_if = {
+			limit = {check_variable = {network2_target = ROOT.id }}
+			set_variable = {network2_target = 0}
+			add_to_variable = {spies_available = network_spies@ROOT}
+			add_to_variable = {networks_used = -1}
+			clear_variable = network_strength@ROOT
+			clear_variable = network_spies@ROOT 
+			}	
+			
+			else_if = {
+			limit = {check_variable = {network3_target = ROOT.id }}
+			set_variable = {network3_target = 0}
+			add_to_variable = {spies_available = network_spies@ROOT }
+			add_to_variable = {networks_used = -1}
+			clear_variable = network_strength@ROOT
+			clear_variable = network_spies@ROOT
+			}	
+				
+			else_if = {
+			limit = {check_variable = {network4_target = ROOT.id }}
+			set_variable = {network4_target = 0}
+			add_to_variable = {spies_available = network_spies@ROOT }
+			add_to_variable = {networks_used = -1}
+			clear_variable = network_strength@ROOT
+			clear_variable = network_spies@ROOT
+			}		
+			
+			else_if = {
+			limit = {check_variable = {network5_target = ROOT.id }}
+			set_variable = {network5_target = 0}
+			add_to_variable = {spies_available = network_spies@ROOT }
+			add_to_variable = {networks_used = -1}
+			clear_variable = network_strength@ROOT 
+			clear_variable = network_spies@ROOT 
+			}
+	
+	
+	
+	}}}
+	
+	
+	}

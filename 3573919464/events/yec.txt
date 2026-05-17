@@ -1,0 +1,28 @@
+###########################
+# Yearly Event Cards Events
+###########################
+
+add_namespace = yec
+
+# Open Yearly Event Cards GUI
+country_event = {
+	id = yec.1
+
+	is_triggered_only = yes
+	hidden = yes
+
+	immediate = {
+		# Calculations for Event Card
+		yec_calc_global_values = yes
+		THIS_yec_calc_delta_values = yes
+		THIS_yec_save_current_values = yes
+
+		# Show Event Card
+		yec_play_event_card_music = yes
+		set_country_flag = yec_event_card_visible
+		country_event = {
+			id = yec.1
+			days = 365
+		}
+	}
+}

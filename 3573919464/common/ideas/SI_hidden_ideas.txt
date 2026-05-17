@@ -1,0 +1,74 @@
+ideas = {
+
+	hidden_ideas = {
+		
+		SI_major_demands_idea = {
+
+			allowed_civil_war = { always = yes }
+
+			allowed = { always = no }
+		}
+
+		SI_minor_demands_idea = {
+			
+			allowed_civil_war = { always = yes }
+
+			allowed = { always = no }
+		}
+
+		SI_else_demands_idea = {
+			
+			allowed_civil_war = { always = yes }
+
+			allowed = { always = no }
+		}
+
+		SI_AI_reluctance_idea = {
+
+			allowed_civil_war = { always = yes }
+
+			allowed = { always = no }
+
+			on_remove = {
+				set_variable = { ROOT.si_ai_reluctance_stage = 0 }
+				set_variable = { ROOT.si_ai_reluctance_value = 0 }
+			}
+		}
+
+		SI_new_gov_stabilisation_idea_1 = {
+			name = SI_puppet_establishment_idea
+
+			allowed_civil_war = { always = yes }
+
+			allowed = { always = no }
+
+			modifier = {
+				political_power_factor = -0.25
+			}
+		}
+		SI_new_gov_stabilisation_idea_2 = {
+			name = SI_puppet_establishment_idea
+
+			allowed_civil_war = { always = yes }
+
+			allowed = { always = no }
+
+			modifier = {
+				political_power_factor = -0.5
+			}
+		}
+		SI_new_gov_stabilisation_idea_3 = {
+			name = SI_puppet_establishment_idea
+
+			allowed_civil_war = { always = yes }
+
+			allowed = { always = no }
+
+			modifier = {
+				political_power_factor = -0.75
+			}
+		}
+
+	}
+
+}

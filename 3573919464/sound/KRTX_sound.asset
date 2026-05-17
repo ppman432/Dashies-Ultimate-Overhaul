@@ -1,0 +1,59 @@
+sound = {
+	name = "distance_airplane_jet_idle"
+	file = "gui/tno_button_empty.wav"
+	always_load = no
+}
+
+sound = {
+	name = "distance_airplane_crash"
+	file = "gui/tno_button_empty.wav"
+	always_load = no
+}
+
+sound = {
+	name = "distance_mechanized_units_mg_fire"
+	file = "gui/tno_button_empty.wav"
+	always_load = no
+}
+
+sound = {
+	name = "distance_airplane_light_fire"
+	file = "gui/tno_button_empty.wav"
+	always_load = no
+}
+
+sound = {
+	name = "distance_airplane_ger_jet_fire"
+	file = "gui/tno_button_empty.wav"
+	always_load = no
+}
+
+sound = {
+	name = "distance_airplane_medium_idle_01"
+	file = "gui/tno_button_empty.wav"
+	always_load = no
+}
+
+sound = {
+	name = "distance_airplane_idle"
+	file = "gui/tno_button_empty.wav"
+	always_load = no
+}
+
+sound = {
+	name = "distance_airplane_heavy_idle_01"
+	file = "gui/tno_button_empty.wav"
+	always_load = no
+}
+
+sound = {
+	name = "tno_button_empty"
+	file = "gui/tno_button_empty.wav"
+	always_load = no
+}
+
+sound = {
+	name = "tno_gunfire"
+	file = "menu/gunfire_sound_effect.wav"
+	always_load = no
+}

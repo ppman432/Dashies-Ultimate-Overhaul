@@ -1,0 +1,8 @@
+continent_declare_war_decision = {
+	priority = 9999
+	allowed = {
+	}
+	visible = {
+		has_country_flag = show_global_dom_decisions
+	}
+}

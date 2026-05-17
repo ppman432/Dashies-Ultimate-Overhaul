@@ -1,0 +1,20 @@
+technologies = {
+	
+	digedanium_tech = {
+	
+		research_cost = 1
+	
+		allow = {
+			always = yes
+		}
+		
+		enable_equipment_modules = {
+			digedanium_small
+			digedanium_medium
+			digedanium_large
+			digedanium2_small
+			digedanium2_medium
+			digedanium2_large
+		}
+	}
+}

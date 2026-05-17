@@ -1,0 +1,80 @@
+on_actions = {
+
+	on_startup = {
+		effect = {
+			
+			set_variable = { global.si_demand_state_cooldown_days = 45 }
+			set_variable = { global.si_demand_vassalisation_cooldown_days = 90 }
+			set_variable = { global.si_claim_state_cooldown_days = 15 }
+			set_variable = { global.si_core_state_cooldown_days = 15 }
+			set_variable = { global.si_move_capital_cooldown_days = 60 }
+
+			set_variable = { global.si_demand_state_pp_required = 250 }
+			set_variable = { global.si_demand_vassalisation_pp_required = 300 }
+			set_variable = { global.si_claim_state_cp_required = 15 }
+			set_variable = { global.si_core_state_cp_required = 30 }
+			set_variable = { global.si_core_state_guns_required = 1500 }
+			set_variable = { global.si_move_capital_pp_required = 250 }
+
+			set_variable = { global.si_core_state_compliance_required = 80 }
+			set_variable = { global.si_core_state_resistance_required = 20 }
+
+			set_variable = { global.si_demand_state_pp_take = -200 }
+			set_variable = { global.si_demand_vassalisation_pp_take = -250 }
+			set_variable = { global.si_claim_state_cp_take = -15 }
+			set_variable = { global.si_core_state_cp_take = -30 }
+			set_variable = { global.si_core_state_guns_take = -1500 }
+			set_variable = { global.si_move_capital_pp_take = -250 }
+
+			set_variable = { global.si_ai_reluctance_time_days = 135 }
+			set_variable = { global.si_ai_reluctance_points_per_stage = 15 }
+
+		}
+	}
+
+	on_daily = {
+		effect = {
+			
+			if = {
+				limit = {
+					ROOT = {
+						exists = no
+					}
+					any_state = {
+						is_in_array = {
+							array = ROOT.selected_states_array
+							value = THIS.id
+						}
+					}
+				}
+				ROOT = {
+					clear_array = THIS.selected_states_array
+				}
+			}
+			if = {
+				limit = {
+					ROOT = {
+						exists = no
+						check_variable = { ROOT.si_ai_reluctance_stage > 0 }
+					}
+				}
+				set_variable = { ROOT.si_ai_reluctance_stage = 0 }
+			}
+
+		}
+	}
+
+	#on_state_control_changed = {
+	#	effect = {
+	#		
+	#		every_country = {
+	#			remove_from_array = {
+	#				array = THIS.selected_states_array
+	#				value = FROM.FROM.id
+	#			}
+	#		}
+	#
+	#	}
+	#}
+
+}

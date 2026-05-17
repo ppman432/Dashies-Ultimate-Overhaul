@@ -1,0 +1,154 @@
+﻿#Here are all global events for any nation#
+
+add_namespace = moneymod 
+#this event will add equipment to the stock pile every year#
+
+######################################## this are events in case you have negative money any of these are been used############
+country_event = {
+	id = moneymod.2
+	title = moneymod.2.t
+	desc = moneymod.2.d
+	picture = GFX_report_event_iww_demonstration
+
+	is_triggered_only = yes
+	option = {
+		name = moneymod.2.a	#takeitfromeco
+		ai_chance = { factor = 50 }	
+		add_stability = -0.1
+		add_political_power = -50
+		add_to_variable = {var = dx value = 50}
+		clr_country_flag = money2
+	}
+option = {
+		name = moneymod.2.b	#Take Debt
+		ai_chance = { factor = 50 }
+		trigger ={
+		check_variable={debttotal < 151}
+		}
+		add_to_variable ={var = debttotal value = 50}
+		add_to_variable ={var = dx value = 50}
+		clr_country_flag = money2
+	}
+	option = {
+		name = moneymod.2.c	#do nothing
+		ai_chance = { factor = 50 }
+		add_political_power = -100
+		add_stability = -0.2
+	}
+}
+country_event = {
+	id = moneymod.3
+	title = moneymod.2.t
+	desc = moneymod.2.d
+	picture = GFX_report_event_iww_demonstration
+	is_triggered_only = yes
+	option = {
+		name = moneymod.2.a	#takeitfromeco
+		ai_chance = { factor = 50 }	
+		add_stability = -0.2
+		add_political_power = -100
+		add_to_variable = {var = dx value = 100}
+		clr_country_flag = money3
+	}
+option = {
+		name = moneymod.2.b	#Take Debt
+		ai_chance = { factor = 50 }
+		trigger ={
+		check_variable={debttotal < 101}
+		}
+		add_to_variable ={var = debttotal value = 100}
+		add_to_variable ={var = dx value = 100}
+		clr_country_flag = money3
+	}
+	option = {
+		name = moneymod.2.c	#Do Nothing
+		ai_chance = { factor = 50 }
+		add_stability = -0.4
+		add_political_power = -150
+	}
+}
+country_event = {
+	id = moneymod.4
+	title = moneymod.2.t
+	desc = moneymod.2.d
+	picture = GFX_report_event_iww_demonstration
+	is_triggered_only = yes
+	option = {
+		name = moneymod.2.a	#takeitfromeco
+		ai_chance = { factor = 50 }	
+		add_stability = -0.4
+		add_to_variable = {var = dx value = 200}
+		clr_country_flag = money4
+		add_political_power = -200
+	}
+option = {
+		name = moneymod.2.b	#Take Debt
+		ai_chance = { factor = 50 }
+		trigger ={
+		check_variable={debttotal = 0}
+		}
+		add_to_variable ={var = debttotal value = 200}
+		add_to_variable ={var = dx value = 200}
+		clr_country_flag = money4
+	}
+	option = {
+		name = moneymod.2.c	#do nothing
+		ai_chance = { factor = 50 }
+		add_stability = -0.8
+		add_political_power = -250
+	}
+}
+
+
+############## this is the event in case your money is -$300M or lower #######################
+
+country_event = {
+	id = moneymod.5 #final solution when reached maximum debt
+	title = moneymod.5.t
+	desc = moneymod.5.d
+	picture = GFX_report_event_iww_demonstration
+	is_triggered_only = yes
+	
+	option = {
+		name = moneymod.5.a	#economycrashes!
+		ai_chance = { factor = 100 }	
+		add_stability = -1
+		add_political_power = -300
+		add_command_power = -1
+		add_war_support = -1
+		set_variable = { var = dx value = 51}
+		clr_country_flag = money5
+	}
+	option = {
+		name = moneymod.5.b	#Civil War!
+		ai_chance = { factor = 0 }	
+		if={
+			limit={
+				OR={
+					has_government = fascism
+					has_government = communism
+					has_government = neutrality
+				}
+			}
+			set_variable = { var = dx value = 50}
+				start_civil_war = {
+			    	ideology = communism
+			    	size = 0.7
+				}
+				set_politics = {
+				ruling_party = democratic
+				}
+			else={
+			set_variable = { var = dx value = 50}
+				start_civil_war = {
+			    	ideology = democratic
+			    	size = 0.7
+				}
+				set_politics = {
+				ruling_party = communism
+				}
+			}
+		}
+		clr_country_flag = money5
+	}
+}
